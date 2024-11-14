@@ -1,6 +1,6 @@
 ## Programming language code
 asdf
 ### Index
-* [A](#DataStructure)
+* [Data Structure](#DataStructure)
 
 ### DataStructure
