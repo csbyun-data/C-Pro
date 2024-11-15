@@ -4,8 +4,6 @@ Grammar of programming, a collection of basic materials for application.
 *  [C](#C)
 *  [C++](#CPP)
 *  [Java](#JAVA)
-*  [Data Structure](#자료구조)
-*  [Algorithm](#알고리즘)
 
 ### C
 * 1. 문법
@@ -67,14 +65,3 @@ Grammar of programming, a collection of basic materials for application.
 * 4. Thread
 * 5. 람다와 Stream
 * 6. Networking, Soket 프로그래밍
-
-### 자료구조
-
-
-
-
-
-
-
-
-###알고리즘
