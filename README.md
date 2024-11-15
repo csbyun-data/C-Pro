@@ -19,9 +19,20 @@ Grammar of programming, a collection of basic materials for application.
 *   2.3 메모리 동적할당
 *   2.4 구조체
   
-* 3. 파일 I/O
-*   3.1 파일 I/O
+* 3. File I/O
+*   3.1 File I/O
 
+* 4. Data Structure, Algorithm
+*   4.1 스택
+*   4.2 Queue, 우선순위 Queue, Heap
+*   4.3 Linked List
+*   4.4 재귀용법
+*   4.5 binary Tree
+*   4.6 그래프
+*   4.7 정렬
+*   4.8 탐색
+*   4.9 해싱
+  
 ### CPP
 * 1. 객체
 *   1.1 class
