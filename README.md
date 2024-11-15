@@ -1,9 +1,6 @@
-## Programming language code
+## C Programming language code
 Grammar of programming, a collection of basic materials for application.
 ### Index
-*  [C](https://github.com/csbyun-data/C-Programming/blame/main/HelloWorld.c)
-
-### C
 * 1.[문법](https://github.com/csbyun-data/C-Programming/blob/main/chap01/README.md))
   *   1.1 변수, 상수, 자료형, 비트 연산
 ```c
