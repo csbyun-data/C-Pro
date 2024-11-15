@@ -8,6 +8,13 @@ Grammar of programming, a collection of basic materials for application.
 ### C
 * 1. 문법
 *   1.1 변수, 상수, 자료형, 비트 연산
+  ```cfm
+<cfcomponent>
+ <cffunction name="hello">
+  <cfreturn "Hello, World!" />
+ </cffunction>
+</cfcomponent>
+```
 *   1.2 조건문, 반복문
 *   1.3 배열, 문자열
 *   1.4 함수
