@@ -1,16 +1,8 @@
 ## C Programming language code
 Grammar of programming, a collection of basic materials for application.
 ### Index
-* 1.[문법](https://github.com/csbyun-data/C-Programming/blob/main/chap01/README.md))
+* 1.[문법](https://github.com/csbyun-data/C-Programming/blob/main/chap01/README.md)
   *   1.1 변수, 상수, 자료형, 비트 연산
-```c
-#include <stdio.h>
-int main()
-{
-  printf("Hellow, World\n");
-  return 0;
-}
-```
   *   1.2 조건문, 반복문
   *   1.3 배열, 문자열
   *   1.4 함수
