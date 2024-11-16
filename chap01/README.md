@@ -30,13 +30,27 @@
     ptr = (char*)malloc(sizeof(char)*50);
 	   fputs("input String : ", stdout);  // stdout 표준촐력 stream 
 
-    if(fgets(ptr, 50, stdin) != NULL)  // stdin 표준입력 stream 
-		     fputs(ptr, stdout);            // stderr 표준에러 stream
+    if(fgets(ptr, 50, stdin) != NULL)         // stdin 표준입력 stream 
+		     fputs(ptr, stdout);      // stderr 표준에러 stream
 	   free(ptr);
     return 0;
   }
   ```    
   *   3.3 fgets, fputs 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets1.c)
-  *   3.3.1 fgets 문자열 끝 newline 제거, null terminator로 변경 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets2.c)
-  *   
-
+  *   3.3.1 fgets 문자열 끝 newline 제거, null terminator로 변경 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets3.c)
+  ```c
+  void strip_newline( char *str, int size ) {
+    int i;
+ 
+    /* remove the null terminator */
+    for (  i = 0; i < size; ++i ) {
+        if ( str[i] == '\n' ) {
+            str[i] = '\0';
+ 
+            /* we're done, so just exit the function by returning */
+            return;   
+        }
+    }
+    /* if we get all the way to here, there must not have been a newline! */
+  }
+  ``` 
