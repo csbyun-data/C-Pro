@@ -3,6 +3,7 @@
 // Size if the created array
 #define M 3
 
+// void ReadArray( int piData[][M]) 동일 표현
 void ReadArray( int (*piData)[M]) {
   int iRow = 0;
   int iCol = 0;
