@@ -8,7 +8,7 @@
    * 1.1.3 크기가 정의되지 않은 배열을 인자로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension2.c)
 
   * 1.2 2차원 배열
-   * 1.2.1 포인터 인자로 전달
+   * 1.2.1 포인터 인자로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer1.c) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer2.c)
    * 1.2.2 매크로, 전역 상수로 전달
    * 1.2.3 행을 생략, 열만 전달
    * 1.2.4 2차 배열로 전달
