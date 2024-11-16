@@ -37,6 +37,6 @@
   }
   ```    
   *   3.3 fgets, fputs 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets1.c)
-  *   3.3.1 fgets 문자열 끝 newline 제거, null terminator로 변경 [here]()
+  *   3.3.1 fgets 문자열 끝 newline 제거, null terminator로 변경 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets2.c)
   *   
 
