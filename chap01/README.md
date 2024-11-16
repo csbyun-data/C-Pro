@@ -66,3 +66,6 @@
   *   5.4 for() continue, break [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control7.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control8.c)
   *   5.5 while() continue, break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control4.c)
   *   5.6 do~while() [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control6.c)
+
+* 6. 배열
+  *   6.1 배열 초기화 [here]()
