@@ -15,6 +15,12 @@
 
 * 2.포인터를 사용한 2차원 배열 접근
    * 2.1 포인터와 배열의 관계
+  ```c
+  acData[i] = *(acData +i);       //1D array in form of pointer
+  a[i] = *(a+i);                  //ith element of an 1D array
+  acData[i][j] = *(acData[i]+j);  //2D array form of 1D array and pointer
+  acData[i][j] = *(*(acData+i)+j) //2D array in form of pointer
+  ``` 
    * 2.2 단일 포인터를 사용한 2차원 배열 접근
    * 2.3 배열 포인터를 사용한 2차원 배열 접근
    
