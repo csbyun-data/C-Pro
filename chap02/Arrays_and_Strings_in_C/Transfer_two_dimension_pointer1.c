@@ -4,6 +4,7 @@
 #define ARRAY_ROW 3
 #define ARRAY_COL 3
 
+// // void ReadArray( int piData[][ARRAY_COL]) 동일 표현
 void ReadArray( int (*piData)[ARRAY_COL]) {
   int iRow = 0;
   int iCol = 0;
