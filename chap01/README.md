@@ -16,6 +16,7 @@
   	va_start( a_list, x)
   }
   ```
+  
 * 3.Input (scanf, gets, fgets)
   *   3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c)
   *   3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets.c)
