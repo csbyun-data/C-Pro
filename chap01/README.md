@@ -36,5 +36,5 @@
     return 0;
   }
   ```    
-  *   3.3 fgets, fputs 사용법 [here]()
+  *   3.3 fgets, fputs 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets1.c)
 
