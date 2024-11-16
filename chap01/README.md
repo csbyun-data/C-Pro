@@ -11,8 +11,7 @@
 ```c
 #include <stdarg.h>
 
-int a_func(int x, ...)
-{
+int a_func(int x, ...) {
 	va_list a_list;
 	va_start( a_list, x)
 }
