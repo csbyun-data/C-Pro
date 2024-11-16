@@ -17,7 +17,7 @@
   }
   ```
 * 3.Input (scanf, gets, fgets)
-  *   3.1 scanf [scanf]()
-  *   3.2 gets [gets]()
-  *   3.3 fgets [fgets]()
+  *   3.1 scanf 사용법 [scanf]()
+  *   3.2 gets 사용법 [gets]()
+  *   3.3 fgets 사용법 [fgets]()
 
