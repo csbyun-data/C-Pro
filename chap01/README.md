@@ -62,4 +62,6 @@
   *   5.1 if~else문장 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control1.c)
   *   5.2 for() break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control2.c)
   *   5.3 for() continue [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control3.c)
-  *   5.4 for() continue, break [here]()
+  *   5.4 while() continue, break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control4.c)
+  *   5.5 do~while() [here1]() [here2]()
+  *   5.6 for() continue, break [here]()
