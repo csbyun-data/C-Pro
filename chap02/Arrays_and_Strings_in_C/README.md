@@ -4,7 +4,7 @@
   * 1.1 1차원 배열
   * 1.1.1 포인터 인자로 전달  [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer1.c) 
 [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer2.c)
-   * 1.1.2 크기가 정의된 배열을 인자로 전달
+   * 1.1.2 크기가 정의된 배열을 인자로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension1.c)
    * 1.1.3 크기가 정의되지 않은 배열을 인자로 전달
 
   * 1.2 2차원 배열
