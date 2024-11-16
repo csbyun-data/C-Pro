@@ -20,5 +20,21 @@
   *   3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c)
   *   3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets.c)
   *   3.2 gets, puts 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_gets1.c)
+  ```c
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  int main() {
+    char* ptr;
+
+    ptr = (char*)malloc(sizeof(char)*50);
+	   fputs("input String : ", stdout);  // stdout 표준촐력 stream 
+
+    if(fgets(ptr, 50, stdin) != NULL)  // stdin 표준입력 stream 
+		     fputs(ptr, stdout);            // stderr 표준에러 stream
+	   free(ptr);
+    return 0;
+  }
+  ```    
   *   3.3 fgets 사용법 [here]()
 
