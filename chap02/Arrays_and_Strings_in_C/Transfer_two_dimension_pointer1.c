@@ -16,7 +16,7 @@ void ReadArray( int (*piData)[ARRAY_COL]) {
 int main( int argc, char *argv[])
 {
   // Create an 2D array
-  int aiData[ARRAY_ROW][ARRAY_COL] = { {1, 2, 3}, {4, 5, 6}};
+  int aiData[ARRAY_ROW][ARRAY_COL] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
 
   //Pass array as a parameter
   ReadArray(aiData);
