@@ -4,15 +4,15 @@
 
 int main()
 {
-	char buffer[100];
+    char buffer[100];
 	
-	// 문자열을 받아 buffer에 저장, 공백을 받아들임
-	printf("input String : ");
-	gets(buffer);  
+    // 문자열을 받아 buffer에 저장, 공백을 받아들임
+    printf("input String : ");
+    gets(buffer);  
 	
-	// buffer에 저장된 문자열을 출력
-	printf("String : ");
-	puts(buffer); 
+    // buffer에 저장된 문자열을 출력
+    printf("String : ");
+    puts(buffer); 
 	
-	return 0;
+    return 0;
 }
