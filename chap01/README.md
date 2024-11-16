@@ -16,7 +16,7 @@
   	va_start( a_list, x)
   }
   ```
-* 3. Input (scanf, gets, fgets)
+* 3.Input (scanf, gets, fgets)
   *   3.1 scanf [scanf]()
   *   3.2 gets [gets]()
   *   3.3 fgets [fgets]()
