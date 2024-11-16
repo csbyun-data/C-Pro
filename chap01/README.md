@@ -20,7 +20,6 @@
   *   3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c)
   *   3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets.c)
   *   3.2 gets, puts 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_gets1.c)
-  *   
   ```c
   #include <stdio.h>
   #include <stdlib.h>
@@ -37,5 +36,5 @@
     return 0;
   }
   ```    
-  *   3.3 fgets 사용법 [here]()
+  *   3.3 fgets, fputs 사용법 [here]()
 
