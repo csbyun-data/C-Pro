@@ -9,32 +9,11 @@
   *   2.3 인자 평균값 [Average](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Average.c) 
 
 ```c
-#include <stdio.h>
+#include <stdarg.h>
 
-int main(int argc, char *argv[])
+int a_func(int x, ...)
 {
-	if( argc != 2) {
-		printf("usage: %s filename", argv[0]);
-	} else {
-		FILE *file = fopen(argv[1], "r");
-		
-		// fopen return 0, the NULL pointer, on failure
-		if( file == 0) {
-			printf("Could not open file\n");
-		} else {
-			int x;
-			/* read one character at a time from file, stopping at EOF, which
-			   indicates the end of the file. Note that the idiom of "assign
-			   to a variable, check the value" used below works because
-			   the assignment statement evaluates to the value assigned. */ 
-			while (( x = fgetc(file))!= EOF ) {
-				printf("%c", x);
-			}
-		}
-		
-		fclose(file);
-	}
-	
-  	return 0;
+	va_list a_list;
+	va_start( a_list, x)
 }
 ```
