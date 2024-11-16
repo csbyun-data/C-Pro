@@ -9,6 +9,7 @@ Grammar of programming, a collection of basic materials for application.
   *   1.5 Type Casting
   *   1.6 가변인자
   *   1.7 scanf(), gets(), fgets() 사용법
+  *   1.8 time() 사용법
   
 * 2.포인터, 배열, 문자열, 함수 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/README.md)
   *   2.1 포인터와 배열
