@@ -17,7 +17,7 @@
   }
   ```
 * 3.Input (scanf, gets, fgets)
-  *   3.1 scanf 사용법 [scanf]()
+  *   3.1 scanf 사용법 [scanf](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c)
   *   3.2 gets 사용법 [gets]()
   *   3.3 fgets 사용법 [fgets]()
 
