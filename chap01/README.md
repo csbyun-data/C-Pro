@@ -54,5 +54,5 @@
     /* if we get all the way to here, there must not have been a newline! */
   }
   ```
-* 4. time 사용법
+* 4.time 사용법
   *   4.1 실행시간체크 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets1.c)  
