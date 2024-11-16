@@ -8,14 +8,14 @@
   *   2.2 인자 최대값 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Max.c) 
   *   2.3 인자 평균값 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Average.c)
   *   2.4 인자 logfile 만들기 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Log.c) 
-    ```c
+  ```c
   #include <stdarg.h>
   
   int a_func(int x, ...) {
   	va_list a_list;
   	va_start( a_list, x)
   }
-    ```
+  ```
 * 3.Input (scanf, gets, fgets)
   *   3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c)
   *   3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets.c)
