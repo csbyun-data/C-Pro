@@ -8,11 +8,11 @@
   *   2.2 인자 최대값 [Max](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Max.c) 
   *   2.3 인자 평균값 [Average](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Average.c) 
 
-```c
-#include <stdarg.h>
-
-int a_func(int x, ...) {
-	va_list a_list;
-	va_start( a_list, x)
-}
-```
+  ```c
+  #include <stdarg.h>
+  
+  int a_func(int x, ...) {
+  	va_list a_list;
+  	va_start( a_list, x)
+  }
+  ```
