@@ -1,3 +1,4 @@
+// stream : 순서를 가진 연속된 문자열
 #include <stdio.h>
 #include <stdlib.h>
 
