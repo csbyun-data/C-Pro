@@ -4,7 +4,7 @@ void ReadArray(int iRow, int iCol, int aiData[][n]) {
   int i, j;
 
   for( i=0; i<ARRAY_ROW; ++i)
-    for( j=0; jCol<ARRAY_COL; ++j)
+    for( j=0; j<ARRAY_COL; ++j)
       printf("%d ", aiData[i][j]);
 }
 
