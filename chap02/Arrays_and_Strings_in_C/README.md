@@ -35,7 +35,7 @@
    * 3.1 정렬되지 않은 int형 합 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array.c)
    * 3.2 정렬된 int형 합 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Sorted_Array.c)
    * 분기 예측은 알고리즘이 따르고 있는 패턴 또는 기본적으로 이전 단계에서 어떻게 실행되었는지에 대해 작동하고. 추측이 맞다면 CPU는 실행을 계속하고 잘못되면 CPU는 파이프라인을 플러시하고 분기로 롤백하고 처음부터 다시 시작해야 합니다.
-   * 3.3 정렬되지 않은 int형을 빠르게 계산하기 위한 변형
+   * 3.3 정렬되지 않은 int형을 빠르게 계산하기 위한 변형 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array2.c)
   ```c
   if(data[c] >= 128)
     sum += data[c];
