@@ -11,7 +11,7 @@
   char *pcData = NULL;
         pcData = &cData;
   ```
-  * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Invalid_pointer_value1.c)
+  * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Invalid_pointer_value4.c)
   ```txt
   1) 변수의 수명이 완료된 개체의 주소를 참조
   2) NULL 포인터인 방향지시 연산자(*)의 포인터 역참조
