@@ -16,6 +16,22 @@
   int a1[6] = { [4]=4, [2]=2 };
   int a2[6] = { [4]4, [2]2 };    // 0, 0, 2, 0, 4, 0
   ```
+  ```c
+  #include <stdio.h>
+
+  int main()
+  {
+    char acBuff[] = {'a','b','c','d','e','f'};
+    int i=0;
+    char *pcBuff = NULL;   // character pointer
+
+    pcBuff = acBuff;
+    for( i=0; i<6; i++)
+      printf("pcBuff[%d] = %c or *(pcBuff+%d)=%c \n\n", i, pcBuff[i], i, *(pcBuff+i));
+
+    return 0;
+   }
+  ```
 
 * 1.배열을 함수 parameter로 전달 
   * 1.1 1차원 배열
