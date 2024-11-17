@@ -43,7 +43,55 @@
     *iPtr = 5;            // change the value through pointer
     printf("%d", data);   // output 5
   ```
+  *  1.4 pointer로 가리킨 주소 안의 값을 변경
+    ```c
+    int num = 10;
+    int *piData = &num;
 
-* 2.포인터
-  * 2.1 포인터
-  * 2.1.1 포인터
+    *piData = 14;
+    printf("*piData=%d, num=%d", *piData, num);
+    ```
+ 
+* 2.포인터 유형
+  ```txt
+  1) NULL pointer
+    int *iPtr = NULL;
+  
+  2) void pointer
+    void *vPtr;
+  ```
+  * 2.1 void pointer
+  * 2.1.1 size of a void pointer in c?
+  * 2.1.2 void pointer의 역참조
+  * 2.1.3 void pointer를 사용하는 이유?
+  * 2.1.4 void pointer 산술 연산
+  * 2.1.5 void pointer 함수에 사용
+  * 2.1.6 void pointer 단점
+  * 2.1.7 void pointer 장점
+
+* 3.pointer 산술작업
+  * 3.1 pointer 산술
+  * 3.2 포인터 증가 프로그램
+  * 3.3 structure의 size 계산
+  * 3.4 pointer 요소간의 거리 계산
+  * 3.5 pointer 요소간의 비교
+  * 3.6 간접 증가/감소 operator 사용
+
+* 4.pointer와 배열
+  * 4.1 pointer와 문자 배열의 관계
+  * 4.2 pointer를 이용한 배열의 모든 요소 접근
+  * 4.3 배열을 수정하려고 할 떄의 컴파일 error
+ 
+* 5.pointer와 function
+  * 5.1 function pointer
+  * 5.2 function pointer이용 함수 호출
+  * 5.3 function pointer를 인수로 사용
+  * 5.4 함수에서 function pointer 반환
+  * 5.5 function pointer배열
+
+* 6.pointer를 사용하는 일반적인 실수
+  * 6.1 pointer를 초기화하지 않음
+  * 6.2 포인터의 비교
+  * 6.3 dynamic memory 할당을 이용한 포인터 선언
+  * 6.4 유효하지 않은 address를 가리키는 pointer
+ 
