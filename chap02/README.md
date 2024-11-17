@@ -12,7 +12,7 @@
   func(&num1, &num2);
   ```
   *  ![image](https://github.com/user-attachments/assets/2df0edbc-d358-4dca-bd7b-72b503d5279d)
-* 2Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
+* 2(메모리 동적할당)Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
   * 2.1 포인터선언
   * 2.2 포인터 유형
   * 2.3 포인터 산술
@@ -25,5 +25,5 @@
   * 3.2 배열을 함수 parameter로 전달
   * 3.3 pointer를 사용한 2차원 배열 접근
   * 3.4 정렬되지 않은 배열 보다 정렬된 배열 처리가 빠른 이유?
-* 4.메모리 동적할당
-* 5.구조체
+    
+* 4.구조체
