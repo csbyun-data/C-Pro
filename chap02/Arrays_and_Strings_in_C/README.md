@@ -1,5 +1,21 @@
 ## 01. 배열과 문자열
 ### Index
+* 1.배열
+  * 1.1 배열 정의, 초기화
+  ```c
+  int aiData[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+  // 나머지 초기화 0, 1, 2, 3, 4, 5, 6, 7, 0, 0 
+  int aiData[] = { 0, 1, 2, 3, 4, 5, 6, 7 };
+
+  char str1[] = "abc";
+  char str2[4] = "abc";
+  char str3[] = { 'a','b','c','\0'};
+
+  // C99 초기화
+  int a1[6] = { [4]=4, [2]=2 };
+  int a2[6] = { [4]4, [2]2 };    // 0, 0, 2, 0, 4, 0
+  ```
+
 * 1.배열을 함수 parameter로 전달 
   * 1.1 1차원 배열
   * 1.1.1 포인터 인자로 전달  [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer1.c) 
