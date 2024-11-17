@@ -14,7 +14,7 @@ int main(void)
   for( iRow=0; iRow<ROW; ++iRow) { // loop for row
     for( iCol=0; iCol<COL; ++iCol) { // loop for column
       // Read element of 2D array
-      printf("aiData[%d][%d] = %d\n"), iRow, iCol, *(piData + (iRow*COL)+iCol));
+      printf("aiData[%d][%d] = %d\n", iRow, iCol, *(piData + (iRow*COL)+iCol));
     }
   }
 
