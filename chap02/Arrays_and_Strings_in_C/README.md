@@ -94,6 +94,18 @@
   ```
    * 2.3 배열 포인터를 사용한 2차원 배열 접근 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers3.c)
   ```c
+  #define ROW   3
+  #define COL   3
+  typedef int Array2D[ROW][COL]; //New type
+
+  Array2D aiData = { { 9, 6, 1 }, { 144, 70, 50 }, {10, 12, 78} };
+  Array2D *p2DArray = NULL; //Pointer to the 2d Array
+  int iRow =0, iCol =0; //Row and col
+
+  p2DArray = &aiData; //Assign address of array to the pointer
+  ...
+  //Read element of 2D array
+  printf("aiData[%d][%d] = %d\n",iRow,iCol, (*p2DArray)[iRow][iCol]);
   ```   
 * 3.정렬되지 않은 배열보다 정렬된 배열 처리가 빠른 이유?
    * 3.1 정렬되지 않은 int형 합 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array.c)
