@@ -6,8 +6,8 @@
 #include <time.h>   // time()
 
 int compare(const void *a, const void *b) {
-	return (*(int *)a - *(int *)b); //asendig
-	// return (*(int *)b - *(int *)a); desending
+	return (*(int *)a - *(int *)b); //ascendig
+	// return (*(int *)b - *(int *)a); descending
 }
 
 int main()
