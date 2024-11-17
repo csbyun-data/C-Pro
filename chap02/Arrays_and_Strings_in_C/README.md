@@ -1,7 +1,7 @@
 ## 01. 배열과 문자열
 ### Index
 * 1.배열
-  * 1.1 배열 정의, 초기화 [here]()
+  * 1.1 배열 정의, 초기화 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Array_Initialize1.c)
   ```c
   int aiData[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
   // 나머지 초기화 0, 1, 2, 3, 4, 5, 6, 7, 0, 0 
