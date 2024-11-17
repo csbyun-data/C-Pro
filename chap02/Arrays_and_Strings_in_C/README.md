@@ -21,7 +21,7 @@
   acData[i][j] = *(acData[i]+j);  //2D array form of 1D array and pointer
   acData[i][j] = *(*(acData+i)+j); //2D array in form of pointer
   ``` 
-   * 2.2 단일 포인터를 사용한 2차원 배열 접근 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers.c)
+   * 2.2 단일 포인터를 사용한 2차원 배열 접근 [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers2.c)
    * ![image](https://github.com/user-attachments/assets/0490cef6-23bc-49a6-94e2-6c16aa93a23b)
   ```c
   offset = (column_number*1)+2);   // calculate offset
