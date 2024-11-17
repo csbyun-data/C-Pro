@@ -32,3 +32,5 @@
    * 2.3 배열 포인터를 사용한 2차원 배열 접근 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers3.c)
    
 * 3.정렬되지 않은 배열보다 정렬된 배열 처리가 빠른 이유?
+   * 3.1 정렬되지 않은 int형 합 [here]()
+   * 3.2 정렬된 int형 합 [here]()
