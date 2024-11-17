@@ -12,7 +12,7 @@
   func(&num1, &num2);
   ```
   *  ![image](https://github.com/user-attachments/assets/2df0edbc-d358-4dca-bd7b-72b503d5279d)
-* 2(메모리 동적할당)Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
+* 2(메모리 동적할당) Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
   * 2.1 포인터선언
   * 2.2 포인터 유형
   * 2.3 포인터 산술
