@@ -12,7 +12,7 @@
   func(&num1, &num2);
   ```
   *  ![image](https://github.com/user-attachments/assets/2df0edbc-d358-4dca-bd7b-72b503d5279d)
-  * 1.2 Pointer and dynamic memory allocation in C [here]()
+  * 1.2 Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
   * 1.3 Arrays and String in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
 * 2.문자열
 * 3.메모리 동적할당
