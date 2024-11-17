@@ -22,6 +22,13 @@
   acData[i][j] = *(*(acData+i)+j); //2D array in form of pointer
   ``` 
    * 2.2 단일 포인터를 사용한 2차원 배열 접근
+   * ![image](https://github.com/user-attachments/assets/0490cef6-23bc-49a6-94e2-6c16aa93a23b)
+  ```c
+  offset = (column_number*1)+2);   // calculate offset
+  (int *)aiData + offset;           // Add offset in array base address
+  //typecast with int pointer because aiData is an array of integer
+  *((int *)aiData + offset);        // Get the element
+  ``` 
    * 2.3 배열 포인터를 사용한 2차원 배열 접근
    
 * 3.정렬되지 않은 배열보다 정렬된 배열 처리가 빠른 이유?
