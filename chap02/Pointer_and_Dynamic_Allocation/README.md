@@ -37,7 +37,7 @@
   3) pointer 호출
     int *iPtr, data;
     data = 20;
-    iPtr = &data;
+    iPtr = &data;         // int *iPtr = &data; 동일 표현
 
     printf("%d", *iPtr);  // output 20
     *iPtr = 5;            // change the value through pointer
