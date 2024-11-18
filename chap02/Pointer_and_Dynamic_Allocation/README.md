@@ -1,6 +1,6 @@
 ## 01. Pointer and Dynamic memory allocation in C
 ### Index
-* 1. Dynamic memory allocation
+* 1.Dynamic memory allocation
   * 1.1 메모리할당, 해제
   ```c
   char *pcBuffer = malloc( 5*sizeof(char));
