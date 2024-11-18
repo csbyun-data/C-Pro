@@ -9,6 +9,11 @@
   * 1.6 pointer를 사용하는 일반적인 실수
  
 * 2.(메모리 동적할당) Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
+  * 2.1 dynamic memory allocation
+  * 3.2 dynamic memory allocation 2D array
+  * 3.3 dynamic 2d array in C using the single pointer
+  * 3.4 pointer to string array in C
+
     
 * 3.Arrays and String in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
   * 3.1 배열과 문자열
