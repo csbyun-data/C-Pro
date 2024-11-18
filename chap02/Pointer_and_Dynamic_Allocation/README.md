@@ -57,14 +57,20 @@
     return TRUE;
   }
   ```  
-  * 2.2 dynamic memory allocation 2D [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c)
+  * 2.2 dynamic memory allocation 2D [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c)
   ```c
   int **piBuff = NULL;
   piBuff = malloc( nrows * sizeof(int *));
-
-  for( i=0; i<nrows; i++) {
-    piBuff[i] = malloc(ncolumns * sizeof(int));
-  }
+  ...
+  for( i=0; i<nrows; i++) 
+    piBuff[i] = (int *)malloc(ncolumns * sizeof(int));
+  ```
+  ```c
+  int **piBuff = NULL;
+  piBuff = malloc( nrows * sizeof(int *));
+  ...
+  for( i=0; i<nrows; i++) 
+    piBuff[i] = (int *)malloc( (i+1)*sizeof(int));
   ```
 
 * 3.Dynamically 2D array in C using the single pointer
