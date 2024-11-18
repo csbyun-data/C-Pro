@@ -11,7 +11,7 @@
   char *pcData = NULL;
         pcData = &cData;
   ```
-  * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Invalid_pointer_value4.c)
+  * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value4.c)
   ```txt
   1) 변수의 수명이 완료된 개체의 주소를 참조
   2) NULL 포인터인 방향지시 연산자(*)의 포인터 역참조
@@ -19,7 +19,7 @@
   4) long 포인터 형태로 정렬되지 않은 메모리를 참조함
   ```
 
-  *  1.3 Address 연산자(&) [사용예제](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Pointer_exam1.c)
+  *  1.3 Address 연산자(&) [사용예제](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Pointer_exam1.c)
   ```txt
   int data = 0;  // declaration of integer variable
   &data // Give the address of the data
@@ -89,12 +89,12 @@
   // invalid use of void expression
   *pvData;   // -> *(int *)pvData; Error 해결
   ```
-  * 2.1.3 void pointer를 사용하는 이유? [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam3.c)
+  * 2.1.3 void pointer를 사용하는 이유? [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer_exam3.c)
   ```txt
   모든 object의 주소를 저장할 수 있고 적절한 casting으로 긴접 연산자로 사용
   ```
-  * 2.1.4 void pointer 산술 연산 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam4.c)
-  * 2.1.5 void pointer 함수에 사용 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam5.c)
+  * 2.1.4 void pointer 산술 연산 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer_exam4.c)
+  * 2.1.5 void pointer 함수에 사용 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer_exam5.c)
   ```c
   void qsort(void *arr, size_t elements, size_t size, int (*comp)(const void *, const void *));
   ```
@@ -114,7 +114,7 @@
     return 0;
   }
   ```
-  * 2.1.7 void pointer 장점 [exam7](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam7.c) [exam8](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam8.c)
+  * 2.1.7 void pointer 장점 [exam7](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer_exam7.c) [exam8](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer_exam8.c)
   * 2.2 wild pointer
    ```c
    int *ptr; //pointer value를 초기화 하지 않음
@@ -134,8 +134,8 @@
   pfData++;  // PfData 4 , float pointer 증가
   ```
   * 3.2 포인터 증가 프로그램
-  * 3.3 structure의 size 계산 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Structure_size.c)
-  * 3.4 pointer 요소간의 거리 계산 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Pointer_offset.c)
+  * 3.3 structure의 size 계산 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Structure_size.c)
+  * 3.4 pointer 요소간의 거리 계산 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Pointer_offset.c)
   * 3.5 pointer 요소간의 비교
   ```c
   //the same array or memory block -> legal
@@ -305,11 +305,11 @@
     return 0;
   }
   ```
-  * 5.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc.c))
-  * 5.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc2.c)
-  * 5.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc3.c)
+  * 5.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c))
+  * 5.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc2.c)
+  * 5.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
 * 6.pointer와 structure
-  * 6.1 Book 자료 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Pointer_structure.c)
+  * 6.1 Book 자료 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Pointer_structure.c)
 
 * 7.pointer를 사용하는 일반적인 실수
   * 7.1 pointer를 초기화하지 않음
