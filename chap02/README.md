@@ -24,3 +24,6 @@
 * 4.Structures and Unions in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/README.md)
   * 4.1 구조체
   * 4.2 공용체
+
+ * 5.Memory layout of c program
+![image](https://github.com/user-attachments/assets/eaa570e1-55d4-4161-8fc4-32fafe87ed52)
