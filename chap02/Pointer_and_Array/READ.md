@@ -156,7 +156,13 @@
   pc2 = acBuffer2;
   if( pc1 > pc2) {} // illegal statement
   ```
-  * 3.6 간접 증가/감소 operator 사용
+  * 3.6 간접 참조 연산자 증가/감소 operator 사용
+  ```c
+  v = *p++;     // p가 가리키는 위치의 값을 가져온 후 v에 대입, p가 가리키는 위치 증가 이동
+  v = (*p)++;   // p가 가리키는 위치의 값을 가져온 후 v에 대입, p가 가리키는 위치의 값을 증가
+  v = *++p;     // p가 가리키는 위치를 증가 후 증가된 위치의 값을 v에 대입
+  v = ++*p;     // P가 가리키는 위치의 값을 가져온 후, 그 값을 증가하여 v에 대입
+  ```
   ```c
   // indirection operator with pre-increment operator
   #include <stdio.h>
