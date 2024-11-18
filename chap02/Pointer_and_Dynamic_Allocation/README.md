@@ -189,3 +189,38 @@
   fgets(arr[0], 10, stdin);  // invalid
   scanf("%s", arr[0]);       // invalid
   ```
+* 6.메모리 할당 coding 실수
+  * 6.1 null pointer 점검
+  ```c
+  int *piBuff = NULL;
+  piBuff = malloc( n*sizeof(int));
+  if ( piBuff == NULL) {  // null pointer 점검 필수!
+    return FAIL;
+  }
+  ```
+  * 6.2 메모리 할당 실수 
+  ```txt
+  1. 할당된 메모리 값을 초기화하지 않고 사용
+  2. 할당 해제된 메모리의 주소를 사용, 포인터는 해제후에도 같은 주소를 가르키고 있음
+    int *piData = NULL;
+    piData = malloc( n*sizeof(int));
+    free(piBuff);
+    *piData = 10; // 해제후 이전 주소를 가지고 있음
+  3. 해제된 메모리를 또 해제를 함
+    int *piData = NULL;
+    piData = malloc( n*sizeof(int));
+    free(piBuff);
+    free(piBuff);
+  4. 메모리 할당되지 않은 포인터를 해제
+    int data = 0;
+    int *piData = &data;
+    free(piData);
+  5. 할당된 메모리 해제를 하지 않음
+  6. 메모리 할당 보다 정규 배열 사용을 권장, 배열은 컴파일러에서 자동해제함, 배열이 빠름
+  7. 동적 배열에는 sizeof() 사용하지 말것, 동적 배열주소 크기가 반환됨
+  8. 메모리 할당 갯수, 해제 갯수 counter
+  ```
+  * 6.3 메모리 할당 갯수, 해제 갯수 counter [here]()
+  
+  
+  
