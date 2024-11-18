@@ -234,7 +234,7 @@
     *piData = 10;
   ```
   * 6.3 메모리 할당 갯수, 해제 갯수 counter code [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Allocation_Deallocation_cnt.c)
-  * 
+
   
   
   
