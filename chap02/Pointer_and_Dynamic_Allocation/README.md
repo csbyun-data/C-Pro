@@ -102,12 +102,27 @@
     return 0;
   }
   ```
-  * 2.1.7 void pointer 장점 [exam7](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam7.c)
+  * 2.1.7 void pointer 장점 [exam7](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam7.c) [exam8](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam8.c)
+  * 2.2 wild pointer
+   ```c
+   int *ptr; //pointer value를 초기화 하지 않음
+   ```
+  * 2.3 dangling pointer
+  ```txt
+  참조된 개체가 삭제되거나 할당이 해제된 메모리를 가리키는 ponter
+  ```
 
 * 3.pointer 산술작업
   * 3.1 pointer 산술
+  ```c
+  char *pcData = NULL;
+  float *pfData = NULL;
+
+  pcData++;  // pcData 1 , character pointer 증가
+  pfData++;  // PfData 4 , float pointer 증가
+  ```
   * 3.2 포인터 증가 프로그램
-  * 3.3 structure의 size 계산
+  * 3.3 structure의 size 계산 [exam3]()
   * 3.4 pointer 요소간의 거리 계산
   * 3.5 pointer 요소간의 비교
   * 3.6 간접 증가/감소 operator 사용
