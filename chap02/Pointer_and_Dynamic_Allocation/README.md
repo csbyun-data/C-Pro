@@ -8,7 +8,7 @@
   free(pcBuffer);  // now pointer dangling pointer
   pcBuffer = NULL; // now pointer is not more dangling
   ```
-  * 1.2 메모리 할당의 단점
+  * 1.2 메모리 할당의 단점 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Dynamic_memory_error1.c)
   ```c
   // memory leck 발생
   #include <stdio.h>
