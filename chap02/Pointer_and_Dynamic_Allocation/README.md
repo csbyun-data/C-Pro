@@ -30,6 +30,8 @@
   
 * 2.Dynamically allocation a 1D, 2D array
   * 2.1 dynamic memory allocation 1D
+  <img src = "https://github.com/user-attachments/assets/a785f845-0f68-49dc-9ac5-4454ad577be1" width="70%" height="70%">
+ 
   ```c
   #include <stdio.h>
   #include <stdlib.h>
