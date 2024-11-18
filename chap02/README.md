@@ -1,6 +1,6 @@
 ## 02. 포인터, 배열, 문자열, 함수포인터
 ### Index
-* 1.포인터와 배열
+* 1.포인터와 배열 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/READ.md)
   * 1.1 포인터 선언
   * 1.2 포인터의 잘못된 사용 조건 및 예
   * 1.3 Address 연산자(&)
