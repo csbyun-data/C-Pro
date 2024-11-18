@@ -19,7 +19,7 @@
   4) long 포인터 형태로 정렬되지 않은 메모리를 참조함
   ```
 
-  *  1.3 Address 연산자(&) [사용예제](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Pointer_exam1.c)
+  *  1.3 Address 연산자(&) [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Pointer_exam1.c)
   ```txt
   int data = 0;  // declaration of integer variable
   &data // Give the address of the data
