@@ -259,7 +259,7 @@
   }
   ```
  
-* 5.pointer와 function
+* 5.fucntion pointer
   * 5.1 function pointer 선언
   ```c
   void (*fpData)(void);
@@ -308,7 +308,7 @@
   * 5.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc.c))
   * 5.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc2.c)
   * 5.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc3.c)
-* 6. pointer와 structure
+* 6.pointer와 structure
   * 6.1 Book 자료 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Pointer_structure.c)
 
 * 7.pointer를 사용하는 일반적인 실수
