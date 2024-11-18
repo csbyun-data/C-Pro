@@ -270,6 +270,31 @@
     return 0;
   }
   ```
+  * 4.3 pointer를 이용한 방법의 장점 (index표기법, 포인터 사용)
+  ```c
+  // index 표기법, 느림, index를 주소로 변한 후 값을 가져 옴
+  int sum( int a[], int n) {  
+    int i, sum=0;
+
+    for ( i=0; i<n; i++)
+      sum += a[i];
+
+    return sum;
+  }
+  ```
+  ```c
+  // pointer 사용, 빠름
+  int sum( int a[], int n) {  
+    int i, sum=0;
+    int *p;
+
+    p = a;
+    for ( i=0; i<n; i++)
+      sum += *p++;
+
+    return sum;
+  }
+  ```      
  
 * 5.fucntion pointer
   * 5.1 function pointer 선언
