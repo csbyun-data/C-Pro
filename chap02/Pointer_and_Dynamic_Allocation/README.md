@@ -89,10 +89,95 @@
   ```c
    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
   ```
+  ![image](https://github.com/user-attachments/assets/39b45f87-9633-4f74-9856-03e44c91ad48)
+
   * 4.2 string pointer 배열을 사용한 문자열
   ```c
    char *arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
   ```
+  ![image](https://github.com/user-attachments/assets/93daf016-231f-4c92-b473-8ffc7905a6fc)
   
+  * 4.3 Access 2d array of characters using the pointer to the array
+  ```c
+  // method1: pointer to the 1d array
+  #include<stdio.h>
 
+  int main()
+  {
+    int row =0;
+    //create 2d array of the characters
+    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+    //create pointer to the array
+    char (*ptrArr)[10] = NULL;
 
+    //initialize the pointer with array
+    ptrArr = arr;
+    for (row = 0; row < 5; ++row) // Loop for coloumn 
+       printf("%s \n", ptrArr[row]);
+
+    return 0;
+  }
+  ```
+  ```c
+  // method2: pointer to the 2d array
+  #include <stdio.h>
+  int main()
+  {
+    int row =0;
+    //create 2d array of the characters
+    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+    //create pointer to the 2d array
+    char (*ptrArr)[5][10] = NULL;
+
+    //initialize the pointer
+    ptrArr = &arr;
+    for (row = 0; row < 5; ++row) // Loop for coloumb
+        printf("%s \n", (*ptrArr)[row]);
+
+    return 0;
+  }
+  ```
+  * 4.4 Access array of string using the pointer to the array and pointer to pointer
+  ```c
+  // method1: pointer to the 1d array
+  #include<stdio.h>
+
+  int main()
+  {
+    int row =0;
+    //create 2d array of the characters
+    char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+
+    //create pointer to the array
+    char * (*ptrArr)[5] = NULL;
+
+    //initialize the pointer
+    ptrArr = &arr;
+    for (row = 0; row < 5; ++row) // Loop for coloumb
+       printf("%s \n", (*ptrArr)[row]);
+
+    return 0;
+  }
+  ```    
+  ```c
+  // method2: pointer to pointer
+  #include<stdio.h>
+
+  int main()
+  {
+    int row =0;
+    //create 2d array of the characters
+    char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+
+    //create pointer to the array
+    char **ptr = NULL;
+
+    //initialize the pointer
+    ptrArr = &arr;
+  
+    for (row = 0; row < 5; ++row) // Loop for coloumb
+      printf("%s \n", ptr[row]);
+
+    return 0;
+  }
+  ``` 
