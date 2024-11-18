@@ -26,4 +26,4 @@
   * 4.2 공용체
 
  * 5.Memory layout of c program
-![image](https://github.com/user-attachments/assets/eaa570e1-55d4-4161-8fc4-32fafe87ed52)
+![image](https://github.com/user-attachments/assets/3d6c3422-4a84-4d7a-8c4e-a46cc6bbb534)
