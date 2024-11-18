@@ -293,9 +293,8 @@
     return 0;
   }
   ```
-  * 5.3 function pointer를 인수로 사용 [exam5]()
-  
-  * 5.4 함수에서 function pointer 반환
+  * 5.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Programming/tree/main/chap02/Pointer_and_Dynamic_Allocation)
+  * 5.4 함수에서 function pointer 반환 [exam4]
   * 5.5 function pointer배열
 
 * 6.pointer를 사용하는 일반적인 실수
