@@ -59,11 +59,28 @@
   
   2) void pointer
     void *vPtr;
-  ```
   * 2.1 void pointer
   * 2.1.1 size of a void pointer in c?
+  ```c
+  void *pvData = NULL;  // sizeof(pvData) -> 8
+  int *piData = NULL;   // sizeof(pvData) -> 8
+  char *pcData = NULL;  // sizeof(pvData) -> 8
+  float *pfData = NULL; // sizeof(pvData) -> 8
+  ``` 
   * 2.1.2 void pointer의 역참조
-  * 2.1.3 void pointer를 사용하는 이유?
+  ```c
+  void *pvData;
+  int iData = 10;
+  pvData = &iData;
+
+  // [Warning] dereferencing 'void' pointer
+  // invalid use of void expression
+  *pvData;   // -> *(int *)pvData; Error 해결
+  ```
+  * 2.1.3 void pointer를 사용하는 이유? [exam3]()
+  ```txt
+  모든 object의 주소를 저장할 수 있고 적절한 casting으로 긴접 연산자로 사용
+  ```
   * 2.1.4 void pointer 산술 연산
   * 2.1.5 void pointer 함수에 사용
   * 2.1.6 void pointer 단점
