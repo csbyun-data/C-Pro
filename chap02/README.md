@@ -1,17 +1,12 @@
 ## 02. 포인터, 배열, 문자열, 함수포인터
 ### Index
 * 1.포인터와 배열 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/READ.md)
-  * 1.1 포인터 선언
-  * 1.2 포인터의 잘못된 사용 조건 및 예
-  * 1.3 Address 연산자(&)
-  * 1.4 pointer로 가리킨 주소 안의 값을 변경
+  * 1.1 포인터 유형
+  * 1.2 포인터 산술
+  * 1.3 포인터와 배열
+  * 1.4 function pointer
  
 * 2.(메모리 동적할당) Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
-  * 2.1 포인터 유형
-  * 2.2 포인터 산술
-  * 2.3 포인터와 배열
-  * 2.4 function pointer
-  * 2.5 포인터를 사용한는 일반적인 실수
     
 * 3.Arrays and String in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
   * 3.1 배열과 문자열
