@@ -295,11 +295,13 @@
   ```
   * 5.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc.c))
   * 5.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc2.c)
-  * 5.5 function pointer배열 [exam5]()
+  * 5.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc3.c)
+* 6. pointer와 structure
+  * 6.1 Book 자료 [here]()
 
-* 6.pointer를 사용하는 일반적인 실수
-  * 6.1 pointer를 초기화하지 않음
-  * 6.2 포인터의 비교
-  * 6.3 dynamic memory 할당을 이용한 포인터 선언
-  * 6.4 유효하지 않은 address를 가리키는 pointer
+* 7.pointer를 사용하는 일반적인 실수
+  * 7.1 pointer를 초기화하지 않음
+  * 7.2 포인터의 비교
+  * 7.3 dynamic memory 할당을 이용한 포인터 선언
+  * 7.4 유효하지 않은 address를 가리키는 pointer
  
