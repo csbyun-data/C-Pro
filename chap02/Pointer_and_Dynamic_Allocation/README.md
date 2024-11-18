@@ -123,7 +123,7 @@
   ```
   * 3.2 포인터 증가 프로그램
   * 3.3 structure의 size 계산 [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Structure_size.c)
-  * 3.4 pointer 요소간의 거리 계산
+  * 3.4 pointer 요소간의 거리 계산 [exam4]()
   * 3.5 pointer 요소간의 비교
   * 3.6 간접 증가/감소 operator 사용
 
