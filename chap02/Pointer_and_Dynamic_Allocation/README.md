@@ -87,7 +87,22 @@
   void qsort(void *arr, size_t elements, size_t size, int (*comp)(const void *, const void *));
   ```
   * 2.1.6 void pointer 단점
-  * 2.1.7 void pointer 장점
+  ```c
+  // 형식 지정을 적절하게 잘 사용해야 됨
+  // C standard arithmetic operation에는 비허용, GNU-C는 허용
+  #incluse <stdio.h>
+
+  int main() {
+    int aiData[3] = { 100, 200, 300 };
+    void *pvData = &aiData[1]; // address of 200
+
+    pvData += sizeof(int);
+    printf("%d", *(int *)pvData);  // print 300
+
+    return 0;
+  }
+  ```
+  * 2.1.7 void pointer 장점 [exam7]()
 
 * 3.pointer 산술작업
   * 3.1 pointer 산술
