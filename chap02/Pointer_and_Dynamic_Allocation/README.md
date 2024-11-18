@@ -102,7 +102,7 @@
     return 0;
   }
   ```
-  * 2.1.7 void pointer 장점 [exam7]()
+  * 2.1.7 void pointer 장점 [exam7](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam7.c)
 
 * 3.pointer 산술작업
   * 3.1 pointer 산술
