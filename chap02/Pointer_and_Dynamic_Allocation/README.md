@@ -73,5 +73,5 @@
     piBuff[i] = (int *)malloc( (i+1)*sizeof(int));
   ```
 
-* 3.Dynamically 2D array in C using the single pointer
+* 3.Dynamically 2D array in C using the single pointer [here]()
 
