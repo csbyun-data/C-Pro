@@ -81,8 +81,11 @@
   ```txt
   모든 object의 주소를 저장할 수 있고 적절한 casting으로 긴접 연산자로 사용
   ```
-  * 2.1.4 void pointer 산술 연산 [exam4]()
-  * 2.1.5 void pointer 함수에 사용
+  * 2.1.4 void pointer 산술 연산 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Void_pointer_exam4.c)
+  * 2.1.5 void pointer 함수에 사용 [exam5]()
+  ```c
+  void qsort(void *arr, size_t elements, size_t size, int (*comp)(const void *, const void *));
+  ```
   * 2.1.6 void pointer 단점
   * 2.1.7 void pointer 장점
 
