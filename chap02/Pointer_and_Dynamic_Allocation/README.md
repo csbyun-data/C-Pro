@@ -58,6 +58,7 @@
   }
   ```  
   * 2.2 dynamic memory allocation 2D [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c)
+   ![image](https://github.com/user-attachments/assets/7551961f-4820-4b6b-8896-37488076aff8)
   ```c
   int **piBuff = NULL;
   piBuff = malloc( nrows * sizeof(int *));
