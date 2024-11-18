@@ -30,6 +30,33 @@
   
 * 2.Dynamically allocation a 1D, 2D array
   * 2.1 dynamic memory allocation 1D
+  ```c
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  #define FAIL 1
+  #define TRUE 0
+
+  int main() {
+    int *piBuff = NULL;
+    int nBlock = 0, i = 0;
+
+    printf("\nEnter the number of block : ");
+    scanf("%d", &nBlock);
+
+    piBuff = (int *)malloc(nBlock*sizeof(int));
+    if ( piBuff == NULL) {
+      return FAIL;
+    }
+
+    for( i=0; i < nBlock; i++)
+      printf("piBuffer[%d] = %d\n", i, piBuff[i]);
+
+    free(piBuff);
+
+    return TRUE;
+  }
+  ```  
   * 2.2 dynamic memory allocation 2D
 
 * 3.Dynamically 2D array in C using the single pointer
