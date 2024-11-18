@@ -297,11 +297,66 @@
   * 5.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc2.c)
   * 5.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Function_pointer_Calc3.c)
 * 6. pointer와 structure
-  * 6.1 Book 자료 [here]()
+  * 6.1 Book 자료 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Pointer_structure.c)
 
 * 7.pointer를 사용하는 일반적인 실수
   * 7.1 pointer를 초기화하지 않음
+  ```c
+  // Error는 발생하지 않지만, logic error 발생
+  int *piData;
+  *piData = 10;    // assining value to the pointer
+
+  printf("%d\n", piData);
+  ```
   * 7.2 포인터의 비교
+  ```c
+  // pointer 비교는 동일 배열을 가르키는 경우만 가능
+  char acBuffer1[10] = "Hello";
+  char acBuffer2[10] = "Bye";
+  char *pc1, *pc2;
+
+  // assining the address of acBuffer1 to pc1 and acBuffer2 to the pc2.
+  pc1 = acBuffer1;
+  pc2 = acBuffer2;
+
+  // compare the both the pointer
+  if ( pc1 > pc2 ) { } // illegal statement
+  ```
   * 7.3 dynamic memory 할당을 이용한 포인터 선언
+  ```c
+  char *pcBuffer = malloc(10); // valid statement
+
+  char *pcBuffer;
+    pcBuffer = malloc(10); // invalid statement
+  ```
   * 7.4 유효하지 않은 address를 가리키는 pointer
- 
+  ```c
+  // 메모리 할당이 해제된 주소에 포인터 값 입력
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  int main( int argc, char *argv[]) {
+    int *piData = malloc(sizeof(int));
+    free(piData);
+
+    *piData = 10;
+    printf("%d\n", *piData);
+  }
+  ```
+  ```c
+  // local 변수의 활용 해제된 변수의 주소를 반환
+  #include <stdio.h>
+
+  int *calc(int a, int b) {
+    int iData;
+    iData = a+b;
+    return &iData;
+  }
+
+  int main( int argc, char *argv[])
+  {
+    int *piData = NULL;
+    piData = calc( 4, 5);
+    printf("%d\n", *piData);
+  }
+  ```
