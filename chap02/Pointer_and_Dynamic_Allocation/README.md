@@ -65,6 +65,7 @@
   for( i=0; i<nrows; i++) 
     piBuff[i] = (int *)malloc(ncolumns * sizeof(int));
   ```
+  ![image](https://github.com/user-attachments/assets/9f92a830-ef83-4d21-864a-6da634a955ea)
   ```c
   int **piBuff = NULL;
   piBuff = malloc( nrows * sizeof(int *));
