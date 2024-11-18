@@ -219,8 +219,22 @@
   6. 메모리 할당 보다 정규 배열 사용을 권장, 배열은 컴파일러에서 자동해제함, 배열이 빠름
   7. 동적 배열에는 sizeof() 사용하지 말것, 동적 배열주소 크기가 반환됨
   8. 메모리 할당 갯수, 해제 갯수 counter
+  9. 메모리 할당 범위를 벗어난 접근
+  10. 포인터를 재할당하여 참조를 손실함
+    int *piData1 = NULL;
+    int *piData2 = NULL;
+    piData1 = malloc(sizeof(int));
+    if ( piData1 == NULL) { return -1; }
+    ...
+    piData2 = piData1;
+    free(piData1);
+    *piData2 = 50;  // 해제된 메모리에 값을 전달
+  11. 메모리를 할당하지 않고 값을 입력. dangling pointer
+    int *piData;
+    *piData = 10;
   ```
-  * 6.3 메모리 할당 갯수, 해제 갯수 counter [here]()
+  * 6.3 메모리 할당 갯수, 해제 갯수 counter code [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Allocation_Deallocation_cnt.c)
+  * 
   
   
   
