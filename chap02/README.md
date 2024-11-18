@@ -25,5 +25,6 @@
   * 4.1 구조체
   * 4.2 공용체
 
- * 5.Memory layout of c program
+* 5.Memory layout of c program
+
 ![image](https://github.com/user-attachments/assets/3d6c3422-4a84-4d7a-8c4e-a46cc6bbb534)
