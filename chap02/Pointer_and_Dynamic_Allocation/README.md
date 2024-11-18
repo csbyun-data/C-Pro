@@ -180,4 +180,12 @@
 
     return 0;
   }
-  ``` 
+  ```
+* 5. some invalid operations on an array of pointers to string
+  ```c
+  strcpy( arr[0], "abcdef"); // invalid
+  strcat( arr[0], "abcdef"); // invalid
+  gets(arr[0]);              // invalid
+  fgets(arr[0], 10, stdin);  // invalid
+  scanf("%s", arr[0]);       // invalid
+  ```
