@@ -26,4 +26,6 @@
   * 3.3 pointer를 사용한 2차원 배열 접근
   * 3.4 정렬되지 않은 배열 보다 정렬된 배열 처리가 빠른 이유?
     
-* 4.Structures and Unions in C
+* 4.Structures and Unions in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/README.md)
+  * 4.1 구조체
+  * 4.2 공용체
