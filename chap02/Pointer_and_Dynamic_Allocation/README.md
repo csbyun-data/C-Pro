@@ -84,4 +84,15 @@
   int **piBuff = NULL;
   piBuff = malloc( nrows * ncolumns * sizeof(int *));
   ```
+* 4.Pointer to string array in C
+  * 4.1 2차원 배열 사용한 문자열
+  ```c
+   char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+  ```
+  * 4.2 string pointer 배열을 사용한 문자열
+  ```c
+   char *arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+  ```
+  
+
 
