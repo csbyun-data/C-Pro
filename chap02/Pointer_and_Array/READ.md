@@ -14,6 +14,12 @@
   * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value4.c)
   ```txt
   1) 변수의 수명이 완료된 개체의 주소를 참조
+     int *add(int x, int y) {
+       int result;
+       result = x+y;
+       return &result;
+     }
+       
   2) NULL 포인터인 방향지시 연산자(*)의 포인터 역참조
   3) 실행 프로그램에서 사용되지 않는 주소를 지정하는 방향지시 연산자(*)의 포인터를 역참조
   4) long 포인터 형태로 정렬되지 않은 메모리를 참조함
