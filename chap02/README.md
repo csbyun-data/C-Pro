@@ -65,12 +65,11 @@
   *  ![image](https://github.com/user-attachments/assets/2df0edbc-d358-4dca-bd7b-72b503d5279d)
  
 * 2.(메모리 동적할당) Pointer and dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
-  * 2.1 포인터선언
-  * 2.2 포인터 유형
-  * 2.3 포인터 산술
-  * 2.4 포인터와 배열
-  * 2.5 function pointer
-  * 2.6 포인터를 사용한는 일반적인 실수
+  * 2.1 포인터 유형
+  * 2.2 포인터 산술
+  * 2.3 포인터와 배열
+  * 2.4 function pointer
+  * 2.5 포인터를 사용한는 일반적인 실수
     
 * 3.Arrays and String in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
   * 3.1 배열과 문자열
