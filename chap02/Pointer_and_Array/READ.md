@@ -13,7 +13,7 @@
   ```
   * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value4.c)
   ```txt
-  1) 변수의 수명이 완료된 개체의 주소를 참조
+  1) 변수의 수명이 완료된 개체의 주소를 참조 (포인터 반환)
      int *add(int x, int y) {
        int result;
        result = x+y;
