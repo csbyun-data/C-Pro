@@ -1,7 +1,7 @@
 ## 01. 문법1
 ### Index
 * 1.문법
-  *   1.1 Command line argument in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/CommandLineArgument.c)
+  *   1.1 Command line argument in C [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/CommandLineArgument1.c)[exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/CommandLineArgument.c)
 
 * 2.가변인자, 가변함수, Variadic arguments (va_start, va_list, va_end, va_arg) 
   *   2.1 인자 더하기 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Add.c) 
