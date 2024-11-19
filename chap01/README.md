@@ -106,6 +106,9 @@
   2-3) 배열의 크기를 찾기위한 #define 매크로 사용
   2-4) pointer 연산사용: (&arr)[1]-arr을 이용 배열 크기 찾기
   2-5) 함수를 이용하여 숫자 배열 출력
+  ```
+  [2-6 예1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/String_function_2-6-1.c)  
+  ```txt
   2-6) 함수를 이용하여 문자열 출력, 명령줄 인수 활용
   ```
   *  7.3 2D 배열을 전달 [here]()
