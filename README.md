@@ -5,11 +5,11 @@ Grammar of programming, a collection of basic materials for application.
   *   1.1 변수, 상수, 자료형, 비트 연산
   *   1.2 조건문, 반복문
   *   1.3 배열, 문자열
-  *   1.4 함수, 함수 parameter전달
-  *   1.5 Type Casting
-  *   1.6 가변인자
-  *   1.7 scanf(), gets(), fgets() 사용법
-  *   1.8 time() 사용법
+  *   1.4 Type Casting
+  *   1.5 가변인자
+  *   1.6 scanf(), gets(), fgets() 사용법
+  *   1.7 time() 사용법
+  *   1.8 함수, 함수 parameter전달
   
 * 2.포인터, 배열, 문자열, 함수 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/README.md)
   *   2.1 포인터와 배열
