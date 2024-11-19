@@ -78,6 +78,14 @@
 * 7.함수
   *  7.1 함수 parameter 전달 (Call by value, Call by address, Call by reference)
   *  7.2 1D 배열을 전달 [here]()
+  ```c
+  2-1) 배열 매개변수에 sizeof()를 사용하지 말것( 배열의 갯수를 찾지 못함)
+  2-2) 배열 pointer 붕괴 예제 (방법: 배열의 크기를 매개변수로 전달)
+  2-3) 배열의 크기를 찾기위한 #define 매크로 사용
+  2-4) pointer 연산사용: (&arr)[1]-arr을 이용 배열 크기 찾기
+  2-5) 함수를 이용하여 숫자 배열 출력
+  2-6) 함수를 이용하여 문자열 출력, 명령줄 인수 활용
+  ```
   *  7.3 2D 배열을 전달 [here]()
   *  7.4 Struct를 전달 [here]()
   *  7.5 Reference Variable과 Pointer Variable의 차이 [here]()
