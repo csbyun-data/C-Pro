@@ -98,17 +98,7 @@
     return 0;
   }
   ```
-  [2-1 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-1.c),
-  [2-1 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-1.c)
-  
-  [2-2 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-2.c),
-  [2-2 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c)  
-
-  [2-3 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c)  
-  [2-4 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c)  
-  
-  [2-5 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-2.c),
-  [2-5 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c)  
+  [2-1 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-1.c), [2-1 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-1.c), [2-2 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-2 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c), [2-3](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c),[2-4](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c), [2-5 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-5 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c)  
 
   ```txt
   2-1) 배열 매개변수에 sizeof()를 사용하지 말것( 배열의 갯수를 찾지 못함)
