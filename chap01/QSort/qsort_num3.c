@@ -10,8 +10,8 @@ int main()
   int i, intArray[length];
 
   for ( i=0; i<length ; i++) {
-    printf("Enter a number: ");
-    scanf("%d", intArray[i]);
+    printf("Enter a number [%d]: ", i+1);
+    scanf("%d", &intArray[i]);
   }
   printf("\n");
 
