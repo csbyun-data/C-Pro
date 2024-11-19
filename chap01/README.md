@@ -76,7 +76,7 @@
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
 * 7.함수
-  *  7.1 함수 parameter 전달 ([Call by value](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_address1.c), [Call by reference](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_reference1.c) [Call by pointer](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_pointer1.c)
+  *  7.1 함수 parameter 전달 ([Call by value](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_address1.c), [Call by reference](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_reference1.c) [Call by pointer](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_pointer1.c) )
   *  7.2 1D 배열을 전달 [here]()
   ```c
   2-1) 배열 매개변수에 sizeof()를 사용하지 말것( 배열의 갯수를 찾지 못함)
