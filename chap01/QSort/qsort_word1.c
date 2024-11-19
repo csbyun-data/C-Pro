@@ -6,6 +6,7 @@ typedef struct {
   char word[10];
 } book;
 
+// strcmp(), 문자열 비교에 사용
 int compare ( const book *a, const book *b) {
   return strcmp( a->word, b->word);
 }
