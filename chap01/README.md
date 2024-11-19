@@ -119,4 +119,4 @@
   3-3) 행, 열 고정되지 않은 2D배열을 매개변수로 전달
   ```
   *  7.4 Struct를 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Struct_parameter.c)
-  *  7.5 Reference Variable과 Pointer Variable의 차이 [here]()
+  *  7.5 Reference Variable과 Pointer Variable의 차이 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Reference_Pointer_diff.cpp)
