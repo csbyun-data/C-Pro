@@ -12,8 +12,8 @@
   #include <stdarg.h>
   
   int a_func(int x, ...) {
-  	va_list a_list;
-  	va_start( a_list, x)
+    va_list a_list;
+    va_start( a_list, x)
   }
   ```
   
@@ -29,11 +29,11 @@
     char* ptr;
 
     ptr = (char*)malloc(sizeof(char)*50);
-	   fputs("input String : ", stdout);  // stdout 표준촐력 stream 
+    fputs("input String : ", stdout);  // stdout 표준촐력 stream 
 
     if(fgets(ptr, 50, stdin) != NULL)         // stdin 표준입력 stream 
-		     fputs(ptr, stdout);      // stderr 표준에러 stream
-	   free(ptr);
+      fputs(ptr, stdout);      // stderr 표준에러 stream
+	  free(ptr);
     return 0;
   }
   ```    
@@ -76,4 +76,8 @@
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
 * 7.함수
-  *  7.1 함수 parameter 전달
+  *  7.1 함수 parameter 전달 (Call by value, Call by address, Call by reference)
+  *  7.2 1D 배열을 전달 [here]()
+  *  7.3 2D 배열을 전달 [here]()
+  *  7.4 Struct를 전달 [here]()
+  *  7.5 Reference Variable과 Pointer Variable의 차이 [here]()
