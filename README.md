@@ -5,7 +5,7 @@ Grammar of programming, a collection of basic materials for application.
   *   1.1 변수, 상수, 자료형, 비트 연산
   *   1.2 조건문, 반복문
   *   1.3 배열, 문자열
-  *   1.4 함수
+  *   1.4 함수, 함수 parameter전달
   *   1.5 Type Casting
   *   1.6 가변인자
   *   1.7 scanf(), gets(), fgets() 사용법
