@@ -100,6 +100,7 @@
   ```
   [2-1 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-1.c)
   [2-1 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-1.c)
+  
   [2-2 잘못된 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Incorrect_function_2-2.c)
   [2-2 옳은 예](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Correct_function_2-2.c)  
   
