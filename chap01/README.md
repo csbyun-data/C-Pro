@@ -111,7 +111,7 @@
   ```txt
   2-6) 함수를 이용하여 문자열 출력, 명령줄 인수 활용
   ```
-  *  7.3 2D 배열을 전달 [here]()
+  *  7.3 2D 배열을 전달 [3-1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Two_dimension_parameter_3-1.c), [3-2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Two_dimension_parameter_3-2.c), [3-3](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Two_dimension_parameter_3-3.c)
   ```txt
   3-1) 고정된 행과 열을 2D 배열의 매개변수로 전달
   3-2) 행 제외, 열만 2D 배열의 매개변수로 전달
