@@ -58,7 +58,7 @@
 
 * 4.time(), qsort() 사용법 [qsort]()
   *   4.1 실행시간체크 time() [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Running_time.c)
-  *   4.2 qsort() 숫자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num1.c), [2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num2.c), [3](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num3.c) 문자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_word3.c), 
+  *   4.2 qsort() 숫자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num1.c), [2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num2.c), [3](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num3.c) 문자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_word1.c), 
 
 * 5.조건문, 반복문
   *   5.1 if~else문장 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control1.c)
