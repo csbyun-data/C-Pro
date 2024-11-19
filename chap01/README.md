@@ -61,12 +61,12 @@
   *   4.2 qsort() 숫자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num1.c), [2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num2.c), [3](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num3.c) 문자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_word1.c), 구조체 정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_struct1.c)
 
 * 5.조건문, 반복문
-  *   5.1 if~else문장 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control1.c)
-  *   5.2 for() break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control2.c)
-  *   5.3 for() continue [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control3.c)
-  *   5.4 for() continue, break [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control7.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control8.c)
-  *   5.5 while() continue, break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control4.c)
-  *   5.6 do~while() [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow_control6.c)
+  *   5.1 if~else문장 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control1.c)
+  *   5.2 for() break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control2.c)
+  *   5.3 for() continue [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control3.c)
+  *   5.4 for() continue, break [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control7.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control8.c)
+  *   5.5 while() continue, break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control4.c)
+  *   5.6 do~while() [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control6.c)
 
 * 6.배열
   *   6.1 배열 초기화
