@@ -2,7 +2,7 @@
  
 void fun(int arr[], unsigned int n) {
   int i;
-  for (i = 0; i < n; i++)
+  for ( i=0; i<n ; i++)
     printf("%d ", arr[i]);
 }
  
