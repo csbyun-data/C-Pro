@@ -1,4 +1,4 @@
-// 배열의 포인터 붕괴 예제, 숫자배열 전달
+// 배열의 pointer 붕괴 예제, 숫자배열 전달
 #include <stdio.h>
 void fun(int* arr)
 {
