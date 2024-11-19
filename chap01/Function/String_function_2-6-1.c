@@ -6,13 +6,14 @@ void fun(char* arr) {
   unsigned int n = strlen(arr);
   
   printf("n = %d\n", n);
-  for (i = 0; i < n; i++)
+  for ( i=0; i<n; i++)
     printf("%c  ", arr[i]);
 }
  
 int main()
 {
-    char arr[] = "abcdefgh";
-    fun(arr);
-    return 0;
+  // char arr[] = {'a','b','c','d','e','f','g','h','\0' }; 동일 표현  
+  char arr[] = "abcdefgh";
+  fun(arr);
+  return 0;
 }
