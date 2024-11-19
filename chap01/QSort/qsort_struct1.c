@@ -21,6 +21,7 @@ int compare(const void *a, const void * b){
     return 0;
 }
 
+// K번째 학생 , 메모리 free되지 않음 ?
 char* solution(char* names[], int names_len, int scores[], int scores_len, int K) {
   int len = names_len;
   Student* students = (Student*)malloc(sizeof(Student)*len);
