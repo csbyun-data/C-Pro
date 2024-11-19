@@ -79,6 +79,26 @@
   *  7.1 함수 parameter 전달 ([Call by value](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_address1.c), [Call by reference](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_reference1.c) [Call by pointer](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_pointer1.c) )
   *  7.2 1D 배열을 전달 [here]()
   ```c
+  return_type foo ( array_type array_name[크기], ...);
+  return_type foo ( array_type array_name[] , ...);
+  return_type foo ( array_type* array_name, ...);
+
+  //배열의 크기를 함수에 전달하지 않으면 크기를 알수 없다
+
+  //Passing Array to Function in C
+  //매개변수의 크기를 전달
+  void func(int a[], int size) {}
+  // void func(int* a, int size) {} 동일 표현
+
+  int main() {
+    int n = 5;
+    int arr[5] = {1, 2, 3, 4, 5};
+    func(arr, n);
+
+    return 0;
+  }
+  ```
+  ```txt
   2-1) 배열 매개변수에 sizeof()를 사용하지 말것( 배열의 갯수를 찾지 못함)
   2-2) 배열 pointer 붕괴 예제 (방법: 배열의 크기를 매개변수로 전달)
   2-3) 배열의 크기를 찾기위한 #define 매크로 사용
