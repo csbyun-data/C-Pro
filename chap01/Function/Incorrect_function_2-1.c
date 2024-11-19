@@ -1,5 +1,4 @@
-// C Program to demonstrate incorrect usage of sizeof() for
-// arrays
+// C Program to demonstrate incorrect usage of sizeof() for arrays
 #include <stdio.h>
  
 void fun(int arr[])
