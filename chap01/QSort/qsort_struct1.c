@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Student{
-	char name[20];
-	int score;
+typedef struct Student {
+  char name[20];
+  int score;
 } Student;
 
 int compare(const void *a, const void * b){
-	Student first = *(Student *)a;
+  Student first = *(Student *)a;
 	Student second = *(Student *)b;
 
   //내림차순 정렬 3, 2, 1, 0
