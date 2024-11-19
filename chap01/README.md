@@ -77,7 +77,7 @@
   ```
 * 7.함수
   *  7.1 함수 parameter 전달 ([Call by value](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_address1.c), [Call by reference](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_reference1.c) [Call by pointer](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_pointer1.c) )
-  *  7.2 1D 배열을 전달 [bubble_sort](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Bubble_sort.c)
+  *  7.2 1D 배열을 전달 
   ```c
   return_type foo ( array_type array_name[크기], ...);
   return_type foo ( array_type array_name[] , ...);
