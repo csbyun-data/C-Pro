@@ -229,6 +229,27 @@
 
   union MyData data, *pData;
   ```
+  ```c
+  //Declaration of C union
+  union s {
+    int i;
+    const int ci;
+  };
+
+  //object unqualified
+  union s s;
+  //object qualified with const
+  const union s cs;
+  //object qualified with volatile
+  volatile union s vs;
+
+  s.i   ->   int
+  s.ci  ->   const int
+  cs.i  ->   const int
+  cs.ci ->   const int
+  vs.i  ->   volatile int
+  vs.ci ->   volatile const int
+  ```
   ([익명Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union1.c), [익명Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union2.c) )
   ```c
   // 익명의 union 사용
