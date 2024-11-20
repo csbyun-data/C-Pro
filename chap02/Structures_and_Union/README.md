@@ -273,15 +273,60 @@
   pLaptop2->productId
   pLaptop2->name
   ```
-    * 2.2 공용체 초기화 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_Initialize1.c)
+    * 2.2 공용체 초기화 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_Initialize1.c) 
   ```c
   union Test obj2 = { .c="Aml" }; <- { .c={Aml"} };
   ```
   그림
-  
-    * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size2.c)
+  ```c
+  #include <stdio.h>
+
+  union Test {
+    unsigned char c;
+    int x;
+  };
+  int main()
+  {
+    union Test obj = {400};
+    printf("%d\n", obj.x);
+
+    return 0;
+  }
+  // output:
+  // 144  <-- 400 결과값 X , Logical error
+  ```
+  그림 추가
+  ```c
+  //output would be unspecified, 초기화되지 않은 b에 출력값이 특정되지 않음
+  #include <stdio.h>
+
+  union Test {
+    char a;
+    int b;
+  };
+
+  int main( )
+  {
+    union Test testData;
+    testData.a = 'A';
+    printf( "testData.a = %c\n", testData.a);    
+    printf( "testData.b = %d\n", testData.b);
     
-  
+    return 0;
+  }
+  // output:
+  // testData.a = A
+  // testData.b = 65 <- 초기화되지 않은 변수에 값이 있음
+  ```
+
+    * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size2.c)
+    * 2.4 공용체 활용 [Ex1](), [Ex2]()
+
+
+
+
+
+ 
 * 3.Bit field
  
 
