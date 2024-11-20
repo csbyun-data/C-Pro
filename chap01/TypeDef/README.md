@@ -1,6 +1,6 @@
-## 01. 문법1
+## 01. typedef 사용법 정리
 ### 참조 자료
-* [참조: aticleworld.com](https://aticleworld.com/typedef-in-c/)
+* [참조: aticleworld.com/typedef-in-c/](https://aticleworld.com/typedef-in-c/)
 
 ### Index
 * 1.typedef 사용법, 범위
