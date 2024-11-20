@@ -83,7 +83,7 @@
   // Error수정
   malloc의 변환 void * -> (struct Laptop *) 정적 형변환
   ```
-  그림
+  ![image](https://github.com/user-attachments/assets/088ea95a-2c9b-4d48-a5ac-94168cc9244d)
   
   * 1.2 구조체 크기 계산 ([exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size2.c), [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
   ```c
@@ -160,7 +160,7 @@
      --->
   psEmpInformation psEmpInfo = (struct EmpInformation *)malloc( sizeof(*psEmpInfo)+sizeof(char)*strlen(pcAddress)+1);
   ```
-  그림
+  ![image](https://github.com/user-attachments/assets/9362ff04-dfcd-40ab-bda1-2352438e512b)
   
   * 1.4 구조체 내부 배열사용 (flexible array in C)
   ```c
@@ -277,7 +277,8 @@
   ```c
   union Test obj2 = { .c="Aml" }; <- { .c={Aml"} };
   ```
-  그림
+  ![image](https://github.com/user-attachments/assets/40eb6f2b-1bcf-4e04-b74f-96b6a3a5f269)
+
   ```c
   #include <stdio.h>
 
@@ -295,7 +296,7 @@
   // output:
   // 144  <-- 400 결과값 X , Logical error
   ```
-  그림 추가
+  ![image](https://github.com/user-attachments/assets/3e2f131c-d4ec-415a-affe-fcf6b380cf2a)
   ```c
   //output would be unspecified, 초기화되지 않은 b에 출력값이 특정되지 않음
   #include <stdio.h>
