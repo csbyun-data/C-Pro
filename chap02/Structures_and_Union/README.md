@@ -116,6 +116,7 @@
   ```
   * 1.3 구조체 hack ([hack1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack2.c))
   ```c
+  // C99에 flexible array가 도입되기전 활용한 기법
   typedef struct {
     int RollNumber;
     int TotalMarks;
