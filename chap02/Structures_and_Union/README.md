@@ -233,7 +233,7 @@
   ```c
   // 익명의 union 사용
   ```
-  ([Ex1](), [Ex2]() )
+  ([Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_ex1.c) )
   ```c
   // Accessing union members
   union Laptop {
