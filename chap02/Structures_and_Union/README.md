@@ -100,7 +100,7 @@
   //output:
   //Size of structure  =  24
   ```
-  [익명 구조체1](), [익명 구조체2]()
+  [익명 구조체1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_struct1.c), [익명 구조체2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_struct2.c)
   ```c
   // 구조체의 중요 형태와 활용, 익명의 구조체 C11사용
   struct { // anonymous struct
