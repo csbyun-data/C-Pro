@@ -1,5 +1,6 @@
 ## 01. Structure and Unions in C
 ### Index
+[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 * 1.구조체 (struct)
   * 1.1 구조체 정의, 초기화
   ```c
