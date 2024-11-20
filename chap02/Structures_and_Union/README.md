@@ -354,7 +354,7 @@
     InfoData sReadInfoData = {0}; <-- InfoData sReadInfoData = {(eInfoTypes)0};
    ```
    
-* 3.Bit field
+* 3.Bit field [참조: aticleworld.com/bit-field-in-c/](https://aticleworld.com/bit-field-in-c/)
   * 3.1 선언, 초기화
   ```c
   //bit field 정의, 초기화 방법
