@@ -112,12 +112,7 @@
   };
   ```
   * 1.3 구조체 hack ([hack1](), [hack2]())
-  ```txt
-  typedef struct {
-    int iLen;
-    char *pcName;
-  } sNameInfo1;
-  
+  ```c
   typedef struct {
     int RollNumber;
     int TotalMarks;
@@ -128,6 +123,29 @@
   (시스템에 따라 4바이트 또는 8바이트) 메모리가 필요하다는 것.
  구조에 포인터를 만들면 포인터에 메모리를 명시적으로 할당해야 하지만 구조 해킹을
  사용한 경우 어레이에 메모리를 다시 할당할 필요가 없습니다. */
+ typedef struct {
+   int iLen;
+   char *pcName;
+ } sNameInfo1;
+
+ typedef struct {
+   int iLen;
+   char acName[0];
+ } sNameInfo2
+
+  //Allocating memory when using sNameInfo1
+  sNameInfo1 *psInfo1 = malloc(sizeof(sNameInfo1));
+  psInfo1->pcName = malloc(sizeof(char) * Number of character + 1);
+
+  //freeing the allocated memory
+  free(psInfo1->pcName);
+  free(psInfo1);
+
+  //Allocating memory when using sNameInfo2
+  sNameInfo1 *psInfo2 = malloc(sizeof(sNameInfo1)+(sizeof(char) * Number of character + 1));
+
+  //freeing the allocated memory
+  free(psInfo2);
   ```
   * 1.4 구조체 내부 배열
   * 1.5 구조체 function pointer
