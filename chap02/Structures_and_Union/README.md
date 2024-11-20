@@ -391,7 +391,7 @@
   pLedState->LED1 = 1;
   pLedState->LED2 = 0;
   ```
-  [BitField Ex1](),
+  ([BitField Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/BitField_ex1.c))
   ```c
   #include <stdio.h>
   #include<string.h>
@@ -465,6 +465,124 @@
   // output:
   // myData.a= 4, myData.b = 4, myData.c = 4  // a=5 ? , b=5 ?
   ```
+  
+  * 3.2 bit-field Error 예
+  ```c
+  //변수 a에 0(00), 1(01), 2(11) 만 입력가능한데 5(101)를 입력한 경우->1(01)로 됨
+  #include <stdio.h>
+
+  struct sData {
+    unsigned int a: 2;
+    unsigned int b: 2;
+    unsigned int c: 2;
+  };
+
+  int main() {
+    struct sData data;
+    data.a = 5;
+    printf("%d", data.a );
+
+    return 0;
+  }
+  // output:
+  // 1
+  ```
+  ![image](https://github.com/user-attachments/assets/0383c0e8-7db5-4fd1-84f4-3fd645f88f57)
+  
+  ```c
+  // bit field에 대한 포인터를 만들수 없고 bit field member에 연산자 주소(&) 사용 불가
+  // 컴파일 error 발생
+  #include <stdio.h>
+
+  struct sData {
+    unsigned int a: 2;
+    unsigned int b: 2;
+    unsigned int c: 2;
+  };
+
+  int main() {
+    struct sData data;
+    data.a = 2;
+    printf("Address of data.a =  %p", &data.a );
+
+    return 0;
+  }
+  ```
+  ![image](https://github.com/user-attachments/assets/f9101c5f-92a8-4734-9026-6473aaefc2ac)
+  ```c
+  //bit filed에 배열 정의가 불가함, 컴파일시 Error발생
+  #include <stdio.h>
+
+  struct sData {
+    unsigned int a: 2;
+    unsigned int b[5]: 2;
+  };
+
+  int main() {
+    struct sData data;
+    data.a = 2;
+
+    return 0;
+  }
+  ```
+  ![image](https://github.com/user-attachments/assets/8915f8b2-77fb-4059-9e56-434a2c34863e)
+  ```c
+  struct sData {
+    unsigned int a: 2;
+    short b: 17;            // Illegal!
+    unsigned int c: 2;
+  };
+  ```
+  ```c
+  #include <stdio.h>
+
+  // A structure without forced alignment
+  typedef struct {
+    unsigned int data1: 5;
+    unsigned int data2: 8;
+  } sData1;
+
+  // A structure with forced alignment
+  typedef struct {
+    unsigned int data1: 5;
+    unsigned int: 0;
+    unsigned int  data2: 8;
+  } sData2;
+
+  int main() {
+    printf("Size of sData1 = %d\n", sizeof(sData1));
+    printf("Size of sData2 = %d\n", sizeof(sData2));
+
+    return 0;
+  }
+
+  // output:
+  // Size of sData1 = 4
+  // Size of sData2 = 8
+  ```
+  
+  ```c
+  //변수 a에 0(00), 1(01), 2(11) 만 입력가능한데 5(101)를 입력한 경우->1(01)로 됨
+  #include <stdio.h>
+
+  struct sData {
+    unsigned int a: 2;
+    unsigned int b: 2;
+    unsigned int c: 2;
+  };
+
+  int main() {
+    struct sData data;
+    data.a = 5;
+    printf("%d", data.a );
+
+    return 0;
+  }
+  // output:
+  // 1
+  ```
+  ![image](https://github.com/user-attachments/assets/26c004bd-a792-44bd-bb7c-a2f310e88470)
+  
 
 
   
