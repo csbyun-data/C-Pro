@@ -78,7 +78,12 @@
   ```c
   // assign memory to the pointer to structure, error example
   Laptop2 = malloc( sizeof( struct Laptop));
+
+  // Error수정
+  malloc의 변환 void * -> (struct Laptop *) 정적 형변환
   ```
+  그림
+  
   * 1.2 구조체 크기 계산 ([exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size2.c), [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
   ```c
   #include <stdio.h>
@@ -147,7 +152,57 @@
   //freeing the allocated memory
   free(psInfo2);
   ```
-  * 1.4 구조체 내부 배열
+  ```txt
+  // Error 수정, malloc의 반환 void * -> (struct EmpInformation *) 정적 형변환
+  // Allocating memory as per the requirements
+  psEmpInformation psEmpInfo = malloc( sizeof(*psEmpInfo)+sizeof(char)*strlen(pcAddress)+1);
+     --->
+  psEmpInformation psEmpInfo = (struct EmpInformation *)malloc( sizeof(*psEmpInfo)+sizeof(char)*strlen(pcAddress)+1);
+  ```
+  그림
+  
+  * 1.4 구조체 내부 배열사용 (flexible array in C)
+  ```c
+  #include <stdio.h>
+
+  struct Score {
+    char name[20];
+    int kor;
+    int mat;
+    int eng;
+  } S;
+
+  int main()
+  {
+    struct Score s[2] = {0};
+
+    for(int i = 0; i < 2; i++) {
+      scanf("%s", s[i].name);
+      scanf("%d", &s[i].kor);
+      scanf("%d", &s[i].mat);
+      scanf("%d", &s[i].eng);
+    }
+    return 0;
+  }
+  ```
+  ```c
+  //Example of a flexible array member, 유연한 배열
+  struct s {
+    int n;
+    double d[];
+  };
+  int m = /* some value */;
+  struct s *p = malloc(sizeof (struct s) + sizeof (double [m]));
+     ---->
+  struct {
+    int n;
+    double d[m];
+  } *p;
+  // 유연한 배열을 사용하는 이유
+  // 정해진 주소의 배열 크기를 넘어서는 문자값을 입력할 경우 Error발생 해결
+  ```
+  [고정된 배열 사용1]()
+  
   * 1.5 구조체 function pointer
   * 1.6 구조체 pointer 맴버
   * 1.7 구조체 내부 pointer 접근
