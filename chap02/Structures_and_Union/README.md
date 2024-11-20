@@ -212,18 +212,47 @@
 * 2.공용체 (union)
   * 2.1 공용체 선언, 초기화, 접근, SIZE
   ```c
+  // declaration of union
   union MyData { // Declare a simple union type
     int age;
     float fees;
     char name[4];
-  } data;
+  } data, *pData;
+
+  // Using the union keyword and its tag
+  #include <stdio.h>
+  union MyData {
+    int age;
+    float fees;
+    char name[4];
+  };
+
+  union MyData data, *pData;
   ```
   ([익명Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union1.c), [익명Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union2.c) )
   ```c
   // 익명의 union 사용
   ```
-  
+  ([Ex1](), [Ex2]() )
+  ```c
+  // Accessing union members
+  union Laptop {
+    float price;
+    int productId;
+    char name[24];
+  } Laptop1, *Laptop2;
 
+  // Using the laptop1 (union object)
+  laptop1.price
+  laptop1.productId
+  laptop1.name
+
+  // Using the pLaptop2 (pointer to a union)
+  pLaptop2->price
+  pLaptop2->productId
+  pLaptop2->name
+  ```
+  
 * 3.Bit field
  
 
