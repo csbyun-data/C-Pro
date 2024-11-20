@@ -218,7 +218,7 @@
     char name[4];
   } data;
   ```
-  [익명Ex1]()
+  ([익명Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union1.c), [익명Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union2.c) )
   ```c
   // 익명의 union 사용
   ```
