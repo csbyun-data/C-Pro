@@ -1,6 +1,6 @@
 ## 02. 포인터, 배열, 문자열, 함수포인터
 ### 참조 자료
-[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
+* [참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 ### Index
 * 1.포인터와 배열 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/READ.md)
   * 1.1 포인터 유형
