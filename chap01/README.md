@@ -120,3 +120,5 @@
   ```
   *  7.4 Struct를 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Struct_parameter.c)
   *  7.5 Reference Variable과 Pointer Variable의 차이 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Reference_Pointer_diff.cpp)
+    
+* 8.typedef 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/TypeDef/README.md)
