@@ -1,5 +1,7 @@
 ## 01. 문법1
-## https://aticleworld.com/typedef-in-c/
+### 참조 자료
+* [참조: aticleworld.com](https://aticleworld.com/typedef-in-c/)
+
 ### Index
 * 1.typedef 사용법, 범위
   *   1.1 struct에 typedef 사용
