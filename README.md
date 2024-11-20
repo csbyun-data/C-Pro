@@ -10,6 +10,7 @@ Grammar of programming, a collection of basic materials for application.
   *   1.6 scanf(), gets(), fgets() 사용법
   *   1.7 time() 사용법
   *   1.8 함수, 함수 parameter전달
+  *   1.9 typedef 사용법
   
 * 2.포인터, 배열, 문자열, 함수, 구조체, 공용체 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/README.md)
   *   2.1 포인터와 배열
