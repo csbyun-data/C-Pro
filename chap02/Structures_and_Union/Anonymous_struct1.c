@@ -1,4 +1,4 @@
-//익명의 구조체 사용예 1
+//익명의 구조체 사용예 1, C11
 #include <stdio.h>
 #include<string.h>
 struct myData {
