@@ -210,7 +210,7 @@
   * 1.7 구조체 내부 pointer 접근
 
 * 2.공용체 (union)
-  * 2.1 공용체 선언, 초기화, 접근, SIZE
+  * 2.1 공용체 선언, 초기화, 접근
   ```c
   // declaration of union
   union MyData { // Declare a simple union type
@@ -273,6 +273,8 @@
   pLaptop2->productId
   pLaptop2->name
   ```
+    * 2.1 공용체 size 계산 [Ex1](), [Ex2]()
+    
   
 * 3.Bit field
  
