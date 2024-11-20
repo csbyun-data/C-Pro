@@ -319,15 +319,157 @@
   // testData.a = A
   // testData.b = 65 <- 초기화되지 않은 변수에 값이 있음
   ```
+  ```c
+  // 공용체 필드 초기화 작업
+  #include <stdio.h>
+
+  union Data {
+    int a;
+  };
+
+  int main() {
+    //designated initialization of union
+    union Data myData = { .a = 4 };
+    printf("myData.a= %d\n",myData.a);
+
+    return 0;
+  }
+  
+  // output:
+  // myData.a= 4
+  ``` 
 
     * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size2.c)
-    * 2.4 공용체 활용 [Ex1](), [Ex2]()
 
-
-
-
-
- 
+    * 2.4 공용체 활용 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_ex2.c)
+     ![image](https://github.com/user-attachments/assets/f13e396e-4275-4487-8cd4-ff25a9ce3f3b)
+   ```c
+    // 컴파일 Error 수정 작업
+    //structure variable to store data
+    InfoData sInfoData = {0};    <-- InfoData sInfoData = {(eInfoTypes)0};
+   
+    //structure variable to store read data
+    InfoData sReadInfoData = {0}; <-- InfoData sReadInfoData = {(eInfoTypes)0};
+   ```
+   
 * 3.Bit field
+  * 3.1 선언, 초기화
+  ```c
+  //bit field 정의, 초기화 방법
+  struct packed_data {
+    unsigned int data1:1;
+    unsigned int data2:1;
+    unsigned int data3:1;
+    unsigned int data4:1;
+    unsigned int data5:1;
+    unsigned int data6:3;
+    unsigned int data7:6;
+  } sPackData;
+
+  //Way to access the member of bit-field
+  sPackData.data6 = 3;
+  ```
+
+  ```c
+  //bit-field structure to mapping with the micro-controller port.
+  typedef union {
+    struct {
+      uint8_t LED1 : 1;
+      uint8_t LED2 : 1;
+      uint8_t LED3 : 1;
+      uint8_t LED4 : 1;
+      uint8_t LED5 : 1;
+      uint8_t LED6 : 1;
+      uint8_t LED7 : 1;
+      uint8_t LED8 : 1;
+    };
+    uint8_t AllLedState;
+  } LED_BAR_STATE;
+  
+  //변수 선언방법
+  volatile LED_BAR_STATE *pLedState = (volatile LED_BAR_STATE *)0xE002C000;
+  pLedState->LED1 = 1;
+  pLedState->LED2 = 0;
+  ```
+  [BitField Ex1](),
+  ```c
+  #include <stdio.h>
+  #include<string.h>
+
+  struct myData {
+    union {  // anonymous union
+      short int a;
+      short int b;
+    };
+    short int c;
+  };
+
+  int main() {
+    //Variable of structure
+    struct myData sMydata;
+    sMydata.a =10; //valid
+    sMydata.b = 20;  //valid
+    sMydata.c = 40;  //valid
+
+    return 0;
+  }
+  ```
+  ```c
+  #include <stdio.h>
+  struct myData {
+    union {  // anonymous union
+      struct {
+        short int a;
+      } data; //data is struct variable
+      struct { //anonymous struct
+        short int b;
+      };
+    };
+    short int c;
+  };
+
+  int main() {
+    struct myData sMydata; //structure variable
+    sMydata.a = 5; //invalid X
+    sMydata.data.a =10;
+    sMydata.b = 20;
+    sMydata.c = 40;
+
+    return 0;
+  }
+  ```
+  ![image](https://github.com/user-attachments/assets/0be5b1fe-cadb-4455-91e9-c9f4d6dae217)
+
+  ```c
+  // bit_field를 공용체에 사용
+  // create a bit-field using the union.
+  #include <stdio.h>
+
+  union Data {
+    unsigned int a: 4;
+    unsigned int b: 4;
+    int c;
+  };
+
+  int main() {
+    union Data myData;
+    myData.a = 5;
+    myData.b = 5;
+    myData.c = 4;
+    printf("myData.a= %d, myData.b = %d, myData.c = %d\n\n",
+           myData.a, myData.b, myData.c);
+
+    return 0;
+  }
+  
+  // output:
+  // myData.a= 4, myData.b = 4, myData.c = 4  // a=5 ? , b=5 ?
+  ```
+
+
+  
+
+  
+  
  
 
