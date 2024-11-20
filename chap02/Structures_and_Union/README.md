@@ -63,7 +63,7 @@
 
   sStudentInfo amlendra;
   ```
-  ([구조체 포인터](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_pointer1.c))
+   ([구조체 포인터](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_pointer1.c))
   ```
   // 변수와 포인터를 사용한 structure member 접근
   struct Laptop {
