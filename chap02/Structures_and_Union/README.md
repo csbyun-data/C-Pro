@@ -79,10 +79,6 @@
   // assign memory to the pointer to structure, error example
   Laptop2 = malloc( sizeof( struct Laptop));
   ```
-  
-  
-  
-  * 1.1 구조체 padding
   * 1.2 구조체 크기 계산
   * 1.3 구조체 hack
   * 1.4 구조체 내부 배열
