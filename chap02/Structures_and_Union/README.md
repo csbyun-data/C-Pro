@@ -75,6 +75,10 @@
   Laptop1.ProducId
   Laptop2->ProductId or (*Laptop2).ProductId
   ```
+  ```c
+  // assign memory to the pointer to structure, error example
+  Laptop2 = malloc( sizeof( struct Laptop));
+  ```
   
   
   
