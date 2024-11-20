@@ -2,7 +2,7 @@
 ### Index
 [참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 * 1.구조체 (struct)
-  * 1.1 구조체 정의, 초기화
+  * 1.1 구조체 정의, 초기화, 잘못된 사용 예제
   ```c
   // Defining structure in C
   struct MyData {
@@ -11,27 +11,23 @@
     char name[4];
   } data;
 
-  // illegal example
   struct MyData {
     int a;
-    struct MyData b;
+    struct MyData b;  // illegal example
   } data;
 
-  // valid example
   struct MyData {
     int a;
-    struct MyData *b;
+    struct MyData *b;  // valid example
   } data;
 
-  // valid in C99 and C11
   struct MyData {
     int a;
-    int b[];
+    int b[];  // valid in C99 and C11
   };
 
-  // illegal example
   struct MyData {
-    int b[];
+    int b[];  // illegal example
   };
   ```
   ```c
@@ -49,7 +45,7 @@
   InfoData.a = 2;
   InfoData.b = 3;
 
-  // 초기화 방법3 C99, C11
+  // 초기화 방법3 in C99, C11
   struct Mydata InfoData = {.a=2, .b=3}; or struct Mydata InfoData = { .b=3, .a=2};
   struct Mydata InfoData = { 2, 3};
   ```
