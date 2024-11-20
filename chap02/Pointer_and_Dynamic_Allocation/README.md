@@ -1,5 +1,6 @@
 ## 01. Pointer and Dynamic memory allocation in C
 ### Index
+[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 * 1.Dynamic memory allocation
   * 1.1 메모리할당, 해제
   ```c
