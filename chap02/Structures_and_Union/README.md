@@ -115,8 +115,8 @@
     short int b;
   };
   ```
+  
   * 1.3 구조체 hack ([참조: aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/)), ([hack1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack2.c))
-  * ([참조: aticleworld.com/flexible-array-member/](https://aticleworld.com/flexible-array-member/))
 
   ```c
   // C99에 flexible array가 도입되기전 활용한 기법
@@ -164,6 +164,7 @@
   ![image](https://github.com/user-attachments/assets/9362ff04-dfcd-40ab-bda1-2352438e512b)
   
   * 1.4 구조체 내부 배열사용 (flexible array in C)
+  * ([참조: aticleworld.com/flexible-array-member/](https://aticleworld.com/flexible-array-member/))
   ```c
   #include <stdio.h>
 
