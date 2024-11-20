@@ -13,7 +13,7 @@ int main()
 {
   //Variable of structure
   struct myData sMydata;
-  sMydata.a =10; //valid
+  sMydata.a = 10; //valid
   sMydata.b = 20;  //valid
   sMydata.c = 40;  //valid
   
