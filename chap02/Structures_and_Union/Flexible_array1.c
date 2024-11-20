@@ -56,6 +56,6 @@ int main()
   return 0;
 }
 
-output:
-Emp_id : 1      Salary : 210013  Address: Preet vihar street-abcd , block abcxyz, New Delhi, India
-Emp_id : 200013 Salary : 13      Address: New Delhi, India
+// output:
+// Emp_id : 1      Salary : 210013  Address: Preet vihar street-abcd , block abcxyz, New Delhi, India
+// Emp_id : 200013 Salary : 13      Address: New Delhi, India
