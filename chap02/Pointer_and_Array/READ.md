@@ -1,6 +1,5 @@
 ## 01. 포인터, 배열, 문자열, 함수포인터
 ### Index
-[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 * 1.포인터와 배열
   * 1.1 포인터 선언
   ```c
