@@ -1,5 +1,6 @@
 ## 01. 배열과 문자열
 ### Index
+[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 * 1.배열과 포인터
   * 1.1 배열 정의, 초기화 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Array_Initialize1.c)
   ```c
