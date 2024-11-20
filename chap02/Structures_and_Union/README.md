@@ -1,6 +1,7 @@
 ## 01. Structure and Unions in C
 ### Index
 [참조: aticleworld.com/structure-in-c/](https://aticleworld.com/structure-in-c/)
+
 * 1.구조체 (struct)
   * 1.1 구조체 정의, 초기화, 잘못된 사용 예제
   ```c
@@ -114,7 +115,8 @@
     short int b;
   };
   ```
-  * 1.3 구조체 hack ([hack1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack2.c))
+  * 1.3 구조체 hack  [참조: aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/), ([hack1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack2.c))    
+
   ```c
   // C99에 flexible array가 도입되기전 활용한 기법
   typedef struct {
