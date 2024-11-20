@@ -201,7 +201,7 @@
   // 유연한 배열을 사용하는 이유
   // 정해진 주소의 배열 크기를 넘어서는 문자값을 입력할 경우 Error발생 해결
   ```
-  ([고정된 배열 사용1, Error](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Unflexible_array1.c), [유연한 배열 사용1]() )
+  ([고정된 배열 사용1, Error](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Unflexible_array1.c), [유연한 배열 사용1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Flexible_array1.c) )
   
   
   * 1.5 구조체 function pointer
