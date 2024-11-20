@@ -210,6 +210,19 @@
   * 1.7 구조체 내부 pointer 접근
 
 * 2.공용체 (union)
+  * 2.1 공용체 선언, 초기화, 접근, SIZE
+  ```c
+  union MyData { // Declare a simple union type
+    int age;
+    float fees;
+    char name[4];
+  } data;
+  ```
+  [익명Ex1]()
+  ```c
+  // 익명의 union 사용
+  ```
+  
 
 * 3.Bit field
  
