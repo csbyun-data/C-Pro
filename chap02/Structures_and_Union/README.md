@@ -111,10 +111,24 @@
     short int b;
   };
   ```
+  * 1.3 구조체 hack ([hack1](), [hack2]())
+  ```txt
+  typedef struct {
+    int iLen;
+    char *pcName;
+  } sNameInfo1;
   
+  typedef struct {
+    int RollNumber;
+    int TotalMarks;
+    char Name[0];  // 0 byte
+  } sStudentInfo;
   
- 
-  * 1.3 구조체 hack
+  ﻿/*포인터를 사용하여 동적 길이 배열을 만들 수도 있지만 문제는 포인터에 추가
+  (시스템에 따라 4바이트 또는 8바이트) 메모리가 필요하다는 것.
+ 구조에 포인터를 만들면 포인터에 메모리를 명시적으로 할당해야 하지만 구조 해킹을
+ 사용한 경우 어레이에 메모리를 다시 할당할 필요가 없습니다. */
+  ```
   * 1.4 구조체 내부 배열
   * 1.5 구조체 function pointer
   * 1.6 구조체 pointer 맴버
