@@ -1,6 +1,83 @@
 ## 01. Structure and Unions in C
 ### Index
 * 1.구조체 (struct)
+  * 1.1 구조체 정의, 초기화
+  ```c
+  // Defining structure in C
+  struct MyData {
+    int Age;
+    float fees;
+    char name[4];
+  } data;
+
+  // illegal example
+  struct MyData {
+    int a;
+    struct MyData b;
+  } data;
+
+  // valid example
+  struct MyData {
+    int a;
+    struct MyData *b;
+  } data;
+
+  // valid in C99 and C11
+  struct MyData {
+    int a;
+    int b[];
+  };
+
+  // illegal example
+  struct MyData {
+    int b[];
+  };
+  ```
+  ```c
+  // illegal example
+  // struct type 선언은 템플릿이고, 선언하지 않으면 구조체 저장 메모리가 없음
+  struct Mydata {
+    int a=0;    // illegal
+    int b=0;    // illegal
+  }
+  // 초기화 방법1
+  struct Mydata InfoData = { 2, 3};
+
+  // 초기화 방법2
+  struct Mydata InfoData;
+  InfoData.a = 2;
+  InfoData.b = 3;
+
+  // 초기화 방법3 C99, C11
+  struct Mydata InfoData = {.a=2, .b=3}; or struct Mydata InfoData = { .b=3, .a=2};
+  struct Mydata InfoData = { 2, 3};
+  ```
+  ```c
+  // typedef를 사용한 구조체
+  - 변수 선언시 struct keyword를 사용하지 않음
+  typedef struct {
+    char acName[20];
+    int iAge;
+    int iTotalMarks;
+  } sStudentInfo;
+
+  sStudentInfo amlendra;
+  ```
+  [구조체1]()
+  ```
+  // 변수와 포인터를 사용한 structure member 접근
+  struct Laptop {
+    float Price;
+    int ProductId;
+    char name[24];
+  } Laptop1, *Laptop2;
+
+  Laptop1.ProducId
+  Laptop2->ProductId or (*Laptop2).ProductId
+  ```
+  
+  
+  
   * 1.1 구조체 padding
   * 1.2 구조체 크기 계산
   * 1.3 구조체 hack
