@@ -80,6 +80,40 @@
   Laptop2 = malloc( sizeof( struct Laptop));
   ```
   * 1.2 구조체 크기 계산
+  ```c
+  #include <stdio.h>
+
+  typedef struct {
+    char Name[12];
+    int Age;
+    float Weight;
+    int RollNumber;
+  } sStudentInfo;
+
+  int main()
+  {
+    // create variable of the structure;
+    sStudentInfo RamInfo;
+
+    printf("Size of structure = %d\n\n", sizeof(RamInfo));
+  }
+  //output:
+  //Size of structure  =  24
+  ```
+  [익명 구조체1](), [익명 구조체2]()
+  ```c
+  // 구조체의 중요 형태와 활용, 익명의 구조체 C11사용
+  struct { // anonymous struct
+    short int b;
+  };
+
+  union { // anonymous union
+    short int b;
+  };
+  ```
+  
+  
+ 
   * 1.3 구조체 hack
   * 1.4 구조체 내부 배열
   * 1.5 구조체 function pointer
