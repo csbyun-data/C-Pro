@@ -79,7 +79,7 @@
   // assign memory to the pointer to structure, error example
   Laptop2 = malloc( sizeof( struct Laptop));
   ```
-  * 1.2 구조체 크기 계산
+  * 1.2 구조체 크기 계산 ([exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size2.c), [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
   ```c
   #include <stdio.h>
 
