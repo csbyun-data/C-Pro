@@ -273,7 +273,8 @@
   pLaptop2->productId
   pLaptop2->name
   ```
-    * 2.1 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size2.c)
+    * 2.2 공용체 초기화 [Ex1]()
+    * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size2.c)
     
   
 * 3.Bit field
