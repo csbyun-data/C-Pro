@@ -49,6 +49,7 @@
   struct Mydata InfoData = {.a=2, .b=3}; or struct Mydata InfoData = { .b=3, .a=2};
   struct Mydata InfoData = { 2, 3};
   ```
+  ([typedef 사용법 참조](https://github.com/csbyun-data/C-Programming/blob/main/chap01/TypeDef/README.md))
   ```c
   // typedef를 사용한 구조체
   - 변수 선언시 struct keyword를 사용하지 않음
