@@ -35,6 +35,12 @@ void printEmpInfo(psEmpInformation psEmpInfo) {
 int main()
 {
   psEmpInformation Aticleworld = ComposeEmpInfo(210013,1, "Delhi, India");
+
+  // 문자열이 배열의 범위를 벗어나 Error
+  // psEmpInformation Aticleworld = ComposeEmpInfo(210013,1, "Preet vihar\
+  //                                               street-abcd ,block\
+  //                                               abcxyz, New Delhi, India");
+  
   if(Aticleworld != NULL) {
     printEmpInfo(Aticleworld);
     free(Aticleworld);
