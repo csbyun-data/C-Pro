@@ -112,12 +112,13 @@
   
   ```
   1.6 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Linked_List_ex2.c)
-  
+* 2.Delete a Linked List node
+  *  2.1 시작 node 삭제
+  *  2.2 중간 node 삭제
+  *  2.3 끝 node 삭제
 
-
-  
-
-  *
-  *   Delete a Linked List node
-  * 1.4 Generic Linked List in C
-  * 1.5 Write a function to reverse a linked list
+* 3.Generic Linked List in C
+  *  3.1 Generic Linked List
+  *  3.2 Function to add a node at the end of the Generic Linked List
+  *  3.3 Free the all allocated memory
+  *  3.4 Driver program to create a Generic Linked List
