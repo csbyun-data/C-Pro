@@ -83,3 +83,12 @@
   *  7.5 Reference Variable과 Pointer Variable의 차이
     
 * 8.typedef 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/TypeDef/README.md)
+  *  8.1 typedef 사용법, 범위
+  *  8.2 struct에 typedef 사용
+  *  8.3 typedef를 사용한 범위 점검
+  *  8.4 typedef pointer형 변수
+  *  8.5 typedef 배열
+  *  8.6 typedef function pointer 사용
+
+
+
