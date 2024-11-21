@@ -26,6 +26,7 @@
 * 4.Structures and Unions in C [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/README.md)
   * 4.1 구조체
   * 4.2 공용체
+  * 4.3 bit field
 
 * 5.Memory layout of c program
 
