@@ -13,8 +13,51 @@
   // Random하게 data를 access할 수 있음
   // Data를 찾기 위해 시간이 소요됨
   ```
+  * 1.2 Linked List Insertion( 첫번째 순서에 Node를 추가)
+  ```c
+  //Linked List에 Node를 insert하는 순서
+
+  //1. new node를 메모리에 생성
+  NodePointer pNewNode = malloc(sizeof(NodeType));
+
+  //2. data field에 값을 입력
+  if(pNewNode != NULL) {
+    pNewNode->iData = Value;
+  }
+
+  //3. New Node에 첫번째 Node의 주소를 포인터에 할당
+  pNewNode ->pNextNode = head;
+
+  //4. Head 포인터에 생성된 Node의 주소를 할당
+  Head = pNewNode;
+  ```
+  *  1.3 중간의 어느 지점에 node를 삽입하는 경우
+  ```c
+  // Insert a new node after a node
+  //1. Head Pointer에 저장된 값을 Temp Node에 저장
+  NodePointer pTmpNode = head;
+
+  //2. New Node를 삽입할 위치를 Node의 주소를 get
+  for( iPosition = 1 ; iPosition < specified_Position ; iPosition++)
+    pTmpNode = pTmpNode ->pNextNode;
+
+  //3.New Node 생성
+  NodePointer pNewNode = malloc(sizeof(NodeType));
+
+  //4. New Node에 Value 입력
+  if(pNewNode != NULL) {
+    pNewNode->iData = Value;
+  }
+
+  //5. New Node의 지시Pointer를 입력
+  pNewNode->pNextNode = pTmpNode->pNextNode;
+
+  //6. Temp Node의 지시Pointer에 New Node의 Pointer 할당
+  pTmpNode->pNextNode = pNewNode;
+  ```
+  그림
+  [InsertNodeAfterNode()함수 구현]()
   
-  * 1.2 Linked List Insertion
   * 1.3 Delete a Linked List node
   * 1.4 Generic Linked List in C
   * 1.5 Write a function to reverse a linked list
