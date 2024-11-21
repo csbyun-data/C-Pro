@@ -220,3 +220,119 @@ int main(void)
   }
   return 0;
 }
+
+// output:
+//         1: Create the Linked List
+//         2: Display The Linked List
+//         3: Insert Node at the begninig of Linked list
+//         4: Insert Node at the End of Linked List
+//         5: insert Node After a Node
+//         6: terminatethe process
+
+
+// enter your choice = 1
+// Enter the number of nodes = 2
+// Enter the Data = 3
+// Enter the Data = 4
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 2
+Linked List is:
+ 3
+ 4
+계속하려면 아무 키나 누르십시오 . . .
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 3
+Enter the desired data = 2
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 2
+Linked List is:
+ 2
+ 3
+ 4
+계속하려면 아무 키나 누르십시오 . . .
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 4
+Enter the desired data = 5
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 2
+Linked List is:
+ 2
+ 3
+ 4
+ 5
+계속하려면 아무 키나 누르십시오 . . .
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 5
+Enter the Position = 2
+Enter the desired data = 0
+
+
+         1: Create the Linked List
+         2: Display The Linked List
+         3: Insert Node at the begninig of Linked list
+         4: Insert Node at the End of Linked List
+         5: insert Node After a Node
+         6: terminatethe process
+
+
+enter your choice = 2
+Linked List is:
+ 2
+ 3
+ 0
+ 4
+ 5
