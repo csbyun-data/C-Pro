@@ -31,6 +31,7 @@
     int b[];  // illegal example
   };
   ```
+  ([구조체 초기화 Example](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Struct_Initialize1.c))
   ```c
   // illegal example
   // struct type 선언은 템플릿이고, 선언하지 않으면 구조체 저장 메모리가 없음
