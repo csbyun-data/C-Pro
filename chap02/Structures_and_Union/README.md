@@ -258,6 +258,7 @@
   ```
   * 1.6 구조체 pointer 맴버
   * 1.7 구조체 내부 pointer 접근
+  * 1.8 구조체 padding [참조](https://aticleworld.com/data-alignment-and-structure-padding-bytes/) [here]() [here]() [here]()
 
 * 2.공용체 (union)
   * 2.1 공용체 선언, 초기화, 접근
