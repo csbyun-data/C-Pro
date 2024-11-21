@@ -119,7 +119,7 @@
   *  2.2 중간 node 삭제 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Delete_middle_node.c)
   사진  
 
-  *  2.3 끝 node 삭제 [here]()
+  *  2.3 끝 node 삭제 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Delete_end_node.c)
 
 * 3.Generic Linked List in C
   *  3.1 Generic Linked List
