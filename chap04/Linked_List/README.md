@@ -2,7 +2,8 @@
 ### Index
 [참조: aticleworld.com](https://aticleworld.com/c-programming/#)
 * 1.Linked List
-  * 1.1 Linked List [Linked List]()
+  * 1.1 Linked List [Linked List](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Linked_List_ex1.c)
+  
     그림
   ```c
   int aiSallary[10] = { 400, 1200, 2000, 4500, 5000 };
