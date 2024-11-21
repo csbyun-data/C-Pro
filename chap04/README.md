@@ -4,7 +4,7 @@
 
 * 1 스택
 * 2 Queue, 우선순위 Queue, Heap
-* 3 Linked List
+* 3 Linked List [here]()
 * 4 재귀용법
 * 5 binary Tree
 * 6 그래프
