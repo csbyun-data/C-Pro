@@ -1,20 +1,19 @@
-### Linked List
-## 01. 배열과 문자열
+## 01. Linked List
 ### Index
 [참조: aticleworld.com](https://aticleworld.com/c-programming/#)
-* 1.배열과 포인터
-  * 1.1 배열 정의, 초기화
+* 1.Linked List
+  * 1.1 Linked List [Linked List]()
+    그림
+  ```c
+  int aiSallary[10] = { 400, 1200, 2000, 4500, 5000 };
+  // Linked List를 사용하는 이유
+  // 메모리 재할당이 없이 요소를 추가, 삭제하기 쉬움
 
-* 2.배열을 함수 parameter로 전달 
-  * 2.1 1차원 배열
-  * 2.1.1 포인터 인자로 전달
-   * 2.1.2 크기가 정의된 배열을 인자로 전달
-   * 2.1.3 크기가 정의되지 않은 배열을 인자로 전달
-  * 2.2 2차원 배열
-   * 2.2.1 포인터 인자, 매크로, 전역상수로 전달 
-   * 2.2.3 행을 생략, 열만 전달
-
-* 3.포인터를 사용한 2차원 배열 접근
-   * 3.1 포인터와 배열의 관계
-   * 3.2 단일 포인터를 사용한 2차원 배열 접근
-   * 3.3 배열 포인터를 사용한 2차원 배열 접근
+  // Random하게 data를 access할 수 있음
+  // Data를 찾기 위해 시간이 소요됨
+  ```
+  
+  * 1.2 Linked List Insertion
+  * 1.3 Delete a Linked List node
+  * 1.4 Generic Linked List in C
+  * 1.5 Write a function to reverse a linked list
