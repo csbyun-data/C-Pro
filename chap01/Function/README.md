@@ -2,6 +2,32 @@
 ### Index
 * 1.함수
   *  1.1 함수 parameter 전달 ([Call by value](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_address1.c), [Call by reference](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_reference1.c) [Call by pointer](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/Call_by_pointer1.c) )
+  ```c
+  // call by value ( pass by value)
+  void swap( int x, int y) { }
+  ...
+  swap(a, b);
+  ```
+  ```c
+  // call by address (pass by address)
+  void swap( int *x, int *y) { }
+  ...
+  swap( &a, &b);
+  ```
+  ```c
+  // call by reference ( pass by reference)
+  // C 사용안됨, C++에서 사용함
+  void swap( int &x, int &y) { }
+  ...
+  swap(a, b);
+  ```
+  ```c
+  // the pass by pointer in function
+  void modifyVal ( int *myptr) { }
+  ...
+  modifyVal(myptr);
+  ```
+
   *  1.2 1D 배열을 전달 
   ```c
   return_type foo ( array_type array_name[크기], ...);
