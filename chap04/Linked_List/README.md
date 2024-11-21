@@ -111,7 +111,7 @@
   }
   
   ```
-  1.6 예제를 구현한 Linked List [Ex1]()
+  1.6 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Linked_List_ex2.c)
   
 
 
