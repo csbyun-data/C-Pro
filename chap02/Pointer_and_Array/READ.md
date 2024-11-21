@@ -58,7 +58,7 @@
     printf("*piData=%d, num=%d", *piData, num);
     ```
 
-  * 1.5 void포인터 (void *) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer1.c))
+  * 1.5 void포인터 (void *) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Array/Void_pointer1.c)
   ```c
   void func (void *ptr1, void *ptr2) { }
 
