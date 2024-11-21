@@ -58,6 +58,66 @@
   그림
   ([InsertNodeAfterNode()함수 구현](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c))
   
-  * 1.3 Delete a Linked List node
+  *  1.4 마지막 node에 신규 node를 입력
+  ```c
+  //1. Temp Node에 Head Pointer 할당
+  NodePointer pTmpNode = head;
+
+  //2. Last Node의 Pointer를 찾음
+  While( pTmpNode ->pNextNode != NULL) {
+    pTmpNode = pTmpNode ->pNextNode;
+  }
+
+  //3. New Node 메모리 할당
+  NodePointer pNewNode = malloc(sizeof(NodeType));
+
+  //4. New Node의 값을 입력
+  if(pNewNode != NULL) {
+    pNewNode->iData = Value;
+  }
+
+  //5. New Node의 POinter를 마지막 Node Pointer에 입력
+  pTmpNode->pNextNode = pNewNode;
+
+  //6. New Node의 Pointer는 NULL로 입력
+  pNewNode->pNextNode = NULL;
+  ```
+  그림
+  * 1.5 할당된 메모리 전체를 풀어줌
+  ```c
+  /* Paas the reference of the head pointer of a list. This function use
+  to free the all allocated memory*/
+  void FreeAllocatedMemory(NodePointer  *pHead) {
+    NodePointer   pTmpNode = NULL;
+    NodePointer   pFirstNode = NULL;
+
+    //Assign  the Address of first node
+    pFirstNode  = *pHead;
+
+    /*check if pFirstNode is NULL, then now list is empty,
+    so assign NULL to head and return.*/
+    while (pFirstNode  != NULL) {
+      /*Save the pFirstNode in a pTmpNode node pointer*/
+      pTmpNode = pFirstNode  ;
+
+      /*Assign the address of next on your list*/
+      pFirstNode  = pFirstNode->pNextNode;
+
+      //Free the allocated memory
+      free(pTmpNode );
+    }
+    //Assign NULL to the head pointer
+    *pHead = NULL;
+  }
+  
+  ```
+  1.6 예제를 구현한 Linked List [Ex1]()
+  
+
+
+  
+
+  *
+  *   Delete a Linked List node
   * 1.4 Generic Linked List in C
   * 1.5 Write a function to reverse a linked list
