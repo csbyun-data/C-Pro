@@ -258,7 +258,7 @@
   ```
   * 1.6 구조체 pointer 맴버
   * 1.7 구조체 내부 pointer 접근
-  * 1.8 구조체 padding [참조](https://aticleworld.com/data-alignment-and-structure-padding-bytes/) [here]() [here]() [here]()
+  * 1.8 구조체 padding [참조](https://aticleworld.com/data-alignment-and-structure-padding-bytes/) [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding2.c), [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding3.c), [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding4.c)
 
 * 2.공용체 (union)
   * 2.1 공용체 선언, 초기화, 접근
