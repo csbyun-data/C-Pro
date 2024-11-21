@@ -56,7 +56,7 @@
   pTmpNode->pNextNode = pNewNode;
   ```
   그림
-  [InsertNodeAfterNode()함수 구현]()
+  [InsertNodeAfterNode()함수 구현](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c)
   
   * 1.3 Delete a Linked List node
   * 1.4 Generic Linked List in C
