@@ -207,7 +207,54 @@
   ([고정된 배열 사용1 Error](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Unflexible_array1.c), [유연한 배열 사용1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Flexible_array1.c) )
   
   
-  * 1.5 구조체 function pointer
+  * 1.5 struct와 function pointer결합하여 객체지향 구현
+  ```c
+  typedef struct {
+    int (*OpenSocket)(void);
+    int (*CloseSocket)(int);
+    int (*ReadFromServer)( int, char *, short);
+    int (*WriteToServer)( int, char *, short);
+  } sCommStruc;
+  ```
+  ```c
+  // the general-purpose communication library 연결
+  sCommStruct *CreateTcpComm (void) {
+    sCommStruct *psComTcpIp = malloc(sizeof( sCommStruct));
+    if ( pComTcpIp != NULL) {
+      psComTcpIp->OpenSocket = &TcpSocketCreate;
+      psComTcpIp->CloseSocket = &TcpSocketClose;
+      psComTcpIp->ReadSocket = &TcpSocketReceive;
+      psComTcpIp->WriteSocket = &TcpSocketSend;
+    }
+    return psComTcpIp;
+  }
+  ```
+  ```c
+  int CommunicationWithTcp(char *Rqst, short lenRqst, char *Rsp,short RvcSize) {
+    int  hSocket = -1;
+    short shortRetval = -1;
+  
+    //Call Create TcpComm function for tcp/Ip communication
+    sCommStructure *psTcpcomm = CreateTcpComm ();
+  
+    //Create Socket
+    hSocket = psTcpcomm->OpenSocket();
+    if(hSocket < 0) {
+        printf("Socket Creation Failed: SOCKET_HANDLER = %d", hSocket);
+        return SOCKET_FAILED;
+    } else {
+        printf("Socket Creation Success: SOCKET_HANDLER = %d", hSocket);
+    }
+  
+    //Send data
+    shortRetval = psTcpcomm->WriteToServer(hSocket, Rqst, lenRqst);
+    ...
+    shortRetval = psTcpcomm->ReadFromServer(hSocket, Rsp, RvcSize);
+    ...
+    psTcpcomm->CloseSocket(hSocket);
+    return 0;
+  }
+  ```
   * 1.6 구조체 pointer 맴버
   * 1.7 구조체 내부 pointer 접근
 
