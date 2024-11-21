@@ -18,7 +18,7 @@
   ```
   
 * 3.Input (scanf, gets, fgets)
-  *  3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c) (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
+  *  3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
   *  3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets.c)
   *  3.2 gets, puts 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_gets1.c)
   ```c
