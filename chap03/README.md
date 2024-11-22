@@ -4,8 +4,48 @@
 * 1.File I/O ([참조: aticleworld.com/file-handling-in-c](https://aticleworld.com/file-handling-in-c/))
   *   1.1 File Open, Create [code](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/Create_File.c)
     파일 mode 그림 추가
-  *   1.2 조건문, 반복문
-  *   1.3 배열, 문자열
+  *   1.2 fprintf(), fputc(), fputs(), fwrite() 사용
+  ```c
+  FILE *fp = fopen("abc.txt", "w");
+  ...
+  // tree times asking for student name
+  for( i=1; i<4; i++ ) {
+    puts("Enter the student name: ");
+    gets(name);
+    fprintf(fp, "%d. Name = [%s]\n", i, name);
+  }
+  fclose(fp);
+  ```
+  ```c
+  FILE *fp = fopen("abc.txt", "w");
+  ...
+  // write A to Z in file
+  for( int ch=65; ch<=90; ++ch)
+    fputc(ch, fp);
+  fclose(fp);
+  ```
+  ```c
+  FILE *fp = fopen("abc.txt", "w");
+  ...
+  fputs("Hello There, I hope this abc will help!", fp);
+  fclose(fp);
+  ```
+  ```c
+  #define MAX_SIZE 32
+
+  char buff[MAX_SIZE] = {0};
+
+  // Get input from the user
+  printf("Enter your name = ");
+  fgets( buff, MAX_SIZE, stdin);
+  
+  FILE *fp = fopen("abc.txt", "w");
+  ...
+  fwrite( buff, sizeif(buff[0]), MAX_SIZE, fp);
+  fclose(fp);
+  ```  
+  *   1.2 fscanf() ([fscanf code]())
+  
   *   1.4 Type Casting
   
 * 2.XML response in C without using library
