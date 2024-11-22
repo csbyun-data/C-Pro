@@ -44,7 +44,56 @@
   fwrite( buff, sizeif(buff[0]), MAX_SIZE, fp);
   fclose(fp);
   ```  
-  *   1.2 fscanf() ([fscanf code](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c))
+  *   1.2 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf code](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c))
+  ```c
+  FILE *fp = fopen("abc.txt", "r");
+  ...
+  while( (ch=fgetc(fp)) != EOF) {
+    printf("%c", ch);
+  }
+  
+  fclose(fp);
+  ```
+  ```c
+  #define MAX_SIZE 32
+  
+  char readFileData[MAX_SIZE] = {0};
+  FILE *fp = fopen("abc.txt", "r");
+  ...
+  // read file using fgets
+  if( fgets(readFileData, MAX_SIZE, fp) == NULL) {
+    printf("Error in reading the file\n");
+    fclose(fp);
+    exit(1);
+  }
+
+  puts(readFileData);
+  
+  fclose(fp);
+  ```
+  ```c
+  #define MAX_SIZE 32
+  
+  char readFileData[MAX_SIZE] = {0};
+  FILE *fp = fopen("abc.txt", "r");
+  ...
+  // Read 5 character from stream
+  fread( readFileData, sizeof(char), 6, fp);
+
+  puts(readFileData);
+  
+  fclose(fp);
+  ```
+  ```c
+  // fseek에는 SEEK_SET(파일 시작), SEEK_CUR(파일 포인터의 현재 위치), SEEK_END(파일 종료)
+  FILE *fp = fopen("abc.txt", "r");
+  ...
+  fseek( fp, 1, SEEK_SET);
+  ch = fgetc(fp);
+
+  fclose(fp);
+  ```
+  
   
   *   1.4 Type Casting
   
