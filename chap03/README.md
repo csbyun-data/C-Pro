@@ -2,7 +2,7 @@
 ## FILE I/O
 ### Index
 * 1.File I/O ([참조: aticleworld.com/file-handling-in-c](https://aticleworld.com/file-handling-in-c/))
-  *   1.1 변수, 상수, 자료형, 비트 연산
+  *   1.1 File Open, Create [code]()
   *   1.2 조건문, 반복문
   *   1.3 배열, 문자열
   *   1.4 Type Casting
