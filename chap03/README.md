@@ -44,7 +44,7 @@
   fwrite( buff, sizeif(buff[0]), MAX_SIZE, fp);
   fclose(fp);
   ```  
-  *   1.2 fscanf() ([fscanf code]())
+  *   1.2 fscanf() ([fscanf code](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c))
   
   *   1.4 Type Casting
   
