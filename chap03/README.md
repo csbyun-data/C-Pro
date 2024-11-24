@@ -78,6 +78,7 @@
   
   fclose(fp);
   ```
+  getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [here]()
   ```c
   #define MAX_SIZE 32
   
