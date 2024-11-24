@@ -68,7 +68,7 @@
   fwrite( buff, sizeif(buff[0]), MAX_SIZE, fp);
   fclose(fp);
   ```  
-  *   1.2 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func2.c), [fgetc](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fgetc_func1.c), [fget_line](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fget_line_func1.c))
+  *   1.3 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func2.c), [fgetc](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fgetc_func1.c), [fget_line](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fget_line_func1.c))
   ```c
   FILE *fp = fopen("abc.txt", "r");
   ...
@@ -120,6 +120,36 @@
 
   fclose(fp);
   ```
+  *   1.4 저수준 파일 입출력함수
+  
+  | mode | value | description |
+  |--|--|--|
+  | O_RDONLY | 0x0001 | 읽기 전용으로 화일을 연다. |
+  | O_WRONLY | 0x0002 | 쓰기 전용으로 화일을 연다. |
+  | O_RDWR | 0x0004 | 읽고 쓰기 위해 화일을 연다. |
+  | O_CREAT | 0x0100 | 화일이 없을 경우 새로운 화일을 만든다. |
+  | O_TRUNC | 0x0200 | 현재 있는 화일의 내용을 0으로(제거) 한다. |
+  | O_EXCL | 0x0400 | O_CREAT과 함께 사용하며, 화일이 없을 경우에만 연다. |
+  | O_APPEND | 0x0800 | 화일을 쓰기용으로 열고 화일 포인터를 화일의 끝에 위치시킨다. |
+  | O_TEXT | 0x4000 | 화일을 텍스트 형식으로 연다. |
+  | O_BINARY | 0x8000 | 화일을 이진 형식으로 연다. |
+  ```c
+  int fd;
+  char buf[80];
+  int n;
+  fd = open("data.dat", O_RDONLY);
+  n = (fd, buf, 80); // buf는 포인터 변수
+  ```
+  ```c
+  int fd;
+  cha *buf;
+  int size;
+  int n;
+  n = write(fd, buf, size);
+  ```
+  file size 구하기 [here]()
+  
+  
   
   
 * 2.XML response in C without using library
