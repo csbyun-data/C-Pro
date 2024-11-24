@@ -27,7 +27,7 @@
   | "a+" | file을 읽기, 쓰기 open, file이 존재하면 내용 맨 뒤쪽에 자동이동 읽기, 쓰기, file이 없으면 생성 |
   
   *   1.1 File Open, Create [code](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/Create_File.c)
-    파일 mode 그림 추가
+  *   ![image](https://github.com/user-attachments/assets/93bb7595-bba8-4e44-84df-d2a2553b606d)
   *   1.2 fprintf(), fputc(), fputs(), fwrite() 사용
   ```c
   FILE *fp = fopen("abc.txt", "w");
