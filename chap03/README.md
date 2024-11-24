@@ -2,6 +2,30 @@
 ## FILE I/O
 ### Index
 * 1.File I/O ([참조: aticleworld.com/file-handling-in-c](https://aticleworld.com/file-handling-in-c/))
+  *   1.1 고수준 파일 입력 함수
+  ```c
+  // FILE의 구조
+  typedef struct   {
+    short           level;         /* fill/empty level of buffer */
+    unsigned        flags;         /* File status flags    */
+    char            fd;            /* File descriptor      */
+    unsigned char   hold           /* Ungetc char if no buffer */
+    short           bsize;         /* Buffer size          */
+    unsigned char   *buffer;       /* Data transfer buffer */
+    unsigned char   *curp;         /* Current active pointer */
+    unsigned        istemp;        /* Temporary file indicator */
+    short           token;         /* Used for validity checking */
+  } FILE;                          /* This is the FILE object */
+  ```
+  | mode | description |
+  |--|--|
+  | "r" | file을 읽기 전용 open, file이 없으면 error |
+  | "w" | file을 쓰기 전용 open, file이 존재하면 내용 제거, file이 없으면 생성 |
+  | "a" | file을 쓰기 전용 open, file이 존재하면 내용 맨 뒤쪽에 자동이동 덧붙여 작성, file이 없으면 생성 |
+  | "r+" | file을 읽기, 쓰기 open, file이 없으면 error |
+  | "w+" | file을 읽기, 쓰기 open, file이 존재하면 내용이 지워지며, file이 없으면 생성 |
+  | "a+" | file을 읽기, 쓰기 open, file이 존재하면 내용 맨 뒤쪽에 자동이동 읽기, 쓰기, file이 없으면 생성 |
+  
   *   1.1 File Open, Create [code](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/Create_File.c)
     파일 mode 그림 추가
   *   1.2 fprintf(), fputc(), fputs(), fwrite() 사용
