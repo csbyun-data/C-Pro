@@ -68,7 +68,7 @@
   fwrite( buff, sizeif(buff[0]), MAX_SIZE, fp);
   fclose(fp);
   ```  
-  *   1.2 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c)), [fscanf 2](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func2.c)
+  *   1.2 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/fscanf_func2.c))
   ```c
   FILE *fp = fopen("abc.txt", "r");
   ...
