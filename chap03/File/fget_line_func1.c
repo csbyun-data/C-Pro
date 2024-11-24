@@ -1,5 +1,11 @@
-//data.dat파일을 정렬하여 다른 파일에 저장
-//한 line을 읽어 들여 처리
+// data.dat파일을 정렬하여 다른 파일에 저장
+// 한 line을 읽어 들여 처리
+
+// data.dat 파일의 한 Line을 읽어들여 순서를 정렬하고 출력
+// >line_sort name_data.dat sdata.dat
+//data.dat 파일의 한 line을 읽어들여 역순으로 정렬하고 출력
+// >line_sort -r name_data.dat sdata.dat
+
 #include <stdio.h>
 #include <string.h>
 
