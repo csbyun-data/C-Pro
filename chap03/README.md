@@ -79,6 +79,7 @@
   fclose(fp);
   ```
   getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/combine_file.c)
+  fgetc, fputc 함수를 활용한 file 복사 프로그램 [here]()
   ```c
   #define MAX_SIZE 32
   
