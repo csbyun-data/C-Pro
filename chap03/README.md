@@ -149,7 +149,7 @@
   ```
   file size 구하기 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/file_size1.c)
   
-  file copy [here](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/file_copy2.c)
+  file copy code [here](https://github.com/csbyun-data/C-Programming/blob/main/chap03/File/file_copy2.c)
   
 * 2.XML response in C without using library
 ([참조: aticleworld.com/parse-xml-response-in-c/](https://aticleworld.com/parse-xml-response-in-c/))
