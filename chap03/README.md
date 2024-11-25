@@ -1,5 +1,5 @@
 
-## FILE I/O
+## 3. FILE I/O
 ### Index
 * 1.File I/O ([참조: aticleworld.com/file-handling-in-c](https://aticleworld.com/file-handling-in-c/))
   *   1.1 고수준 파일 입력 함수
