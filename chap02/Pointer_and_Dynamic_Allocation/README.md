@@ -1,6 +1,6 @@
 ## 01. Pointer and Dynamic memory allocation in C
 ### Index
-[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
+[참조: aticleworld.com](https://aticleworld.com/C-Pro/#)
 * 1.Dynamic memory allocation
   * 1.1 메모리할당, 해제
   ```c
@@ -9,7 +9,7 @@
   free(pcBuffer);  // now pointer dangling pointer
   pcBuffer = NULL; // now pointer is not more dangling
   ```
-  * 1.2 메모리 할당의 단점 [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Dynamic_memory_error1.c)
+  * 1.2 메모리 할당의 단점 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Dynamic_memory_error1.c)
   ```c
   // memory leck 발생
   #include <stdio.h>
@@ -60,7 +60,7 @@
     return TRUE;
   }
   ```  
-  * 2.2 dynamic memory allocation 2D [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c)
+  * 2.2 dynamic memory allocation 2D [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c)
   <img src = "https://github.com/user-attachments/assets/7551961f-4820-4b6b-8896-37488076aff8" width="70%" height="70%">
   
   ```c
@@ -80,7 +80,7 @@
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
   ```
 
-* 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array3.c)
+* 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array3.c)
   ```c
   int **piBuff = NULL;
   piBuff = malloc( nrows * ncolumns * sizeof(int *));
@@ -234,7 +234,7 @@
     int *piData;
     *piData = 10;
   ```
-  * 6.3 메모리 할당 갯수, 해제 갯수 counter code [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Pointer_and_Dynamic_Allocation/Allocation_Deallocation_cnt.c)
+  * 6.3 메모리 할당 갯수, 해제 갯수 counter code [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Allocation_Deallocation_cnt.c)
 
   
   
