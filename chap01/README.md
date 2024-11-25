@@ -68,13 +68,15 @@
   *  5.5 while() continue, break [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control4.c)
   *  5.6 do~while() [here1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control6.c)
 
-* 6.배열
+* 6.배열, 문자열
   *  6.1 배열 초기화
   ```c
   int a[][2] = { {1, 2}, {3, 4}};
   int a[][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
+  * 6.2 String in C [here]()
+
 * 7.함수 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
   *  7.1 함수 parameter 전달 
   *  7.2 1D 배열을 전달 
