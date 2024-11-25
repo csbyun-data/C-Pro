@@ -1,13 +1,13 @@
 ## 01. 문법1
 ### Index
 * 1.문법
-  *  1.1 Command line argument in C [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/CommandLineArgument1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/CommandLineArgument.c)
+  *  1.1 Command line argument in C [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/CommandLineArgument1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/CommandLineArgument.c)
 
 * 2.가변인자, 가변함수, Variadic arguments (va_start, va_list, va_end, va_arg) 
-  *  2.1 인자 더하기 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Add.c) 
-  *  2.2 인자 최대값 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Max.c) 
-  *  2.3 인자 평균값 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Average.c)
-  *  2.4 인자 logfile 만들기 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/VariableArgument_Log.c) 
+  *  2.1 인자 더하기 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Add.c) 
+  *  2.2 인자 최대값 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Max.c) 
+  *  2.3 인자 평균값 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Average.c)
+  *  2.4 인자 logfile 만들기 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Log.c) 
   ```c
   #include <stdarg.h>
   
@@ -18,9 +18,9 @@
   ```
   
 * 3.Input (scanf, gets, fgets)
-  *  3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
-  *  3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets.c)
-  *  3.2 gets, puts 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_gets1.c)
+  *  3.1 scanf 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
+  *  3.1.1 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input_fgets.c)
+  *  3.2 gets, puts 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input_gets1.c)
   ```c
   #include <stdio.h>
   #include <stdlib.h>
@@ -37,8 +37,8 @@
     return 0;
   }
   ```    
-  *   3.3 fgets, fputs 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets1.c)
-  *   3.3.1 fgets 문자열 끝 newline 제거, null terminator로 변경 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Input_fgets3.c)
+  *   3.3 fgets, fputs 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input_fgets1.c)
+  *   3.3.1 fgets 문자열 끝 newline 제거, null terminator로 변경 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input_fgets3.c)
   ```c
   void strip_newline( char *str, int size ) {
     int i;
@@ -57,16 +57,16 @@
   ```
 
 * 4.time(), qsort() 사용법 [qsort]()
-  *  4.1 실행시간체크 time() [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Running_time.c)
-  *  4.2 qsort() 숫자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num1.c), [2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num2.c), [3](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_num3.c) 문자정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_word1.c), 구조체 정렬 [1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/QSort/qsort_struct1.c)
+  *  4.1 실행시간체크 time() [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Running_time.c)
+  *  4.2 qsort() 숫자정렬 [1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num1.c), [2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num2.c), [3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num3.c) 문자정렬 [1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_word1.c), 구조체 정렬 [1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_struct1.c)
 
 * 5.조건문, 반복문
-  *  5.1 if~else문장 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control1.c)
-  *  5.2 for() break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control2.c)
-  *  5.3 for() continue [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control3.c)
-  *  5.4 for() continue, break [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control7.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control8.c)
-  *  5.5 while() continue, break [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control4.c)
-  *  5.6 do~while() [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Flow/Flow_control6.c)
+  *  5.1 if~else문장 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control1.c)
+  *  5.2 for() break [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control2.c)
+  *  5.3 for() continue [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control3.c)
+  *  5.4 for() continue, break [here1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control7.c) [here2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control8.c)
+  *  5.5 while() continue, break [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control4.c)
+  *  5.6 do~while() [here1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control6.c)
 
 * 6.배열
   *  6.1 배열 초기화
@@ -75,14 +75,14 @@
   int a[][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
-* 7.함수 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/Function/README.md)
+* 7.함수 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
   *  7.1 함수 parameter 전달 
   *  7.2 1D 배열을 전달 
   *  7.3 2D 배열을 전달
   *  7.4 Struct를 전달
   *  7.5 Reference Variable과 Pointer Variable의 차이
     
-* 8.typedef 사용법 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap01/TypeDef/README.md)
+* 8.typedef 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md)
   *  8.1 typedef 사용법, 범위
   *  8.2 struct에 typedef 사용
   *  8.3 typedef를 사용한 범위 점검
