@@ -1,4 +1,4 @@
-## 4.Data Structure, Algorithm
+## 4. Data Structure, Algorithm
 
 ### Index
 
