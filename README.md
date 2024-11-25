@@ -32,7 +32,7 @@ Grammar of programming, a collection of basic materials for application.
   *   4.7 정렬
   *   4.8 탐색
   *   4.9 해싱
-* 5. Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
+* 5.Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
   *   5.1 Library management system project (File handling function) ([here]())
   *   5.2 
   *   5.3 
