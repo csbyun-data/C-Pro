@@ -22,6 +22,7 @@ TreeNode *newItem(int data) {
     return pn;
 }
 
+// append function
 void destroyTree(TreeNode *pn) {
   if (pn) {
 	  destroyTree(pn->left);
@@ -31,6 +32,7 @@ void destroyTree(TreeNode *pn) {
 	}
 }
 
+// append function
 TreeNode *searchTree(TreeNode *pn, int data) {
 	if(pn) {
 		if( data == pn->data) {
