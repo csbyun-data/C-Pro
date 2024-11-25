@@ -1,5 +1,6 @@
 // https://www.cprogramming.com/snippets/source-code/binary-tree-creation-traversal-and-search
 // binary tree creation, traversal and search source code
+// https://www.cprogramming.com/tutorial/c/lesson18.html destroyTree(), searchTree() 참조
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,12 +22,26 @@ TreeNode *newItem(int data) {
     return pn;
 }
 
-void destroyTree( TreeNode pn) {
-	//...
+void destroyTree(TreeNode *pn) {
+  if (pn) {
+	  destroyTree(pn->left);
+		destroyTree(pn->right);
+		// printf("destroy data = %d\n", pn->data);
+		free(pn);
+	}
 }
 
 TreeNode *searchTree(TreeNode *pn, int data) {
-  //...
+	if(pn) {
+		if( data == pn->data) {
+			printf("search data = %d\n", pn->data);
+			return pn;
+		} else if ( data < pn->data)
+			return searchTree( pn->left, data);
+		else
+			return searchTree( pn->right, data);
+	} else
+		return 0;
 }
 
 TreeNode* insertTree(TreeNode *pn, int data) {
@@ -127,4 +142,11 @@ int main() {
 	printf("\n");
 	printf("minVal = %d\n", minVal(node));
 	printf("maxVal = %d\n", maxVal(node));
+	
+	// search 3
+	printf("\n");
+	searchTree(node, 3);
+
+	destroyTree(node);
 }
+
