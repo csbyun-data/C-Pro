@@ -31,7 +31,7 @@
     int b[];  // illegal example
   };
   ```
-  ([struct 초기화 Example1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Struct_Initialize1.c))
+  ([struct 초기화 Example1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Struct_Initialize1.c))
   ```c
   // illegal example
   // struct type 선언은 템플릿이고, 선언하지 않으면 구조체 저장 메모리가 없음
@@ -51,7 +51,7 @@
   struct Mydata InfoData = {.a=2, .b=3}; or struct Mydata InfoData = { .b=3, .a=2};
   struct Mydata InfoData = { 2, 3};
   ```
-  ([typedef 사용법 참조](https://github.com/csbyun-data/C-Programming/blob/main/chap01/TypeDef/README.md))
+  ([typedef 사용법 참조](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md))
   ```c
   // typedef를 사용한 구조체
   - 변수 선언시 struct keyword를 사용하지 않음
@@ -63,7 +63,7 @@
 
   sStudentInfo amlendra;
   ```
-   ([구조체 포인터](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_pointer1.c))
+   ([구조체 포인터](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_pointer1.c))
   ```
   // 변수와 포인터를 사용한 structure member 접근
   struct Laptop {
@@ -84,7 +84,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/088ea95a-2c9b-4d48-a5ac-94168cc9244d)
   
-  * 1.2 구조체 크기 계산 ([exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size2.c), [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
+  * 1.2 구조체 크기 계산 ([exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size2.c), [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
   ```c
   #include <stdio.h>
 
@@ -105,7 +105,7 @@
   //output:
   //Size of structure  =  24
   ```
-  ([익명 구조체1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_struct1.c), [익명 구조체2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_struct2.c) )
+  ([익명 구조체1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Anonymous_struct1.c), [익명 구조체2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Anonymous_struct2.c) )
   ```c
   // 구조체의 중요 형태와 활용, 익명의 구조체 C11사용
   struct { // anonymous struct
@@ -117,7 +117,7 @@
   };
   ```
   
-  * 1.3 구조체 hack ([참조: aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/)), ([hack1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_hack2.c))
+  * 1.3 구조체 hack ([참조: aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/)), ([hack1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack2.c))
 
   ```c
   // C99에 flexible array가 도입되기전 활용한 기법
@@ -205,7 +205,7 @@
   // 유연한 배열을 사용하는 이유
   // 정해진 주소의 배열 크기를 넘어서는 문자값을 입력할 경우 Error발생 해결
   ```
-  ([고정된 배열 사용1 Error](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Unflexible_array1.c), [유연한 배열 사용1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Flexible_array1.c) )
+  ([고정된 배열 사용1 Error](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Unflexible_array1.c), [유연한 배열 사용1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Flexible_array1.c) )
   
   
   * 1.5 struct와 function pointer결합하여 객체지향 구현
@@ -258,7 +258,7 @@
   ```
   * 1.6 구조체 pointer 맴버
   * 1.7 구조체 내부 pointer 접근
-  * 1.8 구조체 padding [참조](https://aticleworld.com/data-alignment-and-structure-padding-bytes/) [exam1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding1.c), [exam2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding2.c), [exam3](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding3.c), [exam4](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Structure_padding4.c)
+  * 1.8 구조체 padding [참조](https://aticleworld.com/data-alignment-and-structure-padding-bytes/) [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding2.c), [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding3.c), [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding4.c)
   ```txt
   구조체 메모리 할당시 크기의 차이를 점검
   ```
@@ -304,11 +304,11 @@
   vs.i  ->   volatile int
   vs.ci ->   volatile const int
   ```
-  ([익명Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union1.c), [익명Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Anonymous_union2.c) )
+  ([익명Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Anonymous_union1.c), [익명Ex2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Anonymous_union2.c) )
   ```c
   // 익명의 union 사용
   ```
-  ([Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_ex1.c) )
+  ([Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_ex1.c) )
   ```c
   // Accessing union members
   union Laptop {
@@ -327,7 +327,7 @@
   pLaptop2->productId
   pLaptop2->name
   ```
-    * 2.2 공용체 초기화 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_Initialize1.c) 
+    * 2.2 공용체 초기화 [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_Initialize1.c) 
   ```c
   union Test obj2 = { .c="Aml" }; <- { .c={Aml"} };
   ```
@@ -393,9 +393,9 @@
   // myData.a= 4
   ``` 
 
-    * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_size2.c)
+    * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_size2.c)
 
-    * 2.4 공용체 활용 [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/Union_ex2.c)
+    * 2.4 공용체 활용 [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_ex2.c)
      ![image](https://github.com/user-attachments/assets/f13e396e-4275-4487-8cd4-ff25a9ce3f3b)
    ```c
     // 컴파일 Error 수정 작업
@@ -445,7 +445,7 @@
   pLedState->LED1 = 1;
   pLedState->LED2 = 0;
   ```
-  ([BitField Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Structures_and_Union/BitField_ex1.c))
+  ([BitField Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/BitField_ex1.c))
   ```c
   #include <stdio.h>
   #include<string.h>
