@@ -1,8 +1,8 @@
 ## 01. Linked List
 ### Index
-[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
+[참조: aticleworld.com](https://aticleworld.com/C-Pro/#)
 * 1.Linked List
-  * 1.1 Linked List [Linked List](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Linked_List_ex1.c)
+  * 1.1 Linked List [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex1.c)
   * <img src = "https://github.com/user-attachments/assets/9e41c1a5-84d0-47df-b274-862cd3f0c511" width="50%" height="50%">
   ```c
   int aiSallary[10] = { 400, 1200, 2000, 4500, 5000 };
@@ -56,7 +56,7 @@
   //6. Temp Node의 지시Pointer에 New Node의 Pointer 할당
   pTmpNode->pNextNode = pNewNode;
   ```
-  ([InsertNodeAfterNode()함수 구현](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c))
+  ([InsertNodeAfterNode()함수 구현](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c))
   
   *  1.4 마지막 node에 신규 node를 입력
   *  <img src = "https://github.com/user-attachments/assets/e34e3f33-9fc4-4c12-850b-1dc13fa3634e" width="60%" height="60%">
@@ -112,15 +112,15 @@
   }
   
   ```
-  1.6 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Linked_List_ex2.c)
+  1.6 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex2.c)
 * 2.Delete a Linked List node
-  *  2.1 시작 node 삭제 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Delete_start_node.c)
+  *  2.1 시작 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_start_node.c)
   *  <img src = "https://github.com/user-attachments/assets/88e935fe-dab6-4c7b-b5b9-5d7c6e8b00a5" width="60%" height="60%">
 
-  *  2.2 중간 node 삭제 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Delete_middle_node.c)
+  *  2.2 중간 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_middle_node.c)
   *  <img src = "https://github.com/user-attachments/assets/e28b4846-5541-490e-aca0-d4e8a0509f25" width="60%" height="60%">
 
-  *  2.3 끝 node 삭제 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Delete_end_node.c)
+  *  2.3 끝 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_end_node.c)
   *  <img src = "https://github.com/user-attachments/assets/92c9ac1b-a9c2-4ab9-92e8-06ae243f31ca" width="60%" height="60%">
 
 * 3.Generic Linked List in C
@@ -140,6 +140,6 @@
   // Define the new type Node type and Node pointer
   typedef  struct Node  NodeType, * NodePointer;
   ```
-  *  3.2 Function to add a node at the end of the Generic Linked List [code](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c)
-  *  3.3 Free the all allocated memory [code](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/FreeAllocatedMemory_func1.c)
-  *  3.4 Driver program to create a Generic Linked List [code](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/Generic_linked_list1.c)
+  *  3.2 Function to add a node at the end of the Generic Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c)
+  *  3.3 Free the all allocated memory [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/FreeAllocatedMemory_func1.c)
+  *  3.4 Driver program to create a Generic Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Generic_linked_list1.c)
