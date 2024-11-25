@@ -1,8 +1,8 @@
 ## 01. 배열과 문자열
 ### Index
-[참조: aticleworld.com](https://aticleworld.com/c-programming/#)
+[참조: aticleworld.com](https://aticleworld.com/C-Pro/#)
 * 1.배열과 포인터
-  * 1.1 배열 정의, 초기화 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Array_Initialize1.c)
+  * 1.1 배열 정의, 초기화 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Array_Initialize1.c)
   ```c
   int aiData[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
   
@@ -36,8 +36,8 @@
 
 * 2.배열을 함수 parameter로 전달 
   * 2.1 1차원 배열
-  * 2.1.1 포인터 인자로 전달  [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer1.c) 
-[here2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer2.c)
+  * 2.1.1 포인터 인자로 전달  [here1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer1.c) 
+[here2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer2.c)
   ```c
   void func(int *paData, int size) {}
   ...
@@ -45,14 +45,14 @@
   int aiData[size];
   func(aiData, size);
   ```
-   * 2.1.2 크기가 정의된 배열을 인자로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension1.c)
+   * 2.1.2 크기가 정의된 배열을 인자로 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension1.c)
   ```c
   void func(int paData[10]) {}
   ...
   int aiData[10];
   func(aiData);
   ```
-   * 2.1.3 크기가 정의되지 않은 배열을 인자로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension2.c)
+   * 2.1.3 크기가 정의되지 않은 배열을 인자로 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension2.c)
   ```c
   void func(int paData[], int size) {}
   ...
@@ -61,7 +61,7 @@
   func(aiData, size);
   ```
   * 2.2 2차원 배열
-   * 2.2.1 포인터 인자, 매크로, 전역상수로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer1.c) [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer2.c)
+   * 2.2.1 포인터 인자, 매크로, 전역상수로 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer1.c) [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer2.c)
    ```c
   void func(int (*piData)[10], int size) {}
   ...
@@ -69,7 +69,7 @@
   int aiData[row][size];
   func(aiData, size);
   ```    
-   * 2.2.3 행을 생략, 열만 전달, C99 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension1.c)
+   * 2.2.3 행을 생략, 열만 전달, C99 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension1.c)
    ```c
   void func(int aiData[][10], int size) {}
   ...
@@ -77,7 +77,7 @@
   int aiData[row][size];
   func(aiData, size);
   ```         
-   * 2.2.4 2차 포인터 배열로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension2.c)
+   * 2.2.4 2차 포인터 배열로 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension2.c)
    ```c
   void func(int (*piData)[10][10], int irow, int size) {}
   ...
@@ -86,7 +86,7 @@
   int aiData[irow][size];
   func(&aiData, irow, size);
   ```
-   * 2.2.5 단일 포인터로 전달 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension3.c)
+   * 2.2.5 단일 포인터로 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension3.c)
    ```c
   void func(int *piData, int irow, int size) {}
   ...
@@ -107,7 +107,7 @@
   acData[i][j] = *(acData[i]+j);  //2D array form of 1D array and pointer
   acData[i][j] = *(*(acData+i)+j); //2D array in form of pointer
   ``` 
-   * 3.2 단일 포인터를 사용한 2차원 배열 접근 [here1](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers.c) [here2](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers2.c)
+   * 3.2 단일 포인터를 사용한 2차원 배열 접근 [here1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers.c) [here2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers2.c)
   <img src = "https://github.com/user-attachments/assets/0490cef6-23bc-49a6-94e2-6c16aa93a23b" width="70%" height="70%">  
 
   ```c
@@ -127,7 +127,7 @@
   ...
   data = *(piData + (iRow * COL) + iCol)
   ```
-   * 3.3 배열 포인터를 사용한 2차원 배열 접근 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers3.c)
+   * 3.3 배열 포인터를 사용한 2차원 배열 접근 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/two_dimension_using_pointers3.c)
   ```c
   #define ROW   3
   #define COL   3
@@ -143,10 +143,10 @@
   printf("aiData[%d][%d] = %d\n",iRow,iCol, (*p2DArray)[iRow][iCol]);
   ```   
 * 4.정렬되지 않은 배열보다 정렬된 배열 처리가 빠른 이유?
-   * 4.1 정렬되지 않은 int형 합 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array.c)
-   * 4.2 정렬된 int형 합 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Sorted_Array.c)
+   * 4.1 정렬되지 않은 int형 합 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array.c)
+   * 4.2 정렬된 int형 합 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Sorted_Array.c)
    * 분기 예측은 알고리즘이 따르고 있는 패턴 또는 기본적으로 이전 단계에서 어떻게 실행되었는지에 대해 작동하고. 추측이 맞다면 CPU는 실행을 계속하고 잘못되면 CPU는 파이프라인을 플러시하고 분기로 롤백하고 처음부터 다시 시작해야 합니다.
-   * 4.3 정렬되지 않은 int형을 빠르게 계산하기 위한 변형 [here](https://github.com/csbyun-data/C-Programming/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array2.c)
+   * 4.3 정렬되지 않은 int형을 빠르게 계산하기 위한 변형 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Unsorted_Array2.c)
   ```c
   if(data[c] >= 128)
     sum += data[c];
