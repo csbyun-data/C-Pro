@@ -1,8 +1,8 @@
 
-## 01. Library Management System Project
+## 01. Employee Record System Project in C
 ### Index
 [참조: aticleworld.com/employee-record-system-project-in-c](https://aticleworld.com/employee-record-system-project-in-c/)
-* 1.Library Management System Project
+* 1.Employee Record System Project
   *  1.1 isFileExists 
   *  1.2 init 
   *  1.3 printMessageCenter
