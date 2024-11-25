@@ -21,6 +21,14 @@ TreeNode *newItem(int data) {
     return pn;
 }
 
+void destroyTree( TreeNode pn) {
+	//...
+}
+
+TreeNode *searchTree(TreeNode *pn, int data) {
+  //...
+}
+
 TreeNode* insertTree(TreeNode *pn, int data) {
     if (!pn)
         return newItem(data);
