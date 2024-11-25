@@ -4,7 +4,7 @@
 
 * 1 스택
 * 2 Queue, 우선순위 Queue, Heap
-* 3 Linked List [here](https://github.com/csbyun-data/C-Programming/blob/main/chap04/Linked_List/README.md)
+* 3 Linked List [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
 * 4 재귀용법
 * 5 binary Tree
 * 6 그래프
