@@ -75,7 +75,7 @@
   int a[][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
-  * 6.2 String in C [here]()
+  * 6.2 String in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
 
 * 7.함수 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
   *  7.1 함수 parameter 전달 
