@@ -144,6 +144,24 @@
   for( i=0; i<n; i++)
     names[i] = (char *)calloc(30, sizeof(char));
   ```
+   * 2.6 C++ int형 3D 배열 동적 할당 [code]()
+   ```cpp
+   int **a = new int**[x];
+   ...
+   for( int i=0; i<m; i++) {
+     a[i] = new int*[y];
+     for( int j=0; j<y; j++)
+       a[i][j] = new int[z];
+   }
+   ...
+   // Deallocate memory
+   for (int i = 0; i < x; i++) {
+     for (int j = 0; j < y; j++)
+       delete[] a[i][j];
+     delete[] a[i];
+   }
+   delete[] a;
+   ```
 
 * 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array3.c)
   ```c
