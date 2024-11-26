@@ -124,7 +124,7 @@
   for( icol=0; icol<nrows; icol++) 
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
   ```
-  * 2.4 C++ int형 2D 배열 동적 할당 [code]()
+  * 2.4 C++ int형 2D 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Int_2D.cpp)
   ```cpp
   int **a = new int*[m];
   ...
