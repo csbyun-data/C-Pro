@@ -87,7 +87,7 @@
   for( icol=0; icol<nrows; icol++) 
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
   ```
-  * 2.3 dynamic memory allocation 2D char형 [exam1 C++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_Char_2D.c)
+  * 2.3 dynamic memory allocation 2D char형 ([exam1 C++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_Char_2D.cpp))
   ```c
   char **name;
   names = (char **)calloc( n, sizeof( char *));
