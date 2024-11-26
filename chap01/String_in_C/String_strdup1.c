@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
 
 	// bp = (char*)malloc(strlen(ap)+1); strcpy(bp, ap); 
 	bp = strdup(ap);
-
 	puts(ap);
 	puts(bp);
 
