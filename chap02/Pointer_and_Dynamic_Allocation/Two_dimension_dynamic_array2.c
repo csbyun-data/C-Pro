@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     scanf("%d",&nRow); //Get input for number of Row
 
     //Allocate memory for row
-    piBuffer = (int **)malloc(nRow * sizeof(int*));
+    piBuffer = (int **)malloc(nRow * sizeof(int *));
     //Check memory validity
     if(piBuffer == NULL)
       return FAIL;
