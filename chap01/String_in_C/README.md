@@ -46,6 +46,14 @@
   *  1.8 문자열 포인터 배열 사용 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray2.c)
   *  1.9 strdup()함수, 문자열 복사 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strdup1.c)
   *  1.10 Reverse String [Using two-pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String.c), [참조](https://www.geeksforgeeks.org/reverse-string-in-c/), [Using Recursion](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String2.c), [Using Temporary Array](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String3.c), [Using Library Function](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String4.c)
+  *  1.10 유용한 문자열 함수 [here]()
+  ```c
+  void remchars(char *str, char c);
+  void remcnks(char *str, char *cnk);
+  void replchars(char *str, char c1, char c2);
+  void replcnks(char *str, char *cnk1, char *cnk2);
+  void reverse(char *str);
+  ```
 
 * 2.문자열 프로그램
   * 2.1 문자열 단순 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Small_Program1.c)
