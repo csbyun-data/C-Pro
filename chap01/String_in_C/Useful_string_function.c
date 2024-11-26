@@ -1,3 +1,6 @@
+// Useful string functions source code
+// https://www.cprogramming.com/snippets/source-code/useful-c-string-functions
+
 #include <string.h>
 #include <stdlib.h>
  
