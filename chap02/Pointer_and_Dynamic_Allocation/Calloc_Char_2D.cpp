@@ -1,3 +1,5 @@
+// free() 메모리 해제 미적용됨
+
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
