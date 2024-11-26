@@ -12,4 +12,4 @@
   *  1.6 문자열 복사(strcpy), 비교(strcmp), 검색(strstr) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_func1.c)
   *  1.7 문자열 배열 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array3.c)
   *  1.8 문자열 포인터 배열 사용 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray2.c)
-  *  1.9 strdup()함수, 문자열 복사
+  *  1.9 strdup()함수, 문자열 복사 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strdup1.c)
