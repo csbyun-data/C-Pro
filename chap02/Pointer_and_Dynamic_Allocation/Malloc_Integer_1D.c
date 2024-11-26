@@ -31,7 +31,7 @@ int main() {
     printf("The array element "
            "are:\n");
 
-    for( i=0; i<n; i+=) 
+    for( i=0; i<n; i++) 
       printf("%d ", p[i]);
 
     // De-allocate the allocated memory using free()
