@@ -4,7 +4,7 @@
 * [참조: geeksforgeeks.org/string-c-cpp-programs](https://www.geeksforgeeks.org/string-c-cpp-programs/)
 ### Index
 * 1.문자열 (String)
-  *  1.1 문자열 변수 출력
+  *  1.1 문자열 변수 출력 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_output1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_output2.c)
   *  1.2 문자열 입력 받기
   *  1.3 gets() 함수를 이용한 문자열 입력 받기
   *  1.4 scanset을 이용한 문자열 입력
