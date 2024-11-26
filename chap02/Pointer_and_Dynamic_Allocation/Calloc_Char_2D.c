@@ -31,7 +31,7 @@ int main()
   // Allocating memory for 2nd dimension
   for( i=0; i<n; i++) {
     names[i] = (char *)calloc( 30, sizeof(char));
-    std::cin > names[i];
+    std::cin >> names[i];
   }
 
   sort( names, n);
