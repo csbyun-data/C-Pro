@@ -4,7 +4,7 @@
 int main()
 {
 	char arr[] = "ABCDEFG";
-	char* ptr = arr;
+	char *ptr = arr;
 	int i;
 	
 	printf("arr = %s \n", arr);
