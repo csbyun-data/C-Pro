@@ -15,6 +15,8 @@ void sort( char **names, int n) {
         strcpy( temp, names[j]);
         strcpy( names[j], names[j+1]);
         strcpy( names[j+1], temp);
+
+        free(temp);
       }
 }
 
