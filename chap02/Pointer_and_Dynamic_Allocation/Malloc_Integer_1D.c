@@ -16,16 +16,27 @@ int main() {
   // check if memory allocation is successful or not.
   if( p==NULL) {
     printf("Memory allocation "
+           "failed.\n");
+    exit(0);
+  } else {
+    // Memory allocation successful
+    printf("Memory allocation "
            "successful using "
            "malloc.\n");
+    // Insert element in array
+    for( i=0; i<n; i++)
+      p[i]=i+2;
 
-  // print the array element
-  printf("The array element "
-         "are:\n");
+    // print the array element
+    printf("The array element "
+           "are:\n");
 
-  for( i=0; i<n; i+=) 
-    printf("%d ", p[i]);
+    for( i=0; i<n; i+=) 
+      printf("%d ", p[i]);
 
-  // de-allocate the allocated memory using free()
-  free(p);
+    // De-allocate the allocated memory using free()
+    free(p);
+  }
+
+  return 0;
 }
