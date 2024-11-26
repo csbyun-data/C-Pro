@@ -144,7 +144,7 @@
   for( i=0; i<n; i++)
     names[i] = (char *)calloc(30, sizeof(char));
   ```
-   * 2.6 C++ int형 3D 배열 동적 할당 [code]()
+   * 2.6 C++ int형 3D 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Int_3D.cpp)
    ```cpp
    int **a = new int**[x];
    ...
