@@ -105,7 +105,7 @@
   
   
   
-  * 2.3 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c)
+  * 2.3 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c), [참조](https://www.geeksforgeeks.org/how-to-declare-a-two-dimensional-array-of-pointers-in-c/)
   <img src = "https://github.com/user-attachments/assets/7551961f-4820-4b6b-8896-37488076aff8" width="70%" height="70%">
   
   ```c
@@ -124,7 +124,7 @@
   for( icol=0; icol<nrows; icol++) 
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
   ```
-  * 2.4 C++ int형 2D 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Int_2D.cpp)
+  * 2.4 C++ int형 2D 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Int_2D.cpp), [참조](https://www.geeksforgeeks.org/how-to-declare-a-2d-array-dynamically-in-c-using-new-operator/)
   ```cpp
   int **a = new int*[m];
   ...
@@ -144,7 +144,7 @@
   for( i=0; i<n; i++)
     names[i] = (char *)calloc(30, sizeof(char));
   ```
-   * 2.6 C++ int형 3D 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Int_3D.cpp)
+   * 2.6 C++ int형 3D 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Int_3D.cpp). [참조](https://www.geeksforgeeks.org/how-to-dynamically-allocate-a-3d-array-in-c/)
    ```cpp
    int **a = new int**[x];
    ...
