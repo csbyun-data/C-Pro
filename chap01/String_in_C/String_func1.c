@@ -23,6 +23,10 @@ int main()
   printf("destString after Concatenation: %s\n", destString);
 
   // comparison using strcmp()
+  // return value from strcmp()
+  // 0 : strings are equal
+  // > 0 : str1 > str2 ascii 비교
+  // < 0 : str1 < str2 ascii 비교
   printf("Comparing destString with sourceString: %d\n",
     strcmp(destString, sourceString));
 
