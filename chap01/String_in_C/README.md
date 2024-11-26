@@ -48,7 +48,7 @@
   *  1.10 Reverse String [Using two-pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String.c), [참조](https://www.geeksforgeeks.org/reverse-string-in-c/), [Using Recursion](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String2.c), [Using Temporary Array](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String3.c), [Using Library Function](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String4.c)
 
 * 2.문자열 프로그램
-  * 2.1 문자열 단순 프로그램 [code]()
+  * 2.1 문자열 단순 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Small_Program1.c)
   
 
 
