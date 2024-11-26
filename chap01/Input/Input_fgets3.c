@@ -5,8 +5,7 @@
 entered using fgets.  Note that since we make this into its own function, we
 could easily choose a better technique for removing the newline.  Aren't
 functions great? */
-void strip_newline( char *str, int size )
-{
+void strip_newline( char *str, int size ) {
     int i;
  
     /* remove the null terminator */
