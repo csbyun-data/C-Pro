@@ -68,7 +68,7 @@
     return TRUE;
   }
   ```  
-  * 2.2 dynamic memory allocation 2D [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c)
+  * 2.2 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c)
   <img src = "https://github.com/user-attachments/assets/7551961f-4820-4b6b-8896-37488076aff8" width="70%" height="70%">
   
   ```c
@@ -86,6 +86,14 @@
   ...
   for( icol=0; icol<nrows; icol++) 
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
+  ```
+  * 2.3 dynamic memory allocation 2D char형 [exam1 C++]()
+  ```c
+  char **name;
+  names = (char **)calloc( n, sizeof( char *));
+  ...
+  for( i=0; i<n; i++)
+    names[i] = (char *)calloc(30, sizeof(char));
   ```
 
 * 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array3.c)
