@@ -162,6 +162,7 @@
    }
    delete[] a;
    ```
+   * 2.7 C++ class 배열 동적 할당 [code]()
 
 * 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array3.c)
   ```c
