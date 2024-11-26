@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) 
 {
-  char *ap = "ABCD";
+	char *ap = "ABCD";
 	char *bp;
 
 	// bp = (char*)malloc(strlen(ap)+1); strcpy(bp, ap); 
