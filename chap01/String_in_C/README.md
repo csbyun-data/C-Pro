@@ -34,7 +34,14 @@
   ```
   *  1.4 scanset을 이용한 문자열 입력 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_scanset1.c)
   *  1.5 strcat()함수, 문자열 합치기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcat1.c)
+  ```c
+  char *strcat( char *dest, const char *src);
+  ```
   *  1.6 문자열 복사(strcpy), 비교(strcmp), 검색(strstr) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_func1.c), [strcmp](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcmp1.c)
+  ```c
+  char *strcpy( char *dest, const char *src);
+  int  strcmp( const char *s1, const char *s2);
+  ```
   *  1.7 문자열 배열 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array2.c), [문자열포인터1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array3.c), [문자열포인터2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_array4.c)
   *  1.8 문자열 포인터 배열 사용 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray2.c)
   *  1.9 strdup()함수, 문자열 복사 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strdup1.c)
