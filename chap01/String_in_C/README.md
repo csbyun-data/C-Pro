@@ -18,7 +18,7 @@
   ```c
   문자열 "Dennis Ritchie"입력하면 "Dennis"만 받아 들임, 공백뒤 문자열 잘림
   ```
-  *  1.3 fgets(), puts() 함수를 이용한 문자열 입력 받기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_gets1.c), [Passing string to a Function](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Passing_String1.c)
+  *  1.3 fgets(), puts() 함수를 이용한 문자열 입력 받기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_gets1.c), [문자열 함수전달](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Passing_String1.c)
   *  1.4 scanset을 이용한 문자열 입력 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_scanset1.c)
   *  1.5 strcat()함수, 문자열 합치기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcat1.c)
   *  1.6 문자열 복사(strcpy), 비교(strcmp), 검색(strstr) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_func1.c), [strcmp](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcmp1.c)
