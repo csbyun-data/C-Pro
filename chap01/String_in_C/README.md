@@ -46,7 +46,7 @@
   *  1.8 문자열 포인터 배열 사용 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_parray2.c)
   *  1.9 strdup()함수, 문자열 복사 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strdup1.c)
   *  1.10 Reverse String [Using two-pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String.c), [참조](https://www.geeksforgeeks.org/reverse-string-in-c/), [Using Recursion](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String2.c), [Using Temporary Array](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String3.c), [Using Library Function](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Reverse_String4.c)
-  *  1.10 유용한 문자열 함수 [here]()
+  *  1.10 유용한 문자열 함수 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Useful_string_function.c)
   ```c
   void remchars(char *str, char c);
   void remcnks(char *str, char *cnk);
