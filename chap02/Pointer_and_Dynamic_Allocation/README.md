@@ -4,6 +4,8 @@
 * 1.Dynamic memory allocation
   * 1.1 메모리할당, 해제
   ```c
+  ptr - (cast type *) malloc(byte size);
+  ```c
   char *pcBuffer = malloc( 5*sizeof(char));
 
   free(pcBuffer);  // now pointer dangling pointer
