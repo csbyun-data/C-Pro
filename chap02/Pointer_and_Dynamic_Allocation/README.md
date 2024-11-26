@@ -5,6 +5,12 @@
   * 1.1 메모리할당, 해제
   ```c
   ptr - (cast type *) malloc(byte size);
+
+  int n=3;
+  int *p = (int *)malloc(n*sizeof(int));
+  free(p);
+  
+  ```
   ```c
   char *pcBuffer = malloc( 5*sizeof(char));
 
