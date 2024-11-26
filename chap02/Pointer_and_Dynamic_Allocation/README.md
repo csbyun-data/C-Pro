@@ -38,7 +38,7 @@
   ```
   
 * 2.Dynamically allocation a 1D, 2D array
-  * 2.1 dynamic memory allocation 1D [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_1D.c)
+  * 2.1 dynamic memory allocation 1D [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_1D.c)
   <img src = "https://github.com/user-attachments/assets/a785f845-0f68-49dc-9ac5-4454ad577be1" width="70%" height="70%">
  
   ```c
