@@ -28,7 +28,7 @@
   * 4.2 공용체
   * 4.3 bit field
 
-* 5.Memory layout of c program
+* 5.Memory layout of C program
   * 5.1 ![image](https://github.com/user-attachments/assets/3d6c3422-4a84-4d7a-8c4e-a46cc6bbb534)
   * 5.2 ![image](https://github.com/user-attachments/assets/1e64515f-558d-4873-82df-42772203f518)
 
