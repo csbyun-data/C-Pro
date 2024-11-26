@@ -9,7 +9,7 @@ int main()
   char str[MAX];
 
   // MAX size if 50 defined
-  fgests(str, MAX, stdin);
+  fgets(str, MAX, stdin);
 
   printf("String is: \n");
 
