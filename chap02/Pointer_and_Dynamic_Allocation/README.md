@@ -125,6 +125,16 @@
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
   ```
   * 2.4 C++ int형 2D 배열 동적 할당 [code]()
+  ```cpp
+  int **a = new int*[m];
+  ...
+  for( int i=0; i<m; i++) 
+    a[i] = new int[n];
+  ...
+  for( int i=0; i<m; i++)
+    delete[] a[i];
+  delete[] a;
+  ```
   
   * 2.5 dynamic memory allocation 2D char형 ([exam1 C++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_Char_2D.cpp))
   ```c
