@@ -67,8 +67,45 @@
 
     return TRUE;
   }
-  ```  
-  * 2.2 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c)
+  ```
+  * 2.2 C++ new, delete operator
+  ```cpp
+  #include <iostream>
+  using namespace std;
+
+  int main()
+  {
+    int *p = new int;
+    if(!p) return 1;
+
+    *p = 5;
+    int n = *p;
+    cout << n << endl;
+
+     delete p;
+  }
+  ```
+  ```cpp
+  // Initialization
+  int *p = new int(1);
+  char *c = new char('a');
+  ```
+  ```cpp
+  // Using dynamic memory in an array
+  int *p = new int[5];
+  if(!p) {
+    cout << "Memory allocation error!" << endl;
+    return 0;
+  }
+
+  for( int i=0; i<5; i++)
+    p[i] = i;
+  delete[] p;
+  ```
+  
+  
+  
+  * 2.3 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c)
   <img src = "https://github.com/user-attachments/assets/7551961f-4820-4b6b-8896-37488076aff8" width="70%" height="70%">
   
   ```c
@@ -87,7 +124,7 @@
   for( icol=0; icol<nrows; icol++) 
     piBuff[icol] = (int *)malloc( (icol+1)*sizeof(int));
   ```
-  * 2.3 dynamic memory allocation 2D char형 ([exam1 C++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_Char_2D.cpp))
+  * 2.4 dynamic memory allocation 2D char형 ([exam1 C++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_Char_2D.cpp))
   ```c
   char **name;
   names = (char **)calloc( n, sizeof( char *));
