@@ -25,11 +25,11 @@ int main()
 
   // Printing the array using the array of pointers
   printf("The values are\n");
-  for( int i=0; i<5; i++) 
+  for( int i=0; i<5; i++) {
     for( int j=0; j<5; j++) 
       printf("%d ", *arr2[i][j]);
     printf("\n");
-
+  }
   // Delete the array created
   for( int i=0; i<5; i++)  // To delete the inner arrays
     free(arr2[i]);
