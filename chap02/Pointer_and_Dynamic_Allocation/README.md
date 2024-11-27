@@ -39,11 +39,13 @@
   ```
   * 1.3 malloc(), calloc(), realloc(), free() 함수 [malloc](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_func1.c), [calloc](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_func1.c), [realloc1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Realloc_func1.c), [realloc2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Realloc_func2.c)
   ```c
+  // malloc 1개의 메모리 블록을 할당, 시작부분 포인터 반환, 초기화하지 않음, 빠름
   ptr = (cast-type *) malloc( byte-size);
   int *ptr = (int *)malloc( 5*sizeof(int));  // 5*4=20 bytes of memory
-  
+
+  // calloc 요소크기의 n개 메모리 블록을 할당, 할당블록을 0으로 초기, 느림
   ptr = (cast-type *) calloc( n, element-size); 
-  ptr = (float *) calloc(25, sizeof(float));  // 5 blocks of 4 4byte each
+  ptr = (float *) calloc( 5, sizeof(float));  // 5 blocks of 4 4byte each
 
   ptr = realloc( ptr, newSize));             // ptr 메모리 확장
   int *ptr = realloc( ptr, 10*sizeof(int));  // 20bytes + 20bytes ->
