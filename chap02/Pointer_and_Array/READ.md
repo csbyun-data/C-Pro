@@ -1,4 +1,4 @@
-## 01. 포인터와 배열, 문자열, 함수포인터
+## 01. 포인터와 배열, 문자열, 함수포인터, 포인터 구조체
 ### Index
 * 1.포인터와 배열
   * 1.1 포인터 선언
@@ -348,6 +348,7 @@
   * 6.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c))
   * 6.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc2.c)
   * 6.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
+    
 * 7.pointer와 structure
   * 7.1 Book 자료 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Pointer_structure.c)
 
