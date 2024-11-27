@@ -15,7 +15,7 @@
   * 2.2 dynamic memory allocation 2D array
   * 2.3 dynamic 2d array in C using the single pointer
   * 2.4 pointer to string array in C
-
+  * 2.5 malloc(), calloc(), realloc(), free() 활용
     
 * 3.Arrays and String in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
   * 3.1 배열과 문자열
