@@ -295,9 +295,10 @@
     return sum;
   }
   ```      
- 
-* 5.fucntion pointer
-  * 5.1 function pointer 선언
+* 5.가변 배열과 Dynamic배열
+  
+* 6.fucntion pointer
+  * 6.1 function pointer 선언
   ```c
   void (*fpData)(void);
   int* (*fpData)(int , int (*paIndex)[3] , int (* fpMsg) (const char *));
@@ -319,7 +320,7 @@
     return 0;
   }
   ```
-  * 5.2 function pointer이용 함수 호출
+  * 6.2 function pointer이용 함수 호출
   ```c
   #include <stdio.h>
   #include <stdlib.h>
@@ -342,14 +343,14 @@
     return 0;
   }
   ```
-  * 5.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c))
-  * 5.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc2.c)
-  * 5.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
-* 6.pointer와 structure
-  * 6.1 Book 자료 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Pointer_structure.c)
+  * 6.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c))
+  * 6.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc2.c)
+  * 6.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
+* 7.pointer와 structure
+  * 7.1 Book 자료 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Pointer_structure.c)
 
-* 7.pointer를 사용하는 일반적인 실수
-  * 7.1 pointer를 초기화하지 않음
+* 8.pointer를 사용하는 일반적인 실수
+  * 8.1 pointer를 초기화하지 않음
   ```c
   // Error는 발생하지 않지만, logic error 발생
   int *piData;
@@ -357,7 +358,7 @@
 
   printf("%d\n", piData);
   ```
-  * 7.2 포인터의 비교
+  * 8.2 포인터의 비교
   ```c
   // pointer 비교는 동일 배열을 가르키는 경우만 가능
   char acBuffer1[10] = "Hello";
@@ -371,14 +372,14 @@
   // compare the both the pointer
   if ( pc1 > pc2 ) { } // illegal statement
   ```
-  * 7.3 dynamic memory 할당을 이용한 포인터 선언
+  8.3 dynamic memory 할당을 이용한 포인터 선언
   ```c
   char *pcBuffer = malloc(10); // valid statement
 
   char *pcBuffer;
     pcBuffer = malloc(10); // invalid statement
   ```
-  * 7.4 유효하지 않은 address를 가리키는 pointer
+  * 8.4 유효하지 않은 address를 가리키는 pointer
   ```c
   // 메모리 할당이 해제된 주소에 포인터 값 입력
   #include <stdio.h>
