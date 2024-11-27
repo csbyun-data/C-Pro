@@ -296,6 +296,8 @@
   }
   ```      
 * 5.가변 배열과 Dynamic배열
+  * 5.1 가변 배열 [code]()
+  * 5.2 Dynamic 배열 [code]()
   
 * 6.fucntion pointer
   * 6.1 function pointer 선언
