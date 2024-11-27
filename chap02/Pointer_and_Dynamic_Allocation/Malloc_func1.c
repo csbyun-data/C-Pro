@@ -26,10 +26,18 @@ int main()
     printf("Memory successfully allocated using malloc,\n");
 
     // Get the elements of the array
-    printf("The elements of the array arn: ");
+    for ( i=0; i<n; i++) {
+      ptr[i] = i+1;
+    }
+
+    // Print the elements of the array
+    printf("The elements of the array are: ");
     for( i=0; i<n; ++i) {
       printf("%d, ", ptr[i]);
     }
+    // Free the memory
+    free(ptr);  
+    printf("\nMalloc Memory successfully freed,\n");
   }
   return 0;
 }
