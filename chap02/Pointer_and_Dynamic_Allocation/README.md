@@ -49,7 +49,7 @@
   int *ptr = realloc( ptr, 10*sizeof(int));  // 20bytes + 20bytes ->
                                              // 10*4=40 bytes of memory
   ```
-  * 1.4 C++ new와 malloc(), delete와 free()비교 [new와 malloc](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Malloc_diff.cpp) [delete와 free()](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Delete_Free_diff.cpp)
+  * 1.4 C++ new와 malloc(), delete와 free()비교 [new와 malloc()비교](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Malloc_diff.cpp) [delete와 free()비교](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Delete_Free_diff.cpp)
   
 * 2.Dynamically allocation a 1D, 2D array
   * 2.1 dynamic memory allocation 1D [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_1D.c)
