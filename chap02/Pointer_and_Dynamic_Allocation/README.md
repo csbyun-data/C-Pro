@@ -8,7 +8,7 @@
   ptr - (cast type *) malloc(byte size);
 
   int n=3;
-  int *p = (int *)malloc(n*sizeof(int));
+  int *p = (int *)malloc( n*sizeof(int));
   free(p);
   
   ```
