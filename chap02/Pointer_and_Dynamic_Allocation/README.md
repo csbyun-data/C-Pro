@@ -3,7 +3,7 @@
 [참조: aticleworld.com](https://aticleworld.com/C-Pro/#),
 [참조: geeksforgeeks.org](https://www.geeksforgeeks.org/)
 * 1.Dynamic memory allocation
-  * 1.1 메모리할당, 해제
+  * 1.1 메모리할당, 해제(malloc, free)
   ```c
   ptr - (cast type *) malloc(byte size);
 
@@ -37,6 +37,18 @@
 
   free(pcData2);
   ```
+  * 2.3 malloc(), calloc(), realloc(), free() 함수
+  ```c
+  ptr = (cast-type *) malloc( byte-size);
+  int *ptr = (int *)malloc( 5*sizeof(int));  // 5*4=20 bytes of memory
+  
+  ptr = (cast-type *) calloc( n, element-size); 
+  ptr = (float *) calloc(25, sizeof(float));  // 5 blocks of 4 4byte each
+
+  ptr = realloc( ptr, newSize));             // ptr 메모리 확장
+  int *ptr = realloc( ptr, 10*sizeof(int));  // 20bytes + 20bytes ->
+                                             // 10*4=40 bytes of memory
+  ```    
   
 * 2.Dynamically allocation a 1D, 2D array
   * 2.1 dynamic memory allocation 1D [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_1D.c)
