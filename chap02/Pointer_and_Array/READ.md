@@ -297,7 +297,7 @@
   ```      
 * 5.가변 배열과 Dynamic배열
   * 5.1 가변 배열 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Jagged_Arrays.c)
-  * 5.2 Dynamic 배열 [code]()
+  * 5.2 Dynamic 배열 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Dynamic_Jagged_Array.c)
   
 * 6.fucntion pointer
   * 6.1 function pointer 선언
