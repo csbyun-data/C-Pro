@@ -1,6 +1,7 @@
 ## 02. 포인터, 배열, 문자열, 함수포인터
 ### 참조 자료
-* [참조: aticleworld.com/C-Pro](https://aticleworld.com/C-Pro/#), [참조: geeksforgeeks.org/array-c-cpp-programs](https://www.geeksforgeeks.org/array-c-cpp-programs/)
+* [참조: aticleworld.com/C-Pro](https://aticleworld.com/C-Pro/#)
+* [참조: geeksforgeeks.org/array-c-cpp-programs](https://www.geeksforgeeks.org/array-c-cpp-programs/)
 ### Index
 * 1.포인터와 배열 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
   * 1.1 포인터 유형
