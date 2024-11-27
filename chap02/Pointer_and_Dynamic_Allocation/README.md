@@ -37,7 +37,7 @@
 
   free(pcData2);
   ```
-  * 2.3 malloc(), calloc(), realloc(), free() 함수 [malloc](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_func1.c)
+  * 2.3 malloc(), calloc(), realloc(), free() 함수 [malloc](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_func1.c), [calloc](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Calloc_func1.c)
   ```c
   ptr = (cast-type *) malloc( byte-size);
   int *ptr = (int *)malloc( 5*sizeof(int));  // 5*4=20 bytes of memory
