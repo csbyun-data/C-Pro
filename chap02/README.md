@@ -3,7 +3,7 @@
 * [참조: aticleworld.com/C-Pro](https://aticleworld.com/C-Pro/#)
 * [참조: geeksforgeeks.org/array-c-cpp-programs](https://www.geeksforgeeks.org/array-c-cpp-programs/)
 ### Index
-* 1.포인터와 배열 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
+* 1.포인터와 배열, 함수포인터, 포인터 구조체 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
   * 1.1 포인터 유형
   * 1.2 포인터 산술
   * 1.3 포인터와 배열
