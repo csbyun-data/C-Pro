@@ -118,7 +118,7 @@
   
   
   
-  * 2.3 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c), [참조](https://www.geeksforgeeks.org/how-to-declare-a-two-dimensional-array-of-pointers-in-c/)
+  * 2.3 dynamic memory allocation 2D int형 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Dynamic_Array_2D1.c) [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Dynamic_Array_2D2.c) [2D int](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_Integer_2D.c), [참조](https://www.geeksforgeeks.org/how-to-declare-a-two-dimensional-array-of-pointers-in-c/)
   <img src = "https://github.com/user-attachments/assets/7551961f-4820-4b6b-8896-37488076aff8" width="70%" height="70%">
   
   ```c
@@ -177,7 +177,7 @@
    ```
    * 2.7 C++ class 배열 동적 할당 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/New_Class_1D.cpp)
 
-* 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Two_dimension_dynamic_array3.c)
+* 3.Dynamically 2D array in C using the single pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Dynamic_Array_2D3.c)
   ```c
   int **piBuff = NULL;
   piBuff = malloc( nrows * ncolumns * sizeof(int *));
