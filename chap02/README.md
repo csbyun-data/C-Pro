@@ -6,9 +6,10 @@
   * 1.1 포인터 유형
   * 1.2 포인터 산술
   * 1.3 포인터와 배열
-  * 1.4 function pointer
-  * 1.5 pointer와 structure
-  * 1.6 pointer를 사용하는 일반적인 실수
+  * 1.4 가변 배열 과 Dynamic 배열
+  * 1.5 function pointer
+  * 1.6 pointer와 structure
+  * 1.7 pointer를 사용하는 일반적인 실수
  
 * 2.Dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
   * 2.1 dynamic memory allocation
