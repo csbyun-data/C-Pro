@@ -8,4 +8,7 @@
   ```c
   내부 loop문에서 교환하는 data가 없는 경우 외부loop를 중단해 최적화
   ```
+  * 1.3 Iterative Quick Sort [참조](https://www.geeksforgeeks.org/iterative-quick-sort/), [code]()
+  * 
+
 
