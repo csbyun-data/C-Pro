@@ -8,16 +8,15 @@ using namespace std;
 void insertion_sort(int arr[], int low, int n) 
 {
  
-    for(int i=low+1;i<n+1;i++) {
-      int val = arr[i] ;
-      int j = i ;
-	    while (j>low && arr[j-1]>val) {
-	        arr[j]= arr[j-1] ;
-	      j-= 1;
-	    }
-	    arr[j]= val ;
-    } 
- 
+  for(int i=low+1;i<n+1;i++) {
+    int val = arr[i] ;
+    int j = i ;
+    while (j>low && arr[j-1]>val) {
+      arr[j]= arr[j-1] ;
+      j-= 1;
+    }
+    arr[j]= val ;
+  } 
 }
  
 //The following two functions are used 
@@ -76,7 +75,7 @@ void hybrid_quick_sort(int arr[], int low, int high) {
     }
  
     else {
-        int pivot = partition(arr, low, high) ;
+      int pivot = partition(arr, low, high) ;
  
 	    // Optimised quicksort which works on 
 	    // the smaller arrays first 
@@ -97,15 +96,14 @@ void hybrid_quick_sort(int arr[], int low, int high) {
 	        high = pivot-1;
 	    }
     }
- 
   }
 }
 
 int main()
 {
  int  arr[21] = { 24, 97, 40, 67, 88, 85, 15, 
-  66, 53, 44, 26, 48, 16, 52, 
-  45, 23, 90, 18, 49, 80, 23 };
+                  66, 53, 44, 26, 48, 16, 52, 
+                  45, 23, 90, 18, 49, 80, 23 };
  
   hybrid_quick_sort(arr, 0, 20);
    
@@ -113,5 +111,5 @@ int main()
     cout << arr[i] << ", ";
 } 
 
-//run result
-15, 16, 18, 23, 23, 24, 26, 40, 44, 45, 48, 49, 52, 53, 66, 67, 80, 85, 88, 90, 97,
+// run result
+// 15, 16, 18, 23, 23, 24, 26, 40, 44, 45, 48, 49, 52, 53, 66, 67, 80, 85, 88, 90, 97,
