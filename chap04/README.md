@@ -14,4 +14,4 @@
 * 10.참조 LIST
   * 10.1 [참조: geeksforgeeks.org/자료구조](https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/),
   * 10.2 [참조: DSA](https://github.com/Anubrata-Das/DSA)
-  * 10.3 
+  * 10.3 [참조: C-Algorhthms](https://github.com/fragglet/c-algorithms)
