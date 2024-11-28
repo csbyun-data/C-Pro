@@ -1,5 +1,5 @@
 ## 04. Data Structure, Algorithm
-
+[참조: geeksforgeeks.org/자료구조](https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/)
 ### Index
 
 * 1 스택
