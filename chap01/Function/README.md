@@ -116,6 +116,8 @@
   ```
   * 1.6 return int * 예제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_int1.c)
   * 1.7 return int * 예제, malloc 사용하지 않은 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_int2.c)
+  * 1.8 use the dynamic array to return multiple value from the function [code]()
+  
 
 
   [2-1 잘못된 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-1.c), [2-1 옳은 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-1.c), [2-2 잘못된 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-2 옳은 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c),[2-4](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-5 잘못된 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-5 옳은 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c)  
