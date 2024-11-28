@@ -1,5 +1,5 @@
 ## 04. Data Structure, Algorithm
-[참조: geeksforgeeks.org/자료구조](https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/)
+
 ### Index
 
 * 1 스택
@@ -11,3 +11,7 @@
 * 7 정렬 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/README.md)
 * 8 탐색
 * 9 해싱
+* 10.참조 LIST
+  * 10.1 [참조: geeksforgeeks.org/자료구조](https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/),
+  * 10.2 [참조: DSA](https://github.com/Anubrata-Das/DSA)
+  * 10.3 
