@@ -49,6 +49,72 @@
     return 0;
   }
   ```
+  * 1.3 함수 return int형
+  ```c
+  // call by value( pass by value) 활용
+  #include <stdio.h>
+  int solution () {
+    int a=1;
+  
+    return a;
+  }
+
+  int main() {
+    int ret = solution();
+    printf("solution 함수의 반환 값은 {%d} \n", ret);
+  }
+  ```
+  ```c
+  #include <stdio.h>
+  int sol02( int a, int b) {
+   return a+b;
+  }
+
+  int main() {
+    int sum;
+    sum = sol02(5, 10);
+    printf("Sol02() = %d\n", sum);
+
+    return 0;
+  }
+  ```
+  * 1.4 return int *예제, static int variable value를 사용
+  ```c
+  #include func() {
+    static int n;
+    scanf("%d", &n);
+
+    return &n;
+  }
+
+  int main() {
+    int *ip;
+    ip = func();
+
+    printf("%d\n", *ip);
+  }
+  ```
+  * 1.5 return int *예제, (int *)malloc( sizeof(int)*2)를 사용
+  ```c
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  int *solution(int a, int b) {
+    int *answer = (int *)malloc(sizeof(int)*2);
+
+    answer[0] = a+b;
+    answer[1] = a-b;
+
+    return answer;
+  }
+  int main() {
+    int a=3, b=5;
+    int * ret = solution(a, b);
+
+    printf("Ret Value: {%d, %d}.\n", ret[0], ret[1]);
+  }
+  * 1.6 return int * 예제 [code]()
+
   [2-1 잘못된 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-1.c), [2-1 옳은 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-1.c), [2-2 잘못된 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-2 옳은 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c),[2-4](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-5 잘못된 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-5 옳은 예](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c)  
 
   ```txt
