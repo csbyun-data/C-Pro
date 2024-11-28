@@ -7,7 +7,7 @@
   ```c
   내부 loop문에서 교환하는 data가 없는 경우 외부loop를 중단해 최적화
   ```
-  * 1.3 Iterative Quick Sort [code c++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_Quick_Sort1.cpp), [code1 c](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.c), [code1 c++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.cpp), [code1 java](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_sort1.java)
+  * 1.3 Iterative Quick Sort [code C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_Quick_Sort1.cpp), [code1 C](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.c), [code1 C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.cpp), [code1 Java](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_sort1.java)
   * ([참조: geeksforgeeks.org/iterative-quick-sort](https://www.geeksforgeeks.org/iterative-quick-sort/) )
   * ([참조: geeksforgeeks.org/quick-sort-algorithm](https://www.geeksforgeeks.org/quick-sort-algorithm/) )
   
@@ -28,6 +28,7 @@
   * 1.4 Quick Sort [code 예1_1](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Quick_Sort1.cpp),[code 예1-2](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Quick_Sort1_1.cpp),[code 예1-3](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Quick_Sort1_2.cpp), [code 예2](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Quick_Sort2.cpp) [code 예3]()
   * 1.5 Advanced Quick Sort (Hybrid Algorithm) [code C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Hybrid_Quick_Sort.cpp)
   * ([참조: geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm](https://www.geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm/) )
+  * 1.6 Quick Sort using vector and iterator in STL [code C++]()
   
 
 
