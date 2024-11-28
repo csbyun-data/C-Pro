@@ -70,24 +70,24 @@ void hybrid_quick_sort(int arr[], int low, int high) {
       break;
     } else {
       int pivot = partition(arr, low, high) ;
- 
-	    // Optimised quicksort which works on 
-	    // the smaller arrays first 
-	 
-	    // If the left side of the pivot 
-	    // is less than right, sort left part 
-	    // and move to the right part of the array 
-	 
-	    if (pivot-low<high-pivot) {
-	        hybrid_quick_sort(arr, low, pivot - 1); 
-	        low = pivot + 1;
-	     } else {
-	        // If the right side of pivot is less 
-	        // than left, sort right side and 
-	        // move to the left side 
-	           
-	        hybrid_quick_sort(arr, pivot + 1, high);
-	        high = pivot-1;
+
+      // Optimised quicksort which works on 
+      // the smaller arrays first 
+
+      // If the left side of the pivot 
+      // is less than right, sort left part 
+      // and move to the right part of the array 
+
+      if (pivot-low<high-pivot) {
+        hybrid_quick_sort(arr, low, pivot - 1); 
+        low = pivot + 1;
+      } else {
+        // If the right side of pivot is less 
+        // than left, sort right side and 
+        // move to the left side 
+
+        hybrid_quick_sort(arr, pivot + 1, high);
+        high = pivot-1;
 	    }
     }
   }
