@@ -3,11 +3,9 @@
 
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 // Function to perform the insertion sort
-void insertion_sort(int arr[], int low, int n) 
-{
- 
+void insertion_sort(int arr[], int low, int n) {
   for(int i=low+1;i<n+1;i++) {
     int val = arr[i] ;
     int j = i ;
@@ -21,11 +19,9 @@ void insertion_sort(int arr[], int low, int n)
  
 //The following two functions are used 
 // to perform quicksort on the array. 
- 
- 
+  
 // Partition function for quicksort 
-int partition(int arr[], int low, int high)
-{
+int partition(int arr[], int low, int high) {
   int pivot = arr[high] ;
   int i ,j;
   i = low;
@@ -72,9 +68,7 @@ void hybrid_quick_sort(int arr[], int low, int high) {
     if (high-low + 1 < 10) {
         insertion_sort(arr, low, high);
       break;
-    }
- 
-    else {
+    } else {
       int pivot = partition(arr, low, high) ;
  
 	    // Optimised quicksort which works on 
