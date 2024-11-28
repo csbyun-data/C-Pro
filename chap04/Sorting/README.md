@@ -25,7 +25,7 @@
   저장한 다음 실행을 재개하는 것과 같은 오버헤드가 포함됩니다.
   위의 함수는 보조 스택의 도움으로 반복 버전으로 쉽게 변환할 수 있습니다. 다음은 위의 재귀 코드의 반복 구현입니다. 
   ```
-  * 1.4 Advanced Quick Sort (Hybrid Algorithm)
+  * 1.4 Advanced Quick Sort (Hybrid Algorithm) [code C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Hybrid_Quick_Sort.cpp)
   * ([참조: geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm](https://www.geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm/) )
   
 
