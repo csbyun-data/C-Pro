@@ -28,7 +28,7 @@
   modifyVal(myptr);
   ```
 
-  *  1.2 1D 배열을 전달 [code 1]()
+  *  1.2 1D 배열을 전달 [code 1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Parameter_1D_1_1.c)
   ```c
   return_type foo ( array_type array_name[크기], ...);
   return_type foo ( array_type array_name[] , ...);
