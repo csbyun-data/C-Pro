@@ -28,11 +28,11 @@
   modifyVal(myptr);
   ```
 
-  *  1.2 1D 배열을 전달 
+  *  1.2 1D 배열을 전달 [code 1]()
   ```c
   return_type foo ( array_type array_name[크기], ...);
   return_type foo ( array_type array_name[] , ...);
-  return_type foo ( array_type* array_name, ...);
+  return_type foo ( array_type *array_name, ...);
 
   //배열의 크기를 함수에 전달하지 않으면 크기를 알수 없다
 
