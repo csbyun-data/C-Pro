@@ -61,8 +61,7 @@ void quick_sort(int arr[], int low,int high) {
 void hybrid_quick_sort(int arr[], int low, int high) {
   while (low < high) {
  
-    // If the size of the array is less 
-    // than threshold apply insertion sort 
+    // If the size of the array is less  than threshold apply insertion sort 
     // and stop recursion 
  
     if (high-low + 1 < 10) {
@@ -74,8 +73,7 @@ void hybrid_quick_sort(int arr[], int low, int high) {
       // Optimised quicksort which works on 
       // the smaller arrays first 
 
-      // If the left side of the pivot 
-      // is less than right, sort left part 
+      // If the left side of the pivot is less than right, sort left part 
       // and move to the right part of the array 
 
       if (pivot-low<high-pivot) {
