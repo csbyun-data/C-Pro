@@ -41,6 +41,7 @@
 // https://www.cprogramming.com/snippets/source-code/quick-sort-using-vector-and-iterator-stl
 #include <iostream>
 #include <vector>
+#include <random>
 #include <ctime>
 
 using std::cout;
@@ -51,7 +52,7 @@ vector<int>::iterator partition( const vector<int> &A,
                                  const vector<int>::iterator &p,
                                  const vector<int>::iterator &r) {
   // Get a random element within A[p:r].
-  auto sedd = clock() * clock() * clock();
+  auto seed = clock() * clock() * clock();
   std::default_random_engine dre(seed);
   std::uniform_int_distribution<size_t> di( 0, r-p);
 
@@ -79,7 +80,7 @@ vector<int>::iterator partition( const vector<int> &A,
   }
   // Swap *(p+iless+1) and *r
   *r = *(p+iless+1);
-  *(o+iless+1) = pivot;
+  *(p+iless+1) = pivot;
 
   return p+iless+1;
 }
@@ -107,9 +108,9 @@ int main( int argc, char *argv[]) {
   for( int i=0; i!=num; i++) A.push_back( di(dre)); // Roll the die.
 
   // Original order.
-  cout << \"Original order:\" << endl;
+  cout << "Original order:" << endl;
   for( auto it=A.begin(); it != A.end(); it++)
-    cout << *it << \"\";
+    cout << *it << " ";
   cout << endl;
 
   // Sort.
@@ -117,9 +118,9 @@ int main( int argc, char *argv[]) {
   auto r = A.end()-1;
   quickSort( A, p, r);
 
-  cout << \"Sorted order:\" << endl;
+  cout << "Sorted order:" << endl;
   for( auto it=A.begin(); it != A.end(); it++)
-    cout << *it << \"\";
+    cout << *it << " ";
   cout << endl;
 
   return 0;
