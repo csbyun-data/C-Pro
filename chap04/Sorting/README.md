@@ -24,6 +24,9 @@
     함수 호출 스택은 매개변수와 함께 다른 회계 정보를 저장합니다. 또한 함수 호출에는 호출자 함수의 활성화 레코드를
   저장한 다음 실행을 재개하는 것과 같은 오버헤드가 포함됩니다.
   위의 함수는 보조 스택의 도움으로 반복 버전으로 쉽게 변환할 수 있습니다. 다음은 위의 재귀 코드의 반복 구현입니다. 
-  ``` 
+  ```
+  * 1.4 Advanced Quick Sort (Hybrid Algorithm)
+  * ([참조: geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm](https://www.geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm/) )
+  
 
 
