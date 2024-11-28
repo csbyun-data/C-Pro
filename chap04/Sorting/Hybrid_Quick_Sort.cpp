@@ -29,11 +29,11 @@ int partition(int arr[], int low, int high) {
  
   for (int i = low; i < high; i++) {
       if(arr[i]<pivot) {
-	      int temp = arr[i];
-	      
-	      arr[i] = arr[j];
-	      arr[j] = temp;
-	      j += 1;
+        int temp = arr[i];
+
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j += 1;
       }
     }
    
