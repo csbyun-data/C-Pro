@@ -117,7 +117,7 @@
   * 1.6 return int * 예제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_int1.c)
   * 1.7 return int * 예제, malloc 사용하지 않은 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_int2.c)
   * 1.8 use the dynamic array to return multiple value from the function [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_Array1.c)
-  * 1.9 return 1D 문자열 [code]()
+  * 1.9 return 1D 문자열 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_String1.c)
   
 
 
