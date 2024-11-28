@@ -8,7 +8,11 @@
   ```c
   내부 loop문에서 교환하는 data가 없는 경우 외부loop를 중단해 최적화
   ```
-  * 1.3 Iterative Quick Sort ([참조: geeksforgeeks.org/iterative-quick-sort](https://www.geeksforgeeks.org/iterative-quick-sort/)), [code c++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_Quick_Sort1.cpp), [code1 c](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.c), [code1 c++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.cpp), [code1 java](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_sort1.java)
+  * 1.3 Iterative Quick Sort
+
+  ([참조: geeksforgeeks.org/iterative-quick-sort](https://www.geeksforgeeks.org/iterative-quick-sort/))
+  
+  ([참조: geeksforgeeks.org/quick-sort-algorithm](https://www.geeksforgeeks.org/quick-sort-algorithm/)),[code c++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_Quick_Sort1.cpp), [code1 c](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.c), [code1 c++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_Sort1.cpp), [code1 java](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Iterative_recursive_Quick_sort1.java)
   ```txt
   1) 위의 구현은 마지막 인덱스를 피벗으로 사용합니다.이는 일반적으로 발생하는 경우인 이미 정렬된 배열에서 최악의 동작을
   일으킵니다.피벗에 대한 임의 인덱스를 선택하거나 파티션의 중간 인덱스를 선택하거나 피벗에 대한 파티션의 첫 번째, 중간
