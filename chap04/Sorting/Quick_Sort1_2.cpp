@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int partition(int* arr, int start, int end)
+int partition(int *arr, int start, int end)
 {
   // assuming last element as pivotElement
   int index = 0, pivotElement = arr[end], pivotIndex;
+  
   // making an array whose size is equal to current partition range...
   int* temp = new int[end - start+1]; 
+  
   // pushing all the elements in temp which are smaller than pivotElement
   for (int i = start; i < end; i++) {
     if (arr[i] <= pivotElement) {
@@ -25,11 +27,12 @@ int partition(int* arr, int start, int end)
       index++;
     }
   }
+  
   // all the elements now in temp array are order :
   // leftmost elements are lesser than pivotElement and
   // rightmost elements are greater than pivotElement
-
   index = 0;
+  
   // copying all the elements to original array i.e arr
   for (int i = start; i <= end; i++) {
     if (arr[i] == pivotElement) {
