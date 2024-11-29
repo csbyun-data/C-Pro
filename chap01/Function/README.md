@@ -2,9 +2,10 @@
 ### Index
 * 1.함수
   *  1.1 함수 parameter 전달
-  *  Call by value 방식 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_address1.c)
-  *  Call by reference 방식 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_reference1.c)
-  *  Call by pointer 방식 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_pointer1.c)
+  *  Call by value 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_value1.c)]
+  *  Call by address 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_address1.c)]
+  *  Call by reference 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_reference1.c)]
+  *  Call by pointer 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_pointer1.c)]
 
   ```c
   // call by value ( pass by value)
