@@ -6,16 +6,16 @@ struct _point {
 };
 
 struct _point * func() {
-	static struct _point s = {10, 10};
-	
-	return &s;
+  static struct _point s = {10, 10};
+
+  return &s;
 }
 
 int main() {
-	struct _point *ps;
+  struct _point *ps;
 	
-	ps = func();
-	printf("%d, %d\n", ps->x, ps->y);
+  ps = func();
+  printf("%d, %d\n", ps->x, ps->y);
 }
 
 // 10, 10
