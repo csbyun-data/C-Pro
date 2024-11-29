@@ -1,10 +1,13 @@
 // 배열의 call by address (pass by address) 활용
+// Return multiple values from the function using the array
+
 #include <stdio.h>
 #define ARRAY_SIZE 10
 
 // Function to get n odd numbers
 void collectOddNumbers( const int n, int *ptr) {
   int i=0;
+  
   for( i=0; i<n; ++i) {
     // Store odd numbers
     *(ptr+i)=((i*2)+1);
@@ -24,6 +27,7 @@ int main()
   for( index=0; index<ARRAY_SIZE; ++index) {
     printf("%d ", oddNumbers[index]);
   }
+  
   return 0;
 }
 
