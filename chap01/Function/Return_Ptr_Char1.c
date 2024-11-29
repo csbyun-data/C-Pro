@@ -14,4 +14,3 @@ int main() {
  printf("ret values is %s . \n", ret);
 }
 //결과 : ret values is james .
-// ** Error와 해결 방법
