@@ -3,7 +3,7 @@
 [참조: aticleworld.com](https://aticleworld.com/C-Pro/#),
 [참조: geeksforgeeks.org](https://www.geeksforgeeks.org/)
 * 1.Dynamic memory allocation
-  * 1.1 메모리할당, 해제(malloc, free)
+  * 1.1 메모리할당, 해제(malloc, free) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/Malloc_func2.c)
   ```c
   ptr - (cast type *) malloc(byte size);
 
