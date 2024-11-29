@@ -10,7 +10,7 @@
   * 1.6 pointer와 structure
   * 1.7 pointer를 사용하는 일반적인 실수
  
-* 2.Dynamic memory allocation in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
+* 2.메모리 동적 할당 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
   * 2.1 dynamic memory allocation
   * 2.2 dynamic memory allocation 2D array
   * 2.3 dynamic 2d array in C using the single pointer
