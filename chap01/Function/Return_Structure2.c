@@ -34,10 +34,13 @@ Pair func_c(char* exp, int idx){
     Pair ret;
     char first_num[10] = {0};
     char second_num[10] = {0};
+    
     strncpy(first_num, exp, idx);
     strncpy(second_num, exp+idx+1,strlen(exp) - idx);
+    
     ret.first_num = atoi(first_num);
     ret.second_num = atoi(second_num);
+    
     return ret;
 }
 
@@ -45,6 +48,7 @@ int solution(char* expression) {
     int exp_index = func_b(expression);
     Pair numbers = func_c(expression, exp_index);
     int result = func_a(numbers.first_num, numbers.second_num, expression[exp_index]);
+    
     return result;
 }
 
