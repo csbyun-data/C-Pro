@@ -164,6 +164,34 @@
 
   * 1.13 return struc 예제, 결과 값만 반환하고 내부변수를 참조하지 않음 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure2.c)
   * 1.14 return multiple values from function using structure
+  ```c
+  // code1
+  struct _point {
+   	int x;
+   	int y;
+  };
+
+  struct _point func() {
+    struct _point s = {10, 10};
+   	return s;
+  }
+  ```
+  ```c
+  // code2 
+  typedef struct Pair{
+    int first_num;
+    int second_num;
+  } Pair;
+
+  Pair func_c(char* exp, int idx){
+    Pair ret;
+    ...
+    ret.first_num = atoi(first_num);
+    ret.second_num = atoi(second_num);
+    return ret;
+  }
+  ```
+  
   * 1.15 return struct * 예제, static structure 활용
   * 1.16 return struct * 예제
   ```c
