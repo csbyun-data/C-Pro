@@ -191,7 +191,14 @@
   }
   ```
   * 1.14 return multiple values from function using structure [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure3.c)
-  * 1.15 return struct * 예제, static structure 활용
+  * 1.15 return struct * 예제, static structure 활용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Struc_Ptr1.c)
+  ```c
+  struct _point *func() {
+    static struct _point s={ 10, 10};
+
+    return &s;
+  }
+  ```
   * 1.16 return struct * 예제
   ```c
   (int *)malloc( sizeof(int)*(2))
