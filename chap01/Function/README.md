@@ -1,4 +1,4 @@
-## 01. 문법1
+## 01. FUNCTION
 ### Index
 * 1.함수
   *  1.1 함수 parameter 전달 ([Call by value](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_value1.c), [Call by address](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_address1.c), [Call by reference](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_reference1.c) [Call by pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_pointer1.c) )
