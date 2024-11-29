@@ -149,6 +149,18 @@
   char* p = strdup("abc");
   char p[] = "abc";
   ```
+  ```c
+  // code2 자료
+  // [Warning] deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  // char* p = (char*)"abc"; // OK: cast added
+  ```
+  ```c
+  // code3 자료
+  // [Warning] deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  char const *p = "abc"; // valid and safe in either C or C++.
+  const char * p == char const * P
+  ```
+
 
   * 1.13 return struc 예제, 결과 값만 반환하고 내부변수를 참조하지 않음 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure2.c)
   * 1.14 return multiple values from function using structure
