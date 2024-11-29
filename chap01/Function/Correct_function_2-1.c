@@ -1,8 +1,10 @@
-//올바르게 작성한 프로그램 예, 배열의 요소수를 전달
+// 올바르게 작성한 프로그램 예, 배열의 요소수를 전달
 // C Program to demonstrate correct usage of sizeof() for arrays
+// https://www.geeksforgeeks.org/using-sizof-operator-with-array-paratmeters-in-c/
 
 #include <stdio.h>
  
+// size_t 최소 16 bits의 부호없는 정수형
 void fun(int arr[], size_t arr_size) {
   int i;
   for (i = 0; i < arr_size; i++) 
@@ -25,3 +27,7 @@ int main()
   getchar();
   return 0;
 }
+
+// The size of the array is: 4
+// The elements are:
+// 0  1  2  3
