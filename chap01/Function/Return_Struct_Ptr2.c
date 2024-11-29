@@ -13,18 +13,18 @@ typedef struct {
 
 int* find_not_exist_nums(int matrix[][n]) {
     int *nums = (int*)malloc(sizeof(int)*(2));
-    int nums_n = 0;
-    bool exist[n * n + 1] = {false};
+    int nums_n=0;
+    bool exist[ n*n+1] = {false};
     int i, j;
   
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for ( i=0; i<n; i++) {
+        for (j=0; j<n; j++) {
             if (matrix[i][j] != 0) {
                 exist[matrix[i][j]] = true;
             }
         }
     }
-    for (i = 1; i <= n * n; i++) {
+    for ( i=1; i<=n*n; i++) {
         if (!exist[i]) {
             nums[nums_n++] = i;
         }
@@ -36,8 +36,8 @@ _pair *find_blank_coords(int matrix[][n]) {
     _pair* coords = (_pair*)malloc(sizeof(_pair)*(2));
     int coords_n = 0;
     int i, j;
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for ( i=0; i<n; i++) {
+        for ( j=0; j<n; j++) {
             if (matrix[i][j] == 0) {
                 coords[coords_n].first = i;
                 coords[coords_n++].second = j;
@@ -50,14 +50,14 @@ _pair *find_blank_coords(int matrix[][n]) {
 bool is_magic_square(int matrix[][n]) {
     int i, j;
     int sum = 0;
-    for (i = 1; i <= n * n; i++) {
+    for ( i=1; i<=n*n; i++) {
         sum += i;
     }
-    sum = sum / n;
-    for (i = 0; i < n; i++) {
-        int row_sum = 0;
-        int col_sum = 0;
-        for (j = 0; j < n; j++) {
+    sum = sum/n;
+    for ( i=0; i<n; i++) {
+        int row_sum=0;
+        int col_sum=0;
+        for ( j=0; j<n; j++) {
             row_sum += matrix[i][j];
             col_sum += matrix[j][i];
         }
@@ -70,7 +70,7 @@ bool is_magic_square(int matrix[][n]) {
     }
     int main_diagonal_sum = 0;
     int skew_diagonal_sum = 0;
-    for (i = 0; i < n; i++) {
+    for ( i=0; i<n; i++) {
         main_diagonal_sum += matrix[i][i];
         skew_diagonal_sum += matrix[i][n-1-i];
     }
@@ -114,7 +114,7 @@ int main() {
     int matrix[4][4] = {{16,2,3,13},{5,11,10,0},{9,7,6,12},{0,14,15,1}};
     int* ret = solution(matrix);
     
-    for (int i = 0; i < 6; i++) {
+    for (int i=0; i<6; i++) {
         if (i != 0) printf(", ");
         printf("%d", ret[i]);
     }
