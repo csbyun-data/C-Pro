@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 char* sol(char* names[], int num) {
-	return names[num];
+  return names[num];
 }
 
 int main() {
@@ -13,4 +13,5 @@ int main() {
  
  printf("ret values is %s . \n", ret);
 }
+
 //결과 : ret values is james .
