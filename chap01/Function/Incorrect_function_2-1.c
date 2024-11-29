@@ -1,4 +1,8 @@
 // C Program to demonstrate incorrect usage of sizeof() for arrays
+// 함수로 배열이 매개변수로 전달되면 포인터로 처리되어 문제점 발생됨
+// 배열 매개변수에 sizeof 사용하지 말것
+// https://www.geeksforgeeks.org/using-sizof-operator-with-array-paratmeters-in-c/
+
 #include <stdio.h>
  
 void fun(int arr[])
