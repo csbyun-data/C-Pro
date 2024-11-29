@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 struct _point {
-	int x;
-	int y;
+  int x;
+  int y;
 };
 
 struct _point * func() {
