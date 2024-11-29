@@ -8,8 +8,10 @@
 void Getinfo( int *age, float *height, char *name) {
   printf("\n\n Enter User age = ");
   scanf("%d",age);
+  
   printf("\n\n Enter User height = ");
   scanf("%f",height);
+  
   printf("\n\n Enter User name = ");
   scanf("%s",name);
 }
