@@ -33,6 +33,4 @@ Grammar of programming, a collection of basic materials for application.
   *   4.8 탐색
   *   4.9 해싱
 * 5.Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
-  *   5.1 Library Management system (File handling)
-  *   5.2 Student Record System (File handling)
-  *   5.3 Employee Record System (File handling)
+  *   5.1 File handling function
