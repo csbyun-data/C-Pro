@@ -61,36 +61,34 @@
   [2-6예1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-1.c), [2-6예2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-2.c)
   ```txt
   2-6) 함수를 이용하여 문자열 출력, 명령줄 인수 활용
+  ```
+  * 1.3 함수 return void형
+  ```c
+  #include <stdio.h>
+  void func01() { printf("running function\n"); }
   ```  
   * 1.3 함수 return int형
   ```c
   // call by value( pass by value) 활용
   #include <stdio.h>
-  int solution () {
+  int func01() {
     int a=1;
-  
     return a;
   }
 
-  int main() {
-    int ret = solution();
-    printf("solution 함수의 반환 값은 {%d} \n", ret);
-  }
-  ```
-  ```c
-  #include <stdio.h>
-  int sol02( int a, int b) {
-   return a+b;
-  }
+  int func02( int a, int b) { return (a+b); }
 
   int main() {
-    int sum;
-    sum = sol02(5, 10);
-    printf("Sol02() = %d\n", sum);
+    int ret = func01();
+    printf("func01 함수의 반환 값은 {%d} \n", ret);
+
+    int sum = func02(5, 10);
+    printf("func02() = %d\n", sum);
 
     return 0;
   }
   ```
+  
   * 1.4 return int *예제, static int variable value를 사용
   ```c
   #include func() {
