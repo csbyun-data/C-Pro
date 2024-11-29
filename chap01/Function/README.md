@@ -199,7 +199,7 @@
     return &s;
   }
   ```
-  * 1.16 return struct * 예제
+  * 1.16 return struct * 예제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Struc_Ptr2.c)
   ```c
   (int *)malloc( sizeof(int)*(2))
   (_pair *)malloc( sizeof(_pair)*(2))
