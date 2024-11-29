@@ -31,3 +31,13 @@ int main()
 
   return 0;
 }
+
+// run result
+// Enter User age = 10
+// Enter User height = 180
+// Enter User name = C.S.Byun
+
+// User age = 10
+// User height = 180.000000
+// User name = C.S.Byun
+​
