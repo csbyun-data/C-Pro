@@ -98,7 +98,8 @@
   
   * 1.4 return int *예제, static int variable value를 사용
   ```c
-  #include func() {
+  #include <stdio.h>
+  int *func() {
     static int n;
     scanf("%d", &n);
 
