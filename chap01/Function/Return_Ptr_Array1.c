@@ -1,3 +1,5 @@
+// ☆ invalid conversion from 'void*' to 'int*' [-fpermissive]
+//  https://aticleworld.com/dynamically-allocate-2d-array-c/
 #include <stdio.h>
 #include <stdlib.h>
 #define ARRAY_SIZE  10
