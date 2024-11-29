@@ -139,7 +139,7 @@
   * 1.10 return char *예제, static char carr[100] 문자열 활용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_String2.c)
   * 1.11 return char *예제, 구조체의 char변수형을 반환 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_Structure1.c)
   * 1.12 char * 예제 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_Char1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_Char2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Ptr_Char3.c)
-  * 1.13 return struc 예제, 결과 값만 반환하고 내부변수를 참조하지 않음
+  * 1.13 return struc 예제, 결과 값만 반환하고 내부변수를 참조하지 않음 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Return_Structure2.c)
   * 1.14 return multiple values from function using structure
   * 1.15 return struct * 예제, static structure 활용
   * 1.16 return struct * 예제
