@@ -1,4 +1,4 @@
-## 01. 문법1
+## 01. 문법 정리
 ### Index
 * 1.문법
   *  1.1 Command line argument in C [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/CommandLineArgument1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/CommandLineArgument.c)
