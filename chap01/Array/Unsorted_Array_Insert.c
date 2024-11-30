@@ -1,3 +1,4 @@
+// 정렬되지 않은 배열 끝에 요소 삽입
 // C program to implement insert operation in 
 // an unsorted array.
 #include <stdio.h>
