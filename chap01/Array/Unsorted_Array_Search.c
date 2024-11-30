@@ -1,5 +1,7 @@
 // 정렬되지 않은 배열 검색
 // C Program to implement linear search in unsorted array
+// https://www.geeksforgeeks.org/search-insert-and-delete-in-an-unsorted-array/
+
 #include <stdio.h>
 
 // Function to implement search operation
