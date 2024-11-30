@@ -75,7 +75,7 @@
   int a[][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
-  * 6.2 비정렬 배열 검색, 삽입, 삭제 [검색code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Search.c), 
+  * 6.2 비정렬 배열 검색, 삽입, 삭제 [검색code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Search.c), [삽입 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert.c), [삭제 code]()
   * 6.3 정렬 배열 검색, 삽입, 삭제
   * 6.3 String in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
 
