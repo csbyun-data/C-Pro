@@ -1,4 +1,6 @@
 // C program to implement binary search in sorted array
+// https://www.geeksforgeeks.org/search-insert-and-delete-in-a-sorted-array/
+
 #include <stdio.h>
 
 int binarySearch( int arr[], int low, int high, int key) {
