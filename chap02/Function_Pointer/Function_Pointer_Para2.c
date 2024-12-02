@@ -8,23 +8,23 @@
 typedef void (*UnitTestFunction)(void);
 
 static void test_1( void) {
-	printf("run test_1\n");
+  printf("run test_1\n");
 }
 
 static void test_2( void) {
-	printf("run test_2\n");
+  printf("run test_2\n");
 }
 
 static void run_test( UnitTestFunction test) {
-	test();
+  test();
 }
 
 void run_tests( UnitTestFunction *tests) {
-	int i;
+  int i;
 
-	for (i=0; tests[i] != NULL; ++i) {
-		run_test(tests[i]);
-	}
+  for (i=0; tests[i] != NULL; ++i) {
+    run_test(tests[i]);
+  }
 }
 
 static UnitTestFunction tests[] = {
@@ -32,5 +32,5 @@ static UnitTestFunction tests[] = {
 
 int main(int argc, char *argv[])
 {
-	run_tests(tests);
+  run_tests(tests);
 }
