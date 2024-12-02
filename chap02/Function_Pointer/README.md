@@ -74,7 +74,7 @@
    * 1.6 함수 포인터와 void포인터를 이용한 search()함수 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Search1.c)
   ```c
   bool compare(const void* a, const void* b)
-
+  ...
   int search(void* arr, int arr_size, int ele_size, void* x,
            bool compare(const void*, const void*))
   ```
