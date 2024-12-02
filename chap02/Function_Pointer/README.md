@@ -43,6 +43,6 @@
   배열에 추가후 function을 순서대로 실행
   - 함수 포인터를 typedef를 설정하고, 배열의 요소는 함수 포인터
   ```
-   * 1.4 함수 포인터를 함수의 parameter로 사용 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Para1.c)
+   * 1.4 함수 포인터를 함수의 parameter로 사용 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Para1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Para2.c)
    * 1.5 함수 포인터와 void포인터를 이용한 qsort()함수
    * 1.6 함수 포인터와 void포인터를 이용한 search()함수
