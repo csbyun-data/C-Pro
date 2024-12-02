@@ -4,6 +4,39 @@
 
 * 1.함수 포인터
    * 1.1 함수 포인터 형식과 사용 예
+  ```txt
+  // function pointer는 함수가 메모리에 올라와 있는 주소를 가르키는 포인터 상수
+  // (constance pointer)를 가짐.
+  void func();
+  ```
+  ```c
+  // 01. 사용 예제1
+  void (*fptr)();
+  fptr = &func;
+  (*fptr)();
+
+  // 02. 사용 예제2
+  void (*fptr)() = &func;
+  (*fptr)();  
+  ```
+  ```c
+  // 03. 사용 예제3
+  void (*fptr)();
+  fptr = funcc;
+  fptr();
+
+  // 04. 사용 예제4
+  void (*fptr)() = func;
+  fptr();
+  ```
+  ```c
+  // 05. 사용 예제5
+  double func(double, double);
+  double (*fptr)(double, double);
+  ptr = &func;
+  double a = (*fptr)( 10, 10);
+  ```
+  
    * 1.2 함수 포인터 배열 사용 및 초기화
    * 1.3 함수 포인터 type을 배열에 추가
    * 1.4 함수 포인터를 함수의 parameter로 사용
