@@ -37,7 +37,7 @@
   double a = (*fptr)( 10, 10);
   ```
   
-   * 1.2 함수 포인터 배열 사용 및 초기화
+   * 1.2 함수 포인터 배열 사용 및 초기화 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Array1.c),
    * 1.3 함수 포인터 type을 배열에 추가
    * 1.4 함수 포인터를 함수의 parameter로 사용
    * 1.5 함수 포인터와 void포인터를 이용한 qsort()함수
