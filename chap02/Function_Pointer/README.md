@@ -3,7 +3,7 @@
 ### Index
 
 * 1.함수 포인터
-   * 1.1 함수 포인터 형식과 사용 예
+   * 1.1 함수 포인터 형식과 사용 예 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer1.c)
   ```txt
   // function pointer는 함수가 메모리에 올라와 있는 주소를 가르키는 포인터 상수
   // (constance pointer)를 가짐.
