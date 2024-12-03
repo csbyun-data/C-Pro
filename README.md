@@ -37,3 +37,4 @@ Grammar of programming, a collection of basic materials for application.
   *   5.1 File handling function
 * 6.참조
   * 6.1 [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
+  * 6.2 [참조: [aticleworld.com/c-tutorial/](https://aticleworld.com/c-tutorial/)]
