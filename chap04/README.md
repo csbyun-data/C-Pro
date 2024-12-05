@@ -20,4 +20,4 @@
   * 10.6 [참조: B-트리 데이터 구조를 기반으로 하는 정렬된 메모리 내 컨테이너를 구현하는 템플릿 라이브러리](https://github.com/algorithm-ninja/cpp-btree)
   * 10.7 [참조: C++로 구현된 오픈 어드레싱 해시 테이블 알고리즘](https://github.com/goossaert/hashmap)
   * 10.8 [참조: C++용 빠르고 메모리 효율적인 해시 맵](https://github.com/greg7mdp/sparsepp)
-  * 10.9 [참조: 자료구조 시각화 [here](https://www.cs.usfca.edu/~galles/visualization/)]
+  * 10.9 [참조: 자료구조 시각화 [www.cs.usfca.edu/~galles/visualization/](https://www.cs.usfca.edu/~galles/visualization/)]
