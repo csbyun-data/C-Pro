@@ -262,7 +262,7 @@
   ```txt
   구조체 메모리 할당시 크기의 차이를 점검
   ```
-  * 1.9 구조체내 배열을 값으로 전달 [code]()
+  * 1.9 구조체내 배열을 값으로 전달 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_InArray_Transfer.c)
 
 * 2.공용체 (union)
   * 2.1 공용체 선언, 초기화, 접근
