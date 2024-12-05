@@ -322,3 +322,159 @@ char* oct2hex(long octNum) {
 	
 	return pBinStr;
 }
+
+/* 
+Main Menu
+
+ 1:Binary to Decimal
+
+ 2:Binary to Hexadecimal
+
+ 3:Decimal to Binary
+
+ 4:Decimal to Hexadecimal
+
+ 5:Hexadecimal to Binary
+
+ 6:Hexadecimal to Decimal
+
+ 7:Hexadecimal to Octal
+
+ 0:Exit
+
+ Selection Number:1
+
+ 
+
+Enter Binary[0,1]:1111
+
+ Decimal number: 15
+
+Main Menu
+
+ 1:Binary to Decimal
+
+ 2:Binary to Hexadecimal
+
+     ..
+
+ 0: Exit
+
+ Selection Number:2
+
+ 
+
+Enter Binary[0,1]:1111
+
+Hexadecimal number: F
+
+Main Menu
+
+ 1:Binary to Decimal
+
+ 2:Binary to Hexadecimal
+
+ 3:Decimal to Binary
+
+     ..
+
+ 0:Exit
+
+ Selection Number:3
+
+ 
+
+Enter decmal number[0-9]:15
+
+Binary number: 1111
+
+Main Menu
+
+ 1:Binary to Decimal
+
+ 2:Binary to Hexadecimal
+
+ 3:Decimal to Binary
+
+ 4:Decimal to Hexadecimal
+
+     ..
+
+ 0:Exit
+
+ Selection Number:4
+
+ 
+
+Enter decmal number[0-9]:15
+
+Hexadecimal number: F
+
+Main Menu
+
+      ..
+
+ 5:Hexadecimal to Binary
+
+ 6:Hexadecimal to Decimal
+
+ 7:Hexadecimal to Octal
+
+ 0:Exit
+
+ Selection Number:5
+
+ 
+
+Enter HexaDecimal[0-9,A-F]:F
+
+Binary number: 1111
+
+Main Menu
+
+     ..
+
+ 6:Hexadecimal to Decimal
+
+ 7:Hexadecimal to Octal
+
+ 0:Exit
+
+ Selection Number:6
+
+ 
+
+Enter HexaDecimal[0-9,A-F]:F
+
+ Decimal number: 15
+
+Main Menu
+
+     ..
+
+ 7:Hexadecimal to Octal
+
+ 0:Exit
+
+ Selection Number:7
+
+ 
+
+Enter HexaDecimal[0-9,A-F]:F
+
+ Octalnumber: 17
+
+Main Menu
+
+      ..
+
+ 7:Hexadecimal to Octal
+
+ 0:Exit
+
+ Selection Number:0
+
+End of Program...
+
+Press any key to continue
+*/
