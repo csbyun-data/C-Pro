@@ -1,4 +1,5 @@
 ## 01. 문법 정리
+
 ### Index
 * 1.문법
   *  1.1 Command line argument in C [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/CommandLineArgument1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/CommandLineArgument.c)
@@ -69,7 +70,7 @@
   *  5.6 do~while() [here1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control5.c) [here2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control6.c)
 
 * 6.배열, 문자열
-  *  6.1 배열 초기화
+  * 6.1 배열 초기화
   ```c
   int a[][2] = { {1, 2}, {3, 4}};
   int a[][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
@@ -80,11 +81,11 @@
   * 6.3 String in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
 
 * 7.함수 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
-  *  7.1 함수 parameter 전달 
-  *  7.2 1D 배열을 전달 
-  *  7.3 2D 배열을 전달
-  *  7.4 Struct를 전달
-  *  7.5 Reference Variable과 Pointer Variable의 차이
+  * 7.1 함수 parameter 전달 
+  * 7.2 1D 배열을 전달 
+  * 7.3 2D 배열을 전달
+  * 7.4 Struct를 전달
+  * 7.5 Reference Variable과 Pointer Variable의 차이
     
 * 8.typedef 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md)
   *  8.1 typedef 사용법, 범위
@@ -94,5 +95,4 @@
   *  8.5 typedef 배열
   *  8.6 typedef function pointer 사용
 
-
-
+* 9.Binary Octal Decimal Hexa변환 [code]()
