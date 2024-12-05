@@ -406,6 +406,26 @@
     //structure variable to store read data
     InfoData sReadInfoData = {0}; <-- InfoData sReadInfoData = {(eInfoTypes)0};
    ```
+   * 2.5 struct와 union 사용법
+   ```c
+   //xlisp-plus의 xlisp.h의 code 중에
+   /* node structure */
+   struct node {
+     char n_type;		/* type of node */
+     char n_flags;		/* flag bits */
+     union {			/* value */
+    	  struct xsym n_xsym;	/*     symbol node */
+       struct xsubr n_xsubr;	/*     subr node */
+       struct xlist n_xlist;	/*     list node */
+       struct xint n_xint;	/*     integer node */
+       struct xstr n_xstr;	/*     string node */
+       struct xdbptr n_xdbptr;	/*     database pointer node */
+       struct xkmap n_xkmap;	/*     key map node */
+       struct xfun n_xfun;	/*     function node */
+       struct xobj n_xobj;	/*     object node */
+     } n_info;
+   };
+   ```
    
 * 3.Bit field [참조: aticleworld.com/bit-field-in-c/](https://aticleworld.com/bit-field-in-c/)
   * 3.1 선언, 초기화
