@@ -425,6 +425,10 @@
        struct xobj n_xobj;	/*     object node */
      } n_info;
    };
+   - structure는 메모리 할당을 변수 전체를 구분해서 순서대로 할당 함
+     { n_type, n_flags, n_info} 순으로 할당.
+   - union은 메모리를 공유하며 변수 중에 크기가 제일 큰 변수의 메모리를 할당하고, 공유해서
+     한가지의 자료만 입력된다.
    ```
    
 * 3.Bit field [참조: aticleworld.com/bit-field-in-c/](https://aticleworld.com/bit-field-in-c/)
