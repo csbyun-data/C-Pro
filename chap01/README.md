@@ -95,4 +95,4 @@
   *  8.5 typedef 배열
   *  8.6 typedef function pointer 사용
 
-* 9.Binary Octal Decimal Hexa변환 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin_Oct_Dec_Hexa.c)
+* 9.Binary Octal Decimal Hexa변환 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin_Oct_Dec_Hexa.c), [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin_Oct.c)
