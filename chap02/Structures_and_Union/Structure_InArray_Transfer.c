@@ -22,9 +22,14 @@ void modify( struct ArrayWrapper temp) {
 
   printf("\n");
 
-  // Modify the array
-  for( i=0; i<SIZE; ++i)
-    printf("%d ", ptr[i]); // OR *(ptr+i)
+  // Modify the array 
+  for (i = 0; i < SIZE; ++i) 
+    ptr[i] = 100; // OR *(ptr + i) 
+  
+  printf("\nIn 'modify()', after modification\n"); 
+  for (i = 0; i < SIZE; ++i) 
+    printf("%d ", ptr[i]); // OR *(ptr + i)   
+
 }
 
 // Driver code
