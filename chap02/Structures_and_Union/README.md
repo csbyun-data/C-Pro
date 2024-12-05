@@ -406,7 +406,7 @@
     //structure variable to store read data
     InfoData sReadInfoData = {0}; <-- InfoData sReadInfoData = {(eInfoTypes)0};
    ```
-   * 2.5 struct와 union 사용법
+   * 2.5 struct와 union 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union.c)
    ```c
    //xlisp-plus의 xlisp.h의 code 중에
    /* node structure */
