@@ -288,7 +288,7 @@
     }
     ```
     * 4.3 lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)
-    ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
+    * ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
 
 * 5.XML 파일 형식 변경 분석
     * 5.1 test.xml
@@ -330,8 +330,8 @@
     {
     	XMLNode* curr_node = doc->root; //<-- NULL을 doc->root로 수정함
     }
+    ```
     ![image](https://github.com/user-attachments/assets/3c2cebc9-075a-4ec9-97f4-8df571936108)
-    
     
 * 6.주석문 XML분석시 제외
     * 6.1 test.xml 문서 수정
@@ -381,7 +381,6 @@
 
     	return TRUE;
     }
-    //................
 
     bool XMLDocument_load(XMLDocument* doc, const char* path) {
     	XMLNode* curr_node = doc->root;
