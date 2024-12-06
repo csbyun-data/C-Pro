@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     XMLDocument_write(&doc, "out.xml", 4 );
     XMLDocument_free(&doc);
-	}
+  }
   return 0;
 }
 
