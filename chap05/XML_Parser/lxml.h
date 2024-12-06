@@ -1,3 +1,4 @@
+// 최종 파일
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
 
