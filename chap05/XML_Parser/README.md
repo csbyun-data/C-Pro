@@ -253,7 +253,7 @@
     }
     ```
     * 3.3 lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
-    ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
+    *  ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
 
 * 4.XML 파일 형식 변경 조회
     * 4.1 test.xml 파일 내용
