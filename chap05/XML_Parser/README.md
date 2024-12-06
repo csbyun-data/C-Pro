@@ -253,7 +253,44 @@
     }
     ```
     * 3.3 lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
-    * 
+    ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
+
+* 4.XML 파일 형식 변경 조회
+    * 4.1 test.xml 파일 내용
+    ```xml
+    <root>
+    	<inner>
+    		<more> This is nested node</more>
+    	</inner>
+    	<another>This is another node</another>
+    </root>
+    ```
+    * 4.2 main.c 파일 변경
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    #include "lxml.h"
+
+    int main(int argc, char *argv[])
+    {
+    	XMLDocument doc;
+    	if (XMLDocument_load(&doc, "test.xml")) {
+    		XMLNode* more_node = XMLNode_child(XMLNode_child(doc.root, 0), 0);
+    		printf("%s: %s\n", more_node->tag, more_node->inner_text);
+
+    		XMLNode* another_node = XMLNode_child(doc.root, 1);
+    		printf("%s: %s\n", another_node->tag, another_node->inner_text);
+
+    		XMLDocument_free(&doc);
+    	}
+    	return 0;
+    }
+    ```
+    * 4.3 lxml.h 파일 수정 작업 [code]()
+  
+  
+
     
     
     
