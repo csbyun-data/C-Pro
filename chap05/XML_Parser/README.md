@@ -436,7 +436,7 @@
    ```
    ![image](https://github.com/user-attachments/assets/9005f0dd-e902-49cb-b11b-760432379c09)
 
-* 8. XML version, encoding 얻기
+* 8.XML version, encoding 얻기
     * 8.1 test.xml 파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -543,80 +543,80 @@
     ```
     ![image](https://github.com/user-attachments/assets/7e7e19c7-d9bb-4852-b014-278f21a6afdc)
 
-  * 9.tag의 킅이 /> 로 마무리 되는 inline node인 경우
-     * 9.1 test.xml 파일 수정
-     ```xml
-     <?xml version="1.0" encoding="utf-8" ?>
-     <struct name="Person">
-       <field name="name" type="string" />
-     	 <field name="age" type="int" />
-     </struct>
-     ```
-     * 9.2 main.c 파일 수정
-     * 9.3 lxml.h 파일 수정
+* 9.tag의 끝이 /> 로 마무리 되는 inline node인 경우
+    * 9.1 test.xml 파일 수정
+    ```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <struct name="Person">
+      <field name="name" type="string" />
+      <field name="age" type="int" />
+    </struct>
+    ```
+    * 9.2 main.c 파일 수정
+    * 9.3 lxml.h 파일 수정
 
-   * 10.dummy tag분석 제외
-      * 10.1 test.xml파일 수정
-      ```xml
-      <?xml version="1.0" encoding="utf-8" ?>
-      <struct name="Person">
-      	<field name="name" type="string" />
-      	<dummy/>
-      	<field name="age" type="int" />
-      </struct>
-      ```
-      * 10.2 main.c 파일 수정
-      ```c
-      #include <stdio.h>
-      #include <stdlib.h>
+* 10.dummy tag분석 제외
+    * 10.1 test.xml파일 수정
+    ```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <struct name="Person">
+    	<field name="name" type="string" />
+    	<dummy/>
+     	<field name="age" type="int" />
+    </struct>
+    ```
+    * 10.2 main.c 파일 수정
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
 
-      #include "lxml.h"
+    #include "lxml.h"
 
-      int main(int argc, char *argv[])
-      {
-      	XMLDocument doc;
-      	if (XMLDocument_load(&doc, "test.xml")) {
-      		XMLNode* str = XMLNode_child(doc.root, 0);
-      		printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
+    int main(int argc, char *argv[])
+    {
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        XMLNode* str = XMLNode_child(doc.root, 0);
+        printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
 
-      		XMLNodeList* fields = XMLNode_children(str, "field");
-      		for (int i = 0; i < fields->size; i++) {
-      			XMLNode* field = XMLNodeList_at(fields, i);
-      			printf(" %s (%s)\n", XMLNode_attr_val(field, (char*)"name"), XMLNode_attr_val(field, (char*)"type"));
-      		}
-      		XMLDocument_free(&doc);
-      	}
-      	return 0;
+        XMLNodeList* fields = XMLNode_children(str, "field");
+        for (int i = 0; i < fields->size; i++) {
+          XMLNode* field = XMLNodeList_at(fields, i);
+          printf(" %s (%s)\n", XMLNode_attr_val(field, (char*)"name"), XMLNode_attr_val(field, (char*)"type"));
+        }
+        XMLDocument_free(&doc);
       }
-      ```
-      * 10.3 lxml.h 파일 수정
-      ```c
-      struct _XMLNode* XMLNodeList_at(XMLNodeList* list, int index);
-      void XMLNodeList_free(XMLNodeList* list);
+      return 0;
+    }
+    ```
+    * 10.3 lxml.h 파일 수정
+    ```c
+    struct _XMLNode* XMLNodeList_at(XMLNodeList* list, int index);
+    void XMLNodeList_free(XMLNodeList* list);
 
-      XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag);
+    XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag);
 
-      XMLNode* XMLNodeList_at(XMLNodeList* list, int index) {
-      	return list->data[index];
+    XMLNode* XMLNodeList_at(XMLNodeList* list, int index) {
+      return list->data[index];
+    }
+
+    void XMLNodeList_free(XMLNodeList* list) {
+      free(list);
+    }
+
+    XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag) {
+      XMLNodeList* list = (XMLNodeList*) malloc(sizeof(XMLNodeList));
+      XMLNodeList_init(list);
+
+      for (int i = 0; i < parent->children.size; i++) {
+        XMLNode* child = parent->children.data[i];
+        if (!strcmp(child->tag, tag))
+          XMLNodeList_add(list, child);
       }
-
-      void XMLNodeList_free(XMLNodeList* list) {
-      	free(list);
-      }
-
-      XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag) {
-      	XMLNodeList* list = (XMLNodeList*) malloc(sizeof(XMLNodeList));
-      	XMLNodeList_init(list);
-
-      	for (int i = 0; i < parent->children.size; i++) {
-      		XMLNode* child = parent->children.data[i];
-      		if (!strcmp(child->tag, tag))
-      			XMLNodeList_add(list, child);
-      	}
-      	return list;
-      }
-      ```
-      ![image](https://github.com/user-attachments/assets/832e767b-7b46-4c94-9d89-7d2534df0106)
+      return list;
+    }
+    ```
+    ![image](https://github.com/user-attachments/assets/832e767b-7b46-4c94-9d89-7d2534df0106)
      
 * 11.XMLDocument_write(), XML문서 생성
     * 11.1 main.c 파일 수정
@@ -697,4 +697,5 @@
     }
     ```
     ![image](https://github.com/user-attachments/assets/beb46743-f512-48f5-ac3f-1ba6c16ef36a)
+  
     ![image](https://github.com/user-attachments/assets/9c13db1a-153e-427f-b772-cdfdfebc89a7)
