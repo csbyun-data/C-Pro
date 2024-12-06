@@ -73,13 +73,13 @@
     ```
     ![image](https://github.com/user-attachments/assets/c4ca3118-abc6-4c5a-a446-8e6be19e80c9)
 
-  * 2.XML 내용 조회 구현
-      * 2.1 main.c 프로그램 수정
-      ```c
-      #include <stdio.h>
-      #include <stdlib.h>
+* 2.XML 내용 조회 구현
+    * 2.1 main.c 프로그램 수정
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
 
-      #include "lxml.h"
+    #include "lxml.h"
 
       int main(int argc, char *argv[])
       {
