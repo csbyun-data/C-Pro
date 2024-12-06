@@ -34,7 +34,8 @@ Grammar of programming, a collection of basic materials for application.
   *   4.8 탐색
   *   4.9 해싱
 * 5.Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
-  *   5.1 File handling function
+  *  5.1 File handling function
+  *  5.2 XML Parser
 
 ### 참조 LIST
 * 1 [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
