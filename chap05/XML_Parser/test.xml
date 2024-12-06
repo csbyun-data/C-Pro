@@ -1,0 +1,5 @@
+<struct name="Person">
+<field name="name" type="string"/>
+<field name="age" type="int"/>
+<description>This defines a person</description>
+</struct>
