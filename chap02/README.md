@@ -37,7 +37,7 @@
   * 5.3 bit field
 
 * 6.구조체, 문자열 Pointer 활용
-  *  6.1 구조체(이름, 점수), 문자열 Pointer 활용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/Student_order1.c), [code c++]()
+  *  6.1 구조체(이름, 점수), 문자열 Pointer 활용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/Student_order1.c), [code c++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/Student_order1.cpp)
 * 7.Memory layout of C program
   * 7.1 ![image](https://github.com/user-attachments/assets/3d6c3422-4a84-4d7a-8c4e-a46cc6bbb534)
   * 7.2 ![image](https://github.com/user-attachments/assets/1e64515f-558d-4873-82df-42772203f518)
