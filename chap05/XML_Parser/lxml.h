@@ -1,4 +1,6 @@
 // 최종 파일
+// https://blog.naver.com/time_series/223168051148
+
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
 
