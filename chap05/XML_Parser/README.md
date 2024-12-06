@@ -252,7 +252,7 @@
     	return 0;
     }
     ```
-    * 3.3 lxml.h 파일 수정 [code] ()
+    * 3.3 lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
     * 
     
     
