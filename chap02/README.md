@@ -43,6 +43,6 @@
   * 7.2 ![image](https://github.com/user-attachments/assets/1e64515f-558d-4873-82df-42772203f518)
   * 7.3 ![image](https://github.com/user-attachments/assets/871535be-4452-41a4-8dba-7f7daaa41c2b)
 
-### 참조 자료
+### 참조 LIST
 * [참조: aticleworld.com/C-Pro](https://aticleworld.com/C-Pro/#)
 * [참조: geeksforgeeks.org/array-c-cpp-programs](https://www.geeksforgeeks.org/array-c-cpp-programs/)
