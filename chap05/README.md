@@ -22,4 +22,4 @@
   //plocal = malloc( sizeof(ADDR) );	// ADDR 구조체 할당
   plocal = (ADDR *)malloc( sizeof(ADDR) );	// ADDR 구조체 할당
   ```
-* 2.XML Parser [here]()
+* 2.XML Parser [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
