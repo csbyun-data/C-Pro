@@ -1,4 +1,6 @@
 // 최종 파일
+// https://blog.naver.com/time_series/223168051148
+
 #include <stdio.h>
 #include <stdlib.h>
 
