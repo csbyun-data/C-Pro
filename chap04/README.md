@@ -11,7 +11,8 @@
 * 7 정렬 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/README.md)
 * 8 탐색
 * 9 해싱
-* 참조 LIST
+
+### 참조 LIST
   * 1 [참조: geeksforgeeks.org/자료구조](https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/),
   * 2 [참조: DSA](https://github.com/Anubrata-Das/DSA)
   * 3 [참조: C-Algorhthms](https://github.com/fragglet/c-algorithms)
