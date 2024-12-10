@@ -24,7 +24,7 @@
   ```
 * 2.XML Parser [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
 
-* 3.수식 계산 프로그램
+* 3.수식 계산 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/calculation_formula.c)
 ```txt
 1) 중위식을 후위식으로 변경
 2) Stack을 이용 후위식을 계산
