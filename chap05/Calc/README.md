@@ -19,3 +19,5 @@
 * 4.함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)
 * 5.사칙연산 함수를 STL을 이용하여 표현 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/STL_Calculator1.cpp)
 * 6.재귀호출 계산기 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)]
+* 7. 계산기 관련 자료
+     * 7.1 infix-postfix [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/infix-postfix-conversion.c)
