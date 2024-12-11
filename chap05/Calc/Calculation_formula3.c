@@ -14,14 +14,13 @@ int multiply(int a, int b) {
 
 int main()
 {
-	int (*fptr[3])(int, int) = {plus, minus, multiply};
-	int i=0;
-	int a=5;
-	int b=3;
-	
-	for(i=0; i<=2; i++) {
-		printf("fptr[%d]= %d \n", i, (*fptr[i])(a, b));
-	}
+  int (*fptr[3])(int, int) = {plus, minus, multiply};
+  int i=0;
+  int a=5, b=3;
+
+  for(i=0; i<=2; i++) {
+    printf("fptr[%d]= %d \n", i, (*fptr[i])(a, b));
+  }
 
 	return 0;
 }
