@@ -34,51 +34,51 @@ char pop() {
 }
 
 /* Function for precedence */
-int pr(char elem) { 
-	switch (elem) {
-		case '#':
-			return 0;
-	case '(':
-		return 1;
-	case '+':
-	case '-':
-		return 2;
-	case '*':
-	case '/':
-		return 3;
-	}
+int pr(char elem) {
+  switch (elem) {
+    case '#':
+      return 0;
+    case '(':
+      return 1;
+    case '+':
+    case '-':
+      return 2;
+    case '*':
+    case '/':
+      return 3;
+  }
 }
 
 /*
 * Function to convert from infix to postfix expression
 */
 void infix_to_postfix(char *infix, char *postfix) {
-	char ch, elem;
-	int i = 0, k = 0;
-	
-	RemoveSpaces(infix);
-	push('#');
-	
-	while ((ch = infix[i++]) != '\n') {
-		if (ch == '(')
-			push(ch);
-		else if (isalnum(ch))
-			postfix[k++] = ch;
-		else if (ch == ')') {
-			while (s[top] != '(')
-				postfix[k++] = pop();
-			elem = pop(); /* Remove ( */
-		} else { /* Operator */
-			while (pr(s[top]) >= pr(ch))
-				postfix[k++] = pop();
-			push(ch);
-		}
-	}
-	
-	while (s[top] != '#') /* Pop from stack till empty */
-	postfix[k++] = pop();
-  
-	postfix[k] = 0; /* Make postfix as valid string */
+  char ch, elem;
+  int i = 0, k = 0;
+
+  RemoveSpaces(infix);
+  push('#');
+
+  while ((ch = infix[i++]) != '\n') {
+    if (ch == '(')
+      push(ch);
+    else if (isalnum(ch))
+      postfix[k++] = ch;
+    else if (ch == ')') {
+      while (s[top] != '(')
+        postfix[k++] = pop();
+      elem = pop(); /* Remove ( */
+    } else { /* Operator */
+      while (pr(s[top]) >= pr(ch))
+        postfix[k++] = pop();
+      push(ch);
+    }
+  }
+
+  while (s[top] != '#') /* Pop from stack till empty */
+    postfix[k++] = pop();
+
+  postfix[k] = 0; /* Make postfix as valid string */
 }
 
 /*
