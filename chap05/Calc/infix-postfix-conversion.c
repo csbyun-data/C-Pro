@@ -19,7 +19,7 @@ void RemoveSpaces(char* source) {
     *i = *j++;
     if(*i != ' ')
       i++;
-	}
+  }
   *i = 0;
 }
 
