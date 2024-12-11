@@ -1,6 +1,6 @@
 // Command Line에서 계산식 받음, 숫자의 소수점 처리
 // 이항연산자 배열과 Function pointer 매칭
-// 단항연산자 배열과 Function pointer 매칭
+// 단항연산자 배열과 Function pointer 매칭, SIN, COS, TAN, EXP 함수
 
 #include <stdio.h>
 #include <stdlib.h>
