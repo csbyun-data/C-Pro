@@ -19,4 +19,4 @@
   ```txt
   1) 사칙연산 함수를 Function pointer 배열에 넣어서 활용
   ```
-* 4.함수 포인터를 구조체에 넣어 가감 계산 [code]()
+* 4.함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)
