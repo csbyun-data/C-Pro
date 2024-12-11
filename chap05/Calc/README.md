@@ -1,6 +1,6 @@
 ## 1.계산기 프로그램
 ### INDEX
-* 1. 계산기 프로그램 [code](https://github.com/csbyun-data/C-Pro/edit/main/chap05/Calc/Calculation_formula.c)
+* 1.계산기 프로그램 [code](https://github.com/csbyun-data/C-Pro/edit/main/chap05/Calc/Calculation_formula.c)
     ```txt
   1) 중위식을 후위식으로 변경
   2) Stack을 이용 후위식을 계산
