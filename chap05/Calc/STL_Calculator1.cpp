@@ -1,6 +1,7 @@
-#include <iostream>
- 
+// https://www.cprogramming.com/snippets/source-code/template-calculator
 //A simple calculator using templates
+
+#include <iostream>
  
 template <class T>
 T add(T a, T b) {
