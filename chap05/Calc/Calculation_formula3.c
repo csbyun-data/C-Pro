@@ -1,3 +1,4 @@
+// 사칙연산 함수를 Function pointer 배열에 넣어서 활용
 #include <stdio.h>
 
 int plus(int a, int b) {
