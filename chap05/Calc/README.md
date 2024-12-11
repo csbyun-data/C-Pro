@@ -16,4 +16,6 @@
   ```
 
 * 3.함수포인터를 이용한 가감 계산기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula3.c)
-* 3. 
+  ```txt
+  1) 사칙연산 함수를 Function pointer 배열에 넣어서 활용
+  ```
