@@ -13,24 +13,24 @@ int top = -1; /* Global declarations */
 
 /* Function to remove spaces from given string */
 void RemoveSpaces(char* source) {
-	char* i = source;
-	char* j = source;
-	while(*j != 0) {
-		*i = *j++;
-		if(*i != ' ')
-			i++;
+  char* i = source;
+  char* j = source;
+  while(*j != 0) {
+    *i = *j++;
+    if(*i != ' ')
+      i++;
 	}
-	*i = 0;
+  *i = 0;
 }
 
 /* Function for PUSH operation */
 void push(char elem) { 
-	s[++top] = elem;
+  s[++top] = elem;
 }
 
 /* Function for POP operation */
 char pop() { 
-	return (s[top--]);
+  return (s[top--]);
 }
 
 /* Function for precedence */
