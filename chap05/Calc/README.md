@@ -18,4 +18,4 @@
 * 3.함수 포인터를 배열에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula3.c)
 * 4.함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)
 * 5.사칙연산 함수를 STL을 이용하여 표현 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/STL_Calculator1.cpp)
-* 6.재귀호출 계산기 [C++ [code](https://souptonuts.sourceforge.net/code/desktop_calc.cc.html)]
+* 6.재귀호출 계산기 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)]
