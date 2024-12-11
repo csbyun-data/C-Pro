@@ -1,5 +1,6 @@
-// calculation formula
-// ChatGPT code
+// Calculation Formula
+// ChatGPT code, 중위표기법 -> 후위표기법 변환 Stack사용, 우선순위, 소숫점 처리
+// 삼각함수 (SIN, COS, TAN), 계산식 추가
 
 #include <stdio.h>
 #include <stdlib.h>
