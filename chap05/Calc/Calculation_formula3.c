@@ -22,7 +22,7 @@ int main()
     printf("fptr[%d]= %d \n", i, (*fptr[i])(a, b));
   }
 
-	return 0;
+  return 0;
 }
 
 /*
