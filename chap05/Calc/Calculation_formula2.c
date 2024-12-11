@@ -1,4 +1,4 @@
-// ChatGPT code, 중위표기법 -> 후위표기법 변환 Stack사용, 우선순위, 소숫점 처리
+// ChatGPT code, 중위표기법 -> 후위표기법 변환, 배열 Stack사용, 우선순위, 소숫점 처리
 // Command Line에서 계산식 받음, 숫자의 소수점 처리
 // 이항연산자 배열과 Function pointer 매칭
 // 단항연산자 배열과 Function pointer 매칭, SIN, COS, TAN, EXP 함수
