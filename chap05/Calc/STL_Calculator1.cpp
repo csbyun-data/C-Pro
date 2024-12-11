@@ -32,7 +32,6 @@ T multiply(T a, T b) {
  
 int main(void)
 {
-   
   std::cout<<add<int>(10,20)<<std::endl;
   std::cout<<subtract<float>(5.4,2.3)<<std::endl;
   std::cout<<multiply<int>(4,5)<<std::endl;
