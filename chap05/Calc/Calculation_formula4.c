@@ -1,4 +1,6 @@
 // C언어 함수포인터 활용예제
+// Function pointer를 구조체에 넣어 사용
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
