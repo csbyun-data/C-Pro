@@ -85,38 +85,39 @@ void infix_to_postfix(char *infix, char *postfix) {
 * Function to evaluate a postfix expression
 */
 int eval_postfix(char *postfix) {
-	char ch;
-	int i = 0, op1, op2;
-	while((ch = postfix[i++]) != 0) {
-		if(isdigit(ch)) 
-			push(ch-'0'); /* Push the operand */
-		else {        /* Operator,pop two  operands */
-			op2 = pop();
-			op1 = pop();
-			switch(ch) {
-				case '+' : push(op1+op2); 
-				break;
-				case '-' : push(op1-op2); 
-				break;
-				case '*' : push(op1*op2);
-				break;
-				case '/' : push(op1/op2);
-				break;
-			}
+  char ch;
+  int i = 0, op1, op2;
+
+  while((ch = postfix[i++]) != 0) {
+    if(isdigit(ch)) 
+      push(ch-'0'); /* Push the operand */
+    else {        /* Operator,pop two  operands */
+      op2 = pop();
+      op1 = pop();
+      
+      switch(ch) {
+        case '+' : push(op1+op2); 
+          break;
+        case '-' : push(op1-op2); 
+          break;
+        case '*' : push(op1*op2);
+          break;
+        case '/' : push(op1/op2);
+          break;
+      }
 		}
 	}
-	return s[top];
+  return s[top];
 }
 
 void main() { /* Main Program */
-	
-	char infx[50], pofx[50];
-	printf("\nInput the infix expression: ");
-	fgets(infx, 50, stdin);
-	
-	infix_to_postfix(infx, pofx);
+  char infx[50], pofx[50];
+  printf("\nInput the infix expression: ");
+  fgets(infx, 50, stdin);
 
-	printf("\nGiven Infix Expression: %sPostfix Expression: %s", infx, pofx);
-	top = -1;
-	printf("\nResult of evaluation of postfix expression : %d", eval_postfix(pofx));
+  infix_to_postfix(infx, pofx);
+
+  printf("\nGiven Infix Expression: %sPostfix Expression: %s", infx, pofx);
+  top = -1;
+  printf("\nResult of evaluation of postfix expression : %d", eval_postfix(pofx));
 }
