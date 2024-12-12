@@ -148,7 +148,6 @@
   n = write(fd, buf, size);
   ```
   * file size 구하기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_size1.c)
-  
   * file copy code [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy2.c)
   
 * 2.XML response in C without using library
