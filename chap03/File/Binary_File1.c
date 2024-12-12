@@ -1,4 +1,5 @@
-// // Text파일, Binary파일 사용법 중 Binary파일
+// Text파일, Binary파일 사용법 중 Binary파일
+// Binary file I/O fread and fwrite
 
 // size_t fread(void *ptr, size_t size_of_elements, size_t number_of_elements, FILE *a_file)
 // size_t fwirte(const void *ptr, size_t size_of_elements, size_t numbeR_of_elements,
