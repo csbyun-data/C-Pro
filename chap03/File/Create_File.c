@@ -1,3 +1,5 @@
+// Text파일 fopen 사용 예
+
 #include <stdio.h>
 
 int main()
