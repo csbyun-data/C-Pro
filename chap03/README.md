@@ -78,7 +78,7 @@
   
   fclose(fp);
   ```
-  * getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/combine_file.c)
+  * getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/combine_file.c)
   
   * fgetc, fputc 함수를 활용한 file 복사 프로그램 ([c code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy1.c), [c++ code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy3.cpp))
   ```c
@@ -147,14 +147,14 @@
   int n;
   n = write(fd, buf, size);
   ```
-  file size 구하기 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_size1.c)
+  * file size 구하기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_size1.c)
   
-  file copy code [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy2.c)
+  * file copy code [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy2.c)
   
 * 2.XML response in C without using library
 ([참조: aticleworld.com/parse-xml-response-in-c/](https://aticleworld.com/parse-xml-response-in-c/))
-  *   2.1 Create XML [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/Create_XML_ex1.c)
-  *   2.2 Parse XML [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/Parse_XML_ex1.c)
+  *   2.1 Create XML [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/Create_XML_ex1.c)
+  *   2.2 Parse XML [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/Parse_XML_ex1.c)
   ```c
   //Create Opening Tag
   memset(openTag, 0, sizeof(openTag));
