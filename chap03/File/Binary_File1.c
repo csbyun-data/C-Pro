@@ -8,18 +8,18 @@
 
 int main()
 {
-	FILE *fp;
-	
-	char x[10] = "ABCDEFGHI";
-	
-	fp = fopen("test.bin", "wb");
-	
-	if(fp != NULL) {
-		fwrite(x, sizeof(x[0]), sizeof(x)/sizeof(x[0]), fp);
-	} else {
-		printf("Failed file open!\n");
-	}
-	fclose(fp);
-	
-	return 0;
+  FILE *fp;
+
+  char x[10] = "ABCDEFGHI";
+
+  fp = fopen("test.bin", "wb");
+
+  if(fp != NULL) {
+    fwrite(x, sizeof(x[0]), sizeof(x)/sizeof(x[0]), fp);
+  } else {
+    printf("Failed file open!\n");
+  }
+  fclose(fp);
+
+  return 0;
 }
