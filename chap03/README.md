@@ -79,6 +79,7 @@
   
   fclose(fp);
   ```
+  * getline() 구성 및 사용법 [here]()
   * getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/combine_file.c)
   
   * fgetc, fputc 함수를 활용한 file 복사 프로그램 ([c code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy1.c), [c++ code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy3.cpp))
