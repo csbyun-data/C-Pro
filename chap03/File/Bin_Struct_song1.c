@@ -1,3 +1,4 @@
+// binary파일, 구조체를 이용한 입력, 저장
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
