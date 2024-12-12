@@ -1,3 +1,5 @@
+// https://blog.naver.com/newbongman/223327628488
+
 #pragma warning(disable:4996) 
 
 #include <stdio.h>
