@@ -11,17 +11,16 @@
 
 int main()
 {
-	FILE *fp;
-	
-	fp = fopen("test.txt", "w");
-	
-	if(fp != NULL) {
-		fprintf(fp, "Tesing...\n");
-	} else {
-		printf("Failed file open!\n");
-	}
-	
-	fclose(fp);
-	
-	return 0;
+  FILE *fp;
+
+  fp = fopen("test.txt", "w");
+
+  if(fp != NULL) {
+    fprintf(fp, "Tesing...\n");
+  } else {
+    printf("Failed file open!\n");
+  }
+  fclose(fp);
+
+  return 0;
 }
