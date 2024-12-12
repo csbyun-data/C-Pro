@@ -120,13 +120,13 @@ int eval(char exp[ ] ) {
       op2 = pop(&s);
       op1 = pop(&s);
       switch (ch) { //연산자이면 피연산자를 스택에서 제거
-          case '+' : push(&s, op1+op2); break;
-          case '-' : push(&s, op1-op2); break;
-          case '*' : push(&s, op1*op2); break;
-          case '/' : push(&s, op1/op2); break;
-          // %, ^ 추가'
-          case '%' : push(&s, op1%op2); break;
-          case '^' : push(&s, pow(op1, op2)); break;
+        case '+' : push(&s, op1+op2); break;
+        case '-' : push(&s, op1-op2); break;
+        case '*' : push(&s, op1*op2); break;
+        case '/' : push(&s, op1/op2); break;
+        // %, ^ 추가'
+        case '%' : push(&s, op1%op2); break;
+        case '^' : push(&s, pow(op1, op2)); break;
         }
     }
   }
@@ -213,20 +213,19 @@ void main()
   // char* post = NULL;
 	size_t     size;
 	getline(&line, &size, stdin);
-	if (check_matching(line) == 1){
-	  //괄호 검사 성공 시
-	    
-		//Postfix expression 출력
-		char post[MAX_STACK_SIZE] = {NULL};
-		char* test = NULL;
- 		printf("POSTFIX: ");
-		test = infix_to_postfix(line, post);
-		printf("%s\n", test);
+  if (check_matching(line) == 1){
+    //괄호 검사 성공 시
 
-		//결과값 출력
-		printf("RESULT=%d",eval(test));
-	}
-	else
-	  //괄호 검사 실패 시
-		printf("Error: 괄호가 올바르지 않음.");
+    //Postfix expression 출력
+    char post[MAX_STACK_SIZE] = {NULL};
+    char* test = NULL;
+    printf("POSTFIX: ");
+    test = infix_to_postfix(line, post);
+    printf("%s\n", test);
+
+    //결과값 출력
+    printf("RESULT=%d",eval(test));
+  } else
+    //괄호 검사 실패 시
+    printf("Error: 괄호가 올바르지 않음.");
 }
