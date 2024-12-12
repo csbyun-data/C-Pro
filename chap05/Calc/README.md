@@ -21,3 +21,5 @@
 * 6.재귀호출 계산기 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)]
 * 7.계산기 관련 자료
      * 7.1 infix-postfix [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/infix-postfix-conversion.c)
+     * 7.2 stack을 이용한 infix-postfix변환 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Stack_infix_postfix1.c)
+     * 7.3 stack을 이용한 infix-prefix변환 [code]()
