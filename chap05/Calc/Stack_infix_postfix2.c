@@ -73,34 +73,34 @@ element peek(StackType* s) {
 // 프로그램 5.5
 // 괄호 검사 함수
 int check_matching(const char* in) {
-	StackType s;
-	char ch, open_ch;
-	int i, n = strlen(in);  	// n= 문자열의 길이
-	init_stack(&s);			// 스택의 초기화
+  StackType s;
+  char ch, open_ch;
+  int i, n = strlen(in);  	// n= 문자열의 길이
+  init_stack(&s);			// 스택의 초기화
 
-	for (i = 0; i < n; i++) {
-		ch = in[i];		// ch = 다음 문자
-		switch (ch) {
-		case '(':   case '[':    case '{':
-			push(&s, ch);
-			break;
-		case ')':   case ']':    case '}':
-			if (is_empty(&s)) return 0; // 스택에 오른쪽 괄호는 있는데 왼쪽 괄호가 없는 Error
+  for (i = 0; i < n; i++) {
+    ch = in[i];		// ch = 다음 문자
+    switch (ch) {
+    case '(':   case '[':    case '{':
+      push(&s, ch);
+      break;
+    case ')':   case ']':    case '}':
+      if (is_empty(&s)) return 0; // 스택에 오른쪽 괄호는 있는데 왼쪽 괄호가 없는 Error
 
-			else {
-				open_ch = pop(&s);
-				if ((open_ch == '(' && ch != ')') ||
-					(open_ch == '[' && ch != ']') ||
-					(open_ch == '{' && ch != '}')
-					) {
-					return 0; // 괄호 매칭 안되는 Error
-				}
-				break;
-			}
-		}
-	}
-	if (!is_empty(&s)) return 0; // 스택에 남아있으면 오류
-	return 1; // 성공
+      else {
+        open_ch = pop(&s);
+        if ((open_ch == '(' && ch != ')') ||
+          (open_ch == '[' && ch != ']') ||
+          (open_ch == '{' && ch != '}')
+          ) {
+          return 0; // 괄호 매칭 안되는 Error
+        }
+        break;
+      }
+    }
+  }
+  if (!is_empty(&s)) return 0; // 스택에 남아있으면 오류
+  return 1; // 성공
 }
 
 // 후위 표시 수식 계산 함수
