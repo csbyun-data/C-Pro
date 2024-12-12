@@ -1,3 +1,4 @@
+// Stack을 이용한 infix를 prefix로 변환
 // https://blog.naver.com/newbongman/223327628488
 
 #pragma warning(disable:4996) 
