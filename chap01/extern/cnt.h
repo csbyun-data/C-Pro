@@ -4,9 +4,5 @@
 
 int iCnt;
 void cnt();
-void inc();
-
-static int siCnt = 10;
-void inc2();
 
 #endif
