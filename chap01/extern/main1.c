@@ -26,3 +26,14 @@ int main(int argc, char *argv[]) {
   
   return 0;
 }
+
+/* 
+global iCnt = 11  <- 전역 변수증가
+global iCnt = 12  <- 전역 변수증가
+
+cnt.c siCnt = 11   <- cnt.c 지역 static 변수 증가
+main.c siCnt = 10  <- main.c 지역 static 변수
+cnt.c siCnt = 12   <- cnt.c 지역 static 변수 증가
+main.c siCnt = 10  <- main.c 지역 static 변수 
+main.c siCnt = 11  <- main.c 지역 static 변수 증가
+*/
