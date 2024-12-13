@@ -14,11 +14,13 @@ Grammar of programming, a collection of basic materials for application.
 * 1.9 Binary Octal Decimal Hexa변환
   
 ### 2.포인터, 배열, 문자열, 함수, 구조체, 공용체 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
-* 2.1 포인터와 배열
-* 2.2 배열과 문자열
-* 2.3 메모리 동적할당
-* 2.4 함수 pointer
-* 2.4 구조체, 공용체
+* 2.1 포인터와 배열, 함수포인터, 포인터 구조체
+* 2.2 메모리 동적할당
+* 2.3 Arrays and String in C
+* 2.4 Function Pointer
+* 2.5 Structures and Unions in C
+* 2.6 구조체, 문자열 Pointer 활용
+* 2.7 Memory layout of C program
   
 ### 3.File I/O [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
 * 3.1 File I/O
