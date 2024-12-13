@@ -8,7 +8,7 @@
   ```txt
   다른 파일에서 접근 가능하고, 전역 변수, 함수 접근 제공
   ```
-* 3.static 변수, 함수, extern변수, 함수 사용
+* 3.static 변수, 함수, extern변수, 함수 사용 [[cnt1.h](), [cnt1.c](), [main2.c]()]
   ```txt
   1) static 변수를 cnt2()함수는 함수가 선언된 파일 cnt.c 안에서 siCnt의 값은 변경
      main.c 파일 안에서 siCnt의 값은 변경하지 않는다
