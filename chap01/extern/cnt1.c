@@ -2,14 +2,14 @@
 #include "cnt.h"
 
 void cnt() {
-	iCnt++;
+  iCnt++;
 }
 
 void inc() {
-	iCnt++;
+  iCnt++;
 }
 
 void inc2() {
-	siCnt++;
-	printf("local siCnt = %d\n", siCnt);
+  siCnt++;
+  printf("local siCnt = %d\n", siCnt);
 }
