@@ -4,17 +4,17 @@
 extern int iCnt;
 extern void cnt();
 
-int main(int argc, char *argv[]) {
-	
-	iCnt = 10;
+int main(int argc, char *argv[]) 
+{
+  iCnt = 10;
 
-	cnt();
-	printf("iCnt = %d\n", iCnt);
-	
-	cnt();
-	printf("iCnt = %d\n", iCnt);
-		
-	return 0;
+  cnt();
+  printf("iCnt = %d\n", iCnt);
+
+  cnt();
+  printf("iCnt = %d\n", iCnt);
+
+  return 0;
 }
 
 /*
