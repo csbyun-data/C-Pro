@@ -40,6 +40,7 @@
    * 1.2 함수 포인터 배열 사용 및 초기화 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Array1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Array2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Function_Pointer_Array3.c)
   ```txt
     int (*fun_ptr_arr[])( int, int) = { add, subtract, multiply, divide};
+  
     //동일 표현
     int (*fp[4])( int, int);
     fp[0] = add;
