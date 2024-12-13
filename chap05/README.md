@@ -25,3 +25,5 @@
 * 2.XML Parser [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
 
 * 3.수식 계산 프로그램 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/README.md)
+  * 3.1 Infix to Postfix
+  * 3.2 Infix to Prefix
