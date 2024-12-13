@@ -16,7 +16,9 @@
   2) static 변수가 선언된 "cnt.h"파일을 code파일에 포함해야 error가 발생하지 않는다
      error 예: [Error] 'siCnt' undeclared (first use in this function)
   3) 전역변수는 한개의 변수가 생성되고, 정적변수는 파일마다 한개의 변수가 생성 됨 
-   ```
+   ```  
+  ![image](https://github.com/user-attachments/assets/7d964bc5-8ac3-49c0-9c8c-3b815c279a17)
+
 * 2.extern 사용 관련 error발생
   * 2.1  [Error] invalid type argument of '->' (have 'int')
   ```txt
