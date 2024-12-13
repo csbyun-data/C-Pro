@@ -11,6 +11,16 @@
   char *pcData = NULL;
         pcData = &cData;
   ```
+  ```c
+  char *ps = "Hello, World!"; // RAM CODE영역에 저장, read only 속성
+  char s[] = "Hello, World!"; // RAM DATA영역에 저장, read/write 속성
+
+  char *s = NUUL;
+  s = "Hello, World!"; //OK
+  char s[15];
+  s = "Hello, World!"; // Error
+  ```
+  
   * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value4.c)
   ```txt
   1) 변수의 수명이 완료된 개체의 주소를 참조 (포인터 반환)
