@@ -25,5 +25,9 @@
 * 2.XML Parser [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
 
 * 3.수식 계산 프로그램 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/README.md)
-  * 3.1 Infix to Postfix
-  * 3.2 Infix to Prefix
+  * 3.1 계산기 프로그램
+  * 3.2 함수 포인터를 배열에 넣어 가감 계산
+  * 3.3 함수 포인터를 구조체에 넣어 가감 계산
+  * 3.4 사칙연산 함수를 STL을 이용하여 표현
+  * 3.5 재귀호출 계산기
+  * 3.6 Infix to Postfix, Infix to Prefix
