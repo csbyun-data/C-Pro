@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int plus( int a, int b) { return a+b; }
+int add( int a, int b) { return a+b; }
 int subtract( int a, int b) { return a-b; }
 int multiple( int a, int b) { return a*b; }
 int divide( int a, int b) { return a/b; }
@@ -9,7 +9,7 @@ int main()
 {
   int (*fp[4])( int, int);
 
-  fp[0] = plus;
+  fp[0] = add;
   fp[1] = subtract;
   fp[2] = multiple;
   fp[3] = divide;
