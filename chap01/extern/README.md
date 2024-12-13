@@ -17,7 +17,7 @@
      error 예: [Error] 'siCnt' undeclared (first use in this function)
   3) 전역변수는 한개의 변수가 생성되고, 정적변수는 파일마다 한개의 변수가 생성 됨 
    ```
-* 2. extern 사용 관련 error발생
+* 2.extern 사용 관련 error발생
   * 2.1  [Error] invalid type argument of '->' (have 'int')
   ```txt
    n = xlevmatch(INT,&args)->n_int;    //  <- Error 발생 부분
