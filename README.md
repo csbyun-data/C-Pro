@@ -12,6 +12,7 @@ Grammar of programming, a collection of basic materials for application.
 * 1.7 함수, 함수 parameter전달
 * 1.8 typedef 사용법
 * 1.9 Binary Octal Decimal Hexa변환
+* 1.10 static, extern 사용
   
 ### 2.포인터, 배열, 문자열, 함수, 구조체, 공용체 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
 * 2.1 포인터와 배열, 함수포인터, 포인터 구조체
