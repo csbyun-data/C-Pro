@@ -2,5 +2,5 @@
 #include "cnt.h"
 
 void cnt() {
-	iCnt++;
+  iCnt++;
 }
