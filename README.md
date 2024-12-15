@@ -1,4 +1,4 @@
-# C Programming language code
+# C Programming language
 Grammar of programming, a collection of basic materials for application.
 ## Index
 ## 1.문법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
