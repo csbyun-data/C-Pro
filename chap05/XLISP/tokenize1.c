@@ -1,4 +1,5 @@
-// 문자열 수식 Lisp형태를 token으로 분리
+// 문자열 수식 Lisp형태를 token으로 분리 (+ 1 2 3)
+// ChatGPT code, token 분리후 계산하는 프로그램
 
 #include <stdio.h>
 #include <stdlib.h>
