@@ -42,6 +42,6 @@
   * 3.5 재귀호출 계산기
   * 3.6 Infix to Postfix, Infix to Prefix
 
-* 4. XLISP 계산식 분석
+* 4.XLISP 계산식 분석
   * 4.1  사칙연산 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/Calc1.c)
      
