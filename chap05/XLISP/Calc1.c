@@ -1,3 +1,5 @@
+// LISP 계산식을 Builtin functions사용 코딩
+// 내장 함수, 변수 평가기능
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
