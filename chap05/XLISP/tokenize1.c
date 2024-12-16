@@ -79,9 +79,7 @@ int main() {
   // 분석 함수에 입력
   // 숫자는 make_number(3)
   // 문자는 make_symbol("+")
-  // 
-  
-  // Value args = make_cons(three, make_cons(four, make_number(0)));
+  // make_cons(three, make_cons(four, make_number(0)))
 
   // 메모리 해제
   free_tokens(tokens, num_tokens);
