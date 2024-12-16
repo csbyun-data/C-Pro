@@ -75,6 +75,14 @@ int main() {
   // 토큰 출력
   print_tokens(tokens, num_tokens);
 
+  // token을 사용하여 Calc1.c 파일에 함수들을 사용하여 list로 만들어
+  // 분석 함수에 입력
+  // 숫자는 make_number(3)
+  // 문자는 make_symbol("+")
+  // 
+  
+  // Value args = make_cons(three, make_cons(four, make_number(0)));
+
   // 메모리 해제
   free_tokens(tokens, num_tokens);
 
