@@ -85,7 +85,7 @@
   1) NULL pointer
     int *iPtr = NULL;
   ```
-  * 2.1 void pointer [code](), 
+  * 2.1 void pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/void_ptr1.c)
   ```txt
   2) void pointer
     void *vPtr;
