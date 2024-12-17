@@ -61,7 +61,8 @@
     // file open 실패
   }
   ```
-  그림 -----
+  ![image](https://github.com/user-attachments/assets/82c9e6ea-c0da-4474-b2b5-61f095ce3d46)
+
   * 1.1.2 ASCII code 및 cast 연산자 표현
   ```c
   //ASCii code 및 cast 연산자 표현
@@ -79,7 +80,8 @@
    return 0;
   }
   ```
-  그림 ----
+  ![image](https://github.com/user-attachments/assets/99bc6573-fe27-4104-b4ad-2339e9233198)
+
 
   * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value4.c)
   ```txt
@@ -293,7 +295,7 @@
     pa = array;
   }
   ```
-  그림3 -----
+  ![image](https://github.com/user-attachments/assets/70496436-3348-424b-a22c-bd5645c46a2e)
   
   * 4.1 pointer와 문자 배열의 관계
   ```c
@@ -312,6 +314,7 @@
     return 0;
   }
   ```
+
   ```txt
   &acBuffer[0] == acBuffer
   acBuffer[0] == *acBuffer
@@ -389,7 +392,8 @@
     pa = array;
   }
   ```
-  그림4-----
+  ![image](https://github.com/user-attachments/assets/4c53d2f7-da1e-41bd-9c0a-4f24918785fd)
+
   
 * 5.가변 배열과 Dynamic배열
   * 5.1 가변 배열 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Jagged_Arrays.c)
