@@ -29,7 +29,7 @@
   void (*fptr)() = func;
   fptr();
   ```
-    * 사용 예제3, 예제4 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Func_Ptr_exam3_1.c), [code2]()  
+    * 사용 예제3, 예제4 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Func_Ptr_exam3_1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/Func_Ptr_exam3_2.c)  
   ```c
   // 05. 사용 예제5
   double func(double, double);
