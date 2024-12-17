@@ -40,6 +40,11 @@
   }
   ```
   ```c
+  int i=10;
+  int *p;  // 포인터를 선언할때는 int *p = NULL; , stdio.h의 #define NULL 0
+  p=&i;
+  ```
+  ```c
   // NULL의 선언, 사용 방법
   #define NULL (char*)0
 
