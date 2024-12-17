@@ -90,3 +90,11 @@
   int search(void* arr, int arr_size, int ele_size, void* x,
            bool compare(const void*, const void*))
   ```
+  * 1.7 함수 포인터(Callbacks in C) [code]()
+  ```c
+  // callback function
+  void B(void (*ptr)()) {
+    (*ptr)(); // callback to A
+  }
+  ```
+  
