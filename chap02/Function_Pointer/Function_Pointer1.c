@@ -20,6 +20,7 @@ int main()
 
   return 0;
 }
+
 void func() {
   printf("call func()\n");
 }
