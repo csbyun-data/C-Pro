@@ -84,7 +84,9 @@
   ```txt
   1) NULL pointer
     int *iPtr = NULL;
-  
+  ```
+  * 2.1 void pointer [code](), 
+  ```txt
   2) void pointer
     void *vPtr;
   * 2.1 void pointer
