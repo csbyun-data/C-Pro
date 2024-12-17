@@ -20,6 +20,8 @@ int main()
 		
 	return 0;
 }
-// run result
+
+/*
 a
 1
+*/
