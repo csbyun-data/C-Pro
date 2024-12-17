@@ -29,6 +29,7 @@
   void (*fptr)() = func;
   fptr();
   ```
+    * 사용 예제3, 예제4 [code1](), [code2]()  
   ```c
   // 05. 사용 예제5
   double func(double, double);
