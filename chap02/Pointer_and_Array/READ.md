@@ -20,7 +20,67 @@
   char s[15];
   s = "Hello, World!"; // Error
   ```
-  
+  * 1.1.1 Variable Pointer, NULL 포인터
+  ```c
+  // pointer 선언시 주의사항, NULL선언
+  #include <stdio.h>
+  int main()
+  {
+    int a, b;
+    a = 2;
+    int* pa, pb;  // int *pa, int pb를 선언한 표현, -> int* pa, *pb; 표현해야됨
+    pa = &a;
+    pb = &a;      // Compile Error
+
+    *pa = 27;
+    int tmp = *pa;  //동일 표현 int tmp = *&a;
+    printf("%d, %d\n", *pa, *&a);
+
+    return 0;
+  }
+  ```
+  ```c
+  // NULL의 선언, 사용 방법
+  #define NULL (char*)0
+
+  // 포인터 변수의 초기화
+  char* ptr = NULL;
+
+  // 포인터 변수의 값을 확인
+  if(ptr == NULL) {} else if {}
+  if(ptr != NULL) // if(!ptr) 동일 표현식
+
+  // 메모리 할당 실패 점검
+  int* ptr = (int*)malloc(5*sizeof(int));
+
+  if(ptr == NULL) {
+    // memory allocation 실패
+  }
+
+  if(fopen("data.dat", "r") == NULL} {
+    // file open 실패
+  }
+  ```
+  그림 -----
+  * 1.1.2 ASCII code 및 cast 연산자 표현
+  ```c
+  //ASCii code 및 cast 연산자 표현
+  #include <stdio.h>
+
+  int main()
+  {
+  	int n = 0x30313233;
+
+  	printf("%x %c \n", *(char*)&n, *(char*)&n);
+  	printf("%x %c \n", *((char*)&n+1), *((char*)&n+1));
+  	printf("%x %c \n", *((char*)&n+2), *((char*)&n+2));
+  	printf("%x %c \n", *((char*)&n+3), *((char*)&n+3));
+
+   return 0;
+  }
+  ```
+  그림 ----
+
   * 1.2 포인터의 잘못된 사용 조건 및 예 [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value1.c) [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Invalid_pointer_value4.c)
   ```txt
   1) 변수의 수명이 완료된 개체의 주소를 참조 (포인터 반환)
@@ -223,6 +283,18 @@
   //ouput: aiData[0] = 100, aiData[1] = 200, *piData = 200
   ```
 * 4.pointer와 배열
+  * 4.0 Array pointer(1차원 배열), 배열과 포인터
+  ```c
+  #include <stdio.h>
+  void main()
+  {
+    char array[3] = {'A','B','C'}
+    char* pa;
+    pa = array;
+  }
+  ```
+  그림3 -----
+  
   * 4.1 pointer와 문자 배열의 관계
   ```c
   #include <stdio.h>
@@ -306,7 +378,19 @@
 
     return sum;
   }
-  ```      
+  ```
+  * 4.4 Array pointer(2차원 배열), 배열과 포인터
+  ```c
+  #include <stdio.h>
+  void main()
+  {
+    int array[2][3] = {{0,1,2},{3,4,5}};
+    int (*pa)[3]; //동일표현 int[3] *pa;
+    pa = array;
+  }
+  ```
+  그림4-----
+  
 * 5.가변 배열과 Dynamic배열
   * 5.1 가변 배열 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Jagged_Arrays.c)
   * 5.2 Dynamic 배열 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Dynamic_Jagged_Array.c)
