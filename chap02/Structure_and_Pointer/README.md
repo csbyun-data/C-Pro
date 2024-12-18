@@ -20,5 +20,11 @@
     // 구조체 포인터 변수
     struct student *pst1;
     ```
+    * 1.2 구조체 포인터 선언 후 메모리 할당( type def활용) [code1](), [code2](), [code3](), [code4]()
+    ```txt
+    [Error] invalid conversion from 'void*' to 'Person*' [-fpermissive] 수정
+    ```
+    * 1.3 구조체 초기화, 메모리
+    
     
   
