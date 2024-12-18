@@ -20,7 +20,7 @@
     // 구조체 포인터 변수
     struct student *pst1;
     ```
-    * 1.2 구조체 포인터 선언 후 메모리 할당( type def활용) [code1](), [code2](), [code3](), [code4]()
+    * 1.2 구조체 포인터 선언 후 메모리 할당( type def활용) [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer2.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer3.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer4.c), [code4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer5.c)
     ```txt
     [Error] invalid conversion from 'void*' to 'Person*' [-fpermissive] 수정
     ```
