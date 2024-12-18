@@ -263,7 +263,7 @@
   구조체 메모리 할당시 크기의 차이를 점검
   ```
   * 1.9 구조체내 배열을 값으로 전달 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_InArray_Transfer.c)
-  * 1.10 구조체를 배열의 파라메터로 전달 [code]()
+  * 1.10 구조체를 배열의 파라메터로 전달 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_Paramenter1.c)
   ```c
   int compare_a(const void *a, const void *b) {
       Pizza first = *(Pizza *)a;
