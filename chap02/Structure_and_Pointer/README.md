@@ -35,6 +35,33 @@
     struct p p2;
     memcpy(&p2, p1, sizeof(struct p));
     ```
+    ```c
+    // 구조체 선언 예1 
+   struct Phone {
+      int areacode;
+      usingned long long number;
+   };
+   
+   struct Person {
+      char name[20];
+      int age;
+      struct Phone p;
+   };
+   
+   // 구조체 선언 예2
+   struct Person {
+      char name[20];
+      int age;
+      struct Phone {
+         int areaCode;
+         usinged long long number;
+      };
+   };
+   
+   //초기화 예
+   struct Person p1 = {.name = "name1", .age = 25, {.areacode = 82, .number = 12345678}};
+   struct Person p2 = {"name2", 20, {82, 12345678}};
+    ```
 
     
     
