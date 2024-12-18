@@ -25,6 +25,17 @@
     [Error] invalid conversion from 'void*' to 'Person*' [-fpermissive] 수정
     ```
     * 1.3 구조체 초기화, 메모리 [code1](), [code2](), [code3](), [code4]()
+    ```c
+    // 구조체 변수, 포인터 변수 할당및 복사 예
+    struct p p1;
+    struct p* p2 = malloc(sizeof(struct p));
+    memcpy(p2, &p1, sizeof(struct p));
+
+    struct p* p1 = malloc(sizeof(struct p));
+    struct p p2;
+    memcpy(&p2, p1, sizeof(struct p));
+    ```
+
     
     
   
