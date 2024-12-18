@@ -24,7 +24,7 @@
     ```txt
     [Error] invalid conversion from 'void*' to 'Person*' [-fpermissive] 수정
     ```
-    * 1.3 구조체 초기화, 메모리
+    * 1.3 구조체 초기화, 메모리 [code1](), [code2](), [code3](), [code4]()
     
     
   
