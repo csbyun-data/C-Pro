@@ -24,7 +24,7 @@
     ```txt
     [Error] invalid conversion from 'void*' to 'Person*' [-fpermissive] 수정
     ```
-    * 1.3 구조체 초기화, 메모리 [code1](), [code2](), [code3](), [code4]()
+    * 1.3 구조체 초기화, 메모리 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer6.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer7.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer8.c), [code4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer9.c), [code5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_pointer10.c)
     ```c
     // 구조체 변수, 포인터 변수 할당및 복사 예
     struct p p1;
