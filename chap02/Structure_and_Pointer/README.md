@@ -62,7 +62,7 @@
       struct Person p1 = {.name = "name1", .age = 25, {.areacode = 82, .number = 12345678}};
       struct Person p2 = {"name2", 20, {82, 12345678}};
     ```
-    * 1.4 구조체 포인터 사용 예 [code]()
+    * 1.4 구조체 포인터 사용 예 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/struct_rect1.c)
     ```txt
     직사각형의 왼쪽 아래 꼭지점의 좌표, 오른쪽 위꼭지점의 좌표 (x1, y1, x2, y2)   오른쪽 위 꼭지점의
     좌표를 x축 방향으로 plus_x만큼, y축 방향으로 plus_y만큼 이동했을 때 사각형의   넓이가 얼마나
