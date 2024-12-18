@@ -264,6 +264,7 @@
   ```
   * 1.9 구조체내 배열을 값으로 전달 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_InArray_Transfer.c)
   * 1.10 구조체를 배열의 파라메터로 전달 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_Paramenter1.c)
+  * -    구조체 대신 vector를 이용한 C++ code [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/vector_numbers1.cpp)
   ```c
   int compare_a(const void *a, const void *b) {
       Pizza first = *(Pizza *)a;
