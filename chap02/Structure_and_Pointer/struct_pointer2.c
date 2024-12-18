@@ -23,3 +23,8 @@ int main()
   
   return 0; 
 }
+
+/*
+name: name1, age: 20
+name: name2, age: 25
+*/
