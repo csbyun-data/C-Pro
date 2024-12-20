@@ -5,6 +5,7 @@
 * 1.구조체 (struct)
   * 1.1 구조체 정의, 초기화, 잘못된 사용 예제
   ```c
+  // structure는 메모리 할당을 변수 전체를 구분해서 순서대로 할당 함
   // Defining structure in C
   struct MyData {
     int Age;
@@ -286,6 +287,8 @@
 * 2.공용체 (union)
   * 2.1 공용체 선언, 초기화, 접근
   ```c
+  // union은 메모리를 공유하며 변수 중에 크기가 제일 큰 변수의 메모리를 할당하고,
+  // 공유해서 한가지의 자료만 입력된다.
   // declaration of union
   union MyData { // Declare a simple union type
     int age;
