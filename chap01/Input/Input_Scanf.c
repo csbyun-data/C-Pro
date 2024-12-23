@@ -12,8 +12,9 @@ int main()
     scanf("%s %d", name, &age);
 	
     printf("input address. :");
+    fflush(stdin); // Keyboard Buffer를 비움
     scanf("%s", address);  //문자열에 공백이 있는경우 잘림
-	
+
     printf("name: %s, age: %d, address:%s \n", name, age, address);
 	
     return 0;
