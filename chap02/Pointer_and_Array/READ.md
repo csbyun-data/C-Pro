@@ -22,7 +22,7 @@
   char *s = NUUL;
   s = "Hello, World!"; //OK
   char s[15];
-  s = "Hello, World!"; // Error
+  s = "Hello, World!"; // Error, s == s[0]를 가르키는 변수
   ```
   * 1.1.1 Variable Pointer, NULL 포인터
   ```c
