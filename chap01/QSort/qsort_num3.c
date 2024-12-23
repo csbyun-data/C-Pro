@@ -15,6 +15,7 @@ int main()
   }
   printf("\n");
 
+  // sizeof (intArray[0]) == sizeof(int)
   qsort( (void *)intArray, length, sizeof(intArray[0]), compare);
 
   printf("intArray : ");
