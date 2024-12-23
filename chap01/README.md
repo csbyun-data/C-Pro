@@ -94,12 +94,14 @@
   int a[][2][2] = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
   int a[2][3] = { {1, 2, 3}, {4, 5, 6} };
   ```
-  * 6.1.1 배열의 sizeof [code]()
+  * 6.1.1 배열의 sizeof [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/sizeof_array1D.c)
   ```c
-  // arr, 배열의 이름은 sizeof를 사용하여 배열의 크기를 구할수 있음
-  // arr은 배열의 시작 주소 == &arr[0], 주소는 표시는 동일하지만 sizeof이용 크기를 구하면 arr은 20, &arr[0]는 64 OS에서 8byte를 계산함
-  // sizeof(arr) == sizeif(int)*5
-  // arr[0], 동일 표현 *arr, sizeof(a[0]) == sizof(int)
+  /* arr, 배열의 이름은 sizeof를 사용하여 배열의 크기를 구할수 있음
+     arr은 배열의 시작 주소 == &arr[0], 주소는 표시는 동일,
+     sizeof이용 크기를 구하면 arr은 20, &arr[0]는 64 OS에서 8byte를 계산함
+     sizeof(arr) == sizeif(int)*5, 
+     arr[0], 동일 표현 *arr, sizeof(a[0]) == sizof(int)
+  */
   int arr[] = { 12, 34, 10, 6, 40 };
   int n = sizeof(arr)/sizeof(arr[0]);
   ```
