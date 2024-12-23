@@ -3,20 +3,20 @@
 #include <stdio.h>
 
 struct Rect {
-	int length;
-	int width;
+  int length;
+  int width;
 };
 
 void changeLength (struct Rect *p, int l) {
-	p->length = l;
+  p->length = l;
 }
 
 int main() 
 {
-	struct Rect r = {10, 5};
-	changeLength(&r, 20);
-	
-	printf("Area = %d", r.length*r.width);
-	
-	return 0;
+  struct Rect r = {10, 5};
+  changeLength(&r, 20);
+  
+  printf("Area = %d", r.length*r.width);
+  
+  return 0;
 }
