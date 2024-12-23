@@ -18,6 +18,8 @@ int *solution( int numbers[], int numbers_len) {
 int main() {
   int numbers[] = { 7, 3, 4, 1, 2, 5, 6};
   int numbers_len = 7;
+  // int numbers_len = sizeof numbers / sizeif *numbers; , 갯수를 구함 다른 표현식
+  
   int *ret = solution(numbers, numbers_len);
 
   for( int i=0; i < numbers_len; i++) {
