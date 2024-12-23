@@ -4,7 +4,7 @@
 // C Program to illustrate the main function with command line arguments
 #include <stdio.h>
  
-int main(int argc, char* argv)
+int main(int argc, char* argv[])
 {
   // printing the coundt of arguments
   printf("The value of argc is %d\n", argc);
