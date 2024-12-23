@@ -14,7 +14,7 @@ int compare ( const book *a, const book *b) {
 int main()
 {
   book N[10] = { "english", "see", "korea", "hello", "world", "live",
-                   "summit", "pizza", "dog", "cat"};
+                 "summit", "pizza", "dog", "cat"};
   qsort( N, 10, sizeof(book), compare);
 
   for ( int i=0; i<10; i++) 
