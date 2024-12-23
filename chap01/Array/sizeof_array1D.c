@@ -11,10 +11,10 @@ int main(void)
 {
   int ints[] = {-2, 99, 0, -743, 2, 4};
   int num;
-  int size = sizeof ints / sizeof *ints;
+  int size = sizeof ints / sizeof *ints;   // sizeof(int)*6  / sizeof(int)
  
   for (int i = 0; i < size; i++) {
-    num = *(ints + i);
+    num = *(ints + i);                     // *(ints)
     printf("%5d, %5d \n", ints[i], num);
   }
 }
