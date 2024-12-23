@@ -12,7 +12,13 @@
   
   char c[100];
   c = "C programming"; // Error! array type is not assignable.
-  ``` 
+  ```
+  ```c
+  char *s1 = "Hello, world!";    // char pointer에 문자열의 메모리 주소를 저장
+  char s2[20] = "Hello, world!"; // char 배열에 문자열 저장
+  char s3[] = "Hello, world!";   // char 배열에 문자열 저장
+  ```
+  
   *  1.1 문자열 변수 출력 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_output1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_output2.c)
   *  1.2 scanf() 문자열 입력 받기 [scanf](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_input1.c)
   ```c
