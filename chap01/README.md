@@ -25,6 +25,10 @@
   int a_func(int x, ...) {
     va_list a_list;
     va_start( a_list, x)
+    for (...) {
+      va_arg(ptr, int); // Accessing current variable and pointing to next one
+    }
+    va_end(ptr); // Ending argument list traversal
   }
   ```
   
