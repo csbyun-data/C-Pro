@@ -13,7 +13,7 @@ int main()
 
     // 문자열이 공백이 있어도 줄 전체를 읽어들임
     fflush(stdin); // Keyboard Buffer를 비움
-    fgets(address, 50, stdin); //scanf("%s", address);
+    fgets(address, 50, stdin); // scanf("%s", address); 제거
 	
     printf("name: %s, age: %d, address:%s \n", name, age, address);
 	
