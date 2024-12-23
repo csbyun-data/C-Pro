@@ -25,10 +25,17 @@ int main()
   int n=6;
   int i, key=26;
 
-  printf("\nBefore Insertion: ");
+  printf("\n Before Insertion: ");
   for( i=0; i<n; i++)
     printf("%d ", arr[i]);
 
+  // inserting key
+  n = insertSorted( arr, n, key, capacity);
+
+  printf("\n After Inserttion: ");
+  for( i=0; i<n; i++)
+    printf("%d ", arr[i]);
+  
   return 0;
 }
 
