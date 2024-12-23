@@ -23,11 +23,11 @@ int main()
   int i;
 
   printf("\n Before insertion: ");
-  for( i=0; i<n; i+=)
+  for( i=0; i<n; i++)
     printf("%d ", arr[i]);
   printf("\n");
 
-  int x=10; pos=2;
+  int x=10, pos=2;
 
   // Function call
   insertElement(arr, n, x, pos);
