@@ -104,7 +104,7 @@
   */
   int arr[] = { 12, 34, 10, 6, 40 };
   int n = sizeof(arr)/sizeof(arr[0]);
-  // 동일 표현, int n = sizeif arr / sizeif *arr; 
+  // 동일 표현, int n = sizeof arr / sizeof *arr; 
   ```
 
   * 6.2 비정렬 배열 검색, 삽입, 삭제 [검색code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Search.c), [삽입 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert.c),[삽입 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert2.c) [삭제 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Delete1.c)
