@@ -13,4 +13,6 @@ int main()
   int b=20;
 
   swap(a, b);
+
+  printf("%d, %d", a, b);
 }
