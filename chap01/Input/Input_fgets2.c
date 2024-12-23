@@ -1,4 +1,6 @@
 // char *fgets(char *str, int size, FILE* file);
+// fgets()는 Keyboard로 typing된 문자의 마지막 enter(\n)문자를 받아들임
+
 #include <stdio.h>
 #include <stdlib.h>
 
