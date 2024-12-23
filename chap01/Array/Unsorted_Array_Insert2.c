@@ -22,7 +22,7 @@ int main()
   int n=5;
   int i;
 
-  printf("Before insertion: ");
+  printf("\n Before insertion: ");
   for( i=0; i<n; i+=)
     printf("%d ", arr[i]);
   printf("\n");
@@ -33,7 +33,7 @@ int main()
   insertElement(arr, n, x, pos);
   n++;
 
-  printf("After insertion : ");
+  printf("\n After insertion : ");
   for( i=0; i<n; i++)
     printf("%d ", arr[i]);
 
