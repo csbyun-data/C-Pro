@@ -29,6 +29,14 @@ int main()
   for( i=0; i<n; i++)
     printf("%d ", arr[i]);
 
+    // Function call
+  insertSorted(arr, n, key, capacity);
+  n++;
+
+  printf("\n After insertion : ");
+  for( i=0; i<n; i++)
+    printf("%d ", arr[i]);
+  
   return 0;
 }
 
