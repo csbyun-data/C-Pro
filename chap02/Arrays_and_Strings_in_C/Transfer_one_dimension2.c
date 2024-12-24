@@ -2,6 +2,7 @@
 
 #define ARRAY_SIZE 8
 
+// *acData[] == acData[] 동일 표현
 void ReadArray(int acData[]) {
   int idx = 0;
 
