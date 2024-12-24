@@ -182,14 +182,14 @@
   
   // Execute example code
   void Return_A_Function_Pointer() {
-  	 cout << endl << "Executing ’Return_A_Function_Pointer’" << endl;
+    cout << endl << "Executing ’Return_A_Function_Pointer’" << endl;
   
-  	 // define a function pointer and initialize it to NULL
-  	 float (*pt2Function)(float, float) = NULL;
-  	 pt2Function=GetPtr1('+'); // get function pointer from function ’GetPtr1’
-   	cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
-   	pt2Function=GetPtr2('-'); // get function pointer from function ’GetPtr2’
-   	cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
+    // define a function pointer and initialize it to NULL
+    float (*pt2Function)(float, float) = NULL;
+    pt2Function=GetPtr1('+'); // get function pointer from function ’GetPtr1’
+    cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
+    pt2Function=GetPtr2('-'); // get function pointer from function ’GetPtr2’
+    cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
   }
   ```
   * 2.8 How to Use Arrays of Function Pointers
