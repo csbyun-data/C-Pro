@@ -117,11 +117,11 @@
   	  else
   		  printf("Pointer not initialized!!\n");
   }
-  
   // C++
   if(pt2ConstMember == &TMyClass::DoMore)
   	cout << "Pointer points to TMyClass::DoMore" << endl;
   ```
+  ![image](https://github.com/user-attachments/assets/63ba9f0e-d048-4304-a64f-00ee38c12913)
   * 2.5 calling a function using a function pointer
   ```c
   int result1 = pt2Function (12, ’a’, ’b’); // C short way
