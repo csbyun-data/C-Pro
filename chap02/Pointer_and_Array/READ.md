@@ -547,6 +547,25 @@
   ```
 
   * 6.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc2.c)
+  ```c
+  typedef  int (*pfunctPtr)(int, int); /* function pointer */
+
+  int Add(int iData1,int iData2) {
+    return (iData1 + iData2);
+  }
+  //...
+  //Return function pointer
+  pfunctPtr ArithMaticOperation(int iChoice) {
+    //function pointer
+    pfunctPtr pArithmaticFunction = NULL;
+    switch(iChoice) {
+      case 1:
+        pArithmaticFunction = AddTwoNumber;
+        break;
+      //...
+    }
+
+
   * 6.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
     
 * 7.pointer와 structure
