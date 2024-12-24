@@ -9,8 +9,8 @@ class TMyClass {
     };
 	
     int DoMore(float a, char b, char c) {
-  	  cout << "TMyClass::DoMore" << endl; return a-b+c;
-  	};
+      cout << "TMyClass::DoMore" << endl; return a-b+c;
+    };
   /* more of TMyClass */
 };
 
