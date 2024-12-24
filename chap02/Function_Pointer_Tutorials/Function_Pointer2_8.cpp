@@ -45,9 +45,7 @@ void Array_Of_Member_Function_Pointers() {
   cout << (instance.*funcArr2[0])(89, 'a', 'b') << endl;
 }
 
-int main()
-{
+int main() {
   Array_Of_Member_Function_Pointers();
-  
   return 0;
 }
