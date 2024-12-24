@@ -510,28 +510,16 @@
     return 0;
   }
   ```
-  * 6.2 function pointer이용 함수 호출
+  * 6.2 function pointer이용 함수 호출 [code]()
   ```c
-  #include <stdio.h>
-  #include <stdlib.h>
-
   int AddTwoNumber(int iData1,int iData2) {
     return (iData1 + iData2);
   }
 
-  int main(int argc, char *argv[])
-  {
-    int iRetValue = 0;
-    int (*pfAddTwoNumber)(int,int) = NULL;
+  int (*pfAddTwoNumber)(int,int) = NULL;
+  pfAddTwoNumber = AddTwoNumber;
 
-    pfAddTwoNumber = AddTwoNumber;
-
-    // iRetValue = pfAddTwoNumber(10, 20);
-    iRetValue = (*pfAddTwoNumber)(10, 20);
-    printf("\n\nAddition of two number = %d\n\n",iRetValue);
-
-    return 0;
-  }
+  iRetValue = (*pfAddTwoNumber)(10, 20);
   ```
   * 6.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c)
   ```c
@@ -568,6 +556,15 @@
   }
   ```
   * 6.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
+  ```c
+  //Declaration of array of function pointer
+  int (*apfArithmatics [3])(int,int) = {Add, Sub, Mul};
+
+  // Calling the add function using index of array
+  iRetValue = (*apfArithmatics[0])(20, 10);  // Add
+  iRetValue = (*apfArithmatics[1])(20, 10);  // Sub
+  iRetValue = (*apfArithmatics[2])(20, 10);  // Mul
+  ```
     
 * 7.pointer와 structure
   * 7.1 Book 자료 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Pointer_structure.c)
