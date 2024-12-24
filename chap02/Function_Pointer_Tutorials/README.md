@@ -194,6 +194,8 @@
     cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
   }
   ```
+  ![image](https://github.com/user-attachments/assets/614d723b-2261-41b6-8a5d-10fee09aaea4)
+
   * 2.8 How to Use Arrays of Function Pointers
   ```c
   // C 
