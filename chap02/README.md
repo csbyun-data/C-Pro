@@ -47,4 +47,4 @@
 ### 참조 LIST
 * [참조: aticleworld.com/C-Pro](https://aticleworld.com/C-Pro/#)
 * [참조: geeksforgeeks.org/array-c-cpp-programs](https://www.geeksforgeeks.org/array-c-cpp-programs/)
-* [참조: 포인터 심상돈](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_%EC%8B%AC%EC%83%81%EB%8F%88.pdf)
+* [참조: 포인터 심상돈 pdf](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_%EC%8B%AC%EC%83%81%EB%8F%88.pdf)
