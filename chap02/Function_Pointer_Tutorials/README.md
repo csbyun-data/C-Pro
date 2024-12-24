@@ -108,7 +108,7 @@
     /* more of TMyClass */
   };
   ```
-  * 2.4 comparing function pointers
+  * 2.4 comparing function pointers [code]()
   ```c
   // C
   if(pt2Function >0){ // check if initialized
