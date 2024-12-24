@@ -111,6 +111,22 @@
   * 6.2 비정렬 배열 검색, 삽입, 삭제 [검색code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Search.c), [삽입 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert.c),[삽입 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert2.c) [삭제 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Delete1.c)
   * 6.3 정렬 배열 검색, 삽입, 삭제 [검색 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Sorted_Array_Search1.c), [삽입 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Sorted_Array_Insert1.c), [삭제 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Sorted_Array_Delete1.c)
   * 6.3 String in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
+  * 6.4 포인터 배열, 배열 포인터 [code]()
+  ```txt
+  1) 포인터 배열
+    char *arr[3]; == (char *) arr[3];
+    // 포인터 3개가 존재 함
+    char a, b, c;
+    arr[0] = &a;
+    arr[1] = &b;
+    arr[2] = &c;
+  
+  2) 배열 포인터
+    char (*arr)[3];
+    // 포인터가 1개 존재, array[3]인 배열을 가르킴
+    char tmp1[3] = {'a','b','c'};
+    arr = &tmp1;
+  ```
 
 * 7.함수 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
   * 7.1 함수 parameter 전달 
