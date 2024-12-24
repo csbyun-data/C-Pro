@@ -510,7 +510,7 @@
     return 0;
   }
   ```
-  * 6.2 function pointer이용 함수 호출 [code]()
+  * 6.2 function pointer이용 함수 호출 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Add.c)
   ```c
   int AddTwoNumber(int iData1,int iData2) {
     return (iData1 + iData2);
