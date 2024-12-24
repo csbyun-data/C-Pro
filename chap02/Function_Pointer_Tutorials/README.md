@@ -272,41 +272,23 @@
     /* use the result */
   }
   ```
-  * 3.3 How to make a callback in C by the means of the sort function qsort
+  * 3.3 How to make a callback in C by the means of the sort function qsort [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer3_3.c)
   ```c
-  #include <stdlib.h> // due to: qsort
-  #include <time.h> // randomize
-  #include <stdio.h> // printf
   // comparison-function for the sort-algorithm
   // two items are taken by void-pointer, converted and compared
   int CmpFunc(const void* _a, const void* _b) {
-   	// you’ve got to explicitly cast to the correct type
-   	const float* a = (const float*) _a;
-   	const float* b = (const float*) _b;
+    // you’ve got to explicitly cast to the correct type
+    const float* a = (const float*) _a;
+    const float* b = (const float*) _b;
    
-   	if(*a > *b) return 1; // first item is bigger than the second one -> return 1
-   	else
-    		if(*a == *b) return 0; // equality -> return 0
-    		else return -1; // second item is bigger than the first one -> return -1
+    if( *a > *b) return 1; // first item is bigger than the second one -> return 1
+    else
+      if( *a == *b) return 0; // equality -> return 0
+      else return -1; // second item is bigger than the first one -> return -1
   }
   
-  // example for the use of qsort()
-  void QSortExample() {
-   	float field[100];
-   	::randomize(); // initialize random-number-generator
-   	for(int c=0;c<100;c++) // randomize all elements of the field
-    		field[c]=random(99);
-   
-   	// sort using qsort()
-   	qsort((void*) field, /*number of items*/ 100, /*size of an item*/ sizeof(field[0]),
-   
-   	/*comparison-function*/ CmpFunc);
-   	// display first ten elements of the sorted field
-   	printf("The first ten elements of the sorted field are ...\n");
-   	for(int c=0;c<10;c++)
-    		printf("element #%d contains %.0f\n", c+1, field[c]);
-   	printf("\n");
-  }
+  // sort using qsort()
+  qsort((void*) field, /*number of items*/ 100, /*size of an item*/ sizeof(field[0]),
   ```
   * 3.5 Example A: Callback to member function using an additional argument
   ```c
