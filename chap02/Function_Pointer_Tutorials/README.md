@@ -31,7 +31,7 @@
   4.3 Example of How to Use Functors 
   ```
   
-  * 1.2 Introductory Example or How to Replace a Switch-Statement
+  * 1.2 Introductory Example or How to Replace a Switch-Statement [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer1.c)
   ```
   // Task: Perform one of the four basic arithmetic operations specified by the
   // characters '+', '-', '*' or '/'.
