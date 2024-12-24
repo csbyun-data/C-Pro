@@ -112,10 +112,11 @@
   ```c
   // C
   if(pt2Function >0){ // check if initialized
-  	if(pt2Function == &DoIt)
-  		printf("Pointer points to DoIt\n"); }
-  	else
-  		printf("Pointer not initialized!!\n");
+  	 if(pt2Function == &DoIt)
+  		  printf("Pointer points to DoIt\n");
+  	  else
+  		  printf("Pointer not initialized!!\n");
+  }
   
   // C++
   if(pt2ConstMember == &TMyClass::DoMore)
