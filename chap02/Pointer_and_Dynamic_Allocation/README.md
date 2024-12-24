@@ -274,7 +274,7 @@
     char **ptr = NULL;
 
     //initialize the pointer
-    ptrArr = &arr;
+    ptr = &arr;
   
     for (row = 0; row < 5; ++row) // Loop for coloumb
       printf("%s \n", ptr[row]);
