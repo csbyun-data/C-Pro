@@ -139,7 +139,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/8e5a23dd-b317-4ef1-9283-76aea3ee8ca1)
 
-  * 2.6 How to Pass a Function Pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_6.c)
+  * 2.6 How to Pass a Function Pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_6.cpp)
   ```c
   // <pt2Func> is a pointer to a function which returns an int and takes a float and two char
   void PassPtr(int (*pt2Func)(float, char, char)) {
