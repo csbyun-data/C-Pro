@@ -72,7 +72,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/82c9e6ea-c0da-4474-b2b5-61f095ce3d46)
 
-  * 1.1.2 ASCII code 및 cast 연산자 표현
+  * 1.1.2 ASCII code 및 cast 연산자 표현 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Pointer_Cast.c)
   ```c
   //ASCii code 및 cast 연산자 표현
   #include <stdio.h>
