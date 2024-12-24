@@ -108,7 +108,7 @@
     /* more of TMyClass */
   };
   ```
-  * 2.4 comparing function pointers [code]()
+  * 2.4 comparing function pointers [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_4.c)
   ```c
   // C
   if(pt2Function >0){ // check if initialized
