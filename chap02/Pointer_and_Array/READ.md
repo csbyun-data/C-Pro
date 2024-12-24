@@ -25,8 +25,8 @@
   s = "Hello, World!"; // Error, s == s[0]를 가르키는 변수
 
   int iarr[] = { 10, 20, 30, 40, 50};
-  // iarr[0] == *(iarr+0) == *&iarr[0] 동일 표현
-  // iarr[1] == *(iarr+1) == *&iarr[1] 동일 표현
+  // iarr[0] == *(iarr+0) == *&iarr[0] == 10 동일 표현
+  // iarr[1] == *(iarr+1) == *&iarr[1] == 20 동일 표현
   // ...
   ```
   
