@@ -6,11 +6,11 @@ class TMyClass {
   public:
     int DoIt(float a, char b, char c) {
       cout << "TMyClass::DoIt"<< endl; return a+b+c;
-	};
+    };
 	
     int DoMore(float a, char b, char c) {
   	  cout << "TMyClass::DoMore" << endl; return a-b+c;
-	};
+  	};
   /* more of TMyClass */
 };
 
