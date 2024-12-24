@@ -54,7 +54,7 @@
   }
   ```    
   *   3.3 fgets(), fputs() 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets1.c)
-  *   3.3.1 fgets() 문자열 끝 newline '\n' 제거, null terminator로 변경 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
+  *   3.3.1 fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
   ```c
   void strip_newline( char *str, int size ) {
     int i;
