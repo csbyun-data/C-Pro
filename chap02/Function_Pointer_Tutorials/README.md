@@ -423,6 +423,7 @@
      	void Display(const char* text) { cout << text << endl; };
      	/* more of TClassB */
   };
+  
   // main program
   int main(int argc, char* argv[]) {
     // 1. instantiate objects of TClassA and TClassB
