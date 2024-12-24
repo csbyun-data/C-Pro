@@ -330,7 +330,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/da93006d-d507-47dc-a7c1-7a613b37016c)
 
-  * 3.5 Example B: Callback to member function using a global variable
+  * 3.5 Example B: Callback to member function using a global variable [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Callback_Using_Global.cpp)
   ```c
   // Task: The function ’DoItB’ makes something which implies a callback to
   // the member function ’Display’. Therefore the wrapper function
