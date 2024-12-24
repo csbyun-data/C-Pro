@@ -122,7 +122,7 @@
   	cout << "Pointer points to TMyClass::DoMore" << endl;
   ```
   ![image](https://github.com/user-attachments/assets/63ba9f0e-d048-4304-a64f-00ee38c12913)
-  * 2.5 calling a function using a function pointer [code]()
+  * 2.5 calling a function using a function pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_5.c)
   ```c
   int result1 = pt2Function (12, 'a', 'b'); // C short way
   int result2 = (*pt2Function) (12, 'a', 'b'); // C
