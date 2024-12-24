@@ -250,8 +250,8 @@
     char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
 
     //create pointer to the array
-    char * (*ptrArr)[5] = NULL;
-
+    char * (*ptrArr)[5] = NULL; // 배열 포인터-> (*ptrArr)[5], 배열[5]인 것을 가리키는 포인터 1개
+                                // *(배열 포인터) -> 포인터를 가르키는 포인터
     //initialize the pointer
     ptrArr = &arr;
     for (row = 0; row < 5; ++row) // Loop for coloumb
