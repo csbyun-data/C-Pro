@@ -38,9 +38,7 @@ void Array_Of_Function_Pointers() {
   printf("%d\n", (*funcArr2[0])(34, 'a', 'b'));
 }
 
-
-int main()
-{
+int main() {
   Array_Of_Function_Pointers();
   return 0;
 }
