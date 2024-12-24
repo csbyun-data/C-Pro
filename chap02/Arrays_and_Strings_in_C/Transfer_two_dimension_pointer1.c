@@ -4,7 +4,9 @@
 #define ARRAY_ROW 3
 #define ARRAY_COL 3
 
-// // void ReadArray( int piData[][ARRAY_COL]) 동일 표현
+// void ReadArray( int piData[][ARRAY_COL]) 동일 표현
+// (*piData)[ARRAY_COL] , 배열 포인터, 배열[ARRAY_COL]을 가르키는 포인터 1개
+// *piData[ARRAY_COL] 다른 표현, [Warning] passing argument 1 of 'ReadArray' from incompatible pointer type [-Wincompatible-pointer-types]
 void ReadArray( int (*piData)[ARRAY_COL]) {
   int iRow = 0;
   int iCol = 0;
