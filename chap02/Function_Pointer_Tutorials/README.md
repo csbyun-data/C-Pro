@@ -393,36 +393,36 @@
   // derived template class
   template <class TClass> class TSpecificFunctor : public TFunctor {
    private:
-    	void (TClass::*fpt)(const char*); // pointer to member function
-    	TClass* pt2Object; // pointer to object
+    void (TClass::*fpt)(const char*); // pointer to member function
+    TClass* pt2Object; // pointer to object
    public:
-    	// constructor - takes pointer to an object and pointer to a member and stores
-    	// them in two private variables
-    	TSpecificFunctor(TClass* _pt2Object, void(TClass::*_fpt)(const char*))
-    	{ pt2Object = _pt2Object; fpt=_fpt; };
-    	
-    	// override operator "()"
-    	virtual void operator()(const char* string)
-    	{ (*pt2Object.*fpt)(string);}; // execute member function
-    	
-    	// override function "Call"
-    	virtual void Call(const char* string)
-    	{ (*pt2Object.*fpt)(string);}; // execute member function
+    // constructor - takes pointer to an object and pointer to a member and stores
+    // them in two private variables
+    TSpecificFunctor(TClass* _pt2Object, void(TClass::*_fpt)(const char*))
+    { pt2Object = _pt2Object; fpt=_fpt; };
+    
+    // override operator "()"
+    virtual void operator()(const char* string)
+    { (*pt2Object.*fpt)(string);}; // execute member function
+    
+    // override function "Call"
+    virtual void Call(const char* string)
+    { (*pt2Object.*fpt)(string);}; // execute member function
   };
   
   class TClassA {
     public:
-    	TClassA(){};
-    	void Display(const char* text) { cout << text << endl; };
-    	/* more of TClassA */
+      TClassA(){};
+      void Display(const char* text) { cout << text << endl; };
+      /* more of TClassA */
   };
   
   // dummy class B
   class TClassB{
     public:
-     	TClassB(){};
-     	void Display(const char* text) { cout << text << endl; };
-     	/* more of TClassB */
+      TClassB(){};
+      void Display(const char* text) { cout << text << endl; };
+      /* more of TClassB */
   };
   
   // main program
