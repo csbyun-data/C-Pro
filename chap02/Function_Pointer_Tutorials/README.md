@@ -139,7 +139,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/8e5a23dd-b317-4ef1-9283-76aea3ee8ca1)
 
-  * 2.6 How to Pass a Function Pointer
+  * 2.6 How to Pass a Function Pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_6.c)
   ```c
   // <pt2Func> is a pointer to a function which returns an int and takes a float and two char
   void PassPtr(int (*pt2Func)(float, char, char)) {
@@ -149,10 +149,12 @@
   
   // execute example code - ’DoIt’ is a suitable function like defined above in 2.1-4
   void Pass_A_Function_Pointer() {
-   cout << endl << "Executing ’Pass_A_Function_Pointer’" << endl;
-   PassPtr(&DoIt);
+    cout << endl << "Executing ’Pass_A_Function_Pointer’" << endl;
+    PassPtr(&DoIt);
   }
   ```
+  ![image](https://github.com/user-attachments/assets/33de9189-4297-42c0-a6af-62d01c86b261)
+
   * 2.7 How to Return a Function Pointer
   ```c
   // ’Plus’ and ’Minus’ are defined above. They return a float and take two float
