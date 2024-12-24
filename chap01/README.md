@@ -37,7 +37,7 @@
   *  3.1.1 fgets() 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets.c)
   *  3.2 gets(), puts() 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_gets1.c)
   ```c
-  // stream : 순서를 가진 문자열
+  // stream : 순서를 가진 연속된 문자열
   #include <stdio.h>
   #include <stdlib.h>
 
