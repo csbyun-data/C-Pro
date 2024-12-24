@@ -374,9 +374,8 @@
   }
   ```
   
-  * 4 C 및 C++ 함수 포인터를 캡슐화하는 펑터
+  * 4 C 및 C++ 함수 포인터를 캡슐화하는 펑터 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Functor1.cpp)
   ```c
-  // 4. C 및 C++ 함수 포인터를 캡슐화하는 펑터
   #include <iostream>
   
   using namespace std;
