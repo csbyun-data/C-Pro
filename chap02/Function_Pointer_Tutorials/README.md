@@ -122,18 +122,18 @@
   	cout << "Pointer points to TMyClass::DoMore" << endl;
   ```
   ![image](https://github.com/user-attachments/assets/63ba9f0e-d048-4304-a64f-00ee38c12913)
-  * 2.5 calling a function using a function pointer
+  * 2.5 calling a function using a function pointer [code]()
   ```c
-  int result1 = pt2Function (12, ’a’, ’b’); // C short way
-  int result2 = (*pt2Function) (12, ’a’, ’b’); // C
+  int result1 = pt2Function (12, 'a', 'b'); // C short way
+  int result2 = (*pt2Function) (12, 'a', 'b'); // C
   
   TMyClass instance1;
   
-  int result3 = (instance1.*pt2Member)(12, ’a’, ’b’); // C++
-  int result4 = (*this.*pt2Member)(12, ’a’, ’b’); // C++ if this-pointer can be used
+  int result3 = (instance1.*pt2Member)(12, 'a', 'b'); // C++
+  int result4 = (*this.*pt2Member)(12, 'a', 'b'); // C++ if this-pointer can be used
   
   TMyClass* instance2 = new TMyClass;
-  int result4 = (instance2->*pt2Member)(12, ’a’, ’b’); // C++, instance2 is a pointer
+  int result4 = (instance2->*pt2Member)(12, 'a', 'b'); // C++, instance2 is a pointer
   
   delete instance2;
   ```
@@ -141,7 +141,7 @@
   ```c
   // <pt2Func> is a pointer to a function which returns an int and takes a float and two char
   void PassPtr(int (*pt2Func)(float, char, char)) {
-  	int result = (*pt2Func)(12, ’a’, ’b’); // call using function pointer
+  	int result = (*pt2Func)(12, 'a', 'b'); // call using function pointer
   	cout << result << endl;
   }
   
@@ -158,7 +158,7 @@
   // function which is taking two floats and returns a float. <opCode>
   // specifies which function to return
   float (*GetPtr1(const char opCode))(float, float){
-    if(opCode == ’+’)
+    if(opCode == '+')
       return &Plus;
     else
       return &Minus;} // default if invalid operator was passed
@@ -170,7 +170,7 @@
   // Function takes a char and returns a function pointer which is defined
   // with the typedef above. <opCode> specifies which function to return
   pt2Func GetPtr2(const char opCode) {
-    if(opCode == ’+’)
+    if(opCode == '+')
       return &Plus;
    	else
       return &Minus; // default if invalid operator was passed
@@ -182,9 +182,9 @@
   
   	 // define a function pointer and initialize it to NULL
   	 float (*pt2Function)(float, float) = NULL;
-  	 pt2Function=GetPtr1(’+’); // get function pointer from function ’GetPtr1’
+  	 pt2Function=GetPtr1('+'); // get function pointer from function ’GetPtr1’
    	cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
-   	pt2Function=GetPtr2(’-’); // get function pointer from function ’GetPtr2’
+   	pt2Function=GetPtr2('-'); // get function pointer from function ’GetPtr2’
    	cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
   }
   ```
