@@ -226,7 +226,9 @@
    	printf("%d\n", (*funcArr2[1])(56, 'a', 'b'));
    	printf("%d\n", (*funcArr2[0])(34, 'a', 'b'));
   }
-  
+  ```
+  ![image](https://github.com/user-attachments/assets/d0ed053b-2f5b-47c7-a95c-839e43d7d501)
+  ```c
   // C++ 
   // type-definition: ’pt2Member’ now can be used as type
   typedef int (TMyClass::*pt2Member)(float, char, char);
@@ -253,13 +255,14 @@
    	// calling a function using an index to address the member function pointer
    	// note: an instance of TMyClass is needed to call the member functions
    	TMyClass instance;
-   	cout << (instance.*funcArr1[1])(12, 'a, b) << endl;
+   	cout << (instance.*funcArr1[1])(12, 'a', 'b') << endl;
    	cout << (instance.*funcArr1[0])(12, 'a', 'b') << endl;
    	cout << (instance.*funcArr2[1])(34, 'a', 'b') << endl;
    	cout << (instance.*funcArr2[0])(89, 'a', 'b') << endl;
   }
   ```
-  ![image](https://github.com/user-attachments/assets/d0ed053b-2f5b-47c7-a95c-839e43d7d501)
+  ![image](https://github.com/user-attachments/assets/a66e1312-aef0-4c34-8902-ed4507cfe296)
+
 
   * 3.2 How to Implement a Callback in C ?
   ```c
