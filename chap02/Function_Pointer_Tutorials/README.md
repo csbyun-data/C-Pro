@@ -196,7 +196,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/614d723b-2261-41b6-8a5d-10fee09aaea4)
 
-  * 2.8 How to Use Arrays of Function Pointers
+  * 2.8 How to Use Arrays of Function Pointers [c code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_8.c), [c++ code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_8.cpp)
   ```c
   // C 
   // type-definition: ’pt2Function’ now can be used as type
@@ -221,10 +221,10 @@
    
    	/* more assignments */
    	// calling a function using an index to address the function pointer
-   	printf("%d\n", funcArr1[1](12, ’a’, ’b’)); // short form
-   	printf("%d\n", (*funcArr1[0])(12, ’a’, ’b’)); // "correct" way of calling
-   	printf("%d\n", (*funcArr2[1])(56, ’a’, ’b’));
-   	printf("%d\n", (*funcArr2[0])(34, ’a’, ’b’));
+   	printf("%d\n", funcArr1[1](12, 'a', 'b')); // short form
+   	printf("%d\n", (*funcArr1[0])(12, 'a', 'b')); // "correct" way of calling
+   	printf("%d\n", (*funcArr2[1])(56, 'a', 'b'));
+   	printf("%d\n", (*funcArr2[0])(34, 'a', 'b'));
   }
   
   // C++ 
