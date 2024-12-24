@@ -137,6 +137,8 @@
   
   delete instance2;
   ```
+  ![image](https://github.com/user-attachments/assets/8e5a23dd-b317-4ef1-9283-76aea3ee8ca1)
+
   * 2.6 How to Pass a Function Pointer
   ```c
   // <pt2Func> is a pointer to a function which returns an int and takes a float and two char
