@@ -553,7 +553,7 @@
   int Add(int iData1,int iData2) {
     return (iData1 + iData2);
   }
-  //...
+
   //Return function pointer
   pfunctPtr ArithMaticOperation(int iChoice) {
     //function pointer
@@ -564,8 +564,9 @@
         break;
       //...
     }
-
-
+    return pArithmaticFunction;
+  }
+  ```
   * 6.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
     
 * 7.pointer와 structure
