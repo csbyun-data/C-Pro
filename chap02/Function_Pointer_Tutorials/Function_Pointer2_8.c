@@ -42,6 +42,5 @@ void Array_Of_Function_Pointers() {
 int main()
 {
   Array_Of_Function_Pointers();
-  
   return 0;
 }
