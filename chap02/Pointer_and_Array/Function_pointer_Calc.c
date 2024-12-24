@@ -14,11 +14,11 @@ int Add(int iData1,int iData2) {
 }
 
 int Sub(int iData1,int iData2) {
-    return (iData1 - iData2);
+  return (iData1 - iData2);
 }
 
 int Mul(int iData1,int iData2) {
-    return (iData1 * iData2);
+  return (iData1 * iData2);
 }
 
 int main()
@@ -35,16 +35,16 @@ int main()
   
   switch(iChoice) {
   case 1:
-      Result = ArithMaticOperation(iData1,iData2,Add);
-      break;
+    Result = ArithMaticOperation(iData1,iData2,Add);
+    break;
   case 2:
-      Result = ArithMaticOperation(iData1,iData2,Sub);
-      break;
+    Result = ArithMaticOperation(iData1,iData2,Sub);
+    break;
   case 3:
-      Result = ArithMaticOperation(iData1,iData2,Mul);
-      break;
+    Result = ArithMaticOperation(iData1,iData2,Mul);
+    break;
   default:
-      printf("Enter Wrong Choice\n");
+    printf("Enter Wrong Choice\n");
   }
   printf("Result  = %d\n",Result);
   
