@@ -111,7 +111,7 @@
   * 6.2 비정렬 배열 검색, 삽입, 삭제 [검색code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Search.c), [삽입 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert.c),[삽입 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Insert2.c) [삭제 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Unsorted_Array_Delete1.c)
   * 6.3 정렬 배열 검색, 삽입, 삭제 [검색 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Sorted_Array_Search1.c), [삽입 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Sorted_Array_Insert1.c), [삭제 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/Sorted_Array_Delete1.c)
   * 6.3 String in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
-  * 6.4 포인터 배열, 배열 포인터 [code]()
+  * 6.4 포인터 배열, 배열 포인터 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Array/pointer_array1.c)
   ```txt
   1) 포인터 배열
     char *arr[3]; == (char *) arr[3];
