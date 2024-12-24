@@ -186,8 +186,10 @@
   
     // define a function pointer and initialize it to NULL
     float (*pt2Function)(float, float) = NULL;
+  
     pt2Function=GetPtr1('+'); // get function pointer from function ’GetPtr1’
     cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
+  
     pt2Function=GetPtr2('-'); // get function pointer from function ’GetPtr2’
     cout << (*pt2Function)(2, 4) << endl; // call function using the pointer
   }
