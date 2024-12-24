@@ -155,7 +155,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/33de9189-4297-42c0-a6af-62d01c86b261)
 
-  * 2.7 How to Return a Function Pointer
+  * 2.7 How to Return a Function Pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer2_7.cpp)
   ```c
   // ’Plus’ and ’Minus’ are defined above. They return a float and take two float
   // Direct solution: Function takes a char and returns a pointer to a
