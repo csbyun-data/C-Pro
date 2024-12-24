@@ -533,7 +533,19 @@
     return 0;
   }
   ```
-  * 6.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c))
+  * 6.3 function pointer를 인수로 사용 [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc.c)
+  ```c
+  typedef  int (*pfunctPtr)(int, int); /* function pointer */
+
+  int ArithMaticOperation(int iData1,int iData2, pfunctPtr Calculation) {
+    int iRet =0;
+    iRet = Calculation(iData1,iData2);
+
+    return iRet;
+  }
+  // ...
+  ```
+
   * 6.4 함수에서 function pointer 반환 [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc2.c)
   * 6.5 function pointer배열 [exam5](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/Function_pointer_Calc3.c)
     
