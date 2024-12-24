@@ -37,7 +37,6 @@ void QSortExample() {
   printf("\n");
 }
 
-
 int main() {
   QSortExample();
   return 0;
