@@ -30,10 +30,11 @@
   4.2 How to Implement Functors ? 
   4.3 Example of How to Use Functors 
   ```
+  
   * 1.2 Introductory Example or How to Replace a Switch-Statement
   ```
   // Task: Perform one of the four basic arithmetic operations specified by the
-  // characters ’+’, ’-’, ’*’ or ’/’.
+  // characters '+', '-', '*' or '/'.
   // The four arithmetic operations ... one of these functions is selected
   // at runtime with a swicth or a function pointer
   
@@ -48,10 +49,10 @@
 
     // execute operation
     switch(opCode){
-      case ’+’ : result = Plus (a, b); break;
-      case ’-’ : result = Minus (a, b); break;
-      case ’*’ : result = Multiply (a, b); break;
-      case ’/’ : result = Divide (a, b); break;
+      case '+' : result = Plus (a, b); break;
+      case '-' : result = Minus (a, b); break;
+      case '*' : result = Multiply (a, b); break;
+      case '/' : result = Divide (a, b); break;
      }
   
      cout << "Switch: 2+5=" << result << endl; // display result
