@@ -41,7 +41,6 @@ int main()
   cout << r << '\n';
   
   return 0;
-
 }
 
 //run Result
