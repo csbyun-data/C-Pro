@@ -35,6 +35,12 @@
   * 1.1 Function Pointers
   * 1.2 Syntax of C and C++ Function Pointers
   * 1.3 Callback Function
+  ```c
+  void qsort( ... , int(_USERENTRY *cmpFunc)(const void*, const void*)) {
+    int bigger=cmpFunc(item1, item2); // make callback
+    //...
+  }
+  ```
   * 1.4 Functors 
     
 * 5.Structures and Unions in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
