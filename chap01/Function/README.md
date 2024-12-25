@@ -251,7 +251,7 @@
   ```c
   int a = 10;
   int *p = &a; // 포인터 변수, 주소값 할당
-  int &r = a;  // 레프런스 변수, 대상을 직접 할당
+  int &r = a;  // 레퍼런스 변수, 대상을 직접 할당
   
   struct person {
   	int birthday;
