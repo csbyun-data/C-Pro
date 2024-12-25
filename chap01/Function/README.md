@@ -247,4 +247,29 @@
   17-3) 행, 열 고정되지 않은 2D배열을 매개변수로 전달
   ```
   *  1.18 Struct를 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Struct_parameter.c)
-  *  1.18 Reference Variable과 Pointer Variable의 차이 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Reference_Pointer_diff.cpp)
+  *  1.19 Reference Variable과 Pointer Variable의 차이 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Reference_Pointer_diff.cpp)
+  ```c
+  int a = 10;
+  int *p = &a; // 포인터 변수, 주소값 할당
+  int &r = a;  // 레프런스 변수, 대상을 직접 할당
+  
+  struct person {
+  	int birthday;
+  };
+  struct person *peter = NULL; //포인터 변수, NULL 입력가능
+  if (peter != NULL) //포인터 변수는 NULL 값인지 반드시 확인 필요
+    peter->birthday = 1220;
+  else
+    printf("peter is null\n");
+  ```
+  ```c
+  void FuncByPointer(struct person*);
+  // 포인터 매개변수는 사용시 반드시 NULL 확인 필요
+  void FuncByReference(struct person&);
+  // 참조 매개변수는 NULL확인 필요하지 않음
+
+  struct person peter;
+  FuncByPointer(&peter);  // pointer parameter 사용법
+  FuncByReference(peter); // reference parameter 사용법
+  ```
+
