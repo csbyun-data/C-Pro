@@ -262,9 +262,7 @@
   int *p = &a; // 포인터 변수, 주소값 할당
   int &r = a;  // 레퍼런스 변수, 대상을 직접 할당
   
-  struct person {
-  	int birthday;
-  };
+  struct person { int birthday; };
   struct person *peter = NULL; //포인터 변수, NULL 입력가능
   if (peter != NULL) //포인터 변수는 NULL 값인지 반드시 확인 필요
     peter->birthday = 1220;
