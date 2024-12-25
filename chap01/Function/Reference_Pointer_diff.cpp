@@ -1,3 +1,4 @@
+// Reference Variable과 Pointer Variable의 차이
 #include <iostream>
 
 using namespace std;
@@ -12,11 +13,11 @@ int main()
   int y = 6;
   demo d;
   
-  int* p;
+  int *p;
   p = &x;
   p = &y; 		// 1. Pointer reinitialzation allowd
   
-  int& r= x;		// &r = y; 1. Compile Error
+  int &r= x;		// &r = y; 1. Compile Error
   r = y;			// 1. x value becomes 6
   p = NULL;		// &r = y; 2. Compile Error
   
