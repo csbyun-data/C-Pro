@@ -247,6 +247,15 @@
   17-3) 행, 열 고정되지 않은 2D배열을 매개변수로 전달
   ```
   *  1.18 Struct를 전달 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Struct_parameter.c)
+  ```c
+  struct Rect {...};
+  void changeLength (struct Rect *p, int l) {
+    p->length = l;
+  }
+  struct Rect r = {10, 5};
+  changeLength(&r, 20);
+  ```
+
   *  1.19 Reference Variable과 Pointer Variable의 차이 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Reference_Pointer_diff.cpp)
   ```c
   int a = 10;
