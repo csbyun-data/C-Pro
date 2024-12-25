@@ -32,6 +32,10 @@
   * 1.6 함수 포인터와 void포인터를 이용한 search()함수  
   
 * 4.2 Function Pointer Tutorials [[here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)]
+  * 1.1 Function Pointers
+  * 1.2 Syntax of C and C++ Function Pointers
+  * 1.3 Callback Function
+  * 1.4 Functors 
     
 * 5.Structures and Unions in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
   * 1.1 구조체
