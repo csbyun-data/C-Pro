@@ -13,13 +13,13 @@ int main()
   int y = 6;
   demo d;
   
-  int *p;
+  int *p;    // Pointer Variable 선언
   p = &x;
   p = &y; 		// 1. Pointer reinitialzation allowd
   
-  int &r= x;		// &r = y; 1. Compile Error
+  int &r= x;		// &r = y; 1. Compile Error, Reference Variable 선언
   r = y;			// 1. x value becomes 6
-  p = NULL;		// &r = y; 2. Compile Error
+  p = NULL;		// &r = y; 2. Compile Error, 포인터 변수는 NULL이 대입 됨, 참조 변수는 NULL이 입력안됨, 문법이 Error나지 않게 정해짐
   
   //3. Pointers to next memory location
   p++;
@@ -28,7 +28,7 @@ int main()
   r++;
   
   cout << &p << " " << &x << '\n'; 	//4. Different address 
-  cout << &r << " " << &x << '\n';	//4. SAme address
+  cout << &r << " " << &x << '\n';	//4. Same address
   
   demo* q	 = &d;
   demo& qq = d;
