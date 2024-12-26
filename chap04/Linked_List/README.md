@@ -1,6 +1,5 @@
 ## 01. Linked List
 ### Index
-[참조: aticleworld.com](https://aticleworld.com/C-Pro/#)
 * 1.Linked List
   * 1.1 Linked List [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex1.c)
   * <img src = "https://github.com/user-attachments/assets/9e41c1a5-84d0-47df-b274-862cd3f0c511" width="50%" height="50%">
@@ -112,19 +111,19 @@
   }
   
   ```
-  1.6 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex2.c)
+  * 1.6 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex2.c)
 * 2.Delete a Linked List node
-  *  2.1 시작 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_start_node.c)
+  * 2.1 시작 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_start_node.c)
   *  <img src = "https://github.com/user-attachments/assets/88e935fe-dab6-4c7b-b5b9-5d7c6e8b00a5" width="60%" height="60%">
 
-  *  2.2 중간 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_middle_node.c)
+  * 2.2 중간 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_middle_node.c)
   *  <img src = "https://github.com/user-attachments/assets/e28b4846-5541-490e-aca0-d4e8a0509f25" width="60%" height="60%">
 
-  *  2.3 끝 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_end_node.c)
+  * 2.3 끝 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_end_node.c)
   *  <img src = "https://github.com/user-attachments/assets/92c9ac1b-a9c2-4ab9-92e8-06ae243f31ca" width="60%" height="60%">
 
 * 3.Generic Linked List in C
-  *  3.1 Generic Linked List
+  * 3.1 Generic Linked List
   ```c
   //모든data type을 사용하여 Linked List를 만들어 놓은 프로그램
   //Creating a new type
@@ -140,6 +139,33 @@
   // Define the new type Node type and Node pointer
   typedef  struct Node  NodeType, * NodePointer;
   ```
-  *  3.2 Function to add a node at the end of the Generic Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c)
-  *  3.3 Free the all allocated memory [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/FreeAllocatedMemory_func1.c)
-  *  3.4 Driver program to create a Generic Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Generic_linked_list1.c)
+  * 3.2 Function to add a node at the end of the Generic Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c)
+  * 3.3 Free the all allocated memory [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/FreeAllocatedMemory_func1.c)
+  * 3.4 Driver program to create a Generic Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Generic_linked_list1.c)
+[참조: [aticleworld.com](https://aticleworld.com/C-Pro/#)]
+* 4.Single Linked List
+  * 4.1 실 예제 [code1](), [code2]()
+  ```txt
+  구조체를 이용하여 헤드 노드를 가지는 단일 연결 리스트 코드를 작성
+  . 단일 연결 리스트에는 다음과 같은 함수 생성
+    * cmd의 각 행은 [리스트 조작 명령, 데이터]
+    * 리스트 조작 명령은 1 또는 2이며, 1은 노드 삽입을, 2는 노드 삭제
+    * 모든 명령을 처리한 후 연결 리스트에서 데이터가 담긴 노드의 개수를 return
+
+    예시
+  | cmd                                                      | cmd_len | return |
+  |----------------------------------------------------------|----------|--------|
+  | [[1, 1], [1, 4], [1, 2], [1, 3], [1, 1], [2, 2], [2, 1]] | 7        | 2      |
+
+  | 명령   | 데이터 | 리스트 상태               |
+  |--------|--------|-------------------------|
+  | -      | -      | [H]   (헤드 노드)        |
+  | INSERT | 1      | [H]-[1]                 |
+  | INSERT | 4      | [H]-[4]-[1]             |
+  | INSERT | 2      | [H]-[2]-[4]-[1]         |
+  | INSERT | 3      | [H]-[3]-[2]-[4]-[1]     |
+  | INSERT | 1      | [H]-[1]-[3]-[2]-[4]-[1] |
+  | REMOVE | 2      | [H]-[1]-[3]-[4]-[1]     |
+  | REMOVE | 1      | [H]-[3]-[4]             |
+  따라서 리스트에 남은 노드 중, 데이터가 담긴 노드는 총 2개, Head Node제외
+  ```
