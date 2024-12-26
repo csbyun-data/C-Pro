@@ -169,3 +169,24 @@
   | REMOVE | 1      | [H]-[3]-[4]             |
   따라서 리스트에 남은 노드 중, 데이터가 담긴 노드는 총 2개, Head Node제외
   ```
+  ```c
+  // 할당 메모리 제거, 자료 출력 기능 추가
+  void free_node(struct NODE *head){ 
+    /* recursively free memory */
+    if(head->next != NULL)
+        free_node(head->next);
+    printf("freed node's value: %d\n", head->value);
+    free(head);
+  }
+
+  void print_node(struct NODE *head ) { 
+    /* recursively print node's value */
+  	 if( head != NULL ) {
+  	  	printf( "%d\n", head->value );
+  		  print_node( head->next );
+  	 }
+  }
+  // [Error] 'for' loop initial declarations are only allowed in C99 or C11 mode
+  // [Note] use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
+  // Compiler > Code Generation > Language standard (-std) ISO C99 설정
+  ```
