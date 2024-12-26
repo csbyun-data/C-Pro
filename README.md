@@ -47,6 +47,6 @@ Grammar of programming, a collection of basic materials for application.
 * 1 [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
 * 2 [참조: [aticleworld.com/c-tutorial](https://aticleworld.com/c-tutorial/)]
 * 3 [참조: [aticleworld.com/c-programming](https://aticleworld.com/c-programming/)]
-* 4 [참조: [www.geeksforgeeks.org/c-programming-language/)(https://www.geeksforgeeks.org/c-programming-language/)]
+* 4 [참조: [www.geeksforgeeks.org/c-programming-language/](https://www.geeksforgeeks.org/c-programming-language/)]
 * 5 [참조: [www.c-program-example.com](https://www.c-program-example.com)]
 * 6 [참조: [www.w3schools.com/c](https://www.w3schools.com/c/index.php)]
