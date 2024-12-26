@@ -9,7 +9,7 @@ int compare( const void *a, const void *b) {
 int *solution( int numbers[], int numbers_len) {
   int *answer;
 
-  qsort( numbers, numbers_len, sizeif(int), compare);
+  qsort( numbers, numbers_len, sizeof(int), compare);
 
   answer = numbers;
   return answer;
