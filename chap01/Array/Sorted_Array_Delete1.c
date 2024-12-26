@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // To search a key to be deleted
-int binarySearch( int arr[], int low, int high, in key);
+int binarySearch( int arr[], int low, int high, ini key);
 
 // Function to delete an element
 int deleteElement( int arr[], int n, int key) {
