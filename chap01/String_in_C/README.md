@@ -79,7 +79,7 @@
   ```c
   char *strcat( char *dest, const char *src);
   ```
-  *  1.6 문자열 복사(strcpy), 비교(strcmp), 검색(strstr) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_func1.c), [strcmp](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcmp1.c), [strcpy 구현](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/my_strcpy.c)
+  *  1.6 문자열 복사(strcpy), 비교(strcmp), 검색(strstr) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_func1.c), [strcmp](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcmp1.c), [[strcpy 구현](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/my_strcpy.c)]
   ```c
   char *strcpy( char *dest, const char *src);
   int  strcmp( const char *s1, const char *s2);
