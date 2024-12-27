@@ -1,3 +1,5 @@
+// 문자열 받아들이는 란은 배열로 선언하여 사용
+
 #include <stdio.h>
 
 int main()
