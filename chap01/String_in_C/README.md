@@ -75,7 +75,7 @@
   }
   ```
   *  1.4 scanset을 이용한 문자열 입력 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_scanset1.c)
-  *  1.5 strcat()함수, 문자열 합치기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcat1.c)
+  *  1.5 strcat()함수, 문자열 합치기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_strcat1.c), [strcat 구현](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/my_strcat.c)
   ```c
   char *strcat( char *dest, const char *src);
   ```
