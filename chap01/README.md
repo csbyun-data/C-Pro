@@ -33,9 +33,8 @@
   ```
   
 * 3.Input (scanf, gets, fgets)
-  *  3.1 scanf() 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
-  *  3.1.1 fgets() 문자열 한줄 읽어 들임 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets.c)
-  *  3.2 gets(), puts() 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_gets1.c)
+  * 3.1 scanf() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
+  * 3.1.1 fgets() 문자열 한줄 읽어 들임 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets4.c)
   ```c
   // stream : 순서를 가진 연속된 문자열
   #include <stdio.h>
@@ -53,8 +52,8 @@
     return 0;
   }
   ```    
-  *   3.3 fgets(), fputs() 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets1.c)
-  *   3.3.1 fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
+  * 3.2 fgets(), fputs() 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets1.c)
+  * 3.2.1 fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
   ```c
   //  아래code를 한줄로 표현 string[ strlen(buffer)-1 ] = '₩0';
   
@@ -73,6 +72,7 @@
     /* if we get all the way to here, there must not have been a newline! */
   }
   ```
+  * 3.3 gets(), puts() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_gets1.c)
 
 * 4.time(), qsort() 사용법
   *  4.1 실행시간체크 time() [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Running_time.c)
