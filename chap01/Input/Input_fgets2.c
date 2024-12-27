@@ -13,6 +13,7 @@ int main()
 	
   // newline character('\n')를 제거하고 문자열 끝에
   // null terminator '\0' 입력
+  //  아래code를 한줄로 표현 string[ strlen(buffer)-1 ] = '₩0';
   for(int i=0; i<256; i++) {
     if(string[i] == '\n') {
       string[i] = '\0';
