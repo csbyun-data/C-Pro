@@ -37,3 +37,12 @@ void avg(int (*ptr)[4], int rows, int cols) {
     printf("%d 의 total=%2d, avg=%2d\n", i+1, total, avg);
   }
 }
+
+/* 
+1 2 3 0
+4 5 6 0
+7 8 9 0
+1 의 total= 6, avg= 1
+2 의 total=15, avg= 3
+3 의 total=24, avg= 6
+*/
