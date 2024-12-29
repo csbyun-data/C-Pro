@@ -5,7 +5,8 @@
 #include <stdlib.h>
 
 // function to get user info
-void Getinfo( int *age, float *height, char *name) {
+void Getinfo( int *age, float *height, char *name)  // void Getinfo( int *age, float *height, char name[])
+{
   printf("\n\n Enter User age = ");
   scanf("%d",age);
   
