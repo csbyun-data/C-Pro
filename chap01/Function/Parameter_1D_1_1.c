@@ -5,7 +5,8 @@
 #define ARRAY_SIZE 10
 
 // Function to get n odd numbers
-void collectOddNumbers( const int n, int *ptr) {
+void collectOddNumbers( const int n, int *ptr)  // void collectOddNumbers( const int n, int ptr[])
+{
   int i=0;
   
   for( i=0; i<n; ++i) {
