@@ -1,4 +1,5 @@
 // call by reference ( pass by reference)
+// C++언어 호칭 Call by reference 방식
 // C 사용안됨, C++에서 사용함
 void swap( int &x, int &y) {
   int temp;
