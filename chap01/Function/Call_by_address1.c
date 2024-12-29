@@ -1,4 +1,7 @@
 // call by address (pass by address)
+// C언어 호칭 Call by address (Call by reference)
+// C++ 호칭 (Call by pointer) 방식
+
 void swap( int *x, int *y) {
   int temp;
   temp = *x;
