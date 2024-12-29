@@ -31,6 +31,13 @@
     va_end(ptr); // Ending argument list traversal
   }
   ```
+  * 2.5 printf()
+  ```c
+  int a;
+  int *pa = &a;
+  printf("%c, %d, %g, %x", 'a', 10, 3.1415, pa);
+  ```
+  
   
 * 3.Input (scanf, gets, fgets)
   * 3.1 scanf() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
