@@ -3,9 +3,8 @@
 * 1.함수
   *  1.1 함수 parameter 전달
   *  C언어 Call by value 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_value1.c)]
-  *  C언어 호칭 Call by address (Call by reference) 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_address1.c)]
+  *  C언어 호칭 Call by address (Call by reference), C++호칭 (Call by pointer) 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_address1.c)]
   *  C++언어 호칭 Call by reference 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_reference1.c)]
-  *  C++언어 호칭 Call by pointer 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_pointer1.c)]  
   ![image](https://github.com/user-attachments/assets/ad9a04fb-516c-49e4-9deb-9730aced3551)
 
   ```c
