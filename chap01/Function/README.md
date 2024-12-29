@@ -5,7 +5,9 @@
   *  Call by value 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_value1.c)]
   *  Call by address 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_address1.c)]
   *  Call by reference 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_reference1.c)]
-  *  Call by pointer 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_pointer1.c)]
+  *  Call by pointer 방식 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Call_by_pointer1.c)]  
+ ![image](https://github.com/user-attachments/assets/f7f9c9f4-8fe5-4c1f-80e9-d3f4651a3450)
+
 
   ```c
   // call by value ( pass by value)
