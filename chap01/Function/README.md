@@ -80,7 +80,7 @@
   //Passing Array to Function in C
   //매개변수의 크기를 전달
   void func(int a[], int size) {}
-  // void func(int* a, int size) {} 동일 표현
+  // void func(int *a, int size) {} 동일 표현
 
   int main() {
     int n = 5;
