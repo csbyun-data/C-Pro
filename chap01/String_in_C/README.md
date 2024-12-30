@@ -121,6 +121,8 @@
 
 * 2.문자열 프로그램
   * 2.1 문자열 단순 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Small_Program1.c)
+  * 2.2 문자열 추가, 삭제, 출력, 정렬 응용 (문자열 100개) [code]()
+  
   
 
 
