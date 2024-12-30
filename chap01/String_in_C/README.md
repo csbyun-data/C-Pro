@@ -145,7 +145,7 @@
     //...
   }
   ```
-  * 2.2 문자열 추가, 삭제, 출력, 정렬 응용 (문자열 100개) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_Pro1.c)
+  * 2.2 문자열 추가, 삭제, 출력, 정렬 응용 (문자열 100개) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_Pro1.c), [unicode](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_Pro_Unicode.c)
   ```c
   char * Input() {
     char *str;
