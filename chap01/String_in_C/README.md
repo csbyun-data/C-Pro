@@ -121,6 +121,29 @@
 
 * 2.문자열 프로그램
   * 2.1 문자열 단순 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Small_Program1.c)
+  ```c
+  void strip_newline( char *str, int size ) ;
+   
+  int main()
+  {
+    char name[50];
+    char lastname[50];
+    char fullname[100]; 
+   
+    fgets( name, 50, stdin );
+    strip_newline( name, 50 );
+    
+    fgets( lastname, 50, stdin );
+    strip_newline( lastname, 50 );
+    
+    fullname[0] = '\0';            
+    
+    strcat( fullname, name );
+    strcat( fullname, " " );
+    strcat( fullname, lastname );
+    //...
+  }
+  ```
   * 2.2 문자열 추가, 삭제, 출력, 정렬 응용 (문자열 100개) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_Pro1.c)
   ```c
   char * Input() {
