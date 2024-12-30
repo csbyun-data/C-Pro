@@ -143,6 +143,7 @@
     char *strArray[100];
     //...
     Remove(strArray, &sCnt);
+    Output(strArray, sCnt);
     Sort( strArray, sCnt);
   }
   ```
