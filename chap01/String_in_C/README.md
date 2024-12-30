@@ -123,6 +123,28 @@
   * 2.1 문자열 단순 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Small_Program1.c)
   * 2.2 문자열 추가, 삭제, 출력, 정렬 응용 (문자열 100개) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/String_Pro1.c)
   ```c
+  char * Input() {
+    char *str;
+    str = (char *)malloc( sizeof(char)*strlen( temp)+1);
+    //...
+    return str;
+  }
+  
+  void Remove( char *strArray[], int *sCnt);
+  void Output(char *strArray[], int sCnt);
+  void swap( char **a, char **b);
+  void Sort( char *strArray[], int sCnt) {
+  	//..
+  	swap(&strArray[i], &strArray[min]);
+  }
+  
+  int main()
+  {
+    char *strArray[100];
+    //...
+    Remove(strArray, &sCnt);
+    Sort( strArray, sCnt);
+  }
   ```
   
 
