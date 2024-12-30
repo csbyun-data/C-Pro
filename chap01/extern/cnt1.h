@@ -1,15 +1,5 @@
-// cnt.c code
-#include "cnt.h"
+// cnt.h code
 
-void cnt() {
-  iCnt++;
-}
-
-void inc() {
-  iCnt++;
-}
-
-void inc2() {
-  siCnt++;
-  printf("local siCnt = %d\n", siCnt);
-}
+void cnt() {}
+void inc() { }
+void inc2() { }
