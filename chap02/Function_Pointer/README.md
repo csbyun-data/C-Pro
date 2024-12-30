@@ -8,6 +8,11 @@
   // function pointer는 함수가 메모리에 올라와 있는 주소를 가르키는 포인터 상수
   // (constance pointer)를 가짐.
   void func();
+
+  #include <stdio.h>
+  int main() {
+    printf("%x\n", main);
+  }
   ```
   ```c
   // 01. 사용 예제1
