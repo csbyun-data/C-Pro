@@ -122,6 +122,7 @@
 * 2.문자열 프로그램
   * 2.1 문자열 단순 프로그램 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/Small_Program1.c)
   ```c
+  // 이름을 입력받음
   void strip_newline( char *str, int size ) ;
    
   int main()
