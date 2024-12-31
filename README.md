@@ -8,7 +8,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Input(scanf, gets, fgets)](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/README.md)
 * [time, qsort 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/README.md)
 * [조건문, 반복문](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/README.md)
-* Array, String
+* [Array, String](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
 * function, parameter, return value
 * typedef 사용법
 * Binary Octal Decimal Hexa변환
