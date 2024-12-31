@@ -15,7 +15,7 @@
       unsigned        istemp;        /* Temporary file indicator */
       short           token;         /* Used for validity checking */
     } FILE;                          /* This is the FILE object */
-    ```
+    ```  
     | mode | description |
     |--|--|
     | "r" | file을 읽기 전용 open, file이 없으면 error |
@@ -25,8 +25,8 @@
     | "w+" | file을 읽기, 쓰기 open, file이 존재하면 내용이 지워지며, file이 없으면 생성 |
     | "a+" | file을 읽기, 쓰기 open, file이 존재하면 내용 맨 뒤쪽에 자동이동 읽기, 쓰기, file이 없으면 생성 |
   
-    *   1.1 File Open, Create [[Text파일 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Create_File.c), [Text 파일 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Text_File1.c), [Binary 파일 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Binary_File1.c)]
-    *   ![image](https://github.com/user-attachments/assets/93bb7595-bba8-4e44-84df-d2a2553b606d)
+    *   1.1 File Open, Create [[Text파일 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Create_File.c), [Text 파일 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Text_File1.c), [Binary 파일 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Binary_File1.c)]  
+    ![image](https://github.com/user-attachments/assets/93bb7595-bba8-4e44-84df-d2a2553b606d)
     *   1.1-1 Binary File, song 구조체 저장, 읽기 [저장 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Bin_Struct_song1.c), [읽기 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Bin_Struct_song2.c)
     *   1.2 fprintf(), fputc(), fputs(), fwrite() 사용
     ```c
