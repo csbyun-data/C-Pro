@@ -6,10 +6,10 @@
   
     * 1.3 pason library를 활용한 json 문서 쓰기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_write.c)
     ![image](https://github.com/user-attachments/assets/a124ddd5-adb0-46c7-80a8-1ba0a6f76290)
-    * 1.4 pason library, Serialization [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_Serialization.c)
+    * 1.4 pason library, Serialization [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_Serialization.c)  
     ```txt
     - Create a simple JSON value containing basic information about a person.
-    ```
+    ```  
     ![image](https://github.com/user-attachments/assets/347a56e2-c953-46f3-8f8b-c3a65a6630b6)
 
     * 1.5 pason library, Persistence [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_Persistence.c)
