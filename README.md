@@ -1,4 +1,4 @@
-# C Programming language
+# C Programming
 Grammar of programming, a collection of basic materials for application.
 
 ## Index
