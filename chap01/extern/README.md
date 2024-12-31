@@ -1,5 +1,5 @@
 ### static, extern 사용 방법
-* 1.static, extern 사용
+* static, extern 사용
    * 1.1. static 변수 사용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/extern/static1.c)
    ```txt
    파일 내부에서 사용, 함수의 상태를 기록하기 위해 사용
@@ -9,7 +9,7 @@
    다른 파일에서 접근 가능하고, 전역 변수, 함수 접근 제공
    ```
 
-* 2.extern 사용 관련 error발생
+* extern 사용 관련 error발생
    * 2.1  [Error] invalid type argument of '->' (have 'int')
    ```txt
     n = xlevmatch(INT,&args)->n_int;    //  <- Error 발생 부분
