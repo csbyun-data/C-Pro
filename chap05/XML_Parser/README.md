@@ -1,7 +1,19 @@
-## 1.XML Parser
+### XML Parser
 ### INDEX
-* 1.XML file load 화면 출력 기능 구현
-    * 1.1 mainc. 생성
+* XML File 화면 출력
+* XML 내용 조회 구현
+* XML 파일 속성 조회
+* XML 파일 형식 변경 조회
+* XML 파일 형식 변경 분석
+* XML 주석문 분석시 제외
+* 속성을 읽어들여 출력
+* XML version, encoding 얻기
+* tag의 끝이 />로 마무리 되는 inline node
+* dummy tag분석 제외
+* XMLDocument_write(), XML문서 생성
+
+* XML file load 화면 출력 기능 구현
+    * mainc. 생성
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -17,7 +29,7 @@
     	return 0;
     }
     ```
-    * 1.2 lxml.h 생성
+    * lxml.h 생성
     ```c
     // # include <stdbool.h>  추가
     int XMLDocument_load(XMLDocument* doc, const char* path);  // bool형으로 변경
@@ -32,7 +44,7 @@
     	return true;
     }
     ```
-    * 1.3 lxml.h 수정 작업
+    * lxml.h 수정 작업
     ```
     #pragma once
     #include <stdio.h>
@@ -73,8 +85,8 @@
     ```
     ![image](https://github.com/user-attachments/assets/c4ca3118-abc6-4c5a-a446-8e6be19e80c9)
 
-* 2.XML 내용 조회 구현
-    * 2.1 main.c 프로그램 수정
+* XML 내용 조회 구현
+    * main.c 프로그램 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -91,7 +103,7 @@
       	return 0;
       }
       ```
-      * 2.2 lxml.h 프로그램 수정
+      * lxml.h 프로그램 수정
       ```c
       #pragma once
       #include <stdio.h>
@@ -223,12 +235,12 @@
       ```
       ![image](https://github.com/user-attachments/assets/452b65a7-6832-4606-bc43-0a71d5262814)
 
-* 3.XML 파일 속성 조회
-    * 3.1 test.xml 파일 속성 조회 예제 형식으로 수정
+* XML 파일 속성 조회
+    * test.xml 파일 속성 조회 예제 형식으로 수정
     ```xml
     <root key="value" another="one more">I am a root</root>
     ```
-    * 3.2 main.c 파일 수정
+    * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -252,11 +264,11 @@
     	return 0;
     }
     ```
-    * 3.3 lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
+    * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
     *  ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
 
-* 4.XML 파일 형식 변경 조회
-    * 4.1 test.xml 파일 내용
+* XML 파일 형식 변경 조회
+    * test.xml 파일 내용
     ```xml
     <root>
     	<inner>
@@ -265,7 +277,7 @@
     	<another>This is another node</another>
     </root>
     ```
-    * 4.2 main.c 파일 변경
+    * main.c 파일 변경
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -287,11 +299,11 @@
     	return 0;
     }
     ```
-    * 4.3 lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)
+    * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)
     * ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
 
-* 5.XML 파일 형식 변경 분석
-    * 5.1 test.xml
+* XML 파일 형식 변경 분석
+    * test.xml
     ```xml
     <main>
     	<inner>
@@ -301,7 +313,7 @@
     </main>
     <another> This should work too</another>
     ```
-    * 5.2 main.c 파일 수정
+    * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -324,7 +336,7 @@
     	return 0;
     }
     ```
-    * 5.3 lxml.h 파일 수정
+    * lxml.h 파일 수정
     ```c
     bool XMLDocument_load(XMLDocument* doc, const char* path)
     {
@@ -333,8 +345,8 @@
     ```
     ![image](https://github.com/user-attachments/assets/3c2cebc9-075a-4ec9-97f4-8df571936108)
     
-* 6.주석문 XML분석시 제외
-    * 6.1 test.xml 문서 수정
+* 주석문 XML분석시 제외
+    * test.xml 문서 수정
     ```xml
     <!-- This is a comment-->
     <car type="couple">
@@ -342,7 +354,7 @@
     	<description> This is a really cool description</description>
     </car>
     ```
-    * 6.2 main.c 파일 수정
+    * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -365,7 +377,7 @@
     	return 0;
     }
     ```
-    * 6.3 lxml.h 파일 수정
+    * lxml.h 파일 수정
     ```
     // ends_with 함수 추가
     int ends_with(const char* haystack, const char* needle) {
@@ -409,12 +421,12 @@
     ```
     ![image](https://github.com/user-attachments/assets/4d5d746e-b8c2-47ff-a251-b24864895444)
 
-* 7.속성 읽어들여 출력
-   * 7.1 test.xml 파일 수정
+* 속성 읽어들여 출력
+   * test.xml 파일 수정
    ```xml
    <car type="KIA">  This is a really cool description </car>
    ```
-   * 7.2 main.c 파일 수정
+   * main.c 파일 수정
    ```c
    #include <stdio.h>
    #include <stdlib.h>
@@ -436,13 +448,13 @@
    ```
    ![image](https://github.com/user-attachments/assets/9005f0dd-e902-49cb-b11b-760432379c09)
 
-* 8.XML version, encoding 얻기
-    * 8.1 test.xml 파일 수정
+* XML version, encoding 얻기
+    * test.xml 파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <car type="KIA">  This is a really cool description </car>
     ```
-    * 8.2 main.c 파일 수정
+    * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -464,7 +476,7 @@
     	return 0;
     }
     ```
-    * 8.3 lxml.h 파일 수정
+    * lxml.h 파일 수정
     ```c
     static void parse_attrs(char* buf, int* i, char* lex, int* lexi, XMLNode* curr_node) {
     	XMLAttribute curr_attr = { 0,0 };
@@ -543,8 +555,8 @@
     ```
     ![image](https://github.com/user-attachments/assets/7e7e19c7-d9bb-4852-b014-278f21a6afdc)
 
-* 9.tag의 끝이 /> 로 마무리 되는 inline node인 경우
-    * 9.1 test.xml 파일 수정
+* tag의 끝이 /> 로 마무리 되는 inline node인 경우
+    * test.xml 파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <struct name="Person">
@@ -552,11 +564,11 @@
       <field name="age" type="int" />
     </struct>
     ```
-    * 9.2 main.c 파일 수정
-    * 9.3 lxml.h 파일 수정
+    * main.c 파일 수정
+    * lxml.h 파일 수정
 
-* 10.dummy tag분석 제외
-    * 10.1 test.xml파일 수정
+* dummy tag분석 제외
+    * test.xml파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <struct name="Person">
@@ -565,7 +577,7 @@
      	<field name="age" type="int" />
     </struct>
     ```
-    * 10.2 main.c 파일 수정
+    * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -589,7 +601,7 @@
       return 0;
     }
     ```
-    * 10.3 lxml.h 파일 수정
+    * lxml.h 파일 수정
     ```c
     struct _XMLNode* XMLNodeList_at(XMLNodeList* list, int index);
     void XMLNodeList_free(XMLNodeList* list);
@@ -618,8 +630,8 @@
     ```
     ![image](https://github.com/user-attachments/assets/832e767b-7b46-4c94-9d89-7d2534df0106)
      
-* 11.XMLDocument_write(), XML문서 생성
-    * 11.1 main.c 파일 수정
+* XMLDocument_write(), XML문서 생성
+    * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -646,7 +658,7 @@
     	return 0;
     }
     ```
-    * 11.2 lxml.h 파일 수정
+    * lxml.h 파일 수정
     ```c
     bool XMLDocument_write(XMLDocument* doc, const char* path, int indent);
 
@@ -700,4 +712,4 @@
   
     ![image](https://github.com/user-attachments/assets/9c13db1a-153e-427f-b772-cdfdfebc89a7)
 
-    * 11.3 최종 파일 [lxml.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml.h), [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/main.c), [test.xml](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/test.xml)
+    * 최종 파일 [lxml.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml.h), [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/main.c), [test.xml](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/test.xml)
