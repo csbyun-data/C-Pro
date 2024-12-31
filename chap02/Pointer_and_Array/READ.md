@@ -1,5 +1,4 @@
-## 01. 포인터와 배열, 문자열, 함수포인터, 포인터 구조체
-### Index
+### Pointer and Array, String, Function Pointer, Pointer Structure
 * 1.포인터와 배열
   * 1.1 포인터 선언, 초기화
   ```c
