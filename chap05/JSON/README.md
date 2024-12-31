@@ -13,7 +13,7 @@
     using parson to save user information to a file then load it and validate later.
     - 파일을 user_data.json에 저장 후 파일 자료를 읽어 화면에 출력
     ```
-    * 1.6 pason library, Parsing JSON
+    * 1.6 pason library, Parsing JSON [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/Commit_Info.c)
     ```txt
     Here is a function, which prints basic commit info( data, sha and author)
     from a github repository
