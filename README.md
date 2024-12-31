@@ -38,11 +38,12 @@ Grammar of programming, a collection of basic materials for application.
 * Searching
 * hashing
 
-## Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
+## Project [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
 * File handling function
 * XML Parser
-* 계산식
-* XLISP 계산식
+* Calculation formula analysis
+* XLISP Calculation formula analysis
+* JSON 
 
 ## 참조 LIST
 * 1 [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
