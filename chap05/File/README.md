@@ -1,9 +1,9 @@
 ###  File handling function
-* 1.File handling function
-  * 1.1 Library management system project (File handling) ([here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Library_Management_system.md))
-  * 1.2 Student Record System (File handling) ([here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Student_Record_System.md))
-  * 1.3 Employee Record System (File handling) ([here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Employee_Record_System.md))
-  * 1.4 Linked List를 이용한 주소록 관리 ([code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Address_Mgr.c))
+* File handling function
+  * Library management system project (File handling) ([here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Library_Management_system.md))
+  * Student Record System (File handling) ([here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Student_Record_System.md))
+  * Employee Record System (File handling) ([here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Employee_Record_System.md))
+  * Linked List를 이용한 주소록 관리 ([code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/Address_Mgr.c))
   ```c
   //#define ADDRFILE		"c:\\addrlist.txt"  c:폴더에 파일 생성 Error!
   #define ADDRFILE		".\\addrlist.txt"
