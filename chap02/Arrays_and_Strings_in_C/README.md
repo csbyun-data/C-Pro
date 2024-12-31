@@ -34,7 +34,7 @@
 
 * 2.배열을 함수 parameter로 전달 
   * 2.1 1차원 배열
-  * 2.1.1 포인터 인자로 전달  [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer1.c) 
+  * 2.1.1 포인터 인자로 전달  [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer1.c) 
 [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_one_dimension_pointer2.c)
   ```c
   void func(int *paData, int size) {}
@@ -59,7 +59,7 @@
   func(aiData, size);
   ```
   * 2.2 2차원 배열
-   * 2.2.1 포인터 인자, 매크로, 전역상수로 전달 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer1.c) [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer2.c)
+   * 2.2.1 포인터 인자, 매크로, 전역상수로 전달 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer1.c) [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Transfer_two_dimension_pointer2.c)
    ```c
   void func(int (*piData)[10], int size) {}
   ...
