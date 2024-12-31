@@ -1,5 +1,4 @@
 ### XML Parser
-### INDEX
 * XML file load 화면 출력 기능 구현
     * mainc. 생성
     ```c
