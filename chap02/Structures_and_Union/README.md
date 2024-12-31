@@ -165,7 +165,7 @@
   ![image](https://github.com/user-attachments/assets/9362ff04-dfcd-40ab-bda1-2352438e512b)
   
   * 1.4 구조체 내부 배열사용 (flexible array in C)
-  * Reference [aticleworld.com/flexible-array-member/](https://aticleworld.com/flexible-array-member/)
+  * Reference [flexible-array-member](https://aticleworld.com/flexible-array-member/)
   ```c
   #include <stdio.h>
 
