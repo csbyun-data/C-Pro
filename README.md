@@ -33,7 +33,7 @@ Grammar of programming, a collection of basic materials for application.
 ## Data Structure, Algorithm  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
 * Stack
 * Queue, Priority Queue, Heap
-* Linked List
+* [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
 * Recursion method
 * binary Tree
 * Graph
