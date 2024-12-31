@@ -1,7 +1,8 @@
 ### Linked List
 * Linked List
   * Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex1.c)  
-  <img src = "https://github.com/user-attachments/assets/9e41c1a5-84d0-47df-b274-862cd3f0c511" width="50%" height="50%">  
+  <img src = "https://github.com/user-attachments/assets/9e41c1a5-84d0-47df-b274-862cd3f0c511" width="50%" height="50%">
+
   ```c
   int aiSallary[10] = { 400, 1200, 2000, 4500, 5000 };
   // Linked List를 사용하는 이유
@@ -12,6 +13,7 @@
   ```
   * Linked List Insertion( 첫번째 순서에 Node를 추가)  
   <img src = "https://github.com/user-attachments/assets/ae695477-21b5-491d-b69c-ff20e882e3c5" width="60%" height="60%">
+
   ```c
   //Linked List에 Node를 insert하는 순서
 
@@ -31,6 +33,7 @@
   ```
   * 중간의 어느 지점에 node를 삽입하는 경우  
   <img src = "https://github.com/user-attachments/assets/da235263-2577-4f6b-bbf1-3585e2f599f7" width="60%" height="60%">
+
   ```c
   // Insert a new node after a node
   //1. Head Pointer에 저장된 값을 Temp Node에 저장
@@ -53,8 +56,8 @@
 
   //6. Temp Node의 지시Pointer에 New Node의 Pointer 할당
   pTmpNode->pNextNode = pNewNode;
-  ```
-  ([InsertNodeAfterNode()함수 구현](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c))
+  ```  
+  ([InsertNodeAfterNode()함수 code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c))
   
   * 마지막 node에 신규 node를 입력  
   <img src = "https://github.com/user-attachments/assets/e34e3f33-9fc4-4c12-850b-1dc13fa3634e" width="60%" height="60%">
