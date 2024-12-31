@@ -3,7 +3,7 @@ Grammar of programming, a collection of basic materials for application.
 
 ## Index
 ## Syntax  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
-* Syntax
+* [Syntax](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/README.md)
 * 가변인자, 가변함수
 * Input(scanf, gets, fgets)
 * time, qsort 사용법
