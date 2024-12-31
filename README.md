@@ -24,25 +24,25 @@ Grammar of programming, a collection of basic materials for application.
 * Memory layout of C program
   
 ## File I/O [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
-* 3.1 File I/O
-* 3.2 Parse XML response in C without using library
+* File I/O
+* Parse XML response in C without using library
 
 ## Data Structure, Algorithm [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
-* 4.1 Stack
-* 4.2 Queue, 우선순위 Queue, Heap
-* 4.3 Linked List
-* 4.4 재귀용법
-* 4.5 binary Tree
-* 4.6 그래프
-* 4.7 Sorting
-* 4.8 Searching
-* 4.9 해싱
+* Stack
+* Queue, 우선순위 Queue, Heap
+* Linked List
+* 재귀용법
+* binary Tree
+* 그래프
+* Sorting
+* Searching
+* hashing
 
 ## Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
-* 5.1 File handling function
-* 5.2 XML Parser
-* 5.3 계산식
-* 5.4 XLISP 계산식
+* File handling function
+* XML Parser
+* 계산식
+* XLISP 계산식
 
 ## 참조 LIST
 * 1 [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
