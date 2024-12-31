@@ -1,10 +1,7 @@
-## 01. typedef 사용법 정리
-### 참조 자료
-* [참조: aticleworld.com/typedef-in-c/](https://aticleworld.com/typedef-in-c/)
-
-### Index
-* 1.typedef 사용법, 범위
-  *   1.1 struct에 typedef 사용
+### typedef
+* typedef 사용법, 범위
+  * Reference [typedef-in-c](https://aticleworld.com/typedef-in-c/)
+  * struct에 typedef 사용
   ```c
   // struct선언
   struct sStudentInfo {
@@ -67,7 +64,7 @@
   sStudInfo Shyam;
   ```    
   
-  *   1.2 typedef를 사용한 범위 점검
+  * typedef를 사용한 범위 점검
   ```c
   // typedef의 범위 점검
   #include <stdio.h>
@@ -100,7 +97,7 @@
   // [Error] conflicting types for 'TYPE'
   ```
   
-  *   1.3 typedef pointer형 변수
+  * typedef pointer형 변수
   ```c
   // use of typedef with pointers
   #include <stdio.h>
@@ -123,7 +120,7 @@
   }
   ```
   
-  *   1.4 typedef 배열
+  * typedef 배열
   ```c
   #include <stdio.h>
   typedef int Brick_Price[3];
@@ -146,7 +143,7 @@
   }
   ```
   
-  *   1.5 typedef function pointer 사용
+  * typedef function pointer 사용
   ```c
   // typedef of array of function pointers
   typedef int (*apfArithmatics[3])( int, int);
@@ -161,7 +158,7 @@
   typedef int (*pf)(int);
   pf JumptoApp = (pf)pvHandle;
   ```
-  *   1.6 typedef enum 사용
+  * typedef enum 사용
   ```c
   #include <stdio.h>
 
