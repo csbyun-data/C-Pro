@@ -1,7 +1,7 @@
 # C Programming language
 Grammar of programming, a collection of basic materials for application.
 ## Index
-## 1.문법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
+## 문법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
 * 1.1 문법
 * 1.2 가변인자, 가변함수
 * 1.3 Input(scanf, gets, fgets)
@@ -13,7 +13,7 @@ Grammar of programming, a collection of basic materials for application.
 * 1.9 Binary Octal Decimal Hexa변환
 * 1.10 static, extern 사용
   
-## 2.포인터, 배열, 문자열, 함수, 구조체, 공용체 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
+## 포인터, 배열, 문자열, 함수, 구조체, 공용체 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
 * 2.1 포인터와 배열, 함수포인터, 포인터 구조체
 * 2.2 메모리 동적할당
 * 2.3 Arrays and String in C
@@ -22,11 +22,11 @@ Grammar of programming, a collection of basic materials for application.
 * 2.6 구조체, 문자열 Pointer 활용
 * 2.7 Memory layout of C program
   
-## 3.File I/O [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
+## File I/O [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
 * 3.1 File I/O
 * 3.2 Parse XML response in C without using library
 
-## 4.Data Structure, Algorithm [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
+## Data Structure, Algorithm [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
 * 4.1 스택
 * 4.2 Queue, 우선순위 Queue, Heap
 * 4.3 Linked List
@@ -37,7 +37,7 @@ Grammar of programming, a collection of basic materials for application.
 * 4.8 탐색
 * 4.9 해싱
 
-## 5.Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
+## Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
 * 5.1 File handling function
 * 5.2 XML Parser
 * 5.3 계산식
