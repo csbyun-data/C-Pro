@@ -1,6 +1,6 @@
 ### FILE I/O
 * 1.File I/O
-    * Reference[file-handling-in-c](https://aticleworld.com/file-handling-in-c/)
+    * Reference [file-handling-in-c](https://aticleworld.com/file-handling-in-c/)
     * 1.1 고수준 파일 입력 함수
     ```c
     // FILE의 구조
