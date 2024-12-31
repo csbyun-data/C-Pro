@@ -1,7 +1,4 @@
-## 01. Structure and Unions in C
-### Index
-
-
+### Structure and Unions in C
 * 1.구조체 (struct)
   * Reference [aticleworld.com/structure-in-c/](https://aticleworld.com/structure-in-c/)
   * 1.1 구조체 정의, 초기화, 잘못된 사용 예제
@@ -33,7 +30,7 @@
     int b[];  // illegal example
   };
   ```
-  ([struct 초기화 Example1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Struct_Initialize1.c))
+  ([struct 초기화 code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Struct_Initialize1.c))
   ```c
   // illegal example
   // struct type 선언은 템플릿이고, 선언하지 않으면 구조체 저장 메모리가 없음
@@ -65,7 +62,7 @@
 
   sStudentInfo amlendra;
   ```
-   ([구조체 포인터](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_pointer1.c))
+   ([Struct Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_pointer1.c))
   ```
   // 변수와 포인터를 사용한 structure member 접근
   struct Laptop {
@@ -86,7 +83,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/088ea95a-2c9b-4d48-a5ac-94168cc9244d)
   
-  * 1.2 구조체 크기 계산 ([exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size2.c), [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
+  * 1.2 구조체 크기 계산 ([code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_size3.c) )
   ```c
   #include <stdio.h>
 
@@ -119,7 +116,8 @@
   };
   ```
   
-  * 1.3 구조체 hack ([참조: aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/)), ([hack1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack2.c))
+  * 1.3 구조체 hack ([hack1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack2.c)
+  * Reference [aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/)
 
   ```c
   // C99에 flexible array가 도입되기전 활용한 기법
@@ -167,7 +165,7 @@
   ![image](https://github.com/user-attachments/assets/9362ff04-dfcd-40ab-bda1-2352438e512b)
   
   * 1.4 구조체 내부 배열사용 (flexible array in C)
-  * ([참조: aticleworld.com/flexible-array-member/](https://aticleworld.com/flexible-array-member/))
+  * Reference [aticleworld.com/flexible-array-member/](https://aticleworld.com/flexible-array-member/)
   ```c
   #include <stdio.h>
 
@@ -260,7 +258,8 @@
   ```
   * 1.6 구조체 pointer 맴버
   * 1.7 구조체 내부 pointer 접근
-  * 1.8 구조체 padding [참조](https://aticleworld.com/data-alignment-and-structure-padding-bytes/) [exam1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding1.c), [exam2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding2.c), [exam3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding3.c), [exam4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding4.c)
+  * 1.8 구조체 padding [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding3.c), [code4](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_padding4.c)
+  * Reference [data-alignment-and-structure-padding-bytes](https://aticleworld.com/data-alignment-and-structure-padding-bytes/)
   ```txt
   구조체 메모리 할당시 크기의 차이를 점검
   ```
@@ -454,7 +453,8 @@
      한가지의 자료만 입력된다.
    ```
    
-* 3.Bit field [참조: aticleworld.com/bit-field-in-c/](https://aticleworld.com/bit-field-in-c/)
+* 3.Bit field
+  * Reference [aticleworld.com/bit-field-in-c/](https://aticleworld.com/bit-field-in-c/)
   * 3.1 선언, 초기화
   ```c
   //bit field 정의, 초기화 방법
