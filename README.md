@@ -30,7 +30,7 @@ Grammar of programming, a collection of basic materials for application.
 * [File I/O](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/README.md)
 * [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
-## Data Structure, Algorithm  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
+## Data Structure, Algorithm
 * Stack
 * Queue, Priority Queue, Heap
 * [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
@@ -40,7 +40,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Sorting](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/README.md)
 * Searching
 * Hashing
-* [Reference]()
+* [Reference](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
 
 ## Project  
 * [File handling function](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/README.md)
