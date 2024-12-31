@@ -1,8 +1,9 @@
 ## 01. Structure and Unions in C
 ### Index
-[참조: aticleworld.com/structure-in-c/](https://aticleworld.com/structure-in-c/)
+
 
 * 1.구조체 (struct)
+  * Reference [aticleworld.com/structure-in-c/](https://aticleworld.com/structure-in-c/)
   * 1.1 구조체 정의, 초기화, 잘못된 사용 예제
   ```c
   // structure는 메모리 할당을 변수 전체를 구분해서 순서대로 할당 함
