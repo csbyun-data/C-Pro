@@ -1,17 +1,5 @@
 ### XML Parser
 ### INDEX
-* XML File 화면 출력
-* XML 내용 조회 구현
-* XML 파일 속성 조회
-* XML 파일 형식 변경 조회
-* XML 파일 형식 변경 분석
-* XML 주석문 분석시 제외
-* 속성을 읽어들여 출력
-* XML version, encoding 얻기
-* tag의 끝이 />로 마무리 되는 inline node
-* dummy tag분석 제외
-* XMLDocument_write(), XML문서 생성
-
 * XML file load 화면 출력 기능 구현
     * mainc. 생성
     ```c
