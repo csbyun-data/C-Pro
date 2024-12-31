@@ -117,7 +117,7 @@
   ```
   
   * 1.3 구조체 hack ([hack1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack1.c), [hack2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Structure_hack2.c)
-  * Reference [aticleworld.com/structure-hack-in-c/](https://aticleworld.com/struct-hack-in-c/)
+  * Reference [structure-hack-in-c](https://aticleworld.com/struct-hack-in-c/)
 
   ```c
   // C99에 flexible array가 도입되기전 활용한 기법
