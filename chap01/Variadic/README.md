@@ -16,7 +16,7 @@
       va_end(ptr); // Ending argument list traversal
     }
     ```
-    * printf() function
+* printf() function
     ```c
     int a;
     int *pa = &a;
