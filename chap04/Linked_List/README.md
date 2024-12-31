@@ -61,6 +61,7 @@
   
   * 마지막 node에 신규 node를 입력  
   <img src = "https://github.com/user-attachments/assets/e34e3f33-9fc4-4c12-850b-1dc13fa3634e" width="60%" height="60%">
+
   ```c
   //1. Temp Node에 Head Pointer 할당
   NodePointer pTmpNode = head;
@@ -113,16 +114,16 @@
   }
   
   ```
-  * 예제를 구현한 Linked List [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex2.c)
+  * 예제를 구현한 Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex2.c)
 
 * Delete a Linked List node
-  * 시작 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_start_node.c)  
+  * 시작 node 삭제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_start_node.c)  
   <img src = "https://github.com/user-attachments/assets/88e935fe-dab6-4c7b-b5b9-5d7c6e8b00a5" width="60%" height="60%">
 
-  * 중간 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_middle_node.c)  
+  * 중간 node 삭제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_middle_node.c)  
   <img src = "https://github.com/user-attachments/assets/e28b4846-5541-490e-aca0-d4e8a0509f25" width="60%" height="60%">
 
-  * 끝 node 삭제 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_end_node.c)  
+  * 끝 node 삭제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_end_node.c)  
   <img src = "https://github.com/user-attachments/assets/92c9ac1b-a9c2-4ab9-92e8-06ae243f31ca" width="60%" height="60%">
 
 * Generic Linked List in C
