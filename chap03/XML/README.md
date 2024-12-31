@@ -1,6 +1,6 @@
 ### XML response in C without using library
 * XML response in C without using library
-    * Reference [parse-xml-response-in-c](https://aticleworld.com/parse-xml-response-in-c/))
+    * Reference [parse-xml-response-in-c](https://aticleworld.com/parse-xml-response-in-c/) 
     * Create XML [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/Create_XML_ex1.c)
     * Parse XML [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/Parse_XML_ex1.c)
     ```c
