@@ -37,7 +37,7 @@ Grammar of programming, a collection of basic materials for application.
 * Recursion method
 * [Binary Tree](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Binary_Tree/README.md)
 * Graph
-* Sorting
+* [Sorting](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/README.md)
 * Searching
 * Hashing
 
