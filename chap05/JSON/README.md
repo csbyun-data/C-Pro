@@ -8,7 +8,7 @@
     ```txt
     - Create a simple JSON value containing basic information about a person.
     ```
-    * 1.5 pason library, Persistence
+    * 1.5 pason library, Persistence [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_Persistence.c)
     ```txt
     using parson to save user information to a file then load it and validate later.
     - 파일을 user_data.json에 저장 후 파일 자료를 읽어 화면에 출력
