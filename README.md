@@ -13,11 +13,12 @@ Grammar of programming, a collection of basic materials for application.
 * Binary Octal Decimal Hexa변환
 * static, extern 사용
   
-## Pointer, Array, String, Function, Structure, Union [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
+## Pointer, Array, String, Function [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
 * pointer and array, function pointer, pointer structure
 * memory allocattion
 * Arrays and String in C
 * Function Pointer
+## Structure, Union
 * Structures and Unions in C
 * Structures, String Pointer 활용
 * Memory layout of C program
