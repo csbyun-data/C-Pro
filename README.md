@@ -35,7 +35,7 @@ Grammar of programming, a collection of basic materials for application.
 * Queue, Priority Queue, Heap
 * [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
 * Recursion method
-* binary Tree
+* [Binary Tree](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Binary_Tree/README.md)
 * Graph
 * Sorting
 * Searching
