@@ -1,6 +1,4 @@
-## 01. 배열과 문자열
-### Index
-[참조: aticleworld.com](https://aticleworld.com/C-Pro/#)
+### Array and String
 * 1.배열과 포인터
   * 1.1 배열 정의, 초기화 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Array_Initialize1.c)
   ```c
@@ -154,3 +152,4 @@
   int t = (data[c] - 128) >> 31;
   sum += ~t&data[c];
   ``` 
+* Reference [aticleworld.com](https://aticleworld.com/C-Pro/#)
