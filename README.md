@@ -1,26 +1,26 @@
 # C Programming language
 Grammar of programming, a collection of basic materials for application.
 ## Index
-## 문법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
-* 1.1 문법
-* 1.2 가변인자, 가변함수
-* 1.3 Input(scanf, gets, fgets)
-* 1.4 time, qsort 사용법
-* 1.5 조건문, 반복문
-* 1.6 배열, 문자열
-* 1.7 함수, 함수 parameter전달
-* 1.8 typedef 사용법
-* 1.9 Binary Octal Decimal Hexa변환
-* 1.10 static, extern 사용
+## Syntax [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
+* Syntax
+* 가변인자, 가변함수
+* Input(scanf, gets, fgets)
+* time, qsort 사용법
+* 조건문, 반복문
+* Array, String
+* function, parameter, return value
+* typedef 사용법
+* Binary Octal Decimal Hexa변환
+* static, extern 사용
   
-## 포인터, 배열, 문자열, 함수, 구조체, 공용체 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
-* 2.1 포인터와 배열, 함수포인터, 포인터 구조체
-* 2.2 메모리 동적할당
-* 2.3 Arrays and String in C
-* 2.4 Function Pointer
-* 2.5 Structures and Unions in C
-* 2.6 구조체, 문자열 Pointer 활용
-* 2.7 Memory layout of C program
+## Pointer, Array, String, Function, Structure, Union [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
+* pointer and array, function pointer, pointer structure
+* memory allocattion
+* Arrays and String in C
+* Function Pointer
+* Structures and Unions in C
+* Structures, String Pointer 활용
+* Memory layout of C program
   
 ## File I/O [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
 * 3.1 File I/O
