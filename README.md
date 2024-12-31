@@ -13,7 +13,7 @@ Grammar of programming, a collection of basic materials for application.
 * Binary Octal Decimal Hexa변환
 * static, extern 사용
   
-## Pointer, Array, String, Function [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
+## Pointer, Array, String, Function Pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
 * pointer and array, function pointer, pointer structure
 * memory allocattion
 * Arrays and String in C
@@ -28,14 +28,14 @@ Grammar of programming, a collection of basic materials for application.
 * 3.2 Parse XML response in C without using library
 
 ## Data Structure, Algorithm [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
-* 4.1 스택
+* 4.1 Stack
 * 4.2 Queue, 우선순위 Queue, Heap
 * 4.3 Linked List
 * 4.4 재귀용법
 * 4.5 binary Tree
 * 4.6 그래프
-* 4.7 정렬
-* 4.8 탐색
+* 4.7 Sorting
+* 4.8 Searching
 * 4.9 해싱
 
 ## Project in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
