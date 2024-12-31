@@ -89,7 +89,8 @@
      return 0;
    }
    ```
-   [2-1 잘못된 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-1.c), [2-1 옳은 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-1.c), [2-2 잘못된 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-2 옳은 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-3 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c),[2-4 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-5 잘못된 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-5 옳은 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c)  
+   * [2-1 잘못된 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-1.c), [2-1 옳은 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-1.c), [2-2 잘못된 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-2 옳은 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-3 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c)
+   * [2-4 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c), [2-5 잘못된 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Incorrect_function_2-2.c), [2-5 옳은 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Correct_function_2-2.c)  
  
    ```txt
    2-1) 배열 매개변수에 sizeof()를 사용하지 말것( 배열의 갯수를 찾지 못함)
@@ -98,7 +99,7 @@
    2-4) pointer 연산사용: (&arr)[1]-arr을 이용 배열 크기 찾기
    2-5) 함수를 이용하여 숫자 배열 출력
    ```
-   [2-6 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-1.c), [2-6 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-2.c)
+   * [2-6 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-1.c), [2-6 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-2.c)
    ```txt
    2-6) 함수를 이용하여 문자열 출력, 명령줄 인수 활용
    ```
