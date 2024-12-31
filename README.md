@@ -1,7 +1,8 @@
 # C Programming language
 Grammar of programming, a collection of basic materials for application.
+
 ## Index
-## Syntax [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
+## Syntax  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/README.md)
 * Syntax
 * 가변인자, 가변함수
 * Input(scanf, gets, fgets)
@@ -13,7 +14,7 @@ Grammar of programming, a collection of basic materials for application.
 * Binary Octal Decimal Hexa변환
 * static, extern 사용
   
-## Pointer, Array, String, Function Pointer [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
+## Pointer, Array, String, Function Pointer  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
 * pointer and array, function pointer, pointer structure
 * memory allocattion
 * Arrays and String in C
@@ -23,20 +24,20 @@ Grammar of programming, a collection of basic materials for application.
 * Structures, String Pointer 활용
 * Memory layout of C program
   
-## File I/O [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
+## File I/O  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/README.md)
 * File I/O
 * Parse XML response in C without using library
 
-## Data Structure, Algorithm [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
+## Data Structure, Algorithm  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
 * Stack
-* Queue, 우선순위 Queue, Heap
+* Queue, Priority Queue, Heap
 * Linked List
-* 재귀용법
+* Recursion method
 * binary Tree
-* 그래프
+* Graph
 * Sorting
 * Searching
-* hashing
+* Hashing
 
 ## Project [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/README.md)
 * File handling function
@@ -45,7 +46,7 @@ Grammar of programming, a collection of basic materials for application.
 * XLISP Calculation formula analysis
 * JSON 
 
-## 참조 LIST
+## Reference
 * 1 [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
 * 2 [참조: [aticleworld.com/c-tutorial](https://aticleworld.com/c-tutorial/)]
 * 3 [참조: [aticleworld.com/c-programming](https://aticleworld.com/c-programming/)]
