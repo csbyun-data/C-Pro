@@ -25,7 +25,7 @@
     ```txt
     Here is a function, which prints basic commit info( data, sha and author)
     from a github repository
-    ```
+    ```  
     ![image](https://github.com/user-attachments/assets/1e785172-bafd-46c9-ba01-d2479c2022cb)
 
     
