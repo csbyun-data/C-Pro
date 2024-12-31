@@ -454,7 +454,7 @@
    ```
    
 * 3.Bit field
-  * Reference [aticleworld.com/bit-field-in-c/](https://aticleworld.com/bit-field-in-c/)
+  * Reference [bit-field-in-c](https://aticleworld.com/bit-field-in-c/)
   * 3.1 선언, 초기화
   ```c
   //bit field 정의, 초기화 방법
