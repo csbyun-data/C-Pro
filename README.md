@@ -14,13 +14,14 @@ Grammar of programming, a collection of basic materials for application.
 * Binary Octal Decimal Hexa변환
 * static, extern 사용
   
-## Pointer, Array, String, Function Pointer  [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/README.md)
-* pointer and array, function pointer, pointer structure
-* memory allocattion
-* Arrays and String in C
-* Function Pointer
+## Pointer, Array, String, Function Pointer  
+* [pointer and array, function pointer, pointer structure](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
+* [memory allocattion](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
+* [Arrays and String in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
+* [Function Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/README.md)
+* [Function Pointer Tutorials](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)]
 ## Structure, Union
-* Structures and Unions in C
+* [Structures and Unions in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
 * Structures, String Pointer 활용
 * Memory layout of C program
   
