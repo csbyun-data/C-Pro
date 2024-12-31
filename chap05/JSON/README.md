@@ -1,7 +1,7 @@
 ## JSON 파일 parser
 ### INDEX
 * 1.JSON (JavaScript Object Notation)
-    * 1.1 참조 Lightweight JSON library written in C [github.com/kgabis/parson](https://github.com/kgabis/parson) [[parson.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/parson.c), [parson.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/parson.h)]
+    * 1.1 참조 Lightweight JSON library written in C [kgabis/parson](https://github.com/kgabis/parson) [[parson.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/parson.c), [parson.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/parson.h)]
     * 1.2 pason library를 활용한 json 문서 읽기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_read.c)
     * 1.3 pason library를 활용한 json 문서 쓰기 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_write.c)
     * 1.4 pason library, Serialization [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/JSON_Serialization.c)
