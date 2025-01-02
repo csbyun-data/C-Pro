@@ -1,5 +1,6 @@
 // Stack을 이용한 infix를 postfix로 변환
 // https://blog.naver.com/newbongman/223327618625
+// 소수점, 10단위이상의 숫자처리를 하지 못함
 
 #pragma warning(disable:4996)
 #include <stdio.h>
