@@ -65,6 +65,7 @@
     char input(256];
     int i;
     fgets( input, 256, stdin);
+    // fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경
     for( i=0; i<256; i++) {
       if(input[i] == '\n') {
         input[i] = '\0';
