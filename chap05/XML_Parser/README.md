@@ -31,6 +31,11 @@
       return true;
     }
     ```
+    * test.xml file
+    ```txt
+    <root>I am a root </root>
+    ```
+  
     * lxml.h 수정 작업
     ```
     #pragma once
