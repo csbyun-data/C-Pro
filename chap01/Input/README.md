@@ -12,13 +12,14 @@
   
       ptr = (char *)malloc( sizeof(char) * 50);
       fputs("input String : ", stdout); // stdout 표준촐력 stream 
-  
+
       if(fgets(ptr, 50, stdin) != NULL) // stdin 표준입력 stream 
         fputs(ptr, stdout);            	// stderr 표준에러 stream
   	  free(ptr);
       return 0;
     }
-    ```    
+    // 주의!, fgets()함수는 문자열 끝의 Enter Key('\n')값을 buffer에 읽어 들여 전달함
+    ```
     * fgets(), fputs() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets1.c)
     * fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
     ```c
