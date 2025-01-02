@@ -21,7 +21,7 @@
     // 주의!, fgets()함수는 문자열 끝의 Enter Key('\n')값을 buffer에 읽어 들여 전달함
     ```
     * fgets(), fputs() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets1.c)
-    * fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
+    * fgets() 문자열 끝 newline '\n' 제거, null terminator '\0'로 변경 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets2.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets3.c)
     ```c
     //  아래code를 한줄로 표현 string[ strlen(buffer)-1 ] = '₩0';
     
