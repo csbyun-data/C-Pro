@@ -3,17 +3,17 @@
 
 int main(int argc, char *argv[]) 
 {
-	int i = 1;
+  int i = 1;
   
-	while(i <= 10) {
+  while(i <= 10) {
     if( i == 5) {
-	   	i++;
-			continue;
-		}
-	  printf("%d", i);    //1, 2, 3, 4, 6, 7 출력
-	  
+      i++;
+      continue;
+    }
+    printf("%d", i);    //1, 2, 3, 4, 6, 7 출력
+    
     if( i == 7) break;
-	  i++;
-	}
+    i++;
+  }
   return 0;
 }
