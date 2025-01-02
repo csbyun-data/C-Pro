@@ -22,7 +22,6 @@
     * infix-postfix [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/infix-postfix-conversion.c)  
     ![image](https://github.com/user-attachments/assets/06373509-d088-4a0e-b596-58dd8a925bc4)  
     * stack을 이용한 infix-postfix변환 [[code1](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Stack_infix_postfix1.c), 
- [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Stack_infix_postfix2.c)]  
     ![image](https://github.com/user-attachments/assets/b1ad24f2-590e-4f86-a740-b02535dfc684)
 
     * stack을 이용한 infix-prefix변환 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Stack_infix_prefix1.c)  
