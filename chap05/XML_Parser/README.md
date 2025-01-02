@@ -257,10 +257,10 @@
     * test.xml 파일 내용
     ```xml
     <root>
-    	<inner>
-    		<more> This is nested node</more>
-    	</inner>
-    	<another>This is another node</another>
+      <inner>
+        <more> This is nested node</more>
+      </inner>
+      <another>This is another node</another>
     </root>
     ```
     * main.c 파일 변경
@@ -272,17 +272,17 @@
 
     int main(int argc, char *argv[])
     {
-    	XMLDocument doc;
-    	if (XMLDocument_load(&doc, "test.xml")) {
-    		XMLNode* more_node = XMLNode_child(XMLNode_child(doc.root, 0), 0);
-    		printf("%s: %s\n", more_node->tag, more_node->inner_text);
-
-    		XMLNode* another_node = XMLNode_child(doc.root, 1);
-    		printf("%s: %s\n", another_node->tag, another_node->inner_text);
-
-    		XMLDocument_free(&doc);
-    	}
-    	return 0;
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        XMLNode* more_node = XMLNode_child(XMLNode_child(doc.root, 0), 0);
+        printf("%s: %s\n", more_node->tag, more_node->inner_text);
+  
+        XMLNode* another_node = XMLNode_child(doc.root, 1);
+        printf("%s: %s\n", another_node->tag, another_node->inner_text);
+  
+        XMLDocument_free(&doc);
+      }
+      return 0;
     }
     ```
     * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)
@@ -292,10 +292,10 @@
     * test.xml
     ```xml
     <main>
-    	<inner>
-    		<more> This is nested node</more>
-    	</inner>
-    	<another>This is another node</another>
+      <inner>
+        <more> This is nested node</more>
+      </inner>
+      <another>This is another node</another>
     </main>
     <another> This should work too</another>
     ```
@@ -308,18 +308,17 @@
 
     int main(int argc, char *argv[])
     {
-
-    	XMLDocument doc;
-    	if (XMLDocument_load(&doc, "test.xml")) {
-    		XMLNode* main_node = XMLNode_child(doc.root, 0);
-    		printf("%d children\n", main_node->children.size);
-
-    		XMLNode* another_node = XMLNode_child(doc.root, 1);
-    		printf("%s\n", another_node->inner_text);
-
-    		XMLDocument_free(&doc);
-    	}
-    	return 0;
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        XMLNode* main_node = XMLNode_child(doc.root, 0);
+        printf("%d children\n", main_node->children.size);
+  
+        XMLNode* another_node = XMLNode_child(doc.root, 1);
+        printf("%s\n", another_node->inner_text);
+  
+        XMLDocument_free(&doc);
+      }
+      return 0;
     }
     ```
     * lxml.h 파일 수정
@@ -626,22 +625,22 @@
 
     int main(int argc, char *argv[])
     {
-    	XMLDocument doc;
-    	if (XMLDocument_load(&doc, "test.xml")) {
-    		XMLNode* str = XMLNode_child(doc.root, 0);
-    		printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
-
-    		XMLNodeList* fields = XMLNode_children(str, "field");
-    		for (int i = 0; i < fields->size; i++) {
-    			XMLNode* field = XMLNodeList_at(fields, i);
-    			XMLAttribute* type = XMLNode_attr(field, "type");
-    			type->value = "";
-    		}
-
-    		XMLDocument_write(&doc, "out.xml", 4 );
-    		XMLDocument_free(&doc);
-    	}
-    	return 0;
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        XMLNode* str = XMLNode_child(doc.root, 0);
+        printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
+  
+        XMLNodeList* fields = XMLNode_children(str, "field");
+        for (int i = 0; i < fields->size; i++) {
+          XMLNode* field = XMLNodeList_at(fields, i);
+          XMLAttribute* type = XMLNode_attr(field, "type");
+          type->value = "";
+        }
+  
+        XMLDocument_write(&doc, "out.xml", 4 );
+        XMLDocument_free(&doc);
+      }
+      return 0;
     }
     ```
     * lxml.h 파일 수정
@@ -649,49 +648,49 @@
     bool XMLDocument_write(XMLDocument* doc, const char* path, int indent);
 
     static void node_out(FILE* file, XMLNode* node, int indent, int times) {
-    	for (int i = 0; i < node->children.size; i++) {
-    		XMLNode* child = node->children.data[i];
-
-    	if(times > 0)
-    			fprintf(file, "%0*s", indent*times, " ");
-
-    		fprintf(file, "<%s", child->tag);
-    		for(int i = 0; i < child->attributes.size; i++){
-    			XMLAttribute attr = child->attributes.data[i];
-    			if (!strcmp(attr.value, ""))
-    				continue;
-    			fprintf(file, " %s=\"%s\"", attr.key, attr.value);
-    		}
-
-    		if(child->children.size == 0 && !child->inner_text)
-    			fprintf(file, " /> \n");
-    		else {
-    			fprintf(file, ">\n");
-    			if(child->children.size == 0)
-    				fprintf (file, "%s</%s>\n", child->inner_text, child->tag);
-    			else {
-    				node_out(file, child, indent, times + 1);
-    				if(times > 0)
-    					fprintf(file, "%0*s", indent * times, " ");
-    				fprintf(file, "</%s>\n", child->tag);
-    			}
-    		}
-    	}
+      for (int i = 0; i < node->children.size; i++) {
+        XMLNode* child = node->children.data[i];
+  
+      if(times > 0)
+          fprintf(file, "%0*s", indent*times, " ");
+  
+        fprintf(file, "<%s", child->tag);
+        for(int i = 0; i < child->attributes.size; i++){
+          XMLAttribute attr = child->attributes.data[i];
+          if (!strcmp(attr.value, ""))
+            continue;
+          fprintf(file, " %s=\"%s\"", attr.key, attr.value);
+        }
+  
+        if(child->children.size == 0 && !child->inner_text)
+          fprintf(file, " /> \n");
+        else {
+          fprintf(file, ">\n");
+          if(child->children.size == 0)
+            fprintf (file, "%s</%s>\n", child->inner_text, child->tag);
+          else {
+            node_out(file, child, indent, times + 1);
+            if(times > 0)
+              fprintf(file, "%0*s", indent * times, " ");
+            fprintf(file, "</%s>\n", child->tag);
+          }
+        }
+      }
     }
 
     bool XMLDocument_write(XMLDocument* doc, const char* path, int indent) {
-    	FILE* file = fopen(path, "w");
-    	if (!file) {
-    		fprintf(stderr, "Could not open file '%s'\n", path);
-    		return TRUE;
-    	}
-
-    	fprintf(file, "<?xml version=\"%s\" encoding=\"%s\" ?>\n",
-    		(doc->version) ? doc->version : "1.0",
-    		(doc->encoding) ? doc->encoding : "UTF-8"
-    	);
-    	node_out(file, doc->root, indent, 0);
-    	fclose(file);
+      FILE* file = fopen(path, "w");
+      if (!file) {
+        fprintf(stderr, "Could not open file '%s'\n", path);
+        return TRUE;
+      }
+  
+      fprintf(file, "<?xml version=\"%s\" encoding=\"%s\" ?>\n",
+        (doc->version) ? doc->version : "1.0",
+        (doc->encoding) ? doc->encoding : "UTF-8"
+      );
+      node_out(file, doc->root, indent, 0);
+      fclose(file);
     }
     ```
     ![image](https://github.com/user-attachments/assets/beb46743-f512-48f5-ac3f-1ba6c16ef36a)
