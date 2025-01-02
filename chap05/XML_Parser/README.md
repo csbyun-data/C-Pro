@@ -36,7 +36,7 @@
     <root>I am a root </root>
     ```
   
-    * lxml.h 수정 작업
+    * lxml.h XMLDocument_load() 기능 작업
     ```
     #pragma once
     #include <stdio.h>
