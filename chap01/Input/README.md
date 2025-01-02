@@ -29,13 +29,12 @@
       int i;
    
       /* remove the null terminator */
-      for (  i = 0; i < size; ++i ) {
-          if ( str[i] == '\n' ) {
-              str[i] = '\0';
-   
-              /* we're done, so just exit the function by returning */
-              return;   
-          }
+      for ( i = 0; i < size; ++i ) {
+        if( str[i] == '\n' ) {
+          str[i] = '\0';
+          /* we're done, so just exit the function by returning */
+          return;   
+        }
       }
       /* if we get all the way to here, there must not have been a newline! */
     }
