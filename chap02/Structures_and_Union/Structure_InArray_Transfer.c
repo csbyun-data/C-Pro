@@ -19,7 +19,6 @@ void modify( struct ArrayWrapper temp) {
   printf("In 'modify()', before modification\n"); 
   for( i=0; i<SIZE; ++i)
     printf("%d ", ptr[i]);
-
   printf("\n");
 
   // Modify the array 
