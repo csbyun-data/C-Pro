@@ -10,7 +10,7 @@ typedef struct Student{
 } Student;
 
 // 구조체 배열을 함수의 매개변수로 활용
-int compare(const void *a, const void * b){
+int compare(const void *a, const void *b){
   Student first = *(Student *)a;
   Student second = *(Student *)b;
   if(first.score > second.score)
