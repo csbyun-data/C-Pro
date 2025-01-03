@@ -24,7 +24,7 @@ Grammar of programming, a collection of basic materials for application.
 ## Structure, Union
 * [Structures and Unions in C]
     * [Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
-    * [Unions](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
+    * [Unions](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/UNION.md)
 * [Structures, String Pointer 활용](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/README.md)
 * [Memory layout of C program](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Memory-layout/README.md)
   
