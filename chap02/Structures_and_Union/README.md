@@ -418,7 +418,7 @@
 
     * 2.3 공용체 size 계산 [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_size1.c), [Ex2](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_size2.c)
 
-    * 2.4 공용체 활용 [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_ex2.c)
+    * 2.4 공용체 활용 [Ex1](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Union_ex2.c)  
      ![image](https://github.com/user-attachments/assets/f13e396e-4275-4487-8cd4-ff25a9ce3f3b)
    ```c
     // 컴파일 Error 수정 작업
