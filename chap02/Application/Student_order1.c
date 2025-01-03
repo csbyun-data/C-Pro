@@ -22,7 +22,7 @@ int compare(const void *a, const void * b){
 }
 
 //문자열 포인터, 숫자 배열 포인터를 함수 매개변수로 활용 예
-char* solution(char* names[], int names_len, int scores[], int scores_len, int K) {
+char *solution(char* names[], int names_len, int scores[], int scores_len, int K) {
   int len = names_len;
   Student* students = (Student*)malloc(sizeof(Student)*len);
   for(int i = 0; i < len; ++i){
