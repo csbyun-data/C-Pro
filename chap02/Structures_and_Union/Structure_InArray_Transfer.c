@@ -11,11 +11,11 @@ struct ArrayWrapper {
 };
 
 // An array is passed by value wrapped in temp
-void modify( struct ArrayWrapper temp) {
+// 구조체를 return하면 값 갚이 복사 반납
+struct ArrayWrapper modify( struct ArrayWrapper temp) {
   int *ptr = temp.arr;
   int i;
 
-  // Display array contents
   printf("In 'modify()', before modification\n"); 
   for( i=0; i<SIZE; ++i)
     printf("%d ", ptr[i]);
@@ -28,7 +28,8 @@ void modify( struct ArrayWrapper temp) {
   printf("\nIn 'modify()', after modification\n"); 
   for (i = 0; i < SIZE; ++i) 
     printf("%d ", ptr[i]); // OR *(ptr + i)   
-
+    
+  return temp;
 }
 
 // Driver code
@@ -36,17 +37,21 @@ int main()
 {
   int i;
   struct ArrayWrapper obj;
+  struct ArrayWrapper ret;
   for( i=0; i<SIZE; i++)
     obj.arr[i] = 10;
 
-  modify(obj);
+  ret = modify(obj);
 
-  // Display array contents
   printf("\n\nIn 'Main', after calling modify() \n"); 
-    for (i = 0; i < SIZE; ++i) 
-      printf("%d ", obj.arr[i]); // Not changed 
+  for (i = 0; i < SIZE; ++i) 
+    printf("%d ", obj.arr[i]); // Not changed 
+  printf("\n"); 
   
-    printf("\n"); 
+  printf("\n\nReturn value after calling modify() ret \n"); 
+  for (i = 0; i < SIZE; ++i) 
+    printf("%d ", ret.arr[i]); // Not changed 
+  printf("\n"); 
   
     return 0; 
 } 
@@ -59,5 +64,8 @@ In 'modify()', after modification
 100 100 100 100 100
 
 In 'Main', after calling modify()
-10 10 10 10 10 
+10 10 10 10 10
+
+Return value after calling modify()
+100 100 100 100 100
 */
