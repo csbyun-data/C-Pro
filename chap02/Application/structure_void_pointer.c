@@ -9,7 +9,7 @@ typedef enum {INT, DOUBLE, STRING} ENUMTYPE;
 typedef struct _sData {
   ENUMTYPE type; // 1:정수, 2:실수, 3:문자열
   void *vp;
-} DATA, *PDATA:
+} DATA, *PDATA;
 
 void menu() {
   puts("");
@@ -58,7 +58,7 @@ PDATA Input() {
       break;
     default:
       puts("1~3까지 입력 가능");
-      goto _start:
+      goto _start;
   }
   return p;
 }
@@ -81,8 +81,8 @@ void Remove(PDATA dArray[], int *sCount) {
     return;
   Freememory( dArray[idx]);
   --*sCount;
-  for(; dix < *sCount; idx++)
-    dArray[idx] = dArray[dix+1];
+  for(; idx < *sCount; idx++)
+    dArray[idx] = dArray[idx+1];
 }
 
 void Output(PDATA dArray[], int sCount) {
@@ -96,7 +96,7 @@ void Output(PDATA dArray[], int sCount) {
         printf("%d : 실수[ %.5lf ]\n", i, *(double *)dArray[i]->vp);
         break;
       case STRING:
-        printf("%d : 문자열[ %s ] \n", i, *(char *)dArray[i]->vp);
+        printf("%d : 문자열[ %s ] \n", i, (char *)dArray[i]->vp);
         break;
     }
   }
@@ -127,39 +127,3 @@ void main()
     }
   }
 }
-
-      
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
