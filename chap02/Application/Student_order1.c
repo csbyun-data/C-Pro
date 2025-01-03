@@ -35,7 +35,7 @@ char *solution(char* names[], int names_len, int scores[], int scores_len, int K
 }
 
 int main() {
-  char* names[5] = {"lukas", "james", "levi", "eli", "max"};
+  char *names[5] = {"lukas", "james", "levi", "eli", "max"};
   int names_len = 5;
   int scores[5] = {30, 20, 50, 40, 10};
   int scores_len = 5;
