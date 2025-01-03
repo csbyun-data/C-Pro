@@ -22,7 +22,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Function Pointer Tutorials](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)
 
 ## Structure, Union
-* [Structures and Unions in C]
+* Structures and Unions in C
     * [Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
     * [Unions and Bit field](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/UNION.md)
 * [Structures, String Pointer 활용](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/README.md)
