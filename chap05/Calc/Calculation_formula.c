@@ -121,10 +121,6 @@ void infixToPostfix(char *infix, char *postfix) {
       	while (token[token_index] != '\0') 
       	  postfix[k++] = token[token_index++];	
     	  postfix[k++] = ' ';
-
-        // 함수가 스택에 쌓이도록 처리
-        //push(&stack, 0);  // 임시로 자리만 차지
-        //postfix[k++] = '(';
       }
     }
     // 여는 괄호 처리
