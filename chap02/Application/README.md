@@ -7,5 +7,5 @@
       int score;
     } Student;
     ```
-    * 구조체의 맴버 void형 포언터, 공용체와 결합한 구조체 [code]()
+    * 구조체의 맴버 void형 포언터, 공용체와 결합한 구조체 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/structure_void_pointer.c)
     
