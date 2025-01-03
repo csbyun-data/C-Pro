@@ -7,3 +7,5 @@
       int score;
     } Student;
     ```
+    * 구조체의 맴버 void형 포언터, 공용체와 결합한 구조체 [code]()
+    
