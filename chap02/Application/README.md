@@ -8,4 +8,12 @@
     } Student;
     ```
     * 구조체의 맴버 void형 포언터, 공용체와 결합한 구조체 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/structure_void_pointer.c)
+    ```c
+    typedef enum {INT, DOUBLE, STRING} ENUMTYPE;
+
+    typedef struct _sData {
+       ENUMTYPE type; // 1:정수, 2:실수, 3:문자열
+       void *vp;
+    } DATA, *PDATA;
+    ```
     
