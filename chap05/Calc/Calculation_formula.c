@@ -1,5 +1,5 @@
 // Calculation Formula
-// ChatGPT code, 중위표기법 -> 후위표기법 변환, Stack 구조체 사용, 우선순위, 소숫점 처리
+// ChatGPT code, 중위표기법 -> 후위표기법, Stack 구조체 사용, 우선순위, 소숫점 처리
 // 삼각함수 (SIN, COS, TAN), 계산식 추가
 
 #include <stdio.h>
@@ -7,29 +7,32 @@
 #include <ctype.h>
 #include <string.h>
 #include <math.h>
+#include <stdbool.h>
 
 #define MAX_SIZE 100
+#define PI 3.14
 
-// 스택 구조체 정의
+// Stack
+// ========================================
 typedef struct {
   double items[MAX_SIZE];
   int top;
 } Stack;
 
 // 스택 함수들
-void initStack(Stack* stack) {
+void initStack(Stack *stack) {
   stack->top = -1;
 }
 
-int isEmpty(Stack* stack) {
+int isEmpty(Stack *stack) {
   return stack->top == -1;
 }
 
-int isFull(Stack* stack) {
+int isFull(Stack *stack) {
   return stack->top == MAX_SIZE - 1;
 }
 
-void push(Stack* stack, double value) {
+void push(Stack *stack, double value) {
   if (!isFull(stack)) {
     stack->items[++(stack->top)] = value;
   } else {
@@ -37,7 +40,7 @@ void push(Stack* stack, double value) {
   }
 }
 
-double pop(Stack* stack) {
+double pop(Stack *stack) {
   if (!isEmpty(stack)) {
     return stack->items[(stack->top)--];
   } else {
@@ -45,38 +48,48 @@ double pop(Stack* stack) {
     return -1;
   }
 }
+// ========================================
 
-// 연산자 우선순위 반환 함수
+// Operator Priority Return Function
 int precedence(char op) {
-  if (op == '+' || op == '-') {
-    return 1;
-  } else if (op == '*' || op == '/') {
-    return 2;
-  } else if (op == '^') {
-    return 3;
+  switch (op) {
+    case '+':
+    case '-':
+      return 1;
+    case '*':
+    case '/':
+      return 2;
+    case '^':
+      return 3;
+    default:
+      return 0;
   }
-  return 0;
 }
 
-// 삼각 함수의 우선순위와 계산 함수들
+// Priorities and computational functions of trigonometric functions
 int isFunction(char* func) {
   return (strcmp(func, "sin") == 0 || strcmp(func, "cos") == 0 || strcmp(func, "tan") == 0);
 }
 
-// 삼각 함수 계산
+// Calculate trigonometric functions
 double evaluateFunction(char* func, double value) {
+  double radian;
   if (strcmp(func, "sin") == 0) {
-    return sin(value);
+  	radian = value * PI / 180.0;
+    return sin(radian);
   } else if (strcmp(func, "cos") == 0) {
-    return cos(value);
+  	radian = value * PI / 180.0;
+    return cos(radian);
   } else if (strcmp(func, "tan") == 0) {
-    return tan(value);
+  	radian = value * PI / 180.0;
+    return tan(radian);
   }
+  
   return 0;
 }
 
-// 중위 표기법을 후위 표기법으로 변환하는 함수
-void infixToPostfix(char* infix, char* postfix) {
+// Functions that convert the infix notation to the postfix notation
+void infixToPostfix(char *infix, char *postfix) {
   Stack stack;
   initStack(&stack);
   int i = 0, k = 0;
@@ -86,33 +99,32 @@ void infixToPostfix(char* infix, char* postfix) {
   while (infix[i] != '\0') {
     char c = infix[i];
 
-    // 공백은 무시
     if (c == ' ') {
         i++;
         continue;
     }
 
-    // 숫자나 소수점을 처리
-    if (isdigit(c) || c == '.') {
+    if (isdigit(c) || c == '.') { // Numbers or Decimals
       while (isdigit(infix[i]) || infix[i] == '.') {
-          postfix[k++] = infix[i++];
+        postfix[k++] = infix[i++];
       }
       postfix[k++] = ' ';
     }
-    // 삼각 함수 처리
-    else if (isalpha(c)) {
+    else if (isalpha(c)) { // Trigonometric functions
       token_index = 0;
-      // 함수 이름을 토큰으로 인식
       while (isalpha(infix[i])) {
         token[token_index++] = infix[i++];
       }
       token[token_index] = '\0';
       if (isFunction(token)) {
-        postfix[k++] = ' ';
+      	token_index = 0;
+      	while (token[token_index] != '\0') 
+      	  postfix[k++] = token[token_index++];	
+    	  postfix[k++] = ' ';
 
         // 함수가 스택에 쌓이도록 처리
-        push(&stack, 0);  // 임시로 자리만 차지
-        postfix[k++] = '(';
+        //push(&stack, 0);  // 임시로 자리만 차지
+        //postfix[k++] = '(';
       }
     }
     // 여는 괄호 처리
@@ -148,61 +160,76 @@ void infixToPostfix(char* infix, char* postfix) {
   postfix[k] = '\0'; // 문자열 끝에 NULL 추가
 }
 
-// 후위 표기법 계산 함수
-double evaluatePostfix(char* postfix) {
+// 후위 표기법 계산함수
+double evaluatePostfix(char *postfix) {
   Stack stack;
-  initStack(&stack);
   int i = 0;
+  char c;
   double num;
+  bool dot = false;
+  bool bFunction = false;
+  char func[10];
+  
+  initStack(&stack);
 
   while (postfix[i] != '\0') {
-    char c = postfix[i];
+  	c = postfix[i];
 
-    // 숫자인 경우
-    if (isdigit(c) || c == '.') {
+    if (isdigit(c) || c == '.') { // number
       num = 0;
       double decimalPlace = 1;
+      dot = false;
       while (isdigit(postfix[i]) || postfix[i] == '.') {
-          if (postfix[i] == '.') {
-              i++;
-              decimalPlace = 0.1;
-              continue;
-          }
-          num = num * 10 + (postfix[i] - '0');
-          decimalPlace *= 10;
+      	if (postfix[i] == '.') {
           i++;
+          dot = true;
+          continue;
+        }
+        num = num * 10 + (postfix[i] - '0');
+        if( dot == true)
+          decimalPlace *= 0.1;
+        i++;
       }
-      push(&stack, num / decimalPlace);
-    }
-    // 연산자인 경우
-    else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^') {
+      num = num * decimalPlace;
+      
+      push(&stack, num);
+      
+      if(bFunction == true) {
+        double operand = pop(&stack);
+        printf("%s, %g\n", func, operand);
+        push(&stack, evaluateFunction(func, operand));
+        bFunction = false;
+	  }
+    } else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^') { // 연산자인 경우
       double b = pop(&stack);
       double a = pop(&stack);
       switch (c) {
-          case '+': push(&stack, a + b); break;
-          case '-': push(&stack, a - b); break;
-          case '*': push(&stack, a * b); break;
-          case '/': push(&stack, a / b); break;
-          case '^': push(&stack, pow(a, b)); break;
+      	case '+': push(&stack, a + b); break;
+	    case '-': push(&stack, a - b); break;
+	    case '*': push(&stack, a * b); break;
+	    case '/': push(&stack, a / b); break;
+	    case '^': push(&stack, pow(a, b)); break;
       }
       i++;
     }
-    // 삼각 함수 처리
-    else if (c == '(') {
-        i++;
+    else if (c == ' ') {  // 공백처리 
+      i++;
+      continue;
+	}
+	else if (c == '(' ) { // 삼각함수처리
+      i++;
+      continue;
     }
     else {
-      char func[10];
+
       int func_index = 0;
       while (isalpha(postfix[i])) {
-          func[func_index++] = postfix[i++];
+        func[func_index++] = postfix[i++];
       }
       func[func_index] = '\0';
 
-      if (isFunction(func)) {
-          double operand = pop(&stack);
-          push(&stack, evaluateFunction(func, operand));
-      }
+      if (isFunction(func))
+        bFunction = true;
     }
   }
   
@@ -215,13 +242,14 @@ int main() {
 
   printf("Enter an infix expression (e.g., sin(30) + cos(45)): ");
   fgets(infix, sizeof(infix), stdin);
+  infix[ strlen(infix)-1 ] = '\0';
 
   // 중위 표기법을 후위 표기법으로 변환
   infixToPostfix(infix, postfix);
   printf("Postfix Expression: %s\n", postfix);
 
   // 후위 표기법 계산
-  double result = evaluatePostfix(postfix);
+  double result = evaluatePostfix(postfix);  
   printf("Result: %.4f\n", result);
 
   return 0;
