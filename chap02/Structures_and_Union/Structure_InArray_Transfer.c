@@ -11,7 +11,8 @@ struct ArrayWrapper {
 };
 
 // An array is passed by value wrapped in temp
-// 구조체를 return하면 값 갚이 복사 반납
+// -> 구조체를 return하면 값 갚이 복사 반납
+// void ArrayWrapper modify( struct ArrayWrapper temp ) -> return 값 추가
 struct ArrayWrapper modify( struct ArrayWrapper temp) {
   int *ptr = temp.arr;
   int i;
