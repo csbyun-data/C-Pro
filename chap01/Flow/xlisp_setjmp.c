@@ -37,15 +37,15 @@ int main(int argc, char *argv[])
 
 /* xlfail - error handling routine */
 xlfail(char *err) {
-    /* print the error message */
-    printf("error: %s\n",err);
-
-    /* restart */
-    longjmp(jmpbuf,1);
+  /* print the error message */
+  printf("error: %s\n",err);
+  
+  /* restart */
+  longjmp(jmpbuf,1);
 }
 
 /* fexit - get out of xlisp */
 fexit() {
-	printf("프로그램 종료.\n");
+  printf("프로그램 종료.\n");
   exit(1);
 }
