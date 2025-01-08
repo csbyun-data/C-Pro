@@ -6,4 +6,4 @@
     * for() continue, break [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control7.c) [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control8.c)
     * while() continue, break [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control4.c)
     * do~while() [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control5.c) [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/Flow_control6.c)
-* setjmp(). longjmp() 활용 [code]()
+* setjmp(). longjmp() 활용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/setjmp.c)
