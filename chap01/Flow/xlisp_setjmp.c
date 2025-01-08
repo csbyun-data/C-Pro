@@ -13,26 +13,26 @@ fexit();
 
 int main(int argc, char *argv[])
 {
-	char str[100];
-	
-	while( true) {
-		setjmp(jmpbuf);
-		
-		printf("문자열 입력(종료:exit) : ");
-		fgets(str, sizeof(str), stdin);
-		str[strcspn(str,"\n")] = '\0';
-		
-		if (strcmp(str, "exit") == 0 )
-			fexit();
-		else {
-			// xlread();
-			// xleval();
-			// xlprint();
-			
-			xlfail(str);
-		}
-	}
-	return 0;
+  char str[100];
+  
+  while( true) {
+    setjmp(jmpbuf);
+    
+    printf("문자열 입력(종료:exit) : ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str,"\n")] = '\0';
+    
+    if (strcmp(str, "exit") == 0 )
+      fexit();
+    else {
+      // xlread();
+      // xleval();
+      // xlprint();
+      
+      xlfail(str);
+    }
+  }
+  return 0;
 }
 
 /* xlfail - error handling routine */
