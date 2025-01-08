@@ -1,4 +1,5 @@
 // longjmp()가 실행되면 setjmp()로 이동함,
+// https://www.tutorialspoint.com/c_standard_library/c_function_longjmp.htm
 #include <stdio.h>
 #include <string.h>
 #include <setjmp.h> // setjmp(), longjmp()
