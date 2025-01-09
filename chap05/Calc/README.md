@@ -19,6 +19,11 @@
 * 함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)
 * 사칙연산 함수를 STL을 이용하여 표현 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/STL_Calculator1.cpp)]
 * 재귀호출 계산기 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)]
+```txt
+1) 전위, 후위 연산자 ++, --
+2) 변수 값 입력
+3) 변수 이항연산 계산
+```
 * 계산기 관련 자료
     * infix-postfix [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/infix-postfix-conversion.c)  
     ![image](https://github.com/user-attachments/assets/06373509-d088-4a0e-b596-58dd8a925bc4)  
