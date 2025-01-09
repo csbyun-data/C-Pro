@@ -6,7 +6,7 @@
   3) 삼각함수 (SIN, COS, TAN), 계산식
        SIN(30)+COS(45) 후위계산식 변경 -> SIN 30 COS 45 +
   ```
-* 계산기 프로그램2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula2.c)
+* 계산기 프로그램2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_Function_pointer.c)
   ```txt
   1) ChatGPT code, 중위표기법 -> 후위표기법 변환
   2) Stack 배열을 이용 중위식을 계산, 우선순위, 소수점 처리
