@@ -1,36 +1,35 @@
+// 가변인자를 사용하지 않은 예제
+
 #include <stdio.h>
 
 enum TYPE {
-  TYPE_CHAR,
-  TYPE_INT,
-  TYPE_FLOAT
+  TYPE_CHAR, TYPE_INT, TYPE_FLOAT
 };
 
 typedef struct {
-	void *n_listvalue;
-	size_t n_type;
+  void *n_listvalue;
+  size_t n_type;
 } valist;
 
 void func( valist *n, ...) {
-	size_t n_type;
-	valist **nptr;
-	
-    for (nptr = &n; *nptr != NULL; nptr++) {
-		n_type = (*nptr)->n_type;
-		switch(n_type) {
-			case TYPE_CHAR:
-				printf("1, %s\n", (*nptr)->n_listvalue);
-				break;
-			case TYPE_INT:
-				printf("2, %d\n",  *(int *)(*nptr)->n_listvalue);
-				break;
-			case TYPE_FLOAT:
-				printf("3, %f\n",  *(float *)(*nptr)->n_listvalue);
-				break;				
-			//default:
-		}
-    }	
-	
+  size_t n_type;
+  valist **nptr;
+  
+  for (nptr = &n; *nptr != NULL; nptr++) {
+    n_type = (*nptr)->n_type;
+    switch(n_type) {
+      case TYPE_CHAR:
+        printf("1, %s\n", (*nptr)->n_listvalue);
+        break;
+      case TYPE_INT:
+        printf("2, %d\n",  *(int *)(*nptr)->n_listvalue);
+        break;
+      case TYPE_FLOAT:
+        printf("3, %f\n",  *(float *)(*nptr)->n_listvalue);
+        break;				
+      //default:
+    }
+  }	
 }
 
 int main()
