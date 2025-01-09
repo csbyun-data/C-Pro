@@ -2,6 +2,8 @@
 // 구조체의 같은 메모리크기를 활용, 함수의 파라메터가 stack 메모리에 쌓인 address를 순차적으로 가져옴
 // 마지막 parameter를 NULL을 이용 확인
 
+// David Betz. XLISP 0.0. January 6, 1983. USENET distribution and extracted sources.
+
 #include <stdio.h>
 
 enum TYPE {
