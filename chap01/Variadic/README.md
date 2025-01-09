@@ -33,6 +33,7 @@
     	
     for(int i=2; i<7; i++)
       printf("%.*f\n", i, num);
+    
     /*
     3.14
     3.142
