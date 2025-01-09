@@ -33,22 +33,17 @@
      size_t n_type;
    } valist;
    
-  void func( valist *n, ...) {
+   void func( valist *n, ...) {
      size_t n_type;
      valist **nptr;
    	
      for (nptr = &n; *nptr != NULL; nptr++) {
        n_type = (*nptr)->n_type;
        switch(n_type) {
-   	   case TYPE_CHAR:
-         case TYPE_INT:
-   		case TYPE_FLOAT:
+         //..
        }
       }	
-    }
+   }
    
    func(&a, &b, &c, NULL);
    ```
-   
-   
-       
