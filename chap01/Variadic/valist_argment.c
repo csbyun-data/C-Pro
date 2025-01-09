@@ -1,4 +1,6 @@
 // 가변인자를 사용하지 않은 예제
+// 구조체의 같은 메모리크기를 활용, 함수의 파라메터가 stack 메모리에 쌓인 address를 순차적으로 가져옴
+// 마지막 parameter를 NULL을 이용 확인
 
 #include <stdio.h>
 
@@ -34,19 +36,19 @@ void func( valist *n, ...) {
 
 int main()
 {
-	int num = 1;
-	float fnum = 3.14;
-	
-	valist a, b, c;
-	
-	a.n_type = TYPE_CHAR;
-	a.n_listvalue = "abc";
-	
-	b.n_type = TYPE_INT;
-	b.n_listvalue= &num;
-	
-	c.n_type = TYPE_FLOAT;
-	c.n_listvalue = &fnum;
-	
-	func(&a, &b, &c, NULL);
+  int num = 1;
+  float fnum = 3.14;
+  
+  valist a, b, c;
+  
+  a.n_type = TYPE_CHAR;
+  a.n_listvalue = "abc";
+  
+  b.n_type = TYPE_INT;
+  b.n_listvalue= &num;
+  
+  c.n_type = TYPE_FLOAT;
+  c.n_listvalue = &fnum;
+  
+  func(&a, &b, &c, NULL);
 }
