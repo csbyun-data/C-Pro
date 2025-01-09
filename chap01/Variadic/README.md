@@ -23,5 +23,32 @@
     printf("%c, %d, %g, %x", 'a', 10, 3.1415, pa);
     ```
 * 가변함수를 사용하지 않은 예 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argment.c)
-
-    
+   ```c
+   #include <stdio.h>
+   
+   enum TYPE { TYPE_CHAR, TYPE_INT, TYPE_FLOAT};
+   
+   typedef struct {
+     void *n_listvalue;
+     size_t n_type;
+   } valist;
+   
+  void func( valist *n, ...) {
+     size_t n_type;
+     valist **nptr;
+   	
+     for (nptr = &n; *nptr != NULL; nptr++) {
+       n_type = (*nptr)->n_type;
+       switch(n_type) {
+   	   case TYPE_CHAR:
+         case TYPE_INT:
+   		case TYPE_FLOAT:
+       }
+      }	
+    }
+   
+   func(&a, &b, &c, NULL);
+   ```
+   
+   
+       
