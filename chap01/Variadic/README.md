@@ -27,7 +27,8 @@
     char carr[10] = "abcdefg";
     char *pa = carr;
     printf("%c, %c, %s, %s, %c", c, *p, carr, pa, *pa);
-
+    ```
+    ```c
     double num = 3.141592;
     	
     for(int i=2; i<7; i++)
