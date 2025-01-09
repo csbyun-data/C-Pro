@@ -42,7 +42,7 @@
        switch(n_type) {
          //..
        }
-      }	
+     }	
    }
    
    func(&a, &b, &c, NULL);
