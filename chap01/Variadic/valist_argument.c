@@ -11,11 +11,11 @@ enum TYPE {
 typedef struct {
   void *n_listvalue;
   size_t n_type;
-} valist;
+} node;
 
-void func( valist *n, ...) {
+void func( node *n, ...) {
   size_t n_type;
-  valist **nptr;
+  node **nptr;
   
   for (nptr = &n; *nptr != NULL; nptr++) {
     n_type = (*nptr)->n_type;
@@ -39,7 +39,7 @@ int main()
   int num = 1;
   float fnum = 3.14;
   
-  valist a, b, c;
+  node a, b, c;
   
   a.n_type = TYPE_CHAR;
   a.n_listvalue = "abc";
