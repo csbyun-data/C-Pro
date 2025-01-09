@@ -21,6 +21,11 @@
     int a;
     int *pa = &a;
     printf("%c, %d, %g, %x", 'a', 10, 3.1415, pa);
+
+    char c = 'a';
+    char carr[10] = "abcdefg";
+    char *pa = carr;
+    printf("%c, %s, %s, %c", c, carr, pa, *pa);
     ```
 * 가변함수를 사용하지 않은 예 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argment.c)
    ```c
