@@ -131,7 +131,6 @@ double evaluate_infix(const char *expr) {
         case true:
           while (op_top != -1 && ops[op_top] != '(' && precedence(ops[op_top]) >= precedence(op)) {
             double value = values[value_top--];
-            printf("value : %g\n", value);
             for (int j = 0; j < num_unary_ops; j++) {
               if (unary_operators[j].operator == op) {
                 values[++value_top] = unary_operators[j].operation(value);
@@ -150,8 +149,6 @@ double evaluate_infix(const char *expr) {
             double b = values[value_top--];
             double a = values[value_top--];
             op = ops[op_top--];
-            
-            printf("bin: %g, %g, %c\n", b, a, op);
     
             // 이항 연산자에 맞는 함수 찾기
             for (int j = 0; j < num_binary_ops; j++) {
