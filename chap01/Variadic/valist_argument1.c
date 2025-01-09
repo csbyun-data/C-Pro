@@ -19,7 +19,8 @@ void func( node *n, ...) {
   
   // Initializing argument to the list pointer
   va_start(ptr, n);
-  
+
+  // for (nptr = &n; *nptr != NULL; nptr++) , nptr++을 va_arg()로 변경
   for (nptr = &n; *nptr != NULL; ) {
     n_type = (*nptr)->n_type;
     switch(n_type) {
