@@ -102,47 +102,41 @@ double evaluate_infix(const char *expr) {
       ops[++op_top] = expr[i++];  // 여는 괄호 처리
     }
     else if (expr[i] == ')') { // 닫는 괄호 처리
-      switch (bfunction) {
-      	case true:
-      	  // printf("Unary_operator : %c, value_top: %d, op_top: %d\n", op, value_top, op_top);
-	        value = values[value_top--];
-	      
-  	      if (op == 's' || op == 'c' || op == 't' || op == 'e')
-  	      	value = value * PI / 180.0;
-  	      else if (op == 'e') ;
-          
-          printf("Unary): %c %g \n", op, value);
-          
-	        for (int j = 0; j < num_unary_ops; j++) {
-  	        if (unary_operators[j].operator == op) {
-  	          values[++value_top] = unary_operators[j].operation(value);
-  	          break;
-  	        }
-  	      }
-  	      bfunction = false;
-  	      op_top--;  // 여는 괄호 제거
-  	      i++;
-  	      break;
-      		
-      	case false:
-  	      while (op_top != -1 && ops[op_top] != '(') {
-  	        double b = values[value_top--];
-  	        double a = values[value_top--];
-  	        op = ops[op_top--];
-  	        
-  	        printf("bin): %g, %c %g \n", a, op, b);
-  	
-   	        for (int j = 0; j < num_binary_ops; j++) {
-              if (binary_operators[j].operator == op) {
-                values[++value_top] = binary_operators[j].operation(a, b);
-                break;
-              }
-  	        }
-	        }
-  	      op_top--;  // 여는 괄호 제거
-  	      i++;	      
-  	      break;	      
-  	  }
+      while (op_top != -1 && ops[op_top] != '(') {
+        double b = values[value_top--];
+        double a = values[value_top--];
+        op = ops[op_top--];
+        
+        printf("bin): %g %c %g \n", a, op, b);
+
+        for (int j = 0; j < num_binary_ops; j++) {
+          if (binary_operators[j].operator == op) {
+            values[++value_top] = binary_operators[j].operation(a, b);
+            break;
+          }
+        }
+      }
+      if (bfunction) {
+        printf("Unary_operator : %c, value_top: %d, op_top: %d\n", op, value_top, op_top);
+
+        value = values[value_top--];
+      
+        if (op == 's' || op == 'c' || op == 't' || op == 'e')
+          value = value * PI / 180.0;
+        else if (op == 'e') ;
+        
+        printf("Unary): %c %g \n", op, value);
+        
+        for (int j = 0; j < num_unary_ops; j++) {
+          if (unary_operators[j].operator == op) {
+            values[++value_top] = unary_operators[j].operation(value);
+            break;
+          }
+        }
+        bfunction = false;
+      }
+      op_top--;  // 여는 괄호 제거
+      i++;
     } else if (expr[i] == 's' || expr[i] == 'c' || expr[i] == 't' || expr[i] == 'e') {
       op = expr[i];
       i++;  // 's', 'c', 't', 'e' 처리 후 다음 문자로 이동
