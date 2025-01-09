@@ -1,8 +1,5 @@
-// 가변인자를 사용하지 않은 예제
-// 구조체의 같은 메모리크기를 활용, 함수의 파라메터가 stack 메모리에 쌓인 address를 순차적으로 가져옴
-// 마지막 parameter를 NULL을 이용 확인
-
 #include <stdio.h>
+#include <stdarg.h>
 
 enum TYPE {
   TYPE_CHAR, TYPE_INT, TYPE_FLOAT
@@ -11,13 +8,19 @@ enum TYPE {
 typedef struct {
   void *n_listvalue;
   size_t n_type;
-} valist;
+} node;
 
-void func( valist *n, ...) {
+void func( node *n, ...) {
   size_t n_type;
-  valist **nptr;
+  node **nptr, *arg;
+
+  // Declaring pointer to the argument list
+  va_list ptr;
   
-  for (nptr = &n; *nptr != NULL; nptr++) {
+  // Initializing argument to the list pointer
+  va_start(ptr, n);
+  
+  for (nptr = &n; *nptr != NULL; ) {
     n_type = (*nptr)->n_type;
     switch(n_type) {
       case TYPE_CHAR:
@@ -29,9 +32,13 @@ void func( valist *n, ...) {
       case TYPE_FLOAT:
         printf("3, %f\n",  *(float *)(*nptr)->n_listvalue);
         break;				
-      //default:
     }
-  }	
+    // Accessing current variable and pointing to next one
+    arg = va_arg(ptr, struct node *);
+    nptr = &arg;
+  }
+  // Ending argument list traversal
+  va_end(ptr);
 }
 
 int main()
@@ -39,7 +46,7 @@ int main()
   int num = 1;
   float fnum = 3.14;
   
-  valist a, b, c;
+  node a, b, c;
   
   a.n_type = TYPE_CHAR;
   a.n_listvalue = "abc";
