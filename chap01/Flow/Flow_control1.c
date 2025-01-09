@@ -14,6 +14,6 @@ int main()
   } else {
     printf("n1 < n2");
   }
-	
-	return 0;
+  
+  return 0;
 }
