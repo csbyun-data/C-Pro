@@ -16,7 +16,7 @@
       va_end(ptr); // Ending argument list traversal
     }
     ```
-* printf() function
+* printf() function [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/printf_format1.c)
     ```c
     int a;
     int *pa = &a;
@@ -27,6 +27,11 @@
     char carr[10] = "abcdefg";
     char *pa = carr;
     printf("%c, %c, %s, %s, %c", c, *p, carr, pa, *pa);
+
+    double num = 3.141592;
+    	
+    for(int i=2; i<7; i++)
+      printf("%.*f\n", i, num);    
     ```
 * 가변함수를 사용하지 않은 예 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argment.c)
    ```c
