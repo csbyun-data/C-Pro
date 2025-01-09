@@ -42,7 +42,7 @@
     3.141592
     */
     ```
-* 가변함수를 사용하지 않은 예 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argument.c), [가변함수 사용 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argument1.c)
+* 가변함수를 사용하지 않은 예 [[code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argument.c), [가변함수 사용 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argument1.c)]
    ```c
    #include <stdio.h>
    
