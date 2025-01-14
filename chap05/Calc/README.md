@@ -6,6 +6,8 @@
   3) 삼각함수 (SIN, COS, TAN), 계산식
        SIN(30)+COS(45) 후위계산식 변경 -> SIN 30 COS 45 +
   ```
+  ![image](https://github.com/user-attachments/assets/9532fcba-3fba-4496-b2d4-09dc5f58ace0)
+
 * 함수 포인터를 배열에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula3.c)  
 * 함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)  
     
