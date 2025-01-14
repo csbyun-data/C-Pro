@@ -44,6 +44,7 @@
     ```
 * 가변함수를 사용하지 않은 예,XLISP참조 [[code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argument.c), [가변함수 사용 code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/valist_argument1.c)]
    ```c
+   // 함수의 arguments가 크기가 동일하고, 마지막을 NULL을 입력하여 갯수 확인
    #include <stdio.h>
    
    enum TYPE { TYPE_CHAR, TYPE_INT, TYPE_FLOAT};
