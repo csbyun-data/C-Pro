@@ -6,17 +6,20 @@
   3) 삼각함수 (SIN, COS, TAN), 계산식
        SIN(30)+COS(45) 후위계산식 변경 -> SIN 30 COS 45 +
   ```
-* 계산기 프로그램2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_Function_pointer.c)
+* 함수 포인터를 배열에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula3.c)  
+* 함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)  
+    
+* 계산기 프로그램2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_Function_pointer.c)  
   ```txt
-  1) ChatGPT code, 중위표기법 -> 후위표기법 변환
+  1) ChatGPT code, 중위표기법 계산
   2) Stack 배열을 이용 중위식을 계산, 우선순위, 소수점 처리
-  3) 사칙연산, 이항연산자 배열과 Function pointer 매칭
-  4) 단항연산자 배열과 Function pointer 매칭, 삼각, 지수연산 (SIN, COS, TAN, EXP 함수)
-  5) Command Line에서 계산식 받음, 숫자의 소수점 처리
+  3) 사칙 연산자, 이항 연산자 배열과 Function pointer 매칭
+  4) 단항 연산자 배열과 Function pointer 매칭, 삼각, 지수 연산 (SIN, COS, TAN, EXP 함수)
+  5) Command Line 반복 계산식 처리, #include <setjmp.h> // setjmp(), longjmp() 사용
   ```
+  ![image](https://github.com/user-attachments/assets/fef2af64-b83d-457f-bb4e-80d787b0aeb0)
 
-* 함수 포인터를 배열에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula3.c)
-* 함수 포인터를 구조체에 넣어 가감 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Calculation_formula4.c)
+
 * 사칙연산 함수를 STL을 이용하여 표현 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/STL_Calculator1.cpp)]
 * 재귀호출 계산기 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)]
 ```txt
