@@ -18,12 +18,13 @@
     }
     ```
     * lxml.h file 생성
+  	```c
+    # include <stdbool.h>
+    bool XMLDocument_load(XMLDocument* doc, const char* path);
+  	```
     * main.c code 추가
     ```c
-    // # include <stdbool.h>  추가
-    int XMLDocument_load(XMLDocument* doc, const char* path);  // bool형으로 변경
-
-    int XMLDocument_load(XMLDocument* doc, const char* path) {  // bool형으로 변경
+    bool XMLDocument_load(XMLDocument* doc, const char* path) {
       FILE* file = fopen(path, "r");
       if (!file) {
         fprintf(stderr, "Could not load file from '%s'\n", path);
