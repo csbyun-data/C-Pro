@@ -48,7 +48,7 @@
     // Definitions
 
     struct _XMLDocument {
-    	char *source;
+      char *source;
     };
     typedef struct _XMLDocument XMLDocument;
 
