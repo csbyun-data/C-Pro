@@ -54,9 +54,7 @@
 
     bool XMLDocument_load(XMLDocument *doc, const char *path);
     void XMLDocument_free(XMLDocument *doc);
-    ```
-    * main.c 구현부 추가
-    ```c
+
     // Implementation
     bool XMLDocument_load(XMLDocument *doc, const char *path) {
       FILE *file = fopen(path, "r");
