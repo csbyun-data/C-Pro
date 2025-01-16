@@ -1,6 +1,6 @@
 ### XML Parser
 * XML file load 화면 출력 기능 구현
-    * main.c 생성
+    * main.c file 생성
     ```c
     #include <stdio.h>
     #include <stdlib.h>
@@ -17,7 +17,8 @@
       return 0;
     }
     ```
-    * lxml.h 생성
+    * lxml.h file 생성
+    * main.c code 추가
     ```c
     // # include <stdbool.h>  추가
     int XMLDocument_load(XMLDocument* doc, const char* path);  // bool형으로 변경
@@ -32,7 +33,7 @@
       return true;
     }
     ```
-    * test.xml file
+    * test.xml file 생성
     ```txt
     <root>I am a root </root>
     ```
@@ -54,7 +55,9 @@
 
     bool XMLDocument_load(XMLDocument* doc, const char* path);
     void XMLDocument_free(XMLDocument* doc);
-
+    ```
+    * main.c 구현부 추가
+    ```c
     // Implementation
     bool XMLDocument_load(XMLDocument* doc, const char* path) {
       FILE* file = fopen(path, "r");
