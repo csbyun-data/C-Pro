@@ -125,7 +125,7 @@
     void XMLDocument_free(XMLDocument *doc);
 
     // Implementation
-    XMLNode* XMLNode_new(XMLNode *parent) {
+    XMLNode *XMLNode_new(XMLNode *parent) {
       XMLNode *node = (XMLNode *)malloc(sizeof(XMLNode));
       node->parent = parent;
       node->tag = NULL;
