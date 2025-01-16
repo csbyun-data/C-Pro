@@ -1,5 +1,5 @@
 ### XML Parser
-* XML file load 화면 출력 기능 구현
+* 1.XML file load 화면 출력 기능 구현
     * main.c file 생성
     ```c
     #include <stdio.h>
@@ -48,18 +48,18 @@
     // Definitions
 
     struct _XMLDocument {
-    	char* source;
+    	char *source;
     };
     typedef struct _XMLDocument XMLDocument;
 
-    bool XMLDocument_load(XMLDocument* doc, const char* path);
-    void XMLDocument_free(XMLDocument* doc);
+    bool XMLDocument_load(XMLDocument *doc, const char *path);
+    void XMLDocument_free(XMLDocument *doc);
     ```
     * main.c 구현부 추가
     ```c
     // Implementation
-    bool XMLDocument_load(XMLDocument* doc, const char* path) {
-      FILE* file = fopen(path, "r");
+    bool XMLDocument_load(XMLDocument *doc, const char *path) {
+      FILE *file = fopen(path, "r");
       if (!file) {
         fprintf(stderr, "Could not load file from '%s'\n", path);
         return false;
@@ -68,7 +68,7 @@
       int size = ftell(file);
       fseek(file, 0, SEEK_SET);
   
-      doc->source = (char*)malloc(sizeof(char) * size * 1);
+      doc->source = (char *)malloc(sizeof(char) * size * 1);
       fread(doc->source, 1, size, file);
       fclose(file);
       doc->source[size] = '\0';
@@ -76,11 +76,11 @@
       return true;
     }
 
-    void XMLDocument_free(XMLDocument* doc) { }
+    void XMLDocument_free(XMLDocument *doc) { }
     ```
     ![image](https://github.com/user-attachments/assets/c4ca3118-abc6-4c5a-a446-8e6be19e80c9)
 
-* XML 내용 조회 구현
+* 2.XML 내용 조회 구현
     * main.c 프로그램 수정
     ```c
     #include <stdio.h>
@@ -109,41 +109,41 @@
 
     // Definitions
     struct _XMLNode {
-      char* tag;
-      char* inner_text;
-      struct _XMLNode* parent;
+      char *tag;
+      char *inner_text;
+      struct _XMLNode *parent;
     };
     typedef struct _XMLNode XMLNode;
 
-    XMLNode* XMLNode_new(XMLNode* parent);
-    void XMLNode_free(XMLNode* node);
+    XMLNode *XMLNode_new(XMLNode *parent);
+    void XMLNode_free(XMLNode *node);
 
     struct _XMLDocument {
-      XMLNode* root;
+      XMLNode *root;
     };
     typedef struct _XMLDocument XMLDocument;
 
-    bool XMLDocument_load(XMLDocument* doc, const char* path);
-    void XMLDocument_free(XMLDocument* doc);
+    bool XMLDocument_load(XMLDocument *doc, const char *path);
+    void XMLDocument_free(XMLDocument *doc);
 
     // Implementation
-    XMLNode* XMLNode_new(XMLNode* parent) {
-      XMLNode* node = (XMLNode*)malloc(sizeof(XMLNode));
+    XMLNode* XMLNode_new(XMLNode *parent) {
+      XMLNode *node = (XMLNode *)malloc(sizeof(XMLNode));
       node->parent = parent;
       node->tag = NULL;
       node->inner_text = NULL;
       return node;
     }
 
-    void XMLNode_free(XMLNode* node) {
+    void XMLNode_free(XMLNode *node) {
       if (node->tag)
         free(node->tag);
       if (node->inner_text)
         free(node->inner_text);
     }
 
-    bool XMLDocument_load(XMLDocument* doc, const char* path) {
-      FILE* file = fopen(path, "r");
+    bool XMLDocument_load(XMLDocument *doc, const char *path) {
+      FILE *file = fopen(path, "r");
       if (!file) {
         fprintf(stderr, "Could not load file from '%s'\n", path);
         return false;
@@ -152,7 +152,7 @@
       int size = ftell(file);
       fseek(file, 0, SEEK_SET);
 
-      char* buf = (char*)malloc(sizeof(char) * size * 1);
+      char *buf = (char *)malloc(sizeof(char) * size * 1);
       fread(buf, 1, size, file);
       fclose(file);
       buf[size] = '\0';
@@ -163,7 +163,7 @@
       int lexi = 0;
       int i = 0;
 
-      XMLNode* curr_node = NULL;
+      XMLNode *curr_node = NULL;
 
       while (buf[i] != '\0')	{
         if (buf[i] == '<') {
@@ -224,13 +224,13 @@
       return true;
     }
 
-    void XMLDocument_free(XMLDocument* doc) {
+    void XMLDocument_free(XMLDocument *doc) {
       XMLNode_free(doc->root);  //수정 Source
     }
     ```
     ![image](https://github.com/user-attachments/assets/452b65a7-6832-4606-bc43-0a71d5262814)
 
-* XML 파일 속성 조회
+* 3.XML 파일 속성 조회
     * test.xml 파일 속성 조회 예제 형식으로 수정
     ```xml
     <root key="value" another="one more">I am a root</root>
@@ -261,7 +261,7 @@
     * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
     *  ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
 
-* XML 파일 형식 변경 조회
+* 4.XML 파일 형식 변경 조회
     * test.xml 파일 내용
     ```xml
     <root>
@@ -296,7 +296,7 @@
     * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)
     * ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
 
-* XML 파일 형식 변경 분석
+* 5.XML 파일 형식 변경 분석
     * test.xml
     ```xml
     <main>
@@ -338,7 +338,7 @@
     ```
     ![image](https://github.com/user-attachments/assets/3c2cebc9-075a-4ec9-97f4-8df571936108)
     
-* 주석문 XML분석시 제외
+* 6.주석문 XML분석시 제외
     * test.xml 문서 수정
     ```xml
     <!-- This is a comment-->
@@ -373,7 +373,7 @@
     * lxml.h 파일 수정
     ```
     // ends_with 함수 추가
-    int ends_with(const char* haystack, const char* needle) {
+    int ends_with(const char *haystack, const char *needle) {
     	int h_len = strlen(haystack);
     	int n_len = strlen(needle);
 
@@ -387,8 +387,8 @@
     	return TRUE;
     }
 
-    bool XMLDocument_load(XMLDocument* doc, const char* path) {
-    	XMLNode* curr_node = doc->root;
+    bool XMLDocument_load(XMLDocument *doc, const char *path) {
+    	XMLNode *curr_node = doc->root;
 
     	while (buf[i] != '\0') 	{
   			// End of node
@@ -414,7 +414,7 @@
     ```
     ![image](https://github.com/user-attachments/assets/4d5d746e-b8c2-47ff-a251-b24864895444)
 
-* 속성 읽어들여 출력
+* 7.속성 읽어들여 출력
    * test.xml 파일 수정
    ```xml
    <car type="KIA">  This is a really cool description </car>
@@ -428,10 +428,9 @@
 
    int main(int argc, char *argv[])
    {
-
    	XMLDocument doc;
    	if (XMLDocument_load(&doc, "test.xml")) {
-   		XMLNode* main_node = XMLNode_child(doc.root, 0);
+   		XMLNode *main_node = XMLNode_child(doc.root, 0);
    		printf("Car (%s)\n", main_node->attributes.data[0].value);
 
    		XMLDocument_free(&doc);
@@ -441,7 +440,7 @@
    ```
    ![image](https://github.com/user-attachments/assets/9005f0dd-e902-49cb-b11b-760432379c09)
 
-* XML version, encoding 얻기
+* 8.XML version, encoding 얻기
     * test.xml 파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -456,7 +455,6 @@
 
     int main(int argc, char *argv[])
     {
-
     	XMLDocument doc;
     	if (XMLDocument_load(&doc, "test.xml")) {
     		printf("XML Document (version=%s, encoding=%s)\n", doc.version, doc.encoding);
@@ -471,84 +469,84 @@
     ```
     * lxml.h 파일 수정
     ```c
-    static void parse_attrs(char* buf, int* i, char* lex, int* lexi, XMLNode* curr_node) {
-    	XMLAttribute curr_attr = { 0,0 };
-    	while (buf[*i] != '>') {
-    		lex[(*lexi)++] = buf[(*i)++];
-
-    		// Tag name
-    		if (buf[*i] == ' ' && !curr_node->tag) {
-    			lex[*lexi] = '\0';
-    			curr_node->tag = _strdup(lex);
-    			*lexi = 0;
-    			(*i)++;
-    			continue;
-    		}
-
-    		// Usually ignore spaces
-    		if (lex[*lexi - 1] == ' ') {
-    			(*lexi)--;
-    			continue;
-    		}
-
-    		// Attribute key
-    		if (buf[*i] == '=') {
-    			lex[*lexi] = '\0';
-    			curr_attr.key = _strdup(lex);
-    			*lexi = 0;
-    			continue;
-    		}
-
-    		// Attribute value
-    		if (buf[*i] == '"') {
-    			if (!curr_attr.key) {
-    				fprintf(stderr, "Value has no key\n");
-    				return;
-    			}
-
-    			*lexi = 0;
-    			(*i)++;
-
-    			while (buf[*i] != '"')
-    				lex[(*lexi)++] = buf[(*i)++];
-    			lex[*lexi] = '\0';
-    			curr_attr.value = _strdup(lex);
-    			XMLAttributeList_add(&curr_node->attributes, &curr_attr);
-    			curr_attr.key = NULL;
-    			curr_attr.value = NULL;
-    			*lexi = 0;
-    			(*i)++;
-    			continue;
-       	}
-    	}
+    static void parse_attrs(char *buf, int *i, char *lex, int *lexi, XMLNode *curr_node) {
+      XMLAttribute curr_attr = { 0,0 };
+      while (buf[*i] != '>') {
+        lex[(*lexi)++] = buf[(*i)++];
+  
+        // Tag name
+        if (buf[*i] == ' ' && !curr_node->tag) {
+          lex[*lexi] = '\0';
+          curr_node->tag = _strdup(lex);
+          *lexi = 0;
+          (*i)++;
+          continue;
+        }
+  
+        // Usually ignore spaces
+        if (lex[*lexi - 1] == ' ') {
+          (*lexi)--;
+          continue;
+        }
+  
+        // Attribute key
+        if (buf[*i] == '=') {
+          lex[*lexi] = '\0';
+          curr_attr.key = _strdup(lex);
+          *lexi = 0;
+          continue;
+        }
+  
+        // Attribute value
+        if (buf[*i] == '"') {
+          if (!curr_attr.key) {
+            fprintf(stderr, "Value has no key\n");
+            return;
+          }
+  
+          *lexi = 0;
+          (*i)++;
+  
+          while (buf[*i] != '"')
+            lex[(*lexi)++] = buf[(*i)++];
+          lex[*lexi] = '\0';
+          curr_attr.value = _strdup(lex);
+          XMLAttributeList_add(&curr_node->attributes, &curr_attr);
+          curr_attr.key = NULL;
+          curr_attr.value = NULL;
+          *lexi = 0;
+          (*i)++;
+          continue;
+        }
+      }
     }
 
-    bool XMLDocument_load(XMLDocument* doc, const char* path) {
+    bool XMLDocument_load(XMLDocument *doc, const char *path) {
 			// Declaration tags
-         if (buf[i + 1] == '?') {
-            while ( buf[i] != ' ' && buf[i] != '>')
-               lex[lexi++] = buf[i++];
-            lex[lexi] = '\0';
-
-         // This is the XML declaration
-            if (!strcmp(lex, "<?xml")) {
-               lexi = 0;
-               XMLNode* desc = XMLNode_new(NULL);
-               parse_attrs(buf, &i, lex, &lexi, desc);
-
-               doc->version = XMLNode_attr_val(desc, "version");
-               doc->encoding = XMLNode_attr_val(desc, "encoding");
-               continue;
-            }
-         }
-         // Start tag
-         i++;
-         parse_attrs(buf, &i, lex, &lexi, curr_node);
+      if (buf[i + 1] == '?') {
+        while ( buf[i] != ' ' && buf[i] != '>')
+           lex[lexi++] = buf[i++];
+        lex[lexi] = '\0';
+      
+        // This is the XML declaration
+        if (!strcmp(lex, "<?xml")) {
+           lexi = 0;
+           XMLNode* desc = XMLNode_new(NULL);
+           parse_attrs(buf, &i, lex, &lexi, desc);
+      
+           doc->version = XMLNode_attr_val(desc, "version");
+           doc->encoding = XMLNode_attr_val(desc, "encoding");
+           continue;
+        }
+      }
+      // Start tag
+      i++;
+      parse_attrs(buf, &i, lex, &lexi, curr_node);
     }
     ```
     ![image](https://github.com/user-attachments/assets/7e7e19c7-d9bb-4852-b014-278f21a6afdc)
 
-* tag의 끝이 /> 로 마무리 되는 inline node인 경우
+* 9.tag의 끝이 /> 로 마무리 되는 inline node인 경우
     * test.xml 파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -560,7 +558,7 @@
     * main.c 파일 수정
     * lxml.h 파일 수정
 
-* dummy tag분석 제외
+* 10.dummy tag분석 제외
     * test.xml파일 수정
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -581,13 +579,13 @@
     {
       XMLDocument doc;
       if (XMLDocument_load(&doc, "test.xml")) {
-        XMLNode* str = XMLNode_child(doc.root, 0);
+        XMLNode *str = XMLNode_child(doc.root, 0);
         printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
 
-        XMLNodeList* fields = XMLNode_children(str, "field");
+        XMLNodeList *fields = XMLNode_children(str, "field");
         for (int i = 0; i < fields->size; i++) {
           XMLNode* field = XMLNodeList_at(fields, i);
-          printf(" %s (%s)\n", XMLNode_attr_val(field, (char*)"name"), XMLNode_attr_val(field, (char*)"type"));
+          printf(" %s (%s)\n", XMLNode_attr_val(field, (char *)"name"), XMLNode_attr_val(field, (char *)"type"));
         }
         XMLDocument_free(&doc);
       }
@@ -596,12 +594,12 @@
     ```
     * lxml.h 파일 수정
     ```c
-    struct _XMLNode* XMLNodeList_at(XMLNodeList* list, int index);
-    void XMLNodeList_free(XMLNodeList* list);
+    struct _XMLNode *XMLNodeList_at(XMLNodeList *list, int index);
+    void XMLNodeList_free(XMLNodeList *list);
 
-    XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag);
+    XMLNodeList *XMLNode_children(XMLNode *parent, const char *tag);
 
-    XMLNode* XMLNodeList_at(XMLNodeList* list, int index) {
+    XMLNode *XMLNodeList_at(XMLNodeList *list, int index) {
       return list->data[index];
     }
 
@@ -609,12 +607,12 @@
       free(list);
     }
 
-    XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag) {
-      XMLNodeList* list = (XMLNodeList*) malloc(sizeof(XMLNodeList));
+    XMLNodeList *XMLNode_children(XMLNode *parent, const char *tag) {
+      XMLNodeList *list = (XMLNodeList *) malloc(sizeof(XMLNodeList));
       XMLNodeList_init(list);
 
       for (int i = 0; i < parent->children.size; i++) {
-        XMLNode* child = parent->children.data[i];
+        XMLNode *child = parent->children.data[i];
         if (!strcmp(child->tag, tag))
           XMLNodeList_add(list, child);
       }
@@ -623,7 +621,7 @@
     ```
     ![image](https://github.com/user-attachments/assets/832e767b-7b46-4c94-9d89-7d2534df0106)
      
-* XMLDocument_write(), XML문서 생성
+* 11.XMLDocument_write(), XML문서 생성
     * main.c 파일 수정
     ```c
     #include <stdio.h>
@@ -635,12 +633,12 @@
     {
       XMLDocument doc;
       if (XMLDocument_load(&doc, "test.xml")) {
-        XMLNode* str = XMLNode_child(doc.root, 0);
+        XMLNode *str = XMLNode_child(doc.root, 0);
         printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
   
-        XMLNodeList* fields = XMLNode_children(str, "field");
+        XMLNodeList *fields = XMLNode_children(str, "field");
         for (int i = 0; i < fields->size; i++) {
-          XMLNode* field = XMLNodeList_at(fields, i);
+          XMLNode *field = XMLNodeList_at(fields, i);
           XMLAttribute* type = XMLNode_attr(field, "type");
           type->value = "";
         }
@@ -653,9 +651,9 @@
     ```
     * lxml.h 파일 수정
     ```c
-    bool XMLDocument_write(XMLDocument* doc, const char* path, int indent);
+    bool XMLDocument_write(XMLDocument *doc, const char *path, int indent);
 
-    static void node_out(FILE* file, XMLNode* node, int indent, int times) {
+    static void node_out(FILE *file, XMLNode *node, int indent, int times) {
       for (int i = 0; i < node->children.size; i++) {
         XMLNode* child = node->children.data[i];
   
@@ -686,8 +684,8 @@
       }
     }
 
-    bool XMLDocument_write(XMLDocument* doc, const char* path, int indent) {
-      FILE* file = fopen(path, "w");
+    bool XMLDocument_write(XMLDocument *doc, const char *path, int indent) {
+      FILE *file = fopen(path, "w");
       if (!file) {
         fprintf(stderr, "Could not open file '%s'\n", path);
         return TRUE;
