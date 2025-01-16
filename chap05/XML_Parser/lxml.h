@@ -44,9 +44,9 @@ void XMLAttribute_free(XMLAttribute* attr);
 
 struct _XMLAttributeList
 {
-	int heap_size;
-	int size;
-	XMLAttribute* data;
+  int heap_size;
+  int size;
+  XMLAttribute* data;
 };
 typedef struct _XMLAttributeList XMLAttributeList;
 
@@ -55,9 +55,9 @@ void XMLAttributeList_add(XMLAttributeList* list, XMLAttribute* attr);
 
 struct _XMLNodeList
 {
-	int heap_size;
-	int size;
-	struct _XMLNode** data;
+  int heap_size;
+  int size;
+  struct _XMLNode** data;
 };
 typedef struct _XMLNodeList XMLNodeList;
 
@@ -67,11 +67,11 @@ struct _XMLNode* XMLNodeList_at(XMLNodeList* list, int index);
 void XMLNodeList_free(XMLNodeList* list);
 
 struct _XMLNode {
-	char* tag;
-	char* inner_text;
-	struct _XMLNode* parent;
-	XMLAttributeList attributes;
-	XMLNodeList children;
+  char* tag;
+  char* inner_text;
+  struct _XMLNode* parent;
+  XMLAttributeList attributes;
+  XMLNodeList children;
 };
 typedef struct _XMLNode XMLNode;
 
@@ -83,9 +83,9 @@ char* XMLNode_attr_val(XMLNode* node, char* key);
 XMLAttribute* XMLNode_attr(XMLNode* node, char* key);
 
 struct _XMLDocument {
-	XMLNode* root;
-	char* version;
-	char* encoding;
+  XMLNode* root;
+  char* version;
+  char* encoding;
 };
 typedef struct _XMLDocument XMLDocument;
 
@@ -97,187 +97,187 @@ void XMLDocument_free(XMLDocument* doc);
 
 void XMLAttribute_free(XMLAttribute* attr)
 {
-	free(attr->key);
-	free(attr->value);
+  free(attr->key);
+  free(attr->value);
 }
 
 void XMLAttributeList_init(XMLAttributeList* list)
 {
-	list->heap_size = 1;
-	list->size = 0;
-	list->data = (XMLAttribute*)malloc(sizeof(XMLAttribute) * list->heap_size);
+  list->heap_size = 1;
+  list->size = 0;
+  list->data = (XMLAttribute*)malloc(sizeof(XMLAttribute) * list->heap_size);
 }
 
 void XMLAttributeList_add(XMLAttributeList* list, XMLAttribute* attr)
 {
-	while (list->size >= list->heap_size) {
-		list->heap_size *= 2;
-		list->data = (XMLAttribute*)realloc(list->data, sizeof(XMLAttribute) * list->heap_size);
+  while (list->size >= list->heap_size) {
+    list->heap_size *= 2;
+    list->data = (XMLAttribute*)realloc(list->data, sizeof(XMLAttribute) * list->heap_size);
    }
-
-	list->data[list->size++] = *attr;
+  
+  list->data[list->size++] = *attr;
 }
 
 void XMLNodeList_init(XMLNodeList* list) 
 {
-	list->heap_size = 1;
-	list->size = 0;
-	list->data = (XMLNode**)malloc(sizeof(XMLNode*) * list->heap_size);
+  list->heap_size = 1;
+  list->size = 0;
+  list->data = (XMLNode**)malloc(sizeof(XMLNode*) * list->heap_size);
 }
 
 void XMLNodeList_add(XMLNodeList* list, XMLNode* node) 
 {
-	while (list->size >= list->heap_size) {
-		list->heap_size *= 2;
-		list->data = (XMLNode**)realloc(list->data, sizeof(XMLNode*) * list->heap_size);
-	}
-
-	list->data[list->size++] = node;
+  while (list->size >= list->heap_size) {
+    list->heap_size *= 2;
+    list->data = (XMLNode**)realloc(list->data, sizeof(XMLNode*) * list->heap_size);
+  }
+  
+  list->data[list->size++] = node;
 }
 
 XMLNode* XMLNodeList_at(XMLNodeList* list, int index)
 {
-	return list->data[index];
+  return list->data[index];
 }
 
 void XMLNodeList_free(XMLNodeList* list)
 {
-	free(list);
+  free(list);
 }
 
 XMLNode* XMLNode_new(XMLNode* parent) 
 {
-	XMLNode* node = (XMLNode*)malloc(sizeof(XMLNode));
-	node->parent = parent;
-	node->tag = NULL;
-	node->inner_text = NULL;
-	XMLAttributeList_init(&node->attributes);
-	XMLNodeList_init(&node->children);
-	if (parent)
-		XMLNodeList_add(&parent->children, node);
-
-	return node;
+  XMLNode* node = (XMLNode*)malloc(sizeof(XMLNode));
+  node->parent = parent;
+  node->tag = NULL;
+  node->inner_text = NULL;
+  XMLAttributeList_init(&node->attributes);
+  XMLNodeList_init(&node->children);
+  if (parent)
+    XMLNodeList_add(&parent->children, node);
+  
+  return node;
 }
 
 void XMLNode_free(XMLNode* node) 
 {
-	if (node->tag)
-		free(node->tag);
-	if (node->inner_text)
-		free(node->inner_text);
-		
-	for (int i = 0; i < node->attributes.size; i++)
-		XMLAttribute_free(&node->attributes.data[i]);
-	free(node);
+  if (node->tag)
+    free(node->tag);
+  if (node->inner_text)
+    free(node->inner_text);
+    
+  for (int i = 0; i < node->attributes.size; i++)
+    XMLAttribute_free(&node->attributes.data[i]);
+  free(node);
 }
 
 XMLNode* XMLNode_child(XMLNode* parent, int index)
 {
-	return parent->children.data[index];
+  return parent->children.data[index];
 }
 
 XMLNodeList* XMLNode_children(XMLNode* parent, const char* tag)
 {
-	XMLNodeList* list = (XMLNodeList*) malloc(sizeof(XMLNodeList));
-	XMLNodeList_init(list);
-	
-	for (int i = 0; i < parent->children.size; i++) {
-		XMLNode* child = parent->children.data[i];
-		if (!strcmp(child->tag, tag))
-			XMLNodeList_add(list, child);
-	}
-	return list;
+  XMLNodeList* list = (XMLNodeList*) malloc(sizeof(XMLNodeList));
+  XMLNodeList_init(list);
+  
+  for (int i = 0; i < parent->children.size; i++) {
+    XMLNode* child = parent->children.data[i];
+    if (!strcmp(child->tag, tag))
+      XMLNodeList_add(list, child);
+  }
+  return list;
 }
 
 char* XMLNode_attr_val(XMLNode* node, char* key)
 {
-	for(int i = 0; i < node->attributes.size; i++) {
-		XMLAttribute attr = node->attributes.data[i];
-		if(!strcmp(attr.key, key))
-			return attr.value;
-	}
-	return NULL;
+  for(int i = 0; i < node->attributes.size; i++) {
+    XMLAttribute attr = node->attributes.data[i];
+    if(!strcmp(attr.key, key))
+      return attr.value;
+  }
+  return NULL;
 }
 
 XMLAttribute* XMLNode_attr(XMLNode* node, char* key)
 {
-	for (int i = 0; i < node->attributes.size; i++){
-		XMLAttribute* attr = &node->attributes.data[i];
-		if (!strcmp(attr->key, key))
-			return attr;
-	}
-	return NULL;
+  for (int i = 0; i < node->attributes.size; i++){
+    XMLAttribute* attr = &node->attributes.data[i];
+    if (!strcmp(attr->key, key))
+      return attr;
+  }
+  return NULL;
 }
 
 enum _TagType
 {
-	TAG_START,
-	TAG_INLINE
+  TAG_START,
+  TAG_INLINE
 };
 typedef enum _TagType TagType;
 
 static TagType parse_attrs(char* buf, int* i, char* lex, int* lexi, XMLNode* curr_node)
 {
-	XMLAttribute curr_attr = { 0,0 };
-	while (buf[*i] != '>') {
-		lex[(*lexi)++] = buf[(*i)++];
-
-		// Tag name
-		if (buf[*i] == ' ' && !curr_node->tag) {
-			lex[*lexi] = '\0';
-			curr_node->tag = _strdup(lex);
-			*lexi = 0;
-			(*i)++;
-			continue;
-		}
-
-		// Usually ignore spaces
-		if (lex[*lexi - 1] == ' ') {
-			(*lexi)--;
-		}
-
-		// Attribute key
-		if (buf[*i] == '=') {
-			lex[*lexi] = '\0';
-			curr_attr.key = _strdup(lex);
-			*lexi = 0;
-			continue;
-		}
-
-		// Attribute value
-		if (buf[*i] == '"') {
-			if (!curr_attr.key) {
-				fprintf(stderr, "Value has no key\n");
-				return TAG_START;
-			}
-
-			*lexi = 0;
-			(*i)++;
-
-			while (buf[*i] != '"')
-				lex[(*lexi)++] = buf[(*i)++];
-			lex[*lexi] = '\0';
-			curr_attr.value = _strdup(lex);
-			XMLAttributeList_add(&curr_node->attributes, &curr_attr);
-			curr_attr.key = NULL;
-			curr_attr.value = NULL;
-			*lexi = 0;
-			(*i)++;
-			continue;
-		}
-		
-		//Inline node
-		if(buf[*i -1] == '/' && buf[*i] == '>') {
-			lex[*lexi] = '\0';
-			if(!curr_node->tag)
-				curr_node->tag = strdup(lex);
-			(*i)++;
-			
-			return TAG_INLINE;
-		}
-		
-	}
-	return TAG_START;
+  XMLAttribute curr_attr = { 0,0 };
+  while (buf[*i] != '>') {
+    lex[(*lexi)++] = buf[(*i)++];
+  
+    // Tag name
+    if (buf[*i] == ' ' && !curr_node->tag) {
+      lex[*lexi] = '\0';
+      curr_node->tag = _strdup(lex);
+      *lexi = 0;
+      (*i)++;
+      continue;
+    }
+  
+    // Usually ignore spaces
+    if (lex[*lexi - 1] == ' ') {
+      (*lexi)--;
+    }
+  
+    // Attribute key
+    if (buf[*i] == '=') {
+      lex[*lexi] = '\0';
+      curr_attr.key = _strdup(lex);
+      *lexi = 0;
+      continue;
+    }
+  
+    // Attribute value
+    if (buf[*i] == '"') {
+      if (!curr_attr.key) {
+        fprintf(stderr, "Value has no key\n");
+        return TAG_START;
+      }
+  
+      *lexi = 0;
+      (*i)++;
+  
+      while (buf[*i] != '"')
+        lex[(*lexi)++] = buf[(*i)++];
+      lex[*lexi] = '\0';
+      curr_attr.value = _strdup(lex);
+      XMLAttributeList_add(&curr_node->attributes, &curr_attr);
+      curr_attr.key = NULL;
+      curr_attr.value = NULL;
+      *lexi = 0;
+      (*i)++;
+      continue;
+    }
+    
+    //Inline node
+    if(buf[*i -1] == '/' && buf[*i] == '>') {
+      lex[*lexi] = '\0';
+      if(!curr_node->tag)
+        curr_node->tag = strdup(lex);
+      (*i)++;
+      
+      return TAG_INLINE;
+    }
+    
+  }
+  return TAG_START;
 }
 
 bool XMLDocument_load(XMLDocument* doc, const char* path)
