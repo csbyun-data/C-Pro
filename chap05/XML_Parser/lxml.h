@@ -20,23 +20,23 @@
 
 int ends_with(const char* haystack, const char* needle)
 {
-	int h_len = strlen(haystack);
-	int n_len = strlen(needle);
-	
-	if (h_len < n_len)
-		return FALSE;
-		
-	for (int i = 0; i < n_len; i++)
-		if (haystack[h_len - n_len + i] != needle[i])
-			return FALSE;
-
-	return TRUE;
+  int h_len = strlen(haystack);
+  int n_len = strlen(needle);
+  
+  if (h_len < n_len)
+    return FALSE;
+    
+  for (int i = 0; i < n_len; i++)
+    if (haystack[h_len - n_len + i] != needle[i])
+      return FALSE;
+  
+  return TRUE;
 }
 
 struct _XMLAttribute
 {
-	char* key;
-	char* value;
+  char* key;
+  char* value;
 };
 typedef struct _XMLAttribute XMLAttribute;
 
