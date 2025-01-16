@@ -282,180 +282,180 @@ static TagType parse_attrs(char* buf, int* i, char* lex, int* lexi, XMLNode* cur
 
 bool XMLDocument_load(XMLDocument* doc, const char* path)
 {
-	FILE* file = fopen(path, "r");
-	if (!file) {
-		fprintf(stderr, "Could not load file from '%s'\n", path);
-		return false;
-	}
-	fseek(file, 0, SEEK_END);
-	int size = ftell(file);
-	fseek(file, 0, SEEK_SET);
-
-	char* buf = (char*)malloc(sizeof(char) * size * 1);
-	fread(buf, 1, size, file);
-	fclose(file);
-	buf[size] = '\0';
-
-	doc->root = XMLNode_new(NULL);
-
-	char lex[256];
-	int lexi = 0;
-	int i = 0;
-
-	XMLNode* curr_node = doc->root;
-
-	while (buf[i] != '\0')
-	{
-		if (buf[i] == '<') {
-			lex[lexi] = '\0';
-
-			// Inner text
-			if (lexi > 0) {
-				if (!curr_node) {
-					fprintf(stderr, "Text outside of document\n");
-					return false;
-				}
-
-				curr_node->inner_text = _strdup(lex);
-				lexi = 0;
-			}
-
-			// End of node
-			if (buf[i + 1] == '/') {
-				i += 2;
-				while (buf[i] != '>')
-					lex[lexi++] = buf[i++];
-				lex[lexi] = '\0';
-
-				if (!curr_node) {
-					fprintf(stderr, "Already at the root\n");
-					return false;
-				}
-
-				if (strcmp(curr_node->tag, lex)) {
-					fprintf(stderr, "Mismatched tags (%s !=%s)", curr_node->tag, lex);
-					return false;
-				}
-
-				curr_node = curr_node->parent;
-				i++;
-				continue;
-			 }
-			 
-			//Special nodes
-			if (buf[i + 1] == '!') {
-				while ( buf[i] != ' ' && buf[i] != '>')
-					lex[lexi++] = buf[i++];
-				lex[lexi] = '\0';
-				
-				// Comments
-				if (!strcmp(lex, "<!--")) {
-					lex[lexi] = '\0';
-					while(!ends_with(lex, "-->")) {
-						lex[lexi++] = buf[i++];
-						lex[lexi] = '\0';
-					}
-					//i++
-					continue;
-				}
-			}
-			
-			// Declaration tags
-			if (buf[i + 1] == '?') {
-				while ( buf[i] != ' ' && buf[i] != '>')
-					lex[lexi++] = buf[i++];
-				lex[lexi] = '\0';
-				
-				// This is the XML declaration
-				if (!strcmp(lex, "<?xml")) {
-					lexi = 0;
-					XMLNode* desc = XMLNode_new(NULL);
-					parse_attrs(buf, &i, lex, &lexi, desc);
-					
-					doc->version = XMLNode_attr_val(desc, "version");
-					doc->encoding = XMLNode_attr_val(desc, "encoding");
-					continue;
-				}
-				
-			}
-			
-			// Set current node
-			curr_node = XMLNode_new(curr_node);
-
-			// Start tag
-			i++;
-			if (parse_attrs(buf, &i, lex, &lexi, curr_node) == TAG_INLINE) {
-				curr_node = curr_node->parent;
-				i++;
-				continue;
-			} 
-			
-			// Set tag name if none
-			lex[lexi] = '\0';
-			if (!curr_node->tag)
-				curr_node->tag = _strdup(lex);
-
-			// Reset lexer
-			lexi = 0;
-			i++;
-			continue;
-		}
-		else {
-			lex[lexi++] = buf[i++];
-		}
-	}
-	return true;
+  FILE* file = fopen(path, "r");
+  if (!file) {
+    fprintf(stderr, "Could not load file from '%s'\n", path);
+    return false;
+  }
+  fseek(file, 0, SEEK_END);
+  int size = ftell(file);
+  fseek(file, 0, SEEK_SET);
+  
+  char* buf = (char*)malloc(sizeof(char) * size * 1);
+  fread(buf, 1, size, file);
+  fclose(file);
+  buf[size] = '\0';
+  
+  doc->root = XMLNode_new(NULL);
+  
+  char lex[256];
+  int lexi = 0;
+  int i = 0;
+  
+  XMLNode* curr_node = doc->root;
+  
+  while (buf[i] != '\0')
+  {
+    if (buf[i] == '<') {
+      lex[lexi] = '\0';
+  
+      // Inner text
+      if (lexi > 0) {
+        if (!curr_node) {
+          fprintf(stderr, "Text outside of document\n");
+          return false;
+        }
+  
+        curr_node->inner_text = _strdup(lex);
+        lexi = 0;
+      }
+  
+      // End of node
+      if (buf[i + 1] == '/') {
+        i += 2;
+        while (buf[i] != '>')
+          lex[lexi++] = buf[i++];
+        lex[lexi] = '\0';
+  
+        if (!curr_node) {
+          fprintf(stderr, "Already at the root\n");
+          return false;
+        }
+  
+        if (strcmp(curr_node->tag, lex)) {
+          fprintf(stderr, "Mismatched tags (%s !=%s)", curr_node->tag, lex);
+          return false;
+        }
+  
+        curr_node = curr_node->parent;
+        i++;
+        continue;
+       }
+       
+      //Special nodes
+      if (buf[i + 1] == '!') {
+        while ( buf[i] != ' ' && buf[i] != '>')
+          lex[lexi++] = buf[i++];
+        lex[lexi] = '\0';
+        
+        // Comments
+        if (!strcmp(lex, "<!--")) {
+          lex[lexi] = '\0';
+          while(!ends_with(lex, "-->")) {
+            lex[lexi++] = buf[i++];
+            lex[lexi] = '\0';
+          }
+          //i++
+          continue;
+        }
+      }
+      
+      // Declaration tags
+      if (buf[i + 1] == '?') {
+        while ( buf[i] != ' ' && buf[i] != '>')
+          lex[lexi++] = buf[i++];
+        lex[lexi] = '\0';
+        
+        // This is the XML declaration
+        if (!strcmp(lex, "<?xml")) {
+          lexi = 0;
+          XMLNode* desc = XMLNode_new(NULL);
+          parse_attrs(buf, &i, lex, &lexi, desc);
+          
+          doc->version = XMLNode_attr_val(desc, "version");
+          doc->encoding = XMLNode_attr_val(desc, "encoding");
+          continue;
+        }
+        
+      }
+      
+      // Set current node
+      curr_node = XMLNode_new(curr_node);
+  
+      // Start tag
+      i++;
+      if (parse_attrs(buf, &i, lex, &lexi, curr_node) == TAG_INLINE) {
+        curr_node = curr_node->parent;
+        i++;
+        continue;
+      } 
+      
+      // Set tag name if none
+      lex[lexi] = '\0';
+      if (!curr_node->tag)
+        curr_node->tag = _strdup(lex);
+  
+      // Reset lexer
+      lexi = 0;
+      i++;
+      continue;
+    }
+    else {
+      lex[lexi++] = buf[i++];
+    }
+  }
+  return true;
 }
 
 static void node_out(FILE* file, XMLNode* node, int indent, int times)
 {
-	for (int i = 0; i < node->children.size; i++) {
-		XMLNode* child = node->children.data[i];
-		
-		if(times > 0)
-			fprintf(file, "%0*s", indent*times, " ");
-			
-		fprintf(file, "<%s", child->tag);
-		for(int i = 0; i < child->attributes.size; i++){
-			XMLAttribute attr = child->attributes.data[i];
-			if (!strcmp(attr.value, ""))
-				continue;
-			fprintf(file, " %s=\"%s\"", attr.key, attr.value);
-		}
-		
-		if(child->children.size == 0 && !child->inner_text)
-			fprintf(file, " /> \n");
-		else {
-			fprintf(file, ">\n");
-			if(child->children.size == 0)
-				fprintf (file, "%s</%s>\n", child->inner_text, child->tag);
-			else {
-				node_out(file, child, indent, times + 1);
-				if(times > 0)
-					fprintf(file, "%0*s", indent * times, " ");
-				fprintf(file, "</%s>\n", child->tag);
-			}
-		}
-	}
+  for (int i = 0; i < node->children.size; i++) {
+    XMLNode* child = node->children.data[i];
+    
+    if(times > 0)
+      fprintf(file, "%0*s", indent*times, " ");
+      
+    fprintf(file, "<%s", child->tag);
+    for(int i = 0; i < child->attributes.size; i++){
+      XMLAttribute attr = child->attributes.data[i];
+      if (!strcmp(attr.value, ""))
+        continue;
+      fprintf(file, " %s=\"%s\"", attr.key, attr.value);
+    }
+    
+    if(child->children.size == 0 && !child->inner_text)
+      fprintf(file, " /> \n");
+    else {
+      fprintf(file, ">\n");
+      if(child->children.size == 0)
+        fprintf (file, "%s</%s>\n", child->inner_text, child->tag);
+      else {
+        node_out(file, child, indent, times + 1);
+        if(times > 0)
+          fprintf(file, "%0*s", indent * times, " ");
+        fprintf(file, "</%s>\n", child->tag);
+      }
+    }
+  }
 }
 
 bool XMLDocument_write(XMLDocument* doc, const char* path, int indent)
 {
-	FILE* file = fopen(path, "w");
-	if (!file) {
-		fprintf(stderr, "Could not open file '%s'\n", path);
-		return TRUE;
-	}
-	
-	fprintf(file, "<?xml version=\"%s\" encoding=\"%s\" ?>\n",
-		(doc->version) ? doc->version : "1.0",
-		(doc->encoding) ? doc->encoding : "UTF-8"
-	);	
-	node_out(file, doc->root, indent, 0);
-	fclose(file);
+  FILE* file = fopen(path, "w");
+  if (!file) {
+    fprintf(stderr, "Could not open file '%s'\n", path);
+    return TRUE;
+  }
+  
+  fprintf(file, "<?xml version=\"%s\" encoding=\"%s\" ?>\n",
+    (doc->version) ? doc->version : "1.0",
+    (doc->encoding) ? doc->encoding : "UTF-8"
+  );	
+  node_out(file, doc->root, indent, 0);
+  fclose(file);
 }
 
 void XMLDocument_free(XMLDocument* doc)
 {
-	XMLNode_free(doc->root);
+  XMLNode_free(doc->root);
 }
