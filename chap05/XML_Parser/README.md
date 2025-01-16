@@ -20,9 +20,9 @@
     * lxml.h file 생성
     ```c
     # include <stdbool.h>
-    bool XMLDocument_load(XMLDocument* doc, const char* path);
+    bool XMLDocument_load(XMLDocument *doc, const char *path);
 
-    bool XMLDocument_load(XMLDocument* doc, const char* path) {
+    bool XMLDocument_load(XMLDocument *doc, const char *path) {
       FILE* file = fopen(path, "r");
       if (!file) {
         fprintf(stderr, "Could not load file from '%s'\n", path);
