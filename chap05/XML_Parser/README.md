@@ -18,12 +18,10 @@
     }
     ```
     * lxml.h file 생성
-  	```c
+    ```c
     # include <stdbool.h>
     bool XMLDocument_load(XMLDocument* doc, const char* path);
-  	```
-    * main.c code 추가
-    ```c
+
     bool XMLDocument_load(XMLDocument* doc, const char* path) {
       FILE* file = fopen(path, "r");
       if (!file) {
