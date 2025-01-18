@@ -1,7 +1,7 @@
 
 ### XLISP Calculation formula analysis
 * XLISP code분석
-  * text file load or stdin line load [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/File/file_load.c)
+  * text file load or stdin line load [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/File/file_load.c), [load.txt]()
   * load.txt content ( > main.exe load.txt 실행)
   ```txt
   1 line
