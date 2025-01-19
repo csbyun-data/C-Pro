@@ -13,8 +13,7 @@
   ```c
   function loadFile() 추가
   ```
-  ![image](https://github.com/user-attachments/assets/097e5709-c9af-4974-87be-9e80f82dab8b)
-
+  ![image](https://github.com/user-attachments/assets/22400111-b219-4b8b-8e96-734a5c7288d9)
   
 * XLISP Calculation formula
   * 사칙연산 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/Calc1.c)  
