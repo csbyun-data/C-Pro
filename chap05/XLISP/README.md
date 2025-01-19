@@ -10,8 +10,9 @@
   ````  
   ![image](https://github.com/user-attachments/assets/9388d55c-56c4-4812-812f-c102abd5bb15)
   * prompt에서 파일을 읽어 들이은 기능 추가 ( >@test.xml) [code]()
-  
-  
+  ```c
+  function loadFile() 추가
+  ```
 
 * XLISP Calculation formula
   * 사칙연산 계산 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/Calc1.c)  
