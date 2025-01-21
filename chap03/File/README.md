@@ -112,6 +112,7 @@
     
     fclose(fp);
     ```
+    * fseek()이용 파일크기 계산 [code]()
     ```c
     // int fseek(FILE *pointer. long int offset, int position);
     // SEEK_SET(파일 시작)
