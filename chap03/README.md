@@ -113,6 +113,7 @@
   
   fclose(fp);
   ```
+  * fseek()이용 파일 크기 구하기 (code)(https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_size.c)
   ```c
   // fseek에는 SEEK_SET(파일 시작), SEEK_CUR(파일 포인터의 현재 위치), SEEK_END(파일 종료)
   FILE *fp = fopen("abc.txt", "r");
