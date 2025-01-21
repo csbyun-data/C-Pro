@@ -543,6 +543,7 @@
     }
     ```
     ![image](https://github.com/user-attachments/assets/7e7e19c7-d9bb-4852-b014-278f21a6afdc)
+    ![image](https://github.com/user-attachments/assets/1cfca3f7-c9d8-4bf0-a40e-75bb80f07316)
 
 * 9.tag의 끝이 /> 로 마무리 되는 inline node인 경우
     * test.xml 파일 수정
