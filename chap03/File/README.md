@@ -113,7 +113,11 @@
     fclose(fp);
     ```
     ```c
-    // fseek에는 SEEK_SET(파일 시작), SEEK_CUR(파일 포인터의 현재 위치), SEEK_END(파일 종료)
+    // int fseek(FILE *pointer. long int offset, int position);
+    // SEEK_SET(파일 시작)
+    // SEEK_CUR(파일 포인터의 현재 위치)
+    // SEEK_END(파일 종료)
+    
     FILE *fp = fopen("abc.txt", "r");
     ...
     fseek( fp, 1, SEEK_SET);
