@@ -99,7 +99,7 @@
     }
     ```
     * lxml.h 프로그램 수정  
-    ![image](https://github.com/user-attachments/assets/46b8a4a2-2ff9-41ef-979b-5ac01afbffdf)
+    ![image](https://github.com/user-attachments/assets/8bd0e95e-7af5-45ad-a629-4eb0d8c50666)
 
     ```c
     #pragma once
