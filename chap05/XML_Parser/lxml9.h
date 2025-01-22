@@ -221,27 +221,27 @@ static TagType parse_attrs(char* buf, int* i, char* lex, int* lexi, XMLNode* cur
 }
 
 int XMLDocument_load(XMLDocument* doc, const char* path) {
-	FILE* file = fopen(path, "r");
-	if (!file) {
-		fprintf(stderr, "Could not load file from '%s'\n", path);
-		return false;
-	}
-	fseek(file, 0, SEEK_END);
-	int size = ftell(file);
-	fseek(file, 0, SEEK_SET);
-
-	char* buf = (char*)malloc(sizeof(char) * size * 1);
-	fread(buf, 1, size, file);
-	fclose(file);
-	buf[size] = '\0';
-
-	doc->root = XMLNode_new(NULL);
-
-	char lex[256];
-	int lexi = 0;
-	int i = 0;
-
-	XMLNode* curr_node = doc->root;
+  FILE* file = fopen(path, "r");
+  if (!file) {
+    fprintf(stderr, "Could not load file from '%s'\n", path);
+    return false;
+  }
+  fseek(file, 0, SEEK_END);
+  int size = ftell(file);
+  fseek(file, 0, SEEK_SET);
+  
+  char* buf = (char*)malloc(sizeof(char) * size * 1);
+  fread(buf, 1, size, file);
+  fclose(file);
+  buf[size] = '\0';
+  
+  doc->root = XMLNode_new(NULL);
+  
+  char lex[256];
+  int lexi = 0;
+  int i = 0;
+  
+  XMLNode* curr_node = doc->root;
 
   while (buf[i] != '\0') {
     if (buf[i] == '<') {
