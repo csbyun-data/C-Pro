@@ -562,8 +562,8 @@
       <field name="age" type="int" />
     </struct>
     ```
-    * main.c 파일 수정
-    * lxml.h 파일 수정
+    * main.c 파일 수정 [code]()
+    * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml9.h)
 
 * 10.dummy tag분석 제외
     * test.xml파일 수정
