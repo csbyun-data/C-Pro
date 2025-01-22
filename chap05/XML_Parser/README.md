@@ -562,7 +562,27 @@
       <field name="age" type="int" />
     </struct>
     ```
-    * main.c 파일 수정 [code]()
+    * main.c 파일 수정
+    ```c
+    #include "lxml.h"
+   
+    int main()
+    {
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        XMLNode* str = XMLNode_child(doc.root, 0);
+        printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
+    
+        for (int i = 0; i < str->children.size; i++) {
+          XMLNode* field = XMLNode_child(str, i);
+          printf(" %s (%s)\n", XMLNode_attr_val(field, (char*)"name"), XMLNode_attr_val(field, (char*)"type"));
+        }
+        XMLDocument_free(&doc);
+      }
+      return 0;
+    }
+    ```
+
     * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml9.h)
 
 * 10.dummy tag분석 제외
