@@ -112,8 +112,7 @@ bool XMLDocument_load(XMLDocument* doc, const char* path) {
   
   XMLNode* curr_node = NULL;
   
-  while (buf[i] != '\0')
-  {
+  while (buf[i] != '\0') {
     if (buf[i] == '<') {
       lex[lexi] = '\0';
   
