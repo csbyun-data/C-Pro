@@ -43,8 +43,9 @@
 * 사칙연산 함수를 STL을 이용하여 표현 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/STL_Calculator1.cpp)]
 * 재귀호출 계산기 [C [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.c)], [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)]
   ```txt
-  1) 전위, 후위 연산자 ++a, --a, a++, a--
-  2) 변수 값 입력 a=1 , b=2
-  3) 변수 이항연산 계산 a+b
+  1) 전위, 후위 연산자 (++a, --a, a++, a--)
+  2) 변수 값 입력 (a=1 , b=2)
+  3) 변수 이항연산 계산 (a+b)
+  4) 변수 출력 a;
   ```
   
