@@ -37,7 +37,9 @@
     <root>I am a root </root>
     ```
   
-    * lxml.h XMLDocument_load() 기능 작업
+    * lxml.h XMLDocument_load() 기능 작업  
+    ![image](https://github.com/user-attachments/assets/b0682e0a-6f0d-4c43-b8b4-22fec94674db)
+
     ```
     #pragma once
     #include <stdio.h>
@@ -96,7 +98,9 @@
       return 0;
     }
     ```
-    * lxml.h 프로그램 수정
+    * lxml.h 프로그램 수정  
+    ![image](https://github.com/user-attachments/assets/46b8a4a2-2ff9-41ef-979b-5ac01afbffdf)
+
     ```c
     #pragma once
     #include <stdio.h>
