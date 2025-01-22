@@ -260,8 +260,10 @@
       return 0;
     }
     ```
-    * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)
-    *  ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
+    ![image](https://github.com/user-attachments/assets/2d9e4a62-8c13-4aef-9231-18cea310b0bd)
+
+    * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)  
+    ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
 
 * 4.XML 파일 형식 변경 조회
     * test.xml 파일 내용
@@ -295,8 +297,8 @@
       return 0;
     }
     ```
-    * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)
-    * ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
+    * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)  
+    ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
 
 * 5.XML 파일 형식 변경 분석
     * test.xml
@@ -333,11 +335,10 @@
     ```
     * lxml.h 파일 수정
     ```c
-    bool XMLDocument_load(XMLDocument* doc, const char* path)
-    {
-    	XMLNode* curr_node = doc->root; //<-- NULL을 doc->root로 수정함
-    }
-    ```
+		bool XMLDocument_load(XMLDocument* doc, const char* path) {
+			XMLNode* curr_node = doc->root; //<-- NULL을 doc->root로 수정함
+		}
+    ```  
     ![image](https://github.com/user-attachments/assets/3c2cebc9-075a-4ec9-97f4-8df571936108)
     
 * 6.주석문 XML분석시 제외
@@ -351,26 +352,26 @@
     ```
     * main.c 파일 수정
     ```c
-    #include <stdio.h>
-    #include <stdlib.h>
-
-    #include "lxml.h"
-
-    int main(int argc, char *argv[])
-    {
-
-    	XMLDocument doc;
-    	if (XMLDocument_load(&doc, "test.xml")) {
-    		XMLNode* main_node = XMLNode_child(doc.root, 0);
-    		printf("%d children\n", main_node->children.size);
-
-    		XMLNode* desc = XMLNode_child(main_node, 0);
-    		printf("%s\n", desc->inner_text);
-
-    		XMLDocument_free(&doc);
-    	}
-    	return 0;
-    }
+		#include <stdio.h>
+		#include <stdlib.h>
+	
+		#include "lxml.h"
+	
+		int main(int argc, char *argv[])
+		{
+	
+			XMLDocument doc;
+			if (XMLDocument_load(&doc, "test.xml")) {
+				XMLNode* main_node = XMLNode_child(doc.root, 0);
+				printf("%d children\n", main_node->children.size);
+			
+				XMLNode* desc = XMLNode_child(main_node, 0);
+				printf("%s\n", desc->inner_text);
+			
+				XMLDocument_free(&doc);
+			}
+			return 0;
+		}
     ```
     * lxml.h 파일 수정
     ```
@@ -390,28 +391,28 @@
     }
 
     bool XMLDocument_load(XMLDocument *doc, const char *path) {
-    	XMLNode *curr_node = doc->root;
-
-    	while (buf[i] != '\0') 	{
-  			// End of node
-  			//Special nodes  주석 제외 Source 추가
-  			if (buf[i + 1] == '!') {
-  				while ( buf[i] != ' ' && buf[i] != '>')
-  					lex[lexi++] = buf[i++];
-   			lex[lexi] = '\0';
-    				
+			XMLNode *curr_node = doc->root;
+	
+			while (buf[i] != '\0') 	{
+				// End of node
+				//Special nodes  주석 제외 Source 추가
+				if (buf[i + 1] == '!') {
+					while ( buf[i] != ' ' && buf[i] != '>')
+						lex[lexi++] = buf[i++];
+				lex[lexi] = '\0';
+						
 				// Comments
-   			if (!strcmp(lex, "<!--")) {
-   				lex[lexi] = '\0';
-   				while(!ends_with(lex, "-->")) {
-   					lex[lexi++] = buf[i++];
-   					lex[lexi] = '\0';
-   				}
-   				//i++
-   				continue;
-   			}
-   		}
-   		// Set current node
+				if (!strcmp(lex, "<!--")) {
+					lex[lexi] = '\0';
+					while(!ends_with(lex, "-->")) {
+						lex[lexi++] = buf[i++];
+						lex[lexi] = '\0';
+					}
+					//i++
+					continue;
+				}
+			}
+			// Set current node
     }
     ```
     ![image](https://github.com/user-attachments/assets/4d5d746e-b8c2-47ff-a251-b24864895444)
@@ -430,14 +431,14 @@
 
    int main(int argc, char *argv[])
    {
-   	XMLDocument doc;
-   	if (XMLDocument_load(&doc, "test.xml")) {
-   		XMLNode *main_node = XMLNode_child(doc.root, 0);
-   		printf("Car (%s)\n", main_node->attributes.data[0].value);
-
-   		XMLDocument_free(&doc);
-   	}
-   	return 0;
+		XMLDocument doc;
+		if (XMLDocument_load(&doc, "test.xml")) {
+			XMLNode *main_node = XMLNode_child(doc.root, 0);
+			printf("Car (%s)\n", main_node->attributes.data[0].value);
+	
+			XMLDocument_free(&doc);
+		}
+		return 0;
    }
    ```
    ![image](https://github.com/user-attachments/assets/9005f0dd-e902-49cb-b11b-760432379c09)
@@ -457,16 +458,16 @@
 
     int main(int argc, char *argv[])
     {
-    	XMLDocument doc;
-    	if (XMLDocument_load(&doc, "test.xml")) {
-    		printf("XML Document (version=%s, encoding=%s)\n", doc.version, doc.encoding);
-
-    		XMLNode* main_node = XMLNode_child(doc.root, 0);
-    		printf("Car (%s)\n", main_node->attributes.data[0].value);
-
-    		XMLDocument_free(&doc);
-    	}
-    	return 0;
+			XMLDocument doc;
+			if (XMLDocument_load(&doc, "test.xml")) {
+				printf("XML Document (version=%s, encoding=%s)\n", doc.version, doc.encoding);
+	
+				XMLNode* main_node = XMLNode_child(doc.root, 0);
+				printf("Car (%s)\n", main_node->attributes.data[0].value);
+	
+				XMLDocument_free(&doc);
+			}
+			return 0;
     }
     ```
     * lxml.h 파일 수정
