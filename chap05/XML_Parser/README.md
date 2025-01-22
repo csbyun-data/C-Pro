@@ -260,8 +260,8 @@
       return 0;
     }
     ```
-    ![image](https://github.com/user-attachments/assets/2d9e4a62-8c13-4aef-9231-18cea310b0bd)
-
+    <img src = "https://github.com/user-attachments/assets/2d9e4a62-8c13-4aef-9231-18cea310b0bd" width="70%" height="70%">  
+    
     * lxml.h 파일 수정 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml3_3.h)  
     ![image](https://github.com/user-attachments/assets/a4247c78-0ade-4588-a8d6-f9ee51149ec6)
 
@@ -297,7 +297,7 @@
       return 0;
     }
     ```
-    ![image](https://github.com/user-attachments/assets/dc835f20-5157-4bfc-b592-7547bb999f92)
+    <img src = "https://github.com/user-attachments/assets/dc835f20-5157-4bfc-b592-7547bb999f92" width="90%" height="90%">  
 
     * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)  
     ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
