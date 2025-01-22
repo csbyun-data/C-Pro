@@ -337,9 +337,9 @@
     ```
     * lxml.h 파일 수정
     ```c
-		bool XMLDocument_load(XMLDocument* doc, const char* path) {
-			XMLNode* curr_node = doc->root; //<-- NULL을 doc->root로 수정함
-		}
+    bool XMLDocument_load(XMLDocument* doc, const char* path) {
+      XMLNode* curr_node = doc->root; //<-- NULL을 doc->root로 수정함
+    }
     ```  
     ![image](https://github.com/user-attachments/assets/3c2cebc9-075a-4ec9-97f4-8df571936108)
     
@@ -348,73 +348,73 @@
     ```xml
     <!-- This is a comment-->
     <car type="couple">
-    	<!-- This is a comment-->
-    	<description> This is a really cool description</description>
+      <!-- This is a comment-->
+      <description> This is a really cool description</description>
     </car>
     ```
     * main.c 파일 수정
     ```c
-		#include <stdio.h>
-		#include <stdlib.h>
-	
-		#include "lxml.h"
-	
-		int main(int argc, char *argv[])
-		{
-	
-			XMLDocument doc;
-			if (XMLDocument_load(&doc, "test.xml")) {
-				XMLNode* main_node = XMLNode_child(doc.root, 0);
-				printf("%d children\n", main_node->children.size);
-			
-				XMLNode* desc = XMLNode_child(main_node, 0);
-				printf("%s\n", desc->inner_text);
-			
-				XMLDocument_free(&doc);
-			}
-			return 0;
-		}
+    #include <stdio.h>
+    #include <stdlib.h>
+  
+    #include "lxml.h"
+  
+    int main(int argc, char *argv[])
+    {
+  
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        XMLNode* main_node = XMLNode_child(doc.root, 0);
+        printf("%d children\n", main_node->children.size);
+      
+        XMLNode* desc = XMLNode_child(main_node, 0);
+        printf("%s\n", desc->inner_text);
+      
+        XMLDocument_free(&doc);
+      }
+      return 0;
+    }
     ```
     * lxml.h 파일 수정
     ```
     // ends_with 함수 추가
     int ends_with(const char *haystack, const char *needle) {
-    	int h_len = strlen(haystack);
-    	int n_len = strlen(needle);
-
-    	if (h_len < n_len)
-    		return FALSE;
-
-    	for (int i = 0; i < n_len; i++)
-    		if (haystack[h_len - n_len + i] != needle[i])
-    			return FALSE;
-
-    	return TRUE;
+      int h_len = strlen(haystack);
+      int n_len = strlen(needle);
+  
+      if (h_len < n_len)
+        return FALSE;
+  
+      for (int i = 0; i < n_len; i++)
+        if (haystack[h_len - n_len + i] != needle[i])
+          return FALSE;
+  
+      return TRUE;
     }
-
+  
     bool XMLDocument_load(XMLDocument *doc, const char *path) {
-			XMLNode *curr_node = doc->root;
-	
-			while (buf[i] != '\0') 	{
-				// End of node
-				//Special nodes  주석 제외 Source 추가
-				if (buf[i + 1] == '!') {
-					while ( buf[i] != ' ' && buf[i] != '>')
-						lex[lexi++] = buf[i++];
-				lex[lexi] = '\0';
-						
-				// Comments
-				if (!strcmp(lex, "<!--")) {
-					lex[lexi] = '\0';
-					while(!ends_with(lex, "-->")) {
-						lex[lexi++] = buf[i++];
-						lex[lexi] = '\0';
-					}
-					//i++
-					continue;
-				}
-			}
-			// Set current node
+      XMLNode *curr_node = doc->root;
+  
+      while (buf[i] != '\0') 	{
+        // End of node
+        //Special nodes  주석 제외 Source 추가
+        if (buf[i + 1] == '!') {
+          while ( buf[i] != ' ' && buf[i] != '>')
+            lex[lexi++] = buf[i++];
+        lex[lexi] = '\0';
+            
+        // Comments
+        if (!strcmp(lex, "<!--")) {
+          lex[lexi] = '\0';
+          while(!ends_with(lex, "-->")) {
+            lex[lexi++] = buf[i++];
+            lex[lexi] = '\0';
+          }
+          //i++
+          continue;
+        }
+      }
+      // Set current node
     }
     ```
     ![image](https://github.com/user-attachments/assets/4d5d746e-b8c2-47ff-a251-b24864895444)
@@ -428,19 +428,19 @@
    ```c
    #include <stdio.h>
    #include <stdlib.h>
-
+  
    #include "lxml.h"
-
+  
    int main(int argc, char *argv[])
    {
-		XMLDocument doc;
-		if (XMLDocument_load(&doc, "test.xml")) {
-			XMLNode *main_node = XMLNode_child(doc.root, 0);
-			printf("Car (%s)\n", main_node->attributes.data[0].value);
-	
-			XMLDocument_free(&doc);
-		}
-		return 0;
+    XMLDocument doc;
+    if (XMLDocument_load(&doc, "test.xml")) {
+      XMLNode *main_node = XMLNode_child(doc.root, 0);
+      printf("Car (%s)\n", main_node->attributes.data[0].value);
+  
+      XMLDocument_free(&doc);
+    }
+    return 0;
    }
    ```
    ![image](https://github.com/user-attachments/assets/9005f0dd-e902-49cb-b11b-760432379c09)
@@ -455,21 +455,21 @@
     ```c
     #include <stdio.h>
     #include <stdlib.h>
-
+    
     #include "lxml.h"
-
+    
     int main(int argc, char *argv[])
     {
-			XMLDocument doc;
-			if (XMLDocument_load(&doc, "test.xml")) {
-				printf("XML Document (version=%s, encoding=%s)\n", doc.version, doc.encoding);
-	
-				XMLNode* main_node = XMLNode_child(doc.root, 0);
-				printf("Car (%s)\n", main_node->attributes.data[0].value);
-	
-				XMLDocument_free(&doc);
-			}
-			return 0;
+      XMLDocument doc;
+      if (XMLDocument_load(&doc, "test.xml")) {
+        printf("XML Document (version=%s, encoding=%s)\n", doc.version, doc.encoding);
+    
+        XMLNode* main_node = XMLNode_child(doc.root, 0);
+        printf("Car (%s)\n", main_node->attributes.data[0].value);
+    
+        XMLDocument_free(&doc);
+      }
+      return 0;
     }
     ```
     * lxml.h 파일 수정
@@ -525,9 +525,9 @@
         }
       }
     }
-
+  
     bool XMLDocument_load(XMLDocument *doc, const char *path) {
-			// Declaration tags
+      // Declaration tags
       if (buf[i + 1] == '?') {
         while ( buf[i] != ' ' && buf[i] != '>')
            lex[lexi++] = buf[i++];
@@ -570,25 +570,25 @@
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <struct name="Person">
-    	<field name="name" type="string" />
-    	<dummy/>
-     	<field name="age" type="int" />
+      <field name="name" type="string" />
+      <dummy/>
+      <field name="age" type="int" />
     </struct>
     ```
     * main.c 파일 수정
     ```c
     #include <stdio.h>
     #include <stdlib.h>
-
+  
     #include "lxml.h"
-
+  
     int main(int argc, char *argv[])
     {
       XMLDocument doc;
       if (XMLDocument_load(&doc, "test.xml")) {
         XMLNode *str = XMLNode_child(doc.root, 0);
         printf("Struct: %s\n", XMLNode_attr_val(str, (char *)"name"));
-
+  
         XMLNodeList *fields = XMLNode_children(str, "field");
         for (int i = 0; i < fields->size; i++) {
           XMLNode* field = XMLNodeList_at(fields, i);
@@ -603,21 +603,21 @@
     ```c
     struct _XMLNode *XMLNodeList_at(XMLNodeList *list, int index);
     void XMLNodeList_free(XMLNodeList *list);
-
+  
     XMLNodeList *XMLNode_children(XMLNode *parent, const char *tag);
-
+  
     XMLNode *XMLNodeList_at(XMLNodeList *list, int index) {
       return list->data[index];
     }
-
+  
     void XMLNodeList_free(XMLNodeList* list) {
       free(list);
     }
-
+  
     XMLNodeList *XMLNode_children(XMLNode *parent, const char *tag) {
       XMLNodeList *list = (XMLNodeList *) malloc(sizeof(XMLNodeList));
       XMLNodeList_init(list);
-
+  
       for (int i = 0; i < parent->children.size; i++) {
         XMLNode *child = parent->children.data[i];
         if (!strcmp(child->tag, tag))
@@ -633,9 +633,9 @@
     ```c
     #include <stdio.h>
     #include <stdlib.h>
-
+  
     #include "lxml.h"
-
+  
     int main(int argc, char *argv[])
     {
       XMLDocument doc;
@@ -659,7 +659,7 @@
     * lxml.h 파일 수정
     ```c
     bool XMLDocument_write(XMLDocument *doc, const char *path, int indent);
-
+  
     static void node_out(FILE *file, XMLNode *node, int indent, int times) {
       for (int i = 0; i < node->children.size; i++) {
         XMLNode* child = node->children.data[i];
@@ -690,7 +690,7 @@
         }
       }
     }
-
+  
     bool XMLDocument_write(XMLDocument *doc, const char *path, int indent) {
       FILE *file = fopen(path, "w");
       if (!file) {
