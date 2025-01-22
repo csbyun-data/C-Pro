@@ -224,7 +224,6 @@ bool XMLDocument_load(XMLDocument* doc, const char* path) {
   return true;
 }
 
-void XMLDocument_free(XMLDocument* doc)
-{
-	XMLNode_free(doc->root);
+void XMLDocument_free(XMLDocument* doc) {
+  XMLNode_free(doc->root);
 }
