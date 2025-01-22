@@ -566,7 +566,7 @@
     ```c
     #include "lxml.h"
    
-    int main()
+    int main(int argc, char *argv[])
     {
       XMLDocument doc;
       if (XMLDocument_load(&doc, "test.xml")) {
