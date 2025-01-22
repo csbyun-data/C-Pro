@@ -297,6 +297,8 @@
       return 0;
     }
     ```
+    ![image](https://github.com/user-attachments/assets/dc835f20-5157-4bfc-b592-7547bb999f92)
+
     * lxml.h 파일 수정 작업 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml4_3.h)  
     ![image](https://github.com/user-attachments/assets/e67b3e0f-711b-40ca-a4b4-6f80facfb0b9)
 
