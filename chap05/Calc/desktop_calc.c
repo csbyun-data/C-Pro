@@ -1,5 +1,5 @@
 // C++ program을 C로 전환
-// map<string, double>을 structure로 변경하고, find_var(), add_var() 추가 
+// map<string, double>을 structure 배열로 변경하고, find_var(), add_var() 추가 
 // cin.getch() 을 scanf()로 변경, cin.putback()을 ungetc()로 변경
 // 
 #include <stdio.h>
