@@ -154,16 +154,15 @@ Token_value get_token() {
       if (scanf("%c", &c) && c == '+') {
         return curr_tok = INC;
       }
-              
       ungetc(c, stdin);
       return curr_tok = PLUS;
     }
     case '-': {
-        char c;
-        if (scanf("%c", &c) && c == '-')
-            return curr_tok = DEC;
-        ungetc(c, stdin);
-        return curr_tok = MINUS;
+      char c;
+      if (scanf("%c", &c) && c == '-')
+        return curr_tok = DEC;
+      ungetc(c, stdin);
+      return curr_tok = MINUS;
     }
     case '*':
       return curr_tok = MUL;
@@ -181,7 +180,7 @@ Token_value get_token() {
     case '.':
       ungetc(ch, stdin);
       if (scanf("%lf", &number_value) == 1)
-          return curr_tok = NUMBER;
+        return curr_tok = NUMBER;
       break;
 
     default:
