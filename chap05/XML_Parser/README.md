@@ -98,7 +98,7 @@
       return 0;
     }
     ```
-    * lxml.h 프로그램 수정  
+    * lxml.h 프로그램 수정  [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/lxml2.h)
     ![image](https://github.com/user-attachments/assets/8bd0e95e-7af5-45ad-a629-4eb0d8c50666)
 
     ```c
