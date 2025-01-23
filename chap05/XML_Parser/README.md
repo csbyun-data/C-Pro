@@ -220,6 +220,7 @@
           i++;
           continue;
         }	else {
+          // inner text
           lex[lexi++] = buf[i++];
         }
       }
