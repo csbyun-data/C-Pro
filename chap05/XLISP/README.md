@@ -22,5 +22,62 @@
   * LISP 형식 계산식(+ 2 35 4)을 torken분석 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/tokenize1.c)
 
 * XLISP function pointer를 활용 Builtin-functions
-  * (exit)실행
-  
+  * (exit)실행  
+  ![image](https://github.com/user-attachments/assets/c51eb562-0c12-4aed-bf3a-a6ec10686c65)
+  ```c
+  // 1.  'exit', 함수의 연결 정의
+  xlsubr.c code
+  /* fexit - get out of xlisp */
+  void fexit() { exit(0); }
+
+  /* xlinit - xlisp initialization routine */
+  xlinit() { xlsubr("exit",fexit); }
+
+  // 2. (exit) parser() 작업하여 node 생성
+  /* read an expression */
+  expr.n_ptr = xlread();
+
+  // 3.  builtin function exit를 실행
+  /* evaluate the expression */
+  expr.n_ptr = xleval(expr.n_ptr);
+  ```
+  ```c
+  /* evlist - evaluate a list */
+  struct node *evlist(struct node *nptr) {
+    struct node *oldstk,fun,args,*val;
+
+    /* create a stack frame */
+    oldstk = xlsave(&fun,&args,NULL);
+
+    /* get the function and the argument list */
+    fun.n_ptr = nptr->n_listvalue;
+    args.n_ptr = nptr->n_listnext;
+
+    /* evaluate the first expression */
+    if ((fun.n_ptr = xleval(fun.n_ptr)) == NULL)
+		    xlfail("null function");
+
+    /* evaluate the function */
+    // fexit() 함수를 아래 SUBR logic에서 실행 함
+    switch (fun.n_ptr->n_type) {
+	     case SUBR:
+		      val = (*fun.n_ptr->n_subr)(args.n_ptr);
+		      break;
+	     case FUN:
+	     case LIST:
+		      //val = evfun(fun.n_ptr,args.n_ptr);
+		      break;
+	     case OBJ:
+		      //val = xlsend(fun.n_ptr,args.n_ptr);
+		      break;
+	     default:
+		      xlfail("bad function");
+    }
+
+    /* restore the previous stack frame */
+    xlstack = oldstk;
+
+    /* return the result value */
+    return (val);
+  }
+  ```
