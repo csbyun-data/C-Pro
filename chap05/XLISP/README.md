@@ -148,4 +148,26 @@
   4. xlio.c tgetc() - get a character from the terminal
   5. xlprint.c xlprint()
   ```
+  * XLISP main.c driver 순서
+  ```c
+  // xlisp.c code 중에서
+  /* xlisp - a small subset of lisp */
+  ......
+  main(int argc, char *argv[]) {
+    struct node expr;
+  
+    xldmeminit();                <- 메모리할당 xldmem.c
+    xlinit();   // (routine)     <- routin할당 xlsubr.c
+    xlminit();  // (math)        <- 수식할당 xlmath.c
+    xltin();                     <- 터미널 입력 xlio.c
+  
+    while (TRUE) {
+  		  xlstack = NULL;
+  	 		xlsave(&expr, NULL);               <- xleval.c
+  		  expr.n_ptr = xlread();             <- 터미널 입력 xlread.c
+  	 		expr.n_ptr = xleval(expr.n_ptr);   <- 수식분석 xleval.c
+  	   xlprint(expr.n_ptr);               <- 결과출력 xlprint.c
+    }
+  }
+  ```
 
