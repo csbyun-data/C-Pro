@@ -162,11 +162,11 @@
     xltin();                     <- 터미널 입력 xlio.c
   
     while (TRUE) {
-  		  xlstack = NULL;
-  	 		xlsave(&expr, NULL);               <- xleval.c
-  		  expr.n_ptr = xlread();             <- 터미널 입력 xlread.c
-  	 		expr.n_ptr = xleval(expr.n_ptr);   <- 수식분석 xleval.c
-  	   xlprint(expr.n_ptr);               <- 결과출력 xlprint.c
+      xlstack = NULL;
+      xlsave(&expr, NULL);               <- xleval.c
+      expr.n_ptr = xlread();             <- 터미널 입력 xlread.c
+      expr.n_ptr = xleval(expr.n_ptr);   <- 수식분석 xleval.c
+      xlprint(expr.n_ptr);               <- 결과출력 xlprint.c
     }
   }
   ```
