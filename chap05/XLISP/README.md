@@ -21,4 +21,6 @@
 
   * LISP 형식 계산식(+ 2 35 4)을 torken분석 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/tokenize1.c)
 
-     
+* XLISP function pointer를 활용 Builtin-functions
+  * (exit)실행
+  
