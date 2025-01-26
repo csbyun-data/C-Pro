@@ -170,5 +170,8 @@
     }
   }
   ```
-  <img src = "https://github.com/user-attachments/assets/ee4fa3f4-661e-4f6e-b4c7-7d5e9389ffae" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/ee4fa3f4-661e-4f6e-b4c7-7d5e9389ffae" width="60%" height="60%">  
+
+  
   * [참조 XLISP-PLUS: [https://almy.us/xlisp.html](https://almy.us/xlisp.html)]
+  * [참조 XLISP : [https://www.softwarepreservation.org/projects/LISP/xlisp](https://www.softwarepreservation.org/projects/LISP/xlisp)]
