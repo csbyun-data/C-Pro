@@ -21,8 +21,8 @@ static int tgetc() {
   
   /* prompt if necessary */
   if (prompt) {
-  printf("> ");
-  prompt = false;
+    printf("> ");
+    prompt = false;
   }
   
   /* get the character */
