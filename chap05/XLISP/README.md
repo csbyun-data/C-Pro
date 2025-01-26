@@ -140,11 +140,7 @@
   } 
   ```
   * xlisp0.0 code [xldmem.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xldmem.c), [xldmem.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xldmem.h), [xleval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xleval.c), [xleval.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xleval.h), [xlio.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlio.c), [xlisp.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlisp.c), [xlisp.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlisp.h), [xlmath.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlmath.c), [xlprin.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlprin.c), [xlread.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlread.c), [xlread.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlread.h), [xlsubr.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlsubr.c), [xlsubr.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlsubr.h)
-  *
-  *
-  *
-  *
-  * 
+
   ```txt
   1. xlsubr.c Builtin-functions 
   2. xlmatn.c Function pointer, '+' xadd(val, arg)
