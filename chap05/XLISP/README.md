@@ -45,39 +45,57 @@
   /* evlist - evaluate a list */
   struct node *evlist(struct node *nptr) {
     struct node *oldstk,fun,args,*val;
-
+  
     /* create a stack frame */
     oldstk = xlsave(&fun,&args,NULL);
-
+  
     /* get the function and the argument list */
     fun.n_ptr = nptr->n_listvalue;
     args.n_ptr = nptr->n_listnext;
-
+  
     /* evaluate the first expression */
     if ((fun.n_ptr = xleval(fun.n_ptr)) == NULL)
-		    xlfail("null function");
-
+        xlfail("null function");
+  
     /* evaluate the function */
     // fexit() 함수를 아래 SUBR logic에서 실행 함
     switch (fun.n_ptr->n_type) {
-	     case SUBR:
-		      val = (*fun.n_ptr->n_subr)(args.n_ptr);
-		      break;
-	     case FUN:
-	     case LIST:
-		      //val = evfun(fun.n_ptr,args.n_ptr);
-		      break;
-	     case OBJ:
-		      //val = xlsend(fun.n_ptr,args.n_ptr);
-		      break;
-	     default:
-		      xlfail("bad function");
+       case SUBR:
+          val = (*fun.n_ptr->n_subr)(args.n_ptr);
+          break;
+       case FUN:
+       case LIST:
+          //val = evfun(fun.n_ptr,args.n_ptr);
+          break;
+       case OBJ:
+          //val = xlsend(fun.n_ptr,args.n_ptr);
+          break;
+       default:
+          xlfail("bad function");
     }
-
+  
     /* restore the previous stack frame */
     xlstack = oldstk;
-
+  
     /* return the result value */
     return (val);
   }
   ```
+  * Function pointer, '+' xadd(val, arg)  
+  ![image](https://github.com/user-attachments/assets/e61fc4e5-5f91-40e6-a479-11f269c79793)
+  ```
+  // 1.  '+', add함수연결 정의
+  /* xlminit - xlisp math initialization routine */
+  xlminit() {
+    xlsubr("+",add);
+  }
+  
+  // 2. (+ 1 2) 입력 받아 순서대로 실행, parser() 작업하여 node 생성
+  /* read an expression */
+  expr.n_ptr = xlread();
+  
+  // 3.  수식을 순차적으로 실행	
+  /* evaluate the expression */
+  expr.n_ptr = xleval(expr.n_ptr);
+  ```
+
