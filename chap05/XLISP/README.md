@@ -170,4 +170,4 @@
     }
   }
   ```
-  <img src = "https://github.com/user-attachments/assets/ee4fa3f4-661e-4f6e-b4c7-7d5e9389ffae" width="70%" height="70%">
+  <img src = "https://github.com/user-attachments/assets/ee4fa3f4-661e-4f6e-b4c7-7d5e9389ffae" width="60%" height="60%">
