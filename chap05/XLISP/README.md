@@ -7,7 +7,13 @@
   1 line
   2 line
   3 line
-  ````  
+  ````
+  ```txt
+  - global 함수 포인터를 사용하여 문자를 읽어들일 함수를 지정하여 변경
+  int (*xlgetc)();
+  파일에서 문자를 읽어 들일때 :  xlgetc = fgetc를 사용
+  terminal로 문자를 읽어 들일때 : xlgetc = tgetc를 사용
+  ```
   ![image](https://github.com/user-attachments/assets/9388d55c-56c4-4812-812f-c102abd5bb15)
   * prompt에서 파일을 읽어 들이는 기능 추가 ( >@load.txt) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/File/file_load1.c)
   ```c
