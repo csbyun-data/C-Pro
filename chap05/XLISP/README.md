@@ -325,7 +325,7 @@
   ```
 
   ![image](https://github.com/user-attachments/assets/427393cc-3bff-4c08-b34b-0651cf69ad6b)
-  * xlisp0.0 code [xldmem.c](), [xldmem.h](), [xleval.c](), [xleval,h](), [xlio.c](), [xlisp.c](), [xlisp.h](), [xlmath.c](), [xlprin.c](), [xlread.c](). [xlread.h](). [xlsubr.c](), [xlsubr.h]()
+  * xlisp0.0 code [xldmem.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xldmem.c), [xldmem.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xldmem.h), [xleval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xleval.c), [xleval,h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xleval,h), [xlio.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlio.c), [xlisp.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlisp.c), [xlisp.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlisp.h), [xlmath.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlmath.c), [xlprin.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlprin.c), [xlread.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlread.c). [xlread.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlread.h). [xlsubr.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlsubr.c), [xlsubr.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC1/xlsubr.h)
   ```
   setq(), exit() implementation code
   ```
