@@ -60,7 +60,7 @@ static int xfgetc() {
 }
 
 /* xlfin - setup file input */
-void xlfin(char *str) {
+int xlfin(char *str) {
   char fname[100];
   
   /* create the file name */
@@ -69,12 +69,14 @@ void xlfin(char *str) {
   /* open the input file */
   if ((ifp = fopen(fname,"r")) == NULL) {
     printf("can't open \"%s\" for input\n",fname);
-    return;
+    return 1;
   }
   
   /* setup input from the file */
   xlgetc = xfgetc;
   xlpvals = false;
+
+  return 0;
 }
 
 /* xlread - read an xlisp expression */
