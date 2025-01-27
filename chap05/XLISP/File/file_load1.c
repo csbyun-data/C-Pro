@@ -129,15 +129,15 @@ int getch() {
 void loadFile() {
   char sbuf[STRMAX+1], ch;
   int i;
-
+  
   savech = -1;     /* skip the opening quote */
-
+  
   /* loop looking for a closing quote */
   for ( i = 0; i < STRMAX && (ch = getch()) > 0 && (ch != '\n'); i++)
     sbuf[i] = ch;
-
+  
   sbuf[i] = '\0';
-	xlfin(sbuf);
+  xlfin(sbuf);
 }
 
 int main( int argc, char *argv[])
