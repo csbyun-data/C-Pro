@@ -69,7 +69,7 @@ int xlfin(char *str) {
   /* open the input file */
   if ((ifp = fopen(fname,"r")) == NULL) {
     printf("can't open \"%s\" for input\n",fname);
-    return 1;
+    return -1;
   }
   
   /* setup input from the file */
