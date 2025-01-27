@@ -83,6 +83,8 @@
   ```
   * Function pointer, '+' xadd(val, arg)  
   ![image](https://github.com/user-attachments/assets/e61fc4e5-5f91-40e6-a479-11f269c79793)
+   <img src = "https://github.com/user-attachments/assets/43776492-f73b-45fa-abdb-2cbaeb650232" width="60%" height="60%">  
+
   ```c
   // 1. '+', add함수연결 정의
   /* xlminit - xlisp math initialization routine */
