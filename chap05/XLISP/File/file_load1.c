@@ -106,7 +106,6 @@ void xlread() {
   }
 }
 
-
 /* thisch - look at the current character */
 int thisch() {
   /* return and save the current character */
@@ -128,8 +127,7 @@ int getch() {
 }
 
 void loadFile() {
-  char sbuf[STRMAX+1];
-  char ch;
+  char sbuf[STRMAX+1], ch;
   int i;
 
   savech = -1;     /* skip the opening quote */
