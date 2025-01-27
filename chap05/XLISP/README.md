@@ -27,8 +27,9 @@
 
   * LISP 형식 계산식(+ 2 35 4)을 torken분석 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/tokenize1.c)
 
+
 * XLISP function pointer를 활용 Builtin-functions
-  * (exit)실행  
+  * Builtin-functions (exit)실행  
   ![image](https://github.com/user-attachments/assets/c51eb562-0c12-4aed-bf3a-a6ec10686c65)
   ```c
   // 1.  'exit', 함수의 연결 정의
@@ -87,6 +88,7 @@
     return (val);
   }
   ```
+  
   * Function pointer, '+' xadd(val, arg)  
   ![image](https://github.com/user-attachments/assets/e61fc4e5-5f91-40e6-a479-11f269c79793)  
   <img src = "https://github.com/user-attachments/assets/43776492-f73b-45fa-abdb-2cbaeb650232" width="100%" height="100%">  
@@ -147,6 +149,7 @@
     return (val);
   } 
   ```
+  
   * xlisp0.0 code [xldmem.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xldmem.c), [xldmem.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xldmem.h), [xleval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xleval.c), [xleval.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xleval.h), [xlio.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlio.c), [xlisp.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlisp.c), [xlisp.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlisp.h), [xlmath.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlmath.c), [xlprin.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlprin.c), [xlread.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlread.c), [xlread.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlread.h), [xlsubr.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlsubr.c), [xlsubr.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/SRC0/xlsubr.h)
 
   ```txt
@@ -157,6 +160,7 @@
   4. xlio.c tgetc() - get a character from the terminal
   5. xlprint.c xlprint()
   ```
+  
   * XLISP main.c driver 순서
   ```c
   // xlisp.c code 중에서
@@ -180,6 +184,152 @@
   }
   ```
   <img src = "https://github.com/user-attachments/assets/ee4fa3f4-661e-4f6e-b4c7-7d5e9389ffae" width="60%" height="60%">  
+  
+  * Builtin-functions (setq a 10) 실행
+  ```txt
+  // (setq a 10) 변수 선언, 초기값 설정
+  > (setq a 10)  <- define variable a  , 초기값 10
+  > (+ a 15)     <- 25
+  > (setq a 15)  <- variable a, change value 15
+  > (+ a 20)     <- 35
+  ```
+  ```txt
+  - xlsubr() <- define builtin function
+  xlsubr("setq", setq) <- string "setq", setq() function 연결
+  xlenter("setq")      <- symbol table에 "setq" symbol을 등록
+  ```
+  ```c
+  xlread.c code 중에서 symbol table 생성 구조체 변수
+  /* global variables */
+  struct node *oblist;
+  ```
+  ```c
+  // xlsubr.c code 부분
+
+  /* xlsubr - define a builtin function */
+  xlsubr(sname,subr)
+    char *sname; int (*subr)();
+  {
+      struct node *sym;
+  
+      /* enter the symbol */
+      sym = xlenter(sname);
+  
+      /* initialize the value */
+      sym->n_symvalue = newnode(SUBR);
+      sym->n_symvalue->n_subr = subr;
+  }
+  
+  /* xlenter - enter a symbol into the symbol table */
+  struct node *xlenter(sname)
+    char *sname;
+  {
+      struct node *sptr;
+  	
+      /* check for nil */
+      if (strcmp(sname,"nil") == 0)
+  		return (NULL);
+  
+      /* check for symbol already in table */
+      for (sptr = oblist; sptr != NULL; sptr = sptr->n_listnext) 
+  		if (sptr->n_listvalue == NULL)
+  		    printf("bad oblist\n");
+  		else if (sptr->n_listvalue->n_symname == NULL)
+  		    printf("bad oblist symbol\n");
+  		else
+  		if (strcmp(sptr->n_listvalue->n_symname,sname) == 0)
+  		    return (sptr->n_listvalue);
+      
+      /* enter a new symbol and link it into the symbol list */
+      sptr = newnode(LIST);
+      sptr->n_listnext = oblist;
+      oblist = sptr;
+      sptr->n_listvalue = newnode(SYM);
+      sptr->n_listvalue->n_symname = strsave(sname);
+  
+      /* return the new symbol */
+      return (sptr->n_listvalue);
+  }
+  
+  ....
+  /* xlinit - xlisp initialization routine */
+  xlinit()
+  {
+  	xlsubr("setq",setq);
+      xlsubr("exit",fexit);
+  
+  }
+  ```
+  ```c
+  // setq() function, symbol에 number value를 저장하는 기능
+  // (setq a 10)  <- a는 10을 가진 symbol 생성
+  // xlsubr.c code 부분
+  
+  /* setq - builtin function setq */
+  static struct node *setq(args)
+    struct node *args;
+  {
+      struct node *oldstk,arg,sym,val;
+  
+      /* create a new stack frame */
+      oldstk = xlsave(&arg,&sym,&val,NULL);
+  
+      /* initialize */
+      arg.n_ptr = args;
+  
+      /* get the symbol */
+      sym.n_ptr = xlmatch(SYM,&arg.n_ptr);
+  
+      /* get the new value */
+      val.n_ptr = xlevarg(&arg.n_ptr);
+  
+      /* make sure there aren't any more arguments */
+      if (arg.n_ptr != NULL)
+  	xlfail("too many arguments");
+  
+      /* assign the symbol the value of argument 2 and the return value */
+      assign(sym.n_ptr,val.n_ptr);
+  
+      /* restore the previous stack frame */
+      xlstack = oldstk;
+  
+      /* return the result value */
+      return (val.n_ptr);
+  }
+  ```
+  ```c
+  // a 10 symbol node를 생성
+  // + 함수 xadd()를 실행하면서 a를 만나면 symbol를 10으로 변경하여 계산 작업
+  > (setq a 10)
+  10
+  > (+ a 15)
+  25
+  
+  (+ a 15)
+  1. + -> LIST -> SYM으로 xadd() 진행
+  2. xadd() 함수 뒤에 a symbol을 10로 변경
+  3. xadd() 함수에  0 10을 입력하여 계산
+  3. xadd() 함수에 10 15를 입력하여 계산
+  4. 결과 25를 return
+  ```  
+
+  ![image](https://github.com/user-attachments/assets/e83aa2c7-50be-495c-8b18-740d2bc71b47)
+
+  ```
+  (+ 10 15)
+  1. + -> LIST -> SYM으로 xadd() 진행
+  2. xadd() 함수에  0 10을 입력하여 계산
+  3. xadd() 함수에 10 15를 입력하여 계산
+  4. 결과 25를 return
+  ```
+
+  ![image](https://github.com/user-attachments/assets/427393cc-3bff-4c08-b34b-0651cf69ad6b)
+  * xlisp0.0 code 
+  ```
+  setq(), exit() implementation code
+  ```
+  
+
 
   
   * [참조 XLISP-PLUS: [https://almy.us/xlisp.html](https://almy.us/xlisp.html)]
