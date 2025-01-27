@@ -122,9 +122,10 @@ int main( int argc, char *argv[])
   
   /* read the input file if specified */
   if (argc > 1)
-    xlfin(argv[1]);
-  
-  
+    if (xlfin(argv[1]) == -1) {
+      return 1;
+    }
+
   /* main command processing loop */
   while (true) {
     /* setup the error return */
