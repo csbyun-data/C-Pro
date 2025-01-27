@@ -47,6 +47,9 @@ static int xfgetc() {
   
   /* get a character */
   if ((ch = getc(ifp)) <= 0) {
+    /* close the input file */
+    fclose(ifp);
+    
     xlgetc = tgetc;
     xlpvals = true;
     return (tgetc());
