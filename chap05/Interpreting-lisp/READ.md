@@ -34,3 +34,24 @@
   #include <math.h>
   ```
   * [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/lisp.c)
+  ```c
+  /* forward references */
+  #define forward extern
+  forward int32 seval(int32 i);
+  forward void initlisp(void);
+  forward int32 sread(void);
+  forward void swrite(int32 i);
+  forward int32 newloc(int32 x, int32 y);
+  forward int32 numatom (double r);
+  forward int32 ordatom (char *s);
+  forward void gc(void);
+  forward void gcmark(int32 p);
+  forward char getgchar(void);
+  forward char lookgchar(void);
+  forward void fillg(void);
+  forward int32 e(void);
+  forward void error(char *s);
+  forward int16 fgetline(char *s, int16 lim, FILE *stream);
+  forward void ourprint(char *s);
+  ```
+  
