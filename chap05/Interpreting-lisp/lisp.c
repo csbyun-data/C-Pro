@@ -42,7 +42,7 @@ and turned off with the directive "!notrace".
    system. */
 
 #if !defined(NULL)
-#  define NULL 0L
+#define NULL 0L
 #endif
 #define EOF (-1)
 #define EOS (0)
@@ -53,7 +53,7 @@ and turned off with the directive "!notrace".
 #define NOT !
 
 #define n 1000
-#define  m 6000
+#define m 6000
 /* n = size of Atom and Number tables, m = size of list-area. */
 
 jmp_buf env;         /* struct to hold environment for longjump */
@@ -974,5 +974,3 @@ start:
     }
    else marknum(t,p);
 }
-
-
