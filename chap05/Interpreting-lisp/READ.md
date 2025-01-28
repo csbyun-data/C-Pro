@@ -4,8 +4,8 @@
   ```c
   // 수정전 code
   /* Using int16_t and int32_t works on both 32-bit and 64-bit systems
-   with newer compilers.  For older 32-bit compilers, use: 
-   [#define int16 short int] and [#define int32 long int]. */
+     with newer compilers.  For older 32-bit compilers, use: 
+     [#define int16 short int] and [#define int32 long int]. */
   #define int16 int16_t
   #define int32 int32_t
   
