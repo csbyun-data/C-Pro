@@ -14,6 +14,13 @@ void ourprint(char *s) {
     fflush(logfilep);  // 로그 파일에 바로 기록
 }
 
+// 결과를 출력하고 로그에도 기록하는 함수
+void swrite(int result) {
+    char result_str[1024];
+    snprintf(result_str, sizeof(result_str), "결과: %d\n", result);  // 결과를 문자열로 변환
+    ourprint(result_str);  // 표준 출력과 로그 파일에 기록
+}
+
 // 로그 파일을 초기화하고 열기
 void initlisp(void) {
     logfilep = fopen("lisp.log", "w");
@@ -121,6 +128,10 @@ int main(void) {
         ourprint("Enter a Lisp expression: ");
         fgets(input, sizeof(input), stdin);  // 한 줄 입력 받기
 
+        // 입력받은 문자열을 로그 파일에 기록
+        fprintf(logfilep, "입력한 문자열: %s", input);
+        fflush(logfilep);  // 즉시 로그 파일에 기록
+
         // (exit)을 입력하면 프로그램 종료
         if (check_exit_condition(input)) {
             ourprint("프로그램을 종료합니다.\n");
@@ -136,9 +147,11 @@ int main(void) {
         printf("입력한 표현식: %s", input);
 
         // 문법 분석 함수 호출 (예시로 e() 사용)
-        e();  // 문법 분석 후 결과 처리
+        int result = e();  // 문법 분석 후 결과 처리
 
-        // 결과 출력 후 다시 입력을 받음
+        // 결과 출력 후 로그에도 기록
+        swrite(result);
+
         ourprint("입력받은 후 처리 완료.\n\n");
     }
 
