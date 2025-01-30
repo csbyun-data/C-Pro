@@ -120,7 +120,7 @@ int main(void) {
     if (input[0] == '\n') {
       continue;
     }
-    printf("Expression entered: %s", input);
+    outprint("Expression entered: %s", input);
 
     e(input);
   }
