@@ -25,7 +25,12 @@
     if (sout != NULL) { free(sout); }
     if (logfilep != NULL) { fclose(logfilep); }
   }
-  //...
+  //... Driver code
+  char input[1024];
+  fgets(input, sizeof(input), stdin);
+
+  fprintf(logfilep, "%s", input);
+  fflush(logfilep);
   sprintf(sout,"%s\n", str);
   ourprint(sout);
   ```
