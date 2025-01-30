@@ -34,7 +34,7 @@
   sprintf(sout,"%s\n", str);
   ourprint(sout);
   ```  
-  ![image](https://github.com/user-attachments/assets/615451a2-56d4-4b69-a23b-358ab36abf09)  
+  ![image](https://github.com/user-attachments/assets/24a7f2f4-d2d5-43f6-a2dd-cc98c7e5e4d7)
   ![image](https://github.com/user-attachments/assets/ce3c464e-10e3-4da3-ab36-49ba7f062917)
 
 
