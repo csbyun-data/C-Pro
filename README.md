@@ -32,9 +32,10 @@ Grammar of programming, a collection of basic materials for application.
   
 ## File I/O
 * [File I/O](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/README.md)
-    ```txt
-    고수준 파일함수 fopen(), fprintf(), fputc(), fputs(), fwrite(),fscanf(), fgetc(), fgets(), fread(), fseek()
-    저수준 파일함수 open(), write()
+  ```txt
+  고수준 파일함수 fopen(), fprintf(), fputc(), fputs(), fwrite(),fscanf(),
+    fgetc(), fgets(), fread(), fseek()
+  저수준 파일함수 open(), write()
     ```
 * [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
