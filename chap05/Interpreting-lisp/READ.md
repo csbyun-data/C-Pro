@@ -36,7 +36,7 @@
   sprintf(sout,"%s\n", str);
   ourprint(sout);
   ```  
-  ![image](https://github.com/user-attachments/assets/5a2b40ce-f57b-42df-889b-6762fdb22d4e)
+  ![image](https://github.com/user-attachments/assets/5a2b40ce-f57b-42df-889b-6762fdb22d4e)  
   ![image](https://github.com/user-attachments/assets/05cef0df-2df4-4db1-a2cc-9422f941a87f)
 
 ### Interpreting LISP: Programming and Data Structures
