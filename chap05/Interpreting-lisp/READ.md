@@ -1,4 +1,4 @@
-### Programming
+### Programming LISP
 * log file [code]()
 * 
 ### Interpreting LISP: Programming and Data Structures
