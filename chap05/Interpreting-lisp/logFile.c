@@ -120,7 +120,8 @@ int main(void) {
     if (input[0] == '\n') {
       continue;
     }
-    outprint("Expression entered: %s", input);
+    sprintf(sout, "Expression entered: %s", input);
+    ourprint(sout); 
 
     e(input);
   }
