@@ -1,6 +1,8 @@
 ### Programming LISP
 * log file [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/logFile.c)
   ```
+  // 1.log file
+  // 2.문자열 분석
   FILE *logfilep;
   char *sout;
   
@@ -34,10 +36,8 @@
   sprintf(sout,"%s\n", str);
   ourprint(sout);
   ```  
-  ![image](https://github.com/user-attachments/assets/24a7f2f4-d2d5-43f6-a2dd-cc98c7e5e4d7)
-  ![image](https://github.com/user-attachments/assets/ce3c464e-10e3-4da3-ab36-49ba7f062917)
-
-
+  ![image](https://github.com/user-attachments/assets/5a2b40ce-f57b-42df-889b-6762fdb22d4e)
+  ![image](https://github.com/user-attachments/assets/05cef0df-2df4-4db1-a2cc-9422f941a87f)
 
 ### Interpreting LISP: Programming and Data Structures
 * Interpreting Lisp by Gary D. Knott (Apress, 2017). [here](http://www.apress.com/9781484227060)
