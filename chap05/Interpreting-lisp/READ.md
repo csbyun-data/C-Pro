@@ -33,7 +33,9 @@
   fflush(logfilep);
   sprintf(sout,"%s\n", str);
   ourprint(sout);
-  ```
+  ```  
+  ![image](https://github.com/user-attachments/assets/615451a2-56d4-4b69-a23b-358ab36abf09)
+
 
 ### Interpreting LISP: Programming and Data Structures
 * Interpreting Lisp by Gary D. Knott (Apress, 2017). [here](http://www.apress.com/9781484227060)
