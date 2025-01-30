@@ -335,20 +335,20 @@ int32 sread(void)
  A(skp)= j= k= newloc(nilptr,nilptr);
 
  /* we will return k, but we will fill node j first */
- if (c EQ 1)
-    {scan: A(j)= sread();
-     next: if ((c= e())<=2)
-              {t= newloc(nilptr,nilptr); B(j)= t; j= t;
-               if (c<=0) {A(j)= c; goto next;}
-               pb= c; goto scan;
-              }
-     if (c!=4) {B(j)= sread(); if (e()!=4) error("syntax error");}
-     skp= B(skp); return(k);
-    }
- if (c EQ 2)
-    {A(j)= quoteptr; B(j)= t= newloc(nilptr,nilptr); A(t)= sread();
-     skp= B(skp); return(k);
-    }
+ if (c EQ 1) {
+   scan: A(j)= sread();
+   next: if ((c= e())<=2) {
+           t= newloc(nilptr,nilptr); B(j)= t; j= t;
+           if (c<=0) {A(j)= c; goto next;}
+           pb= c; goto scan;
+         }
+   if (c!=4) {B(j)= sread(); if (e()!=4) error("syntax error");}
+   skp= B(skp); return(k);
+ }
+ if (c EQ 2) {
+   A(j)= quoteptr; B(j)= t= newloc(nilptr,nilptr); A(t)= sread();
+   skp= B(skp); return(k);
+ }
  error("bad syntax");
 }
 
@@ -385,19 +385,19 @@ int32 e(void)
 start:
  while ((c= getgchar()) EQ BLANK);  /* remove blanks */
 
- if (c EQ OPENP)
-    {while (lookgchar() EQ BLANK) getgchar(); /* remove blanks */
-     if (lookgchar() EQ CLOSEP) {getgchar(); return(nilptr);} else return(1);
-    }
- if (c EQ EOS)
-    {if (topInsave EQ NULL) {fclose(logfilep); exit(0);}
-     /* restore the previous input stream */
-     fclose(filep);
-     strcpy(g,topInsave->g); pg= topInsave->pg; pge= topInsave->pge;
-     filep= topInsave->filep; topInsave= topInsave->link;
-     if (prompt EQ '@') prompt= '>';
-     goto start;
-    }
+ if (c EQ OPENP) {
+   while (lookgchar() EQ BLANK) getgchar(); /* remove blanks */
+   if (lookgchar() EQ CLOSEP) {getgchar(); return(nilptr);} else return(1);
+ }
+ if (c EQ EOS) {
+   if (topInsave EQ NULL) {fclose(logfilep); exit(0);}
+   /* restore the previous input stream */
+   fclose(filep);
+   strcpy(g,topInsave->g); pg= topInsave->pg; pge= topInsave->pge;
+   filep= topInsave->filep; topInsave= topInsave->link;
+   if (prompt EQ '@') prompt= '>';
+   goto start;
+ }
  if (c EQ SINGLEQ) return(2);
  if (c EQ CLOSEP) return(4);
  if (c EQ DOT)
@@ -527,7 +527,7 @@ int32 numatom(double r)
  j= hashnum(r);
 
  while (nx[j]!=-1)
-    if (Ntab[nx[j]].num EQ r) {j= nx[j]; goto ret;} else if (++j EQ n) j= 0;
+   if (Ntab[nx[j]].num EQ r) {j= nx[j]; goto ret;} else if (++j EQ n) j= 0;
 
  if (nf<0) {gc(); if (nf<0) error("The number table is full");}
  nx[j]= nf; j= nf; nf= Ntab[nf].nlink; Ntab[j].num= r;
