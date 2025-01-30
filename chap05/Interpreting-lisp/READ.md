@@ -1,8 +1,7 @@
 ### Programming LISP
-* log file [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/logFile.c)
+* log file Implimentation [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/logFile.c)
   ```
   // 1.log file
-  // 2.문자열 분석
   FILE *logfilep;
   char *sout;
   
@@ -38,6 +37,54 @@
   ```  
   ![image](https://github.com/user-attachments/assets/5a2b40ce-f57b-42df-889b-6762fdb22d4e)  
   ![image](https://github.com/user-attachments/assets/05cef0df-2df4-4db1-a2cc-9422f941a87f)
+  
+  * parse Implementation
+  ```c
+  // driver code
+  char input[1024];
+  ourprint("> ");
+  fgets(input, sizeof(input), stdin);
+  e(input);
+
+  // parse code
+  int e(const char *str) {
+    char c;
+    char buffer[100];  // 입력을 임시로 저장할 버퍼
+    int idx = 0;
+    int i = 0;    
+  
+    while ((c = str[i++]) != '\n') {
+      if (isspace(c)) { continue;  // 공백은 무시 }
+    
+      if (c == '(') { continue; }
+      else if (c == ')') { continue; }
+      else if (isalpha(c)) {
+        idx = 0;
+        buffer[idx++] = c;
+        while (isalpha(str[i]) || str[i] == '_') {
+            c = str[i++];
+            buffer[idx++] = c;
+        }
+        buffer[idx] = '\0';
+        continue;            
+      } else if (isdigit(c) || (c == '-' && isdigit(str[i]))) {
+        idx = 0;
+        buffer[idx++] = c;
+        while (isdigit(str[i]) || str[i] == '.') {
+          c = str[i++];
+          buffer[idx++] = c;
+        }
+        buffer[idx] = '\0';
+        continue;
+      } else {
+        sprintf(sout, "%c\n", c);
+        ourprint(sout);            
+        continue;
+      }
+    }
+    return 0;  // EOF에 도달
+  }
+```
 
 ### Interpreting LISP: Programming and Data Structures
 * Interpreting Lisp by Gary D. Knott (Apress, 2017). [here](http://www.apress.com/9781484227060)
