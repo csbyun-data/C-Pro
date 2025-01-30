@@ -1,6 +1,35 @@
 ### Programming LISP
-* log file [code]()
-* 
+* log file [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/logFile.c)
+  ```
+  FILE *logfilep;
+  char *sout;
+  
+  void ourprint(char *s) {
+    printf("%s", s);
+    fflush(stdout);  
+    fprintf(logfilep, "%s", s);
+    fflush(logfilep);
+  }
+  
+  void initlisp(void) {
+    sout= (char *)calloc(80,sizeof(char));
+  
+    logfilep = fopen("lisp.log", "w");
+    if (logfilep == NULL) {
+      perror("Cannot open logfile");
+      exit(1);
+    }
+  }
+  
+  void closelisp(void) {
+    if (sout != NULL) { free(sout); }
+    if (logfilep != NULL) { fclose(logfilep); }
+  }
+  //...
+  sprintf(sout,"%s\n", str);
+  ourprint(sout);
+  ```
+
 ### Interpreting LISP: Programming and Data Structures
 * Interpreting Lisp by Gary D. Knott (Apress, 2017). [here](http://www.apress.com/9781484227060)
   * Apress soruce code [https://github.com/Apress/interpreting-lisp](https://github.com/Apress/interpreting-lisp)
