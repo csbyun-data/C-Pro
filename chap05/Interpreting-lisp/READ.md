@@ -84,7 +84,7 @@
     }
     return 0;  // EOF에 도달
   }
-```
+  ```
 
 ### Interpreting LISP: Programming and Data Structures
 * Interpreting Lisp by Gary D. Knott (Apress, 2017). [here](http://www.apress.com/9781484227060)
