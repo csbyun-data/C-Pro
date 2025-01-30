@@ -123,7 +123,7 @@
   #include <setjmp.h>
   #include <math.h>
   ```
-  * Dev-C++ Tools [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/lisp.c)
+  * modified [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/lisp.c)
   ```c
   /* forward references */
   #define forward extern
