@@ -86,8 +86,8 @@
   }
   ```
 
-### Interpreting LISP: Programming and Data Structures
-    ![image](https://github.com/user-attachments/assets/ab8e28db-e90a-40b5-a8cc-352df5f5cab2)
+### Interpreting LISP: Programming and Data Structures  
+  ![image](https://github.com/user-attachments/assets/ab8e28db-e90a-40b5-a8cc-352df5f5cab2)
 
 * Interpreting Lisp by Gary D. Knott (Apress, 2017). [here](http://www.apress.com/9781484227060)
   * Apress soruce code [https://github.com/Apress/interpreting-lisp](https://github.com/Apress/interpreting-lisp)
