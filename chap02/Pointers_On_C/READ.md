@@ -1,7 +1,5 @@
-## Pointers On C
-### INDEX
-
-* 1.Pointer On C
+### Pointers On C
+* INDEX
   * Contents 
   ```txt
   1. A Quick Start.
