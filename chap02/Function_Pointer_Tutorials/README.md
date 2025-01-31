@@ -374,8 +374,8 @@
     DoItB(TClassB::Wrapper_To_Call_Display);
   }
   ```
-  
-  * 4 C 및 C++ 함수 포인터를 캡슐화하는 펑터 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Functor1.cpp)
+* 4.Functors to encapsulate C and C++ Function Pointers   
+  * 4.3 Example of How to Use Functors [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Functor1.cpp)
   ```c
   #include <iostream>
   
