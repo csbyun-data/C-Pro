@@ -9,12 +9,8 @@ int main( void ) {
   BST **node_ptr;
   
   while( flag ) {
-    printf( "***i: insert a new value to the tree***\n" );
-    printf( "***d: delete a value from the tree***\n" );
-    printf( "***f: find a value from the tree***\n" );
-    printf( "***I: print tree's nodes in in-order***\n" );
-    printf( "***p: print tree's nodes in pre-order***\n" );
-    printf( "***P: print thee's node  in post-order***\n" );
+    printf( "* i, d, f: insert(i), delete(d), find(f) a new value to the tree***\n" );
+    printf( "* I, p, P: print tree's nodes in in-order(I), pre-order(p), post-order(P)*\n" );
     scanf( " %c", &cmd );
   
     switch( cmd ) {
