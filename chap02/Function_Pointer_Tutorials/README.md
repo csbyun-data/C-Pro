@@ -29,7 +29,8 @@
   4.3 Example of How to Use Functors 
   ```
   *  Pdf File [book.pdf](https://github.com/csbyun-data/C-Pro/blob/main/chap02/The%20Function%20Pointer%20Tutorials.pdf)
-  
+
+* 1.Introduction to Function Pointers 
   * 1.2 Introductory Example or How to Replace a Switch-Statement [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer1.c)
   ```
   // Task: Perform one of the four basic arithmetic operations specified by the
@@ -75,7 +76,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/102c2709-af9e-4e69-9436-b37d6704eb38)
 
-  * 2 The Syntax of C and C++ Function Pointers
+* 2 The Syntax of C and C++ Function Pointers
   * 2.1 define a function pointer and initialize to NULL
   ```c
   int (*pt2Function)(float, char, char) = NULL; // C
@@ -262,7 +263,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/a66e1312-aef0-4c34-8902-ed4507cfe296)
 
-
+* 3.How to Implement Callback Functions in C and C++
   * 3.2 How to Implement a Callback in C ?
   ```c
   void qsort( ... , int(_USERENTRY *cmpFunc)(const void*, const void*)) {
