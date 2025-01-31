@@ -18,6 +18,6 @@
   EPILOG 53
   ```
   * Pdf file [[here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A%20tutorial%20on%20pointers%20and%20arrays%20in%20c.pdf)]
-  * Code [github.com/jflaherty/ptrtut13](https://github.com/jflaherty/ptrtut13)
+  * Code [[github.com/jflaherty/ptrtut13](https://github.com/jflaherty/ptrtut13)]
 
 * Chat01 What is a pointer?
