@@ -89,6 +89,8 @@
   /* reallocate the memory block that is pointed to from ptr, to size bytes instead */
   void *my_realloc( void *ptr, size_t old_size, size_t new_size );
   ```
+  ![image](https://github.com/user-attachments/assets/ee58aa4b-8b66-4b25-bc24-a7103b79528f)
+
 
 
 
