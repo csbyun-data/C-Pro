@@ -71,7 +71,7 @@
   void print_float( float );
   void print_string( char* );
   ```
- ![image](https://github.com/user-attachments/assets/2931a998-4a46-432f-88e4-b294590f1546)
+  ![image](https://github.com/user-attachments/assets/2931a998-4a46-432f-88e4-b294590f1546)
 
 
 
