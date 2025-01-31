@@ -92,7 +92,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/ee58aa4b-8b66-4b25-bc24-a7103b79528f)
 
-  * Linked List 방식의 메모리를 할당하고, 해제하는 방법 점검 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/linked_list.c)
+  * Linked List 방식의 메모리를 할당하고, 해제하는 방법 점검 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/linked_list.c)  
   ![image](https://github.com/user-attachments/assets/2105a77e-10ca-4ace-9b67-20336a91905c)
 
   
