@@ -34,6 +34,31 @@
   ![image](https://github.com/user-attachments/assets/4446011d-fbec-4652-a3c1-86407086b15c)
 * chap03 Data
   * return string, int [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/return.c)
+  ```c
+  #include <stdio.h>
+
+  char *returnstring( char *);
+  int *returnint( int c);
+  
+  int main( void ) {
+    char string[10] = "a string";
+    
+    printf( "%s\n", returnstring( string ) );
+    printf( "%i\n", *returnint(20) );
+    
+    return 0;
+  }
+  
+  char *returnstring( char *string ) {
+    char *str = "the string";
+    return str;
+  }
+  
+  int *returnint( int c ) {
+    int *value = &c;
+    return value;
+  }
+  ```  
   ![image](https://github.com/user-attachments/assets/143fdf90-e459-459f-9409-40c2840f4ddf)
 
 
