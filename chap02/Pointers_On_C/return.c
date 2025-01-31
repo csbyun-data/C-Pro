@@ -18,7 +18,7 @@ char *returnstring( char *string ) {
   char *str = "the string";
   //	char str[10] = "the string"; //DOES NOT WORK!!!!
   
-  //	char* str = string; //WORKABLE!
+  //	char *str = string; //WORKABLE!
   return str;
 }
 
@@ -43,7 +43,7 @@ nothing
 
 int *returnint( int c ) {
 /*
-  int* value;
+  int *value;
   int k = 20;
   value = &k;
   return value;
@@ -53,7 +53,7 @@ int *returnint( int c ) {
   value = 20;
   return &value;
 */
-  int* value = &c;
+  int *value = &c;
   return value;
 }
 
