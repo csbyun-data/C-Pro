@@ -74,6 +74,21 @@
   ![image](https://github.com/user-attachments/assets/2931a998-4a46-432f-88e4-b294590f1546)
 
 * Chap11 Dynamic Memory Allocation.
-  * Keyin한 문자열이 20개 단위로 잘라서 크기가 더 크면 메모리를 추가 할당하여 문자열 저장 [code]()
-  * 
+  * Keyin한 문자열이 20개 단위로 잘라서 크기가 더 크면 메모리를 추가 할당하여 문자열 저장
+  * [read_from_stdin code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/read_from_stdin.c)
+  ```txt
+  - 문자열을 입력 중 종료하고 싶을때는 ^Z를 typing하여 준다
+  ```
+  ![image](https://github.com/user-attachments/assets/df18d5f5-3ffb-40ef-9736-515fc6fb51c6)
+  * 문자열 크기의 확장으로 할당된 메모리를 다른곳에 크게 재생성하는 방법
+  * [my_alloc.c code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/my_alloc.c)
+  ```c
+  /* allocate num memory blocks each occupying size bytes */
+  void *my_calloc( size_t num, size_t size );
+  
+  /* reallocate the memory block that is pointed to from ptr, to size bytes instead */
+  void *my_realloc( void *ptr, size_t old_size, size_t new_size );
+  ```
+
+
 
