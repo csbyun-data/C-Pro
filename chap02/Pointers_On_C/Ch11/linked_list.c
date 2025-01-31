@@ -16,6 +16,7 @@ NODE* implement_node( NODE *head ) {
   
   NODE *next_node = head;
   int i;
+	
   if( head != NULL ) {
     for( i = 0; i < 3; i++ ) {
       next_node->next = malloc( sizeof( NODE ) );
@@ -58,6 +59,7 @@ void print_node( NODE *head ) { /* recursively print node's value */
 
 int main( void ) {
   NODE *head;
+	
   head = implement_node( head );
   print_node( head );
   free_node( head );
