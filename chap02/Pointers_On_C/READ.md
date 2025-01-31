@@ -32,7 +32,8 @@
   주어진 문자열을 0~3, 10~12 문자를 합쳐 출력하는 예제
   ```
   ![image](https://github.com/user-attachments/assets/4446011d-fbec-4652-a3c1-86407086b15c)
-* chap03 Data
+  
+* Chap03 Data
   * return string, int [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/return.c)
   ```c
   #include <stdio.h>
@@ -62,8 +63,8 @@
   ![image](https://github.com/user-attachments/assets/143fdf90-e459-459f-9409-40c2840f4ddf)
 
 
-* chap07
-  * implementation printf() [main.c](), [printf.h](), [printf.h](), [printf.c]()
+* Chap07
+  * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [[printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c)
   * 
 
 
