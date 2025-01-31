@@ -4,22 +4,22 @@ char *returnstring( char *);
 int *returnint( int c);
 
 int main( void ) {
-	char string[10] = "a string";
+  char string[10] = "a string";
   
-	printf( "%s\n", returnstring( string ) );
-	printf( "%i\n", *returnint(20) );
+  printf( "%s\n", returnstring( string ) );
+  printf( "%i\n", *returnint(20) );
   
-	return 0;
+  return 0;
 }
 
 char *returnstring( char *string ) {
-	char str1[10] = "the string";
-//	char *str = str1; //DOES NOT WORK!!!!
-	char *str = "the string";
-//	char str[10] = "the string"; //DOES NOT WORK!!!!
-
-//	char* str = string; //WORKABLE!
-	return str;
+  char str1[10] = "the string";
+  //	char *str = str1; //DOES NOT WORK!!!!
+  char *str = "the string";
+  //	char str[10] = "the string"; //DOES NOT WORK!!!!
+  
+  //	char* str = string; //WORKABLE!
+  return str;
 }
 
 /*
@@ -41,20 +41,20 @@ Finally, when function returns, the str1[i] just is discarded with the runtime s
 nothing
 */
 
-int* returnint( int c ) {
+int *returnint( int c ) {
 /*
-	int* value;
-	int k = 20;
-	value = &k;
-	return value;
+  int* value;
+  int k = 20;
+  value = &k;
+  return value;
 */
 /*
-	int value;
-	value = 20;
-	return &value;
+  int value;
+  value = 20;
+  return &value;
 */
-	int* value = &c;
-	return value;
+  int* value = &c;
+  return value;
 }
 
 /* run result
