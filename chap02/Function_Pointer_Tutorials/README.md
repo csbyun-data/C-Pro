@@ -76,7 +76,7 @@
   ```
   ![image](https://github.com/user-attachments/assets/102c2709-af9e-4e69-9436-b37d6704eb38)
 
-* 2 The Syntax of C and C++ Function Pointers
+* 2.The Syntax of C and C++ Function Pointers
   * 2.1 define a function pointer and initialize to NULL
   ```c
   int (*pt2Function)(float, char, char) = NULL; // C
