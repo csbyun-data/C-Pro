@@ -80,6 +80,7 @@
   - 문자열을 입력 중 종료하고 싶을때는 ^Z를 typing하여 준다
   ```
   ![image](https://github.com/user-attachments/assets/df18d5f5-3ffb-40ef-9736-515fc6fb51c6)
+  
   * 문자열 크기의 확장으로 할당된 메모리를 다른곳에 크게 재생성하는 방법
   * [my_alloc.c code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/my_alloc.c)
   ```c
@@ -90,6 +91,11 @@
   void *my_realloc( void *ptr, size_t old_size, size_t new_size );
   ```
   ![image](https://github.com/user-attachments/assets/ee58aa4b-8b66-4b25-bc24-a7103b79528f)
+
+  * Linked List 방식의 메모리를 할당하고, 해제하는 방법 점검 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/linked_list.c)
+  ![image](https://github.com/user-attachments/assets/2105a77e-10ca-4ace-9b67-20336a91905c)
+
+  
 
 
 
