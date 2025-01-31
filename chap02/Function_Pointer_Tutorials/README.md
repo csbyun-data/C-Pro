@@ -1,6 +1,6 @@
 ### Function Pointer
 * INDEX
-  * 2.0 contents 
+  * Contents 
   ```txt
   1 Introduction to Function Pointers 
   1.1 What is a Function Pointer ?
