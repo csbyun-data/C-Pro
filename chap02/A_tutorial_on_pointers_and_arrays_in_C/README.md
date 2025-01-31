@@ -1,6 +1,20 @@
 ### A tutorial on pointers and arrays in C
-### INDEX
-
-* 1.배열과 포인터
-  * 1.1 배열 정의, 초기화 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Array_Initialize1.c)
-  ```c
+* INDEX
+  * Contents
+  ```txt
+  TABLE OF CONTENTS
+  PREFACE 2
+  INTRODUCTION 4
+  CHAPTER 1: What is a pointer? 5
+  CHAPTER 2: Pointer types and Arrays 9
+  CHAPTER 3: Pointers and Strings 14
+  CHAPTER 4: More on Strings 19
+  CHAPTER 5: Pointers and Structures 22
+  CHAPTER 6: Some more on Strings, and Arrays of Strings 26
+  CHAPTER 7: More on Multi-Dimensional Arrays 30
+  CHAPTER 8: Pointers to Arrays 32
+  CHAPTER 9: Pointers and Dynamic Allocation of Memory 34
+  CHAPTER 10: Pointers to Functions 42
+  EPILOG 53
+  ```
+* pdf file [here]()
