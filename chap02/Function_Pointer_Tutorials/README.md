@@ -1,7 +1,5 @@
-## Function Pointer
-### INDEX
-
-* 2.Function Pointer Tutorials [book.pdf](https://github.com/csbyun-data/C-Pro/blob/main/chap02/The%20Function%20Pointer%20Tutorials.pdf)
+### Function Pointer
+* INDEX
   * 2.0 contents 
   ```txt
   1 Introduction to Function Pointers 
@@ -30,6 +28,7 @@
   4.2 How to Implement Functors ? 
   4.3 Example of How to Use Functors 
   ```
+  *  Pdf File [book.pdf](https://github.com/csbyun-data/C-Pro/blob/main/chap02/The%20Function%20Pointer%20Tutorials.pdf)
   
   * 1.2 Introductory Example or How to Replace a Switch-Statement [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer1.c)
   ```
