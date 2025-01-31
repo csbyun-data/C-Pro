@@ -64,7 +64,14 @@
 
 
 * Chap07
-  * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c)
-  * 
+  * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c) 
+  ```c
+  void print_format( char*, ... );
+  void print_integer( int );
+  void print_float( float );
+  void print_string( char* );
+  ```
+ ![image](https://github.com/user-attachments/assets/2931a998-4a46-432f-88e4-b294590f1546)
+
 
 
