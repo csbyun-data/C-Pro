@@ -17,4 +17,4 @@
   CHAPTER 10: Pointers to Functions 42
   EPILOG 53
   ```
-* pdf file [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A%20tutorial%20on%20pointers%20and%20arrays%20in%20c.pdf)
+* Pdf file [[here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A%20tutorial%20on%20pointers%20and%20arrays%20in%20c.pdf)]
