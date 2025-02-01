@@ -112,7 +112,11 @@
   ```  
   ![image](https://github.com/user-attachments/assets/a9a66821-66f7-47c3-8388-30e081bf6ef8)
 
-  * Pointers and Structures [code]()
+  * Pointers and Structures [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/pointers_structures.c)
+  ```c
+  
+  ```
+  
   
 
 
