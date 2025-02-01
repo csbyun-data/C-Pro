@@ -21,9 +21,9 @@ int main(void)
       printf("\nFailure to allocate for row[%d]\n",row);
       exit(0);
     }
-    printf("\n%d         %p         %lu", row, (void *)rowptr[row], (unsigned long)rowptr[row]);
+    printf("\n%d     %p     %lu", row, (void *)rowptr[row], (unsigned long)rowptr[row]);
     if (row > 0)
-    printf("              %d",(int)(rowptr[row] - rowptr[row-1]));
+    printf("      %d",(int)(rowptr[row] - rowptr[row-1]));
   }
   printf("\n");
   
