@@ -206,8 +206,9 @@
   int (*xptr)[COLS]; // int Arr[COLS]를 가르키는 포인터
   int *xptr[COLS];   // int *xptr 배열 COLS개
   ```
-  * Method 3 [[malloc two dememstion code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/malloc_two_demension.c)]
-  * 
+  * Method 3 [[malloc two dememstion code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/malloc_two_demension.c)]  
+  ![image](https://github.com/user-attachments/assets/cbd38104-ffb5-4709-886b-76a30ced892c)
+
   
 
 
