@@ -55,5 +55,49 @@
   *pB = '\0';
   ```
   ![image](https://github.com/user-attachments/assets/a6fe3402-d925-4703-9a50-80df50342c14)
+  ```
+  // String Copy
+  char strA[80] = "A string to be used for demonstration purposes";
+  char strB[80];
+    
+  char *my_strcpy(char *destination, char *source) {
+    char *p = destination;
+    while (*source != '\0') {
+      *p++ = *source++;
+    }
+    *p = '\0';
+  
+    return destination;
+  }
+  
+  int main(void) {
+    my_strcpy(strB, strA);
+    puts(strB);
+  }
+  ```
+  
+* Chap4. More on Strings
+  * my_strcpy() function
+  ```
+  // 동일 표현 char *my_strcpy(char *destination, char *source)
+  char *my_strcpy(char dest[], char source[]) {
+    int i = 0;
+  
+    while (source[i] != '\0') {
+      dest[i] = source[i];
+      i++;
+    }
+    dest[i] = '\0';
+  
+    return dest;
+  }
+  ```
+  
+* Chap5. Pointers and Structures
+  * Structures [code]()
+  * Pointers and Structures [code]()
+  
+
+
 
 
