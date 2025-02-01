@@ -20,12 +20,12 @@
   * Pdf file [[here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A%20tutorial%20on%20pointers%20and%20arrays%20in%20c.pdf)]
   * Code [[github.com/jflaherty/ptrtut13](https://github.com/jflaherty/ptrtut13)]
 
-* Chap01 What is a pointer?
+* Chap01. What is a pointer?
   * sizeof [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/sizeof.c)
   
   ![image](https://github.com/user-attachments/assets/6d5520f3-de4a-46b6-93c1-ebf4b14b0007)
 
-* Chap02 Pointer types and Arrays
+* Chap02. Pointer types and Arrays
   * Arrays and Pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/pointer_arrays.c)
   ```c
   int my_array[] = {1, 23, 17, 4,- 5, 100};
@@ -36,4 +36,7 @@
   my_array[i] // 동일 표현 *(ptr + i)
   ```
   ![image](https://github.com/user-attachments/assets/abadf6f7-a62d-4a52-95ee-2a3667a99094)
+
+* Chap3. Pointers and Strings
+  * 
 
