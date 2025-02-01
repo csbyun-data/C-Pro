@@ -259,6 +259,22 @@
 
   * bubble sort 4 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort4.c)
   ```c
+  void bubble(int *p, int N);
+  int compare(void *m, void *n);
+
+  bubble(arr,10);
+  void bubble(int *p, int N) {
+    //..
+    if (compare((void *)&p[j-1], (void *)&p[j])) {}
+    //..
+  }
+  int compare(void *m, void *n) {
+    int *m1, *n1;
+    m1 = (int *)m;
+    n1 = (int *)n;
+  
+    return (*m1 > *n1);
+  }
   ```
   * bubble sort 5 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort5.c)
   ```c
