@@ -319,6 +319,34 @@
   ```
   * bubble sort 7 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort7.c)
   ```c
-  
-  ```
+  long arr[10] = { 3,6,1,2,3,8,4,1,7,2};
+  char arr2[5][20] = { "Mickey Mouse",
+                       "Donald Duck",
+                       "Minnie Mouse",
+                       "Goofy",
+                       "Ted Jensen" };
+  void bubble(void *p, int width, int N, int(*fptr)(const void *, const void *));
+  int compare_string(const void *m, const void *n);
+  int compare_long(const void *m, const void *n);
 
+  bubble(arr, 4, 10, compare_long); /* sort the longs */
+  bubble(arr2, 20, 5, compare_string); /* sort the strings */
+  void bubble(void *p, int width, int N, int(*fptr)(const void *, const void *)) {
+    //..
+    k = fptr((void *)(bp + width*(j-1)), (void *)(bp + j*width));
+    //..
+  }
+  int compare_string(const void *m, const void *n) {
+    char *m1 = (char *)m;
+    char *n1 = (char *)n;
+  
+    return (strcmp(m1,n1));
+  }
+  int compare_long(const void *m, const void *n) {
+    long *m1, *n1;
+    m1 = (long *)m;
+    n1 = (long *)n;
+  
+    return (*m1 > *n1);
+  }  
+  ```
