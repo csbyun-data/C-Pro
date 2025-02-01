@@ -21,3 +21,4 @@
   * Code [[github.com/jflaherty/ptrtut13](https://github.com/jflaherty/ptrtut13)]
 
 * Chat01 What is a pointer?
+  * sizeof [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/A_tutorial_on_pointers_and_arrays_in_C)
