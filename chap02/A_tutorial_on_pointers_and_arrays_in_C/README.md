@@ -49,10 +49,10 @@
   pA = strA;    /* point pA at string A */
   pB = strB;    /* point pB at string B */
   
-  while(*pA != '\0') {  /* line A (see text) */
-      *pB++ = *pA++;   /* line B (see text) */
+  while(*pA != '\0') {
+    *pB++ = *pA++;
   }
-  *pB = '\0';          /* line C (see text) */
+  *pB = '\0';
   ```
   ![image](https://github.com/user-attachments/assets/a6fe3402-d925-4703-9a50-80df50342c14)
 
