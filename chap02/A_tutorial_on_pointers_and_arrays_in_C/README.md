@@ -278,11 +278,47 @@
   ```
   * bubble sort 5 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort5.c)
   ```c
+  void bubble(void *p, size_t width, int N);
+  int compare(void *m, void *n);
+  
+  bubble(arr, sizeof(long), 10);
+  void bubble(void *p, size_t width, int N) {
+    //..
+    if (compare((void *)(bp + width*(j-1)), (void *)(bp + j*width))){}
+    //..
+  }
+  int compare(void *m, void *n) {
+    long *m1, *n1;
+    m1 = (long *)m;
+    n1 = (long *)n;
+  
+    return (*m1 > *n1);
+  }
   ```
   * bubble sort 6 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort6.c)
   ```c
+  char arr2[5][20] = { "Mickey Mouse",
+                       "Donald Duck",
+                       "Minnie Mouse",
+                       "Goofy",
+                       "Ted Jensen" };
+  void bubble(void *p, int width, int N);
+  int compare(void *m, void *n);
+
+  bubble(arr2, 20, 5);
+  void bubble(void *p, int width, int N) {
+    //..
+    k = compare((void *)(bp + width*(j-1)), (void *)(bp + j*width));
+    //..
+  }
+  int compare(void *m, void *n) {
+    char *m1 = m;
+    char *n1 = n;
+    return (strcmp(m1,n1));
+  }
   ```
   * bubble sort 7 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort7.c)
   ```c
+  
   ```
 
