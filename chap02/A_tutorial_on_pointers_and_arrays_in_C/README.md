@@ -142,7 +142,80 @@
   ```
 
 * Chap6. Some more on Strings, and Arrays of Strings
-  * integer arrays [code]()
+  * integer arrays [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/integer_arrays.c)
+  ```c
+  #define ROWS 5
+  #define COLS 10
+  int multi[ROWS][COLS];
+  
+  multi[row][col] = row*col;
+  printf("\n%d ",multi[row][col]); // 동일표현 *(*(multi + row) + col)
+  ```
+
+* Chap7. More on Multi-Dimensional Arrays
+  ```c
+  #define ROWS 5
+  #define COLS 10
+  int multi[ROWS][COLS];
+
+  void set_value(int m_array[][COLS]) {
+    int row, col;
+    for (row = 0; row < ROWS; row++) {
+      for (col = 0; col < COLS; col++) {
+        m_array[row][col] = 1;
+      }
+    }
+  }
+  set_value(multi);
+  ```
+
+* Chap8. Pointers to Arrays 
+  ```c
+  int *ptr;
+  ptr = &my_array[0]; /* point our pointer at the first
+                         integer in our array */
+  int array[3] = {'1', '5', '7'};
+  void a_func(int *p); // 동일 표현 void a_func(int p[]);
+  
+  typedef unsigned char byte;
+  byte b[10]; would be an array of unsigned characters
+
+  int (*p1d)[10]; // 10개의 정수 배열을 가르키는 포인터
+  int *p1d[10];   // 10개의 포인터 배열
+  ```
+
+* Chap9 Pointers and Dynamic Allocation of Memory
+  * malloc() function
+  ```c
+  int *iptr;
+  iptr = (int *)malloc(10 * sizeof(int));
+
+  if (iptr == NULL) { .. ERROR ROUTINE GOES HERE .. }
+  int k;
+  for (k = 0; k < 10; k++)
+    iptr[k] = 2;
+  ```
+  * Method 1
+  ```c
+  multi[row][col] = 1; *(*(multi + row) + col) = 1;
+
+  multi[row] *(multi + row)
+  ```
+  * Method 2
+  ```c
+  int (*xptr)[COLS]; // int Arr[COLS]를 가르키는 포인터
+  int *xptr[COLS];   // int *xptr 배열 COLS개
+  ```
+  * Method 3
+  * 
+  
+
+
+
+  
+
+  
+
   
 
 
