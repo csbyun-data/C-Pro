@@ -212,6 +212,9 @@
   * Method 4 [[malloc two demension2 code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/malloc_two_demension2.c)]  
   ![image](https://github.com/user-attachments/assets/d1d0b8f3-8789-4f47-88e0-b4d38f58b535)
 
+  * Method 5 [[malloc three demenstion code]()
+  * 
+
 
 
 
