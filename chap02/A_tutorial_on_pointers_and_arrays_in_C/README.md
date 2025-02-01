@@ -216,7 +216,7 @@
   ![image](https://github.com/user-attachments/assets/e414a4aa-c406-4b53-bb04-95f8f4e3bbc1)
 
 * Chap10. Pointers to Functions
-  * bubble sort 1 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_1.c)
+  * bubble sort 1 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort1.c)
   ```c
   int arr[10] = { 3,6,1,2,3,8,4,1,7,2};
   void bubble(int a[], int N);
@@ -225,6 +225,10 @@
   ```
   ![image](https://github.com/user-attachments/assets/1edd559a-6e2d-456d-bcfe-b34f143a8718)
 
-  * bubble sort 2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_2.c)  
-  * bubble sort 3 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_3.c)  
-  * bubble sort 4 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_4.c)  
+  * bubble sort 2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sprt2.c)  
+  * bubble sort 3 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort3.c)  
+  * bubble sort 4 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort4.c)
+  * bubble sort 5 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort5.c)
+  * bubble sort 6 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort6.c)
+  * bubble sort 7 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort7.c)
+
