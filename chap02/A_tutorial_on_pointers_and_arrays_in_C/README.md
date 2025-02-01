@@ -216,7 +216,9 @@
   ![image](https://github.com/user-attachments/assets/e414a4aa-c406-4b53-bb04-95f8f4e3bbc1)
 
 * Chap10. Pointers to Functions
-  * bubble sort 1 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_1.c)
-  * bubble sort 2 [code]()
-  * bubble sort 3 [code]()
-  * bubble sort 4 [code]()
+  * bubble sort 1 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_1.c)  
+  ![image](https://github.com/user-attachments/assets/1edd559a-6e2d-456d-bcfe-b34f143a8718)
+
+  * bubble sort 2 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_2.c)  
+  * bubble sort 3 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_3.c)  
+  * bubble sort 4 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_4.c)  
