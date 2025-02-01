@@ -114,9 +114,35 @@
 
   * Pointers and Structures [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/pointers_structures.c)
   ```c
+  struct tag{                     /* the structure type */
+    char lname[20];             /* last name */
+    char fname[20];             /* first name */
+    int age;                    /* age */
+    float rate;                 /* e.g. 12.75 per hour */
+  };
   
+  struct tag my_struct;           /* define the structure */
+  void show_name(struct tag *p);  /* function prototype */
+  //..
+   struct tag *st_ptr;         /* a pointer to a structure */
+   st_ptr = &my_struct;        /* point the pointer to my_struct */
+ 
+   strcpy(my_struct.lname,"Jensen");
+   strcpy(my_struct.fname,"Ted");
+   my_struct.age = 63;
+  
+   show_name(st_ptr);          /* pass the pointer */
+  //..
+  
+  void show_name(struct tag *p) {
+    printf("\n%s ", p->fname);  /* p points to a structure */
+    printf("%s ", p->lname);
+    printf("%d\n", p->age);
+  }
   ```
-  
+
+* Chap6. Some more on Strings, and Arrays of Strings
+  * integer arrays [code]()
   
 
 
