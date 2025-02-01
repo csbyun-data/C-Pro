@@ -195,7 +195,7 @@
   for (k = 0; k < 10; k++)
     iptr[k] = 2;
   ```
-  * Method 1
+  * Method 1 [malloc one demension code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/mallc_one_demension.c)
   ```c
   multi[row][col] = 1; *(*(multi + row) + col) = 1;
 
