@@ -21,7 +21,8 @@
   * Code [[github.com/jflaherty/ptrtut13](https://github.com/jflaherty/ptrtut13)]
 
 * Chap01 What is a pointer?
-  * sizeof [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/sizeof.c)  
+  * sizeof [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/sizeof.c)
+  
   ![image](https://github.com/user-attachments/assets/6d5520f3-de4a-46b6-93c1-ebf4b14b0007)
 
 * Chap02 Pointer types and Arrays
