@@ -38,5 +38,22 @@
   ![image](https://github.com/user-attachments/assets/abadf6f7-a62d-4a52-95ee-2a3667a99094)
 
 * Chap3. Pointers and Strings
-  * 
+  * Pointers and Strings [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/pointers_strings.c)
+  ```c
+  char strA[80] = "A string to be used for demonstration purposes";
+  char strB[80];
+  //..
+  char *pA;     /* a pointer to type character */
+  char *pB;     /* another pointer to type character */
+  
+  pA = strA;    /* point pA at string A */
+  pB = strB;    /* point pB at string B */
+  
+  while(*pA != '\0') {  /* line A (see text) */
+      *pB++ = *pA++;   /* line B (see text) */
+  }
+  *pB = '\0';          /* line C (see text) */
+  ```
+  ![image](https://github.com/user-attachments/assets/a6fe3402-d925-4703-9a50-80df50342c14)
+
 
