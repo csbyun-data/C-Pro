@@ -195,7 +195,7 @@
   for (k = 0; k < 10; k++)
     iptr[k] = 2;
   ```
-  * Method 1 [malloc one demension code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/mallc_one_demension.c)
+  * Method 1 [[malloc one demension code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/mallc_one_demension.c)]
   ```c
   multi[row][col] = 1; *(*(multi + row) + col) = 1;
 
@@ -206,7 +206,7 @@
   int (*xptr)[COLS]; // int Arr[COLS]를 가르키는 포인터
   int *xptr[COLS];   // int *xptr 배열 COLS개
   ```
-  * Method 3
+  * Method 3 [malloc two dememstion code]()
   * 
   
 
