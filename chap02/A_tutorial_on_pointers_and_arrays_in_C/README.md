@@ -95,6 +95,23 @@
   
 * Chap5. Pointers and Structures
   * Structures [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/structure.c)
+  ```c
+  struct tag {
+    char lname[20];      /* last name */
+    char fname[20];      /* first name */
+    int age;             /* age */
+    float rate;          /* e.g. 12.75 per hour */
+  };
+  
+  struct tag my_struct;       /* declare the structure my_struct */
+  //..
+  strcpy(my_struct.lname,"Jensen");
+  strcpy(my_struct.fname,"Ted");
+  printf("\n%s ",my_struct.fname);
+  printf("%s\n",my_struct.lname);
+  ```  
+  ![image](https://github.com/user-attachments/assets/a9a66821-66f7-47c3-8388-30e081bf6ef8)
+
   * Pointers and Structures [code]()
   
 
