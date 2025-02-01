@@ -316,7 +316,9 @@
     char *n1 = n;
     return (strcmp(m1,n1));
   }
-  ```
+  ```  
+  ![image](https://github.com/user-attachments/assets/fb266bee-72df-4fe1-8b24-075ad58017d8)
+
   * bubble sort 7 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort7.c)
   ```c
   long arr[10] = { 3,6,1,2,3,8,4,1,7,2};
