@@ -241,9 +241,32 @@
     return (m > n);
   }
   ```
-  * bubble sort 3 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort3.c)  
+  * bubble sort 3 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort3.c)
+  ```c
+  void bubble(int *p, int N);
+  int compare(int *m, int *n);
+  
+  bubble(arr,10);
+  void bubble(int *p, int N) {
+    //..
+    if (compare(&p[j-1], &p[j])) {}
+    //..
+  }
+  int compare(int *m, int *n) {
+    return (*m > *n);
+  }
+  ```
+
   * bubble sort 4 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort4.c)
+  ```c
+  ```
   * bubble sort 5 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort5.c)
+  ```c
+  ```
   * bubble sort 6 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort6.c)
+  ```c
+  ```
   * bubble sort 7 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_sort7.c)
+  ```c
+  ```
 
