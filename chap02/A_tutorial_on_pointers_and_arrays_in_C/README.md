@@ -94,7 +94,7 @@
   ```
   
 * Chap5. Pointers and Structures
-  * Structures [code]()
+  * Structures [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/structure.c)
   * Pointers and Structures [code]()
   
 
