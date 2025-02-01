@@ -220,6 +220,7 @@
   ```c
   int arr[10] = { 3,6,1,2,3,8,4,1,7,2};
   void bubble(int a[], int N);
+  //..
   bubble(arr,10);
   ```
   ![image](https://github.com/user-attachments/assets/1edd559a-6e2d-456d-bcfe-b34f143a8718)
