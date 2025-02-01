@@ -216,7 +216,7 @@
   ![image](https://github.com/user-attachments/assets/e414a4aa-c406-4b53-bb04-95f8f4e3bbc1)
 
 * Chap10. Pointers to Functions
-  * bubble sort 1 [code]()
+  * bubble sort 1 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/bubble_1.c)
   * bubble sort 2 [code]()
   * bubble sort 3 [code]()
   * bubble sort 4 [code]()
