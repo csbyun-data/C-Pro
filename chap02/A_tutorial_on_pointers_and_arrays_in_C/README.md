@@ -35,3 +35,5 @@
                              element of the array */
   my_array[i] // 동일 표현 *(ptr + i)
   ```
+  ![image](https://github.com/user-attachments/assets/abadf6f7-a62d-4a52-95ee-2a3667a99094)
+
