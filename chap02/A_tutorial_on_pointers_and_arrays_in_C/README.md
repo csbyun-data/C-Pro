@@ -26,7 +26,7 @@
   ![image](https://github.com/user-attachments/assets/6d5520f3-de4a-46b6-93c1-ebf4b14b0007)
 
 * Chap02 Pointer types and Arrays
-  * Arrays and Pointer
+  * Arrays and Pointer [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/pointer_arrays.c)
   ```c
   int my_array[] = {1, 23, 17, 4,- 5, 100};
   int *ptr;
