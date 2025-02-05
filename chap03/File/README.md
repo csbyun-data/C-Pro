@@ -153,6 +153,3 @@
     int n;
     n = write(fd, buf, size);
     ```
-* File Commands
-   * file copy [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy2.c)]
-   * tail [[code]()]
