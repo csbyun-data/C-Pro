@@ -14,6 +14,25 @@
       return 0;
     }
     ```
+    ```c
+    unsigned int linenum = 20;
+
+    void getlinenum(int n, char * str[]) {
+      for (--n; n; --n) {
+        ++str;
+        if ((**str == '/') || (**str == '-')) {
+          linenum = atoi(*(str) + 1);
+          if (linenum <= 0)
+            linenum = 20;
+        }
+      }
+    }
+   
+   int main(int argc, char **argv) {
+     getlinenum(argc, argv);
+   }
+   ```
+
     * 증감 연산자
     ```c
     // 후위 증감 연산자
