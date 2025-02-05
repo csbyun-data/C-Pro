@@ -14,6 +14,8 @@
       return 0;
     }
     ```
+    ![image](https://github.com/user-attachments/assets/c2b81abd-95a5-4f10-ad37-e91ad2fc899c)
+
     
     * Command line argument '/20' [[code]()]
     ```c
