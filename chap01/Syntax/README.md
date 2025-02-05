@@ -1,6 +1,6 @@
 ### Syntax
 * Syntax
-    * Command line argument in C [[file open](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/arg_file_open.c), [argc argv code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/main_argc.c)]
+    * Command line argument in C [[file open](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/arg_file_open.c)], [[argc argv code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/main_argc.c)]
     ```c
     int main(int argc, char* argv[]) {
 
