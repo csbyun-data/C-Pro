@@ -18,7 +18,7 @@
      write(fd2, buf, n)
    ```
    
-   * tail [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/tail.c)]
+   * tail [[snip9707 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/tail.c)]
    ```c
    void getlinenum(int n, char * str[]);
    void gettail(void);
