@@ -15,7 +15,7 @@
     }
     ```
     
-    * Command line argument '/20' [code]()
+    * Command line argument '/20' [[code]()]
     ```c
     unsigned int linenum = 20;
 
