@@ -13,6 +13,7 @@
    ```c
    // low level file code
    int fd1, fd2;
+   //..
    while ((n = read(fd1, buf, BUFSIZ)) > 0) 
      write(fd2, buf, n)
    ```
