@@ -34,6 +34,7 @@
      getlinenum(argc, argv);
    }
    ```
+    ![image](https://github.com/user-attachments/assets/b63f8fb0-85b5-40b5-bb70-0963a1cc3cf8)  
 
     * 증감 연산자
     ```c
