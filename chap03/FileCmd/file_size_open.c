@@ -1,4 +1,5 @@
-//저수준 파일함수를 활용한 파일 복사
+//low level file code
+
 #include <stdio.h>
 #include <fcntl.h>
 
