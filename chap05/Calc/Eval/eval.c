@@ -50,48 +50,53 @@
 */
 typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
 
-char *rmallws(char *str)
-{
-      char *obuf, *nbuf;
-
-      if (str)
-      {
-            for (obuf = str, nbuf = str; *obuf; ++obuf)
-            {
-                  if (!isspace(*obuf))
-                        *nbuf++ = *obuf;
-            }
-            *nbuf = NUL;
-      }
-      return str;
+char *rmallws(char *str) {
+  char *obuf, *nbuf;
+  
+  if (str) {
+    for (obuf = str, nbuf = str; *obuf; ++obuf) {
+      if (!isspace(*obuf))
+        *nbuf++ = *obuf;
+    }
+    *nbuf = NUL;
+  }
+  return str;
 }
-char *strupr(char *);
 
+char *strupr(char *string) {
+  char *s;
+
+  if (string) {
+    for (s = string; *s; ++s)
+      *s = toupper(*s);
+  }
+  return string;
+} 
 
 struct operator {
-      char        token;
-      char       *tag;
-      size_t      taglen;
-      int         precedence;
+  char        token;
+  char       *tag;
+  size_t      taglen;
+  int         precedence;
 };
 
 static struct operator verbs[] = {
-      {'+',  "+",       1, 2 },
-      {'-',  "-",       1, 3 },
-      {'*',  "*",       1, 4 },
-      {'/',  "/",       1, 5 },
-      {'\\', "\\",      1, 5 },
-      {'^',  "^",       1, 6 },
-      {'(',  "(",       1, 0 },
-      {')',  ")",       1, 99},
-      {'S',  "SIN(",    4, 0 },
-      {'C',  "COS(",    4, 0 },
-      {'A',  "ABS(",    4, 0 },
-      {'L',  "LN(",     3, 0 },
-      {'E',  "EXP(",    4, 0 },
-      {'t',  "ATAN(",   5, 0 },
-      {'s',  "SQRT(",   5, 0 },
-      {NUL,  NULL,      0, 0 }
+  {'+',  "+",       1, 2 },
+  {'-',  "-",       1, 3 },
+  {'*',  "*",       1, 4 },
+  {'/',  "/",       1, 5 },
+  {'\\', "\\",      1, 5 },
+  {'^',  "^",       1, 6 },
+  {'(',  "(",       1, 0 },
+  {')',  ")",       1, 99},
+  {'S',  "SIN(",    4, 0 },
+  {'C',  "COS(",    4, 0 },
+  {'A',  "ABS(",    4, 0 },
+  {'L',  "LN(",     3, 0 },
+  {'E',  "EXP(",    4, 0 },
+  {'t',  "ATAN(",   5, 0 },
+  {'s',  "SQRT(",   5, 0 },
+  {NUL,  NULL,      0, 0 }
 };
 
 static char   op_stack[256];                    /* Operator stack       */
