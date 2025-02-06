@@ -42,7 +42,6 @@
 #include <ctype.h>
 #include <math.h>
 
-#include "snipmath.h"
 #include "numcnvrt.h"
 
 #define NUL '\0'
