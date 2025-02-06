@@ -48,5 +48,4 @@
   3) 변수 이항연산 계산 (a+b)
   4) 변수 출력 a;
   ```
-* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c), [extkword.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/extkword.h), [numcnvrt.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/numcnvrt.h), [pi.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/pi.h), [rmallws.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/rmallws.c), [round.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/round.h), [snip_str.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/snip_str.h), [smipmath.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/smipmath.h), [sniptype.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/sniptype.h), [strupr.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/strupr.c)
-  
+* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c)
