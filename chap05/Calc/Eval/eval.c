@@ -1,10 +1,7 @@
 // https://github.com/vonj/snippets.org
 
-/* +++Date last modified: 05-Jul-1997 */
-
 /************************************************************************/
-/*                                                                      */
-/*  EVAL.C - A simple mathematical expression evaluator in C            */
+/*  eval.c - A simple mathematical expression evaluator in C            */
 /*                                                                      */
 /*  operators supported: Operator               Precedence              */
 /*                                                                      */
@@ -29,7 +26,7 @@
 /*  Original Copyright 1991-93 by Robert B. Stout as part of            */
 /*  the MicroFirm Function Library (MFL)                                */
 /*                                                                      */
-/*  eval sin(30*pi/180)+3                                               */
+/*  ex) eval sin(30*pi/180)+3                                               */
 /************************************************************************/
 
 #include <stdlib.h>
@@ -38,13 +35,10 @@
 #include <math.h>
 
 #define NUL '\0'
-#define R_ERROR -2                              /* EVAL.C Range error   */
+#define R_ERROR -2
 
 typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
 
-/*
-**  Other SNIPPETS functions
-*/
 char *rmallws(char *str) {
   char *obuf, *nbuf;
   
@@ -131,11 +125,9 @@ static int              getTOSprec(void);
 /*                                                                      */
 /*  Side effects: Removes all whitespace from the string and converts   */
 /*                it to U.C.                                            */
-/*                                                                      */
 /************************************************************************/
 
-int evaluate(char *line, double *val)
-{
+int evaluate(char *line, double *val) {
   double arg;
   char *ptr = line, *str, *endptr;
   int ercode;
