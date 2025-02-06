@@ -42,9 +42,9 @@
 #include <ctype.h>
 #include <math.h>
 
-#include "numcnvrt.h"
-
 #define NUL '\0'
+#define R_ERROR -2                              /* EVAL.C Range error   */
+
 typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
 
 /*
