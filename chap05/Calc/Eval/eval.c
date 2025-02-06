@@ -41,7 +41,6 @@
 #include <string.h>
 #include <ctype.h>
 #include <math.h>
-#include "sniptype.h"
 #include "snip_str.h"                     /* For rmallws(), strupr()    */
 #include "snipmath.h"
 #include "numcnvrt.h"
@@ -49,6 +48,7 @@
 /*
 **  Other SNIPPETS functions
 */
+typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
 
 char *rmallws(char *);
 char *strupr(char *);
