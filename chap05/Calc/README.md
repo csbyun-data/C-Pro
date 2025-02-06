@@ -48,4 +48,6 @@
   3) 변수 이항연산 계산 (a+b)
   4) 변수 출력 a;
   ```
-* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c)
+* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c)  
+  ![image](https://github.com/user-attachments/assets/3091be4f-b26f-4d51-95d8-d6d5a2a34b7b)
+
