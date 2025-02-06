@@ -10,7 +10,6 @@
 #include <stddef.h>                       /* For size_t and NULL        */
 #include <string.h>                       /* For strncpy() & memmove()  */
 #include "sniptype.h"                     /* For LAST_CHAR() & NUL      */
-#include "extkword.h"                     /* For FAR                    */
 
 /*
 **  Macros to print proper plurals by Bob Stout
