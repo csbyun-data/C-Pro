@@ -11,6 +11,7 @@
 #include <string.h>                       /* For strncpy() & memmove()  */
 
 #define NUL '\0'
+typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
 
 /*
 **  Macros to print proper plurals by Bob Stout
