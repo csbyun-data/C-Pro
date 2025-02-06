@@ -122,300 +122,245 @@ static int              getTOSprec(void);
 
 int evaluate(char *line, double *val)
 {
-      double arg;
-      char *ptr = line, *str, *endptr;
-      int ercode;
-      struct operator *op;
+  double arg;
+  char *ptr = line, *str, *endptr;
+  int ercode;
+  struct operator *op;
 
-      strupr(line);
-      rmallws(line);
-      state = op_sptr = arg_sptr = parens = 0;
+  strupr(line);
+  rmallws(line);
+  state = op_sptr = arg_sptr = parens = 0;
 
-      while (*ptr)
-      {
-            switch (state)
-            {
-            case 0:
-                  if (NULL != (str = get_exp(ptr)))
-                  {
-                        if (NULL != (op = get_op(str)) &&
-                              strlen(str) == op->taglen)
-                        {
-                              push_op(op->token);
-                              ptr += op->taglen;
-                              break;
-                        }
+  while (*ptr) {
+    switch (state) {
+    case 0:
+      if (NULL != (str = get_exp(ptr))) {
+        if (NULL != (op = get_op(str)) &&
+              strlen(str) == op->taglen) {
+          push_op(op->token);
+          ptr += op->taglen;
+          break;
+        }
 
-                        if (Success_ == strcmp(str, "-"))
-                        {
-                              push_op(*str);
-                              ++ptr;
-                              break;
-                        }
+        if (Success_ == strcmp(str, "-")) {
+          push_op(*str);
+          ++ptr;
+          break;
+        }
 
-                        if (Success_ == strcmp(str, "PI"))
-                              push_arg(Pi);
+        if (Success_ == strcmp(str, "PI"))
+              push_arg(Pi);
+        else {
+          if (0.0 == (arg = strtod(str, &endptr)) &&
+                NULL == strchr(str, '0')) {
+            return Error_;
+          }
+          push_arg(arg);
+        }
+        ptr += strlen(str);
+      } else  return Error_;
 
-                        else
-                        {
-                              if (0.0 == (arg = strtod(str, &endptr)) &&
-                                    NULL == strchr(str, '0'))
-                              {
-                                    return Error_;
-                              }
-                              push_arg(arg);
-                        }
-                        ptr += strlen(str);
-                  }
-                  else  return Error_;
+      state = 1;
+      break;
 
-                  state = 1;
-                  break;
-
-            case 1:
-                  if (NULL != (op = get_op(ptr)))
-                  {
-                        if (')' == *ptr)
-                        {
-                              if (Success_ > (ercode = do_paren()))
-                                    return ercode;
-                        }
-                        else
-                        {
-                              while (op_sptr &&
-                                    op->precedence <= getTOSprec())
-                              {
-                                    do_op();
-                              }
-                              push_op(op->token);
-                              state = 0;
-                        }
-
-                        ptr += op->taglen;
-                  }
-                  else  return Error_;
-
-                  break;
-            }
+    case 1:
+      if (NULL != (op = get_op(ptr))) {
+        if (')' == *ptr) {
+          if (Success_ > (ercode = do_paren()))
+            return ercode;
+        } else {
+          while (op_sptr &&
+                op->precedence <= getTOSprec()) {
+            do_op();
+          }
+          push_op(op->token);
+          state = 0;
+        }
+        ptr += op->taglen;
       }
-
-      while (1 < arg_sptr)
-      {
-            if (Success_ > (ercode = do_op()))
-                  return ercode;
-      }
-      if (!op_sptr)
-            return pop_arg(val);
       else  return Error_;
+      break;
+    }
+  }
+
+  while (1 < arg_sptr) {
+    if (Success_ > (ercode = do_op()))
+      return ercode;
+  }
+  if (!op_sptr)
+    return pop_arg(val);
+  else  return Error_;
 }
 
 /*
 **  Evaluate stacked arguments and operands
 */
 
-static int do_op(void)
-{
-      double arg1, arg2;
-      int op;
+static int do_op(void) {
+  double arg1, arg2;
+  int op;
 
-      if (Error_ == pop_op(&op))
-            return Error_;
+  if (Error_ == pop_op(&op))
+    return Error_;
 
-      pop_arg(&arg1);
-      pop_arg(&arg2);
+  pop_arg(&arg1);
+  pop_arg(&arg2);
 
-      switch (op)
-      {
-      case '+':
-            push_arg(arg2 + arg1);
-            break;
-
-      case '-':
-            push_arg(arg2 - arg1);
-            break;
-
-      case '*':
-            push_arg(arg2 * arg1);
-            break;
-
-      case '/':
-            if (0.0 == arg1)
-                  return R_ERROR;
-            push_arg(arg2 / arg1);
-            break;
-
-      case '\\':
-            if (0.0 == arg1)
-                  return R_ERROR;
-            push_arg(fmod(arg2, arg1));
-            break;
-
-      case '^':
-            push_arg(pow(arg2, arg1));
-            break;
-
-      case 't':
-            ++arg_sptr;
-            push_arg(atan(arg1));
-            break;
-
-      case 'S':
-            ++arg_sptr;
-            push_arg(sin(arg1));
-            break;
-
-      case 's':
-            if (0.0 > arg2)
-                  return R_ERROR;
-            ++arg_sptr;
-            push_arg(sqrt(arg1));
-            break;
-
-      case 'C':
-            ++arg_sptr;
-            push_arg(cos(arg1));
-            break;
-
-      case 'A':
-            ++arg_sptr;
-            push_arg(fabs(arg1));
-            break;
-
-      case 'L':
-            if (0.0 < arg1)
-            {
-                  ++arg_sptr;
-                  push_arg(log(arg1));
-                  break;
-            }
-            else  return R_ERROR;
-
-      case 'E':
-            ++arg_sptr;
-            push_arg(exp(arg1));
-            break;
-
-      case '(':
-            arg_sptr += 2;
-            break;
-
-      default:
-            return Error_;
-      }
-      if (1 > arg_sptr)
-            return Error_;
-      else  return op;
+  switch (op) {
+  case '+':
+    push_arg(arg2 + arg1);
+    break;
+  case '-':
+    push_arg(arg2 - arg1);
+    break;
+  case '*':
+    push_arg(arg2 * arg1);
+    break;
+  case '/':
+    if (0.0 == arg1)
+      return R_ERROR;
+    push_arg(arg2 / arg1);
+    break;
+  case '\\':
+    if (0.0 == arg1)
+      return R_ERROR;
+    push_arg(fmod(arg2, arg1));
+    break;
+  case '^':
+    push_arg(pow(arg2, arg1));
+    break;
+  case 't':
+    ++arg_sptr;
+    push_arg(atan(arg1));
+    break;
+  case 'S':
+    ++arg_sptr;
+    push_arg(sin(arg1));
+    break;
+  case 's':
+    if (0.0 > arg2)
+      return R_ERROR;
+    ++arg_sptr;
+    push_arg(sqrt(arg1));
+    break;
+  case 'C':
+    ++arg_sptr;
+    push_arg(cos(arg1));
+    break;
+  case 'A':
+    ++arg_sptr;
+    push_arg(fabs(arg1));
+    break;
+  case 'L':
+    if (0.0 < arg1) {
+      ++arg_sptr;
+      push_arg(log(arg1));
+      break;
+    } else  return R_ERROR;
+  case 'E':
+    ++arg_sptr;
+    push_arg(exp(arg1));
+    break;
+  case '(':
+    arg_sptr += 2;
+    break;
+  default:
+    return Error_;
+  }
+  if (1 > arg_sptr)
+    return Error_;
+  else  return op;
 }
 
 /*
 **  Evaluate one level
 */
 
-static int do_paren(void)
-{
-      int op;
+static int do_paren(void) {
+  int op;
 
-      if (1 > parens--)
-            return Error_;
-      do
-      {
-            if (Success_ > (op = do_op()))
-                  break;
-      } while (getprec((char)op));
-      return op;
+  if (1 > parens--)
+    return Error_;
+  do {
+    if (Success_ > (op = do_op()))
+      break;
+  } while (getprec((char)op));
+  return op;
 }
 
 /*
 **  Stack operations
 */
 
-static void push_op(char op)
-{
-      if (!getprec(op))
-            ++parens;
-      op_stack[op_sptr++] = op;
+static void push_op(char op) {
+  if (!getprec(op))
+    ++parens;
+  op_stack[op_sptr++] = op;
 }
 
-static void push_arg(double arg)
-{
-      arg_stack[arg_sptr++] = arg;
+static void push_arg(double arg) {
+  arg_stack[arg_sptr++] = arg;
 }
 
-static int pop_arg(double *arg)
-{
-      *arg = arg_stack[--arg_sptr];
-      if (0 > arg_sptr)
-            return Error_;
-      else  return Success_;
+static int pop_arg(double *arg) {
+  *arg = arg_stack[--arg_sptr];
+  if (0 > arg_sptr)
+    return Error_;
+  else  return Success_;
 }
 
-static int pop_op(int *op)
-{
-      if (!op_sptr)
-            return Error_;
-      *op = op_stack[--op_sptr];
-      return Success_;
+static int pop_op(int *op) {
+  if (!op_sptr)
+    return Error_;
+  *op = op_stack[--op_sptr];
+  return Success_;
 }
 
 /*
 **  Get an expression
 */
 
-static char * get_exp(char *str)
-{
-      char *ptr = str, *tptr = token;
-      struct operator *op;
+static char * get_exp(char *str) {
+  char *ptr = str, *tptr = token;
+  struct operator *op;
 
-      if (Success_ == strncmp(str, "PI", 2))
-            return strcpy(token, "PI");
+  if (Success_ == strncmp(str, "PI", 2))
+    return strcpy(token, "PI");
 
+  while (*ptr) {
+    if (NULL != (op = get_op(ptr))) {
+      if ('-' == *ptr) {
+        if (str != ptr && 'E' != ptr[-1])
+              break;
+        if (str == ptr && !isdigit(ptr[1]) && '.' != ptr[1]) {
+          push_arg(0.0);
+          strcpy(token, op->tag);
+          return token;
+        }
+      } else if (str == ptr) {
+        strcpy(token, op->tag);
+        return token;
+      } else break;
+    }
+    *tptr++ = *ptr++;
+  }
+  *tptr = NUL;
 
-      while (*ptr)
-      {
-            if (NULL != (op = get_op(ptr)))
-            {
-                  if ('-' == *ptr)
-                  {
-                        if (str != ptr && 'E' != ptr[-1])
-                              break;
-                        if (str == ptr && !isdigit(ptr[1]) && '.' != ptr[1])
-                        {
-                              push_arg(0.0);
-                              strcpy(token, op->tag);
-                              return token;
-                        }
-                  }
-
-                  else if (str == ptr)
-                  {
-                        strcpy(token, op->tag);
-                        return token;
-                  }
-
-                  else break;
-            }
-
-            *tptr++ = *ptr++;
-      }
-      *tptr = NUL;
-
-      return token;
+  return token;
 }
 
 /*
 **  Get an operator
 */
 
-static struct operator * get_op(char *str)
-{
-      struct operator *op;
+static struct operator * get_op(char *str) {
+  struct operator *op;
 
-      for (op = verbs; op->token; ++op)
-      {
-            if (Success_ == strncmp(str, op->tag, op->taglen))
-                  return op;
-      }
-      return NULL;
+  for (op = verbs; op->token; ++op) {
+    if (Success_ == strncmp(str, op->tag, op->taglen))
+      return op;
+  }
+  return NULL;
 }
 
 /*
@@ -424,39 +369,37 @@ static struct operator * get_op(char *str)
 
 static int getprec(char token)
 {
-      struct operator *op;
+  struct operator *op;
 
-      for (op = verbs; op->token; ++op)
-      {
-            if (token == op->token)
-                  break;
-      }
-      if (op->token)
-            return op->precedence;
-      else  return 0;
+  for (op = verbs; op->token; ++op) {
+    if (token == op->token)
+      break;
+  }
+  if (op->token)
+    return op->precedence;
+  else  return 0;
 }
 
 /*
 **  Get precedence of TOS token
 */
 
-static int getTOSprec(void)
-{
-      if (!op_sptr)
-            return 0;
-      return getprec(op_stack[op_sptr - 1]);
+static int getTOSprec(void) {
+  if (!op_sptr)
+        return 0;
+  return getprec(op_stack[op_sptr - 1]);
 }
 
 #include <stdio.h>
 
 int main(int argc, char *argv[])
 {
-      int retval;
-      double val;
-
-      printf("evaluate(%s) ", argv[1]);
-      printf("returned %d\n", retval = evaluate(argv[1], &val));
-      if (0 == retval)
-            printf("val = %f\n", val);
-      return 0;
+  int retval;
+  double val;
+  
+  printf("evaluate(%s) ", argv[1]);
+  printf("returned %d\n", retval = evaluate(argv[1], &val));
+  if (0 == retval)
+    printf("val = %f\n", val);
+  return 0;
 }
