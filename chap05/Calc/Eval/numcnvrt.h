@@ -9,7 +9,6 @@
 
 #include <stddef.h>     /* For size_t     */
 #include "sniptype.h"
-#include "round.h"
 #include "pi.h"
 
 #define R_ERROR -2                              /* EVAL.C Range error   */
