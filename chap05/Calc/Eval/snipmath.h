@@ -9,7 +9,6 @@
 
 #include <math.h>
 #include "sniptype.h"
-#include "round.h"
 
 /*
 **  Callable library functions begin here
