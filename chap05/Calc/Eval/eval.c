@@ -29,12 +29,7 @@
 /*  Original Copyright 1991-93 by Robert B. Stout as part of            */
 /*  the MicroFirm Function Library (MFL)                                */
 /*                                                                      */
-/*  The user is granted a free limited license to use this source file  */
-/*  to create royalty-free programs, subject to the terms of the        */
-/*  license restrictions specified in the LICENSE.MFL file.             */
-/*                                                                      */
-/*  Requires RMALLWS.C, also in SNIPPETS.                               */
-/*                                                                      */
+/*  eval sin(30*pi/180)+3                                               */
 /************************************************************************/
 
 #include <stdlib.h>
