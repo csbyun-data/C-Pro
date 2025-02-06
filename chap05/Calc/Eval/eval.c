@@ -50,7 +50,21 @@
 */
 typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
 
-char *rmallws(char *);
+char *rmallws(char *str)
+{
+      char *obuf, *nbuf;
+
+      if (str)
+      {
+            for (obuf = str, nbuf = str; *obuf; ++obuf)
+            {
+                  if (!isspace(*obuf))
+                        *nbuf++ = *obuf;
+            }
+            *nbuf = NUL;
+      }
+      return str;
+}
 char *strupr(char *);
 
 
