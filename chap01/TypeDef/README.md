@@ -1,4 +1,4 @@
-### typedef
+### typedef struct
 * typedef 사용법, 범위
   * Reference [typedef-in-c](https://aticleworld.com/typedef-in-c/)
   * struct에 typedef 사용
