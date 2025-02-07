@@ -102,6 +102,11 @@
    * [2-6 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-1.c), [2-6 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/String_function_2-6-2.c)
    ```txt
    2-6) 함수를 이용하여 문자열 출력, 명령줄 인수 활용
+   void fun(char *arr) { } // 동일 표현 void fun(char arr[])
+  
+   // char arr[] = {'a','b','c','d','e','f','g','h','\0' }; 동일 표현  
+   char arr[] = "abcdefgh";
+   fun(arr);
    ```
    * 1.3 함수 return void형
    ```c
