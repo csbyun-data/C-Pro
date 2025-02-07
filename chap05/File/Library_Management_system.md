@@ -1,7 +1,7 @@
 
 ## 01. Library Management System Project
 ### Index
-[참조: aticleworld.com/library-management-system-project-in-c](https://aticleworld.com/library-management-system-project-in-c/)
+  참조: [aticleworld.com/library-management-system-project-in-c](https://aticleworld.com/library-management-system-project-in-c/)
 * 1.Library Management System Project
   *  1.1 isFileExists [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/isFileExists.c)
   *  1.2 init [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/init.c)
