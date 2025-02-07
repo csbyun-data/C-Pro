@@ -41,6 +41,7 @@
   ![image](https://github.com/user-attachments/assets/fef2af64-b83d-457f-bb4e-80d787b0aeb0)
 
 * 사칙연산 함수를 STL을 이용하여 표현 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/STL_Calculator1.cpp)]
+
 * 재귀호출 계산기 [C++ [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.cc)], [C로 변환 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/desktop_calc.c)]
   ```txt
   1) 전위, 후위 연산자 (++a, --a, a++, a--)
@@ -48,6 +49,19 @@
   3) 변수 이항연산 계산 (a+b)
   4) 변수 출력 a;
   ```
-* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c)  
+  
+* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c)
+  ```
+  1) 프로그램에서 head 파일 참조 구현된 함수들을 1개의 파일로 만듦
+  #include "sniptype.h"
+  #include "snip_str.h"                     /* For rmallws(), strupr()    */
+  #include "snipmath.h"
+  #include "numcnvrt.h"
+  
+  #include "sniptype.h"                     /* For LAST_CHAR() & NUL      */
+  #include "extkword.h"                     /* For FAR                    */
+  #include "round.h"
+  #include "pi.h"
+  ```
   ![image](https://github.com/user-attachments/assets/3091be4f-b26f-4d51-95d8-d6d5a2a34b7b)
 
