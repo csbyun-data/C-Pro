@@ -20,7 +20,7 @@
    
    * tail [[snip9707 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/tail.c)]
    ```c
-   void getlinenum(int n, char * str[]);
+   void getlinenum(int n, char *str[]);
    void gettail(void);
    ```
    ![image](https://github.com/user-attachments/assets/4f5a3877-4451-4407-9fb1-49517254e0a1)
