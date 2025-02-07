@@ -4,14 +4,14 @@
    * get file size [[fopen code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/file_size_fopen.c)]
    * file copy [[high level code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy1.c), [low level code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/file_copy_open.c)]
    ```c
-   // ligh level file code
+   // ligh level file copy code
    FILE *srcfp, *objfp;
    //..
    while ((ch = fgetc(srcfp)) != EOF)
       fputc(ch,objfp);
    ```
    ```c
-   // low level file code
+   // low level file copy code
    int fd1, fd2;
    //..
    while ((n = read(fd1, buf, BUFSIZ)) > 0) 
