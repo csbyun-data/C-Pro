@@ -1,4 +1,4 @@
-### typedef struct
+### typedef 사용법, 범위
 * typedef 사용법, 범위
   * Reference [typedef-in-c](https://aticleworld.com/typedef-in-c/)
   * struct에 typedef 사용
@@ -63,8 +63,8 @@
   psStudInfo Ram;
   sStudInfo Shyam;
   ```    
-  
-  * typedef를 사용한 범위 점검
+
+* typedef를 사용한 범위 점검
   ```c
   // typedef의 범위 점검
   #include <stdio.h>
@@ -97,7 +97,7 @@
   // [Error] conflicting types for 'TYPE'
   ```
   
-  * typedef pointer형 변수
+* typedef pointer형 변수
   ```c
   // use of typedef with pointers
   #include <stdio.h>
@@ -120,7 +120,7 @@
   }
   ```
   
-  * typedef 배열
+* typedef 배열
   ```c
   #include <stdio.h>
   typedef int Brick_Price[3];
@@ -143,7 +143,7 @@
   }
   ```
   
-  * typedef function pointer 사용
+* typedef function pointer 사용
   ```c
   // typedef of array of function pointers
   typedef int (*apfArithmatics[3])( int, int);
