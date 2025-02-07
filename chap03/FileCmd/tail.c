@@ -118,9 +118,9 @@ void gettail(void) {
 void help(void) {
   char *ptr;
   static char help_str[] =  "Usage:\n\nTAIL <filename> [filename] "
-        "[/n]\n\n<filename>  - The name of a valid file, wildcards "
-        "accepted.\nn           - Number of lines to print out, 20 "
-        "by default.";
+    "[/n]\n\n<filename>  - The name of a valid file, wildcards "
+    "accepted.\nn           - Number of lines to print out, 20 "
+    "by default.";
 
   for (ptr = &help_str[0]; *ptr; ptr++)
     fputc(*ptr, stdout);
@@ -129,8 +129,8 @@ void help(void) {
 int main(int argc, char **argv)
 {
   if (argc <= 1) {
-        help();
-        exit(1);
+    help();
+    exit(1);
   }
 
   getlinenum(argc, argv);
