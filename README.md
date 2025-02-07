@@ -9,7 +9,7 @@ Grammar of programming, a collection of basic materials for application.
 * [time, qsort 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/README.md)
 * [조건문, 반복문, setjmp()](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/README.md)
 * [Array, String](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
-* [function, parameter, return value](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
+* [function(), parameter, return value](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
 * [typedef 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md)
 * [Binary Octal Decimal Hexa변환](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin/README.md)
 * [static, extern 사용](https://github.com/csbyun-data/C-Pro/blob/main/chap01/extern/README.md)
