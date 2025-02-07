@@ -6,7 +6,7 @@
   *  1.1 isFileExists [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/isFileExists.c)
   *  1.2 init [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/init.c)
   *  1.3 printMessageCenter [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/printMessageCenter.c)
-  *  1.4 headMesage [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/headMesager.c)
+  *  1.4 headMessage [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/headMessage.c)
   *  1.5 welcomeMessage [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/welcomeMessage.c)
   *  1.6 isNameValid [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/isNameValid.c)
   *  1.7 isValidDate [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/isValidDate.c)
