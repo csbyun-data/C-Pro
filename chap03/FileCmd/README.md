@@ -20,6 +20,8 @@
    
    * tail [[snip9707 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/tail.c)]
    ```c
+   1) text파일의 하단부분 20line을 출력하는 프로그램
+
    void getlinenum(int n, char *str[]);
    void gettail(void);
    ```
