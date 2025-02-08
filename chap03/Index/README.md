@@ -22,6 +22,8 @@
     - name, line position
     3) index.exe records.txt index.ndx
     ```
+    ![image](https://github.com/user-attachments/assets/8f683ed0-093d-424d-9ce1-d762135331fa)
+
 
     * lookup [lookup.c]()
     ```
