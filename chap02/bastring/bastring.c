@@ -9,8 +9,10 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <assert.h>
-#include "sniptype.h"
+
 #include "bastrngs.h"
+
+#define NUL '\0'
 
 static int stralloc_ptr;
 static char *strings[8];
