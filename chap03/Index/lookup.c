@@ -1,3 +1,4 @@
+// https://github.com/vonj/snippets.org
 /*
 **  LOOKUP.C
 **
