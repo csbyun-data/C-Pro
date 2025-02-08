@@ -32,17 +32,17 @@
 #include <stdarg.h>
 #include <string.h>
 
-int ferrorf(FILE *filehandle, const char *format, ...)
-{
-      int vfp, fp;
-      va_list vargs;
- 
-      vfp = fp = 0;
-      va_start(vargs, format);
-      vfp = vfprintf(filehandle, format, vargs);
-      va_end(vargs);
-      fp = fprintf(filehandle, ": %s\n", sys_errlist[errno]);
-      return ((vfp==EOF || fp==EOF) ? EOF : (vfp+fp));
+int ferrorf(FILE *filehandle, const char *format, ...) {
+  int vfp, fp;
+  va_list vargs;
+  
+  vfp = fp = 0;
+  va_start(vargs, format);
+  vfp = vfprintf(filehandle, format, vargs);
+  va_end(vargs);
+  fp = fprintf(filehandle, ": %s\n", sys_errlist[errno]);
+  
+  return ((vfp==EOF || fp==EOF) ? EOF : (vfp+fp));
 }
 
 /*
