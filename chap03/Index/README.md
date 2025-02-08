@@ -22,4 +22,9 @@
     - name, line position
     3) index.exe records.txt index.ndx
     ```
+
+    * lookup [lookup.c]()
+    ```
+    1) 찾는 name을 받아들여 index.ndx 파일에 name을 찾아 recodes.txt의 line을 찾음
+    ```
    
