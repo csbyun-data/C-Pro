@@ -24,8 +24,7 @@
     ```
     ![image](https://github.com/user-attachments/assets/8f683ed0-093d-424d-9ce1-d762135331fa)
 
-
-    * lookup [lookup.c]()
+    * lookup [lookup.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/lookup.c), [errors.h](), [ferrorf.c](), [indxlook.h](), [sniptype.h]()
     ```
     1) 찾는 name을 받아들여 index.ndx 파일에 name을 찾아 recodes.txt의 line을 찾음
     ```
