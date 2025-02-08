@@ -125,19 +125,19 @@ int main(int argc, char *argv[]) {
 }
 
 void write_index(char *txtfile, char *ndxfile) {
-    FILE *afp, *ifp;                    /* types of files       */
-    TREE_NODE *root;                    /* index tree           */
-    static INDEX header = {"!", 0};     /* dummy header node    */
+  FILE *afp, *ifp;                    /* types of files       */
+  TREE_NODE *root;                    /* index tree           */
+  static INDEX header = {"!", 0};     /* dummy header node    */
   
-    afp = cant(txtfile, "r");
-    if ((root = make_tree(afp, &header.pos)) != NULL) {
-      ifp = cant(ndxfile, "wb");
-      fwrite((char *) &header, sizeof(header), 1, ifp);
-      save_tree(root, ifp);
-      fclose(ifp);
-      printf("\n%ld records\n", header.pos);
-    }
-    fclose(afp);
+  afp = cant(txtfile, "r");
+  if ((root = make_tree(afp, &header.pos)) != NULL) {
+    ifp = cant(ndxfile, "wb");
+    fwrite((char *) &header, sizeof(header), 1, ifp);
+    save_tree(root, ifp);
+    fclose(ifp);
+    printf("\n%ld records\n", header.pos);
+  }
+  fclose(afp);
 }
 
 /*
