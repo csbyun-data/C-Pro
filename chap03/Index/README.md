@@ -27,6 +27,7 @@
     * lookup [lookup.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/lookup.c), [errors.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/errors.h), [ferrorf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/ferrorf.c), [indxlook.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/indxlook.h), [sniptype.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/sniptype.h)
     ```
     1) 찾는 name을 받아들여 index.ndx 파일에 name을 찾아 recodes.txt의 line을 찾음
+    2) lookup.exe records.txt index.ndx
     ```
     ![image](https://github.com/user-attachments/assets/dcf06104-7003-47ab-8b12-e74b7c6ddc40)
 
