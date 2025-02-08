@@ -18,7 +18,7 @@ Grammar of programming, a collection of basic materials for application.
 * [pointer and array, function pointer, pointer structure](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
 * [Pointer and Dynamic memory allocation](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
 * [Arrays and String in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
-* [snippets.org bastring](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/README.md), [left(), right(), mid(), string_add()]
+* [snippets.org],[bastring,left(), right(), mid(), string_add()](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/README.md), []
 * [Function Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/README.md)
 * [Book], [Function Pointer Tutorials](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)
 * [Book], [Pointers on C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/READ.md)
@@ -39,7 +39,7 @@ Grammar of programming, a collection of basic materials for application.
   저수준 파일함수 open(), write()
     ```
 * [File Command](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/README.md)
-* [File Index](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/README.md)
+* [snippets.org], [File Index](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/README.md)
 * [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
 ## Data Structure, Algorithm
