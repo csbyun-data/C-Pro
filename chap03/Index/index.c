@@ -84,22 +84,22 @@ FILE *cant(char *fname, char *fmode) {
 */
 
 typedef enum {Error_ = -1, Success_, False_ = 0, True_} Boolean_T;
-#define MAX_LINE           40       /* maximum line length			*/
+#define MAX_LINE           40       /* maximum line length	*/
 #define MAX_KEY            26       /* maximum key size			*/
 #define END_REC         ".\n"       /* end of a record			*/
 
-struct index_rec                /* index record				*/
+struct index_rec                /* index record	*/
 {
-	char key[MAX_KEY];            /* name					*/
-	long pos;                     /* position					*/
+  char key[MAX_KEY];            /* name					*/
+  long pos;                     /* position			*/
 };
 
 typedef struct index_rec INDEX;
 
 struct tree_node                      /* node in tree */
 {
-   struct tree_node *l_ptr, *r_ptr;   /* left and right pointers */
-   INDEX *data_ptr;                   /* data pointer */
+  struct tree_node *l_ptr, *r_ptr;   /* left and right pointers */
+  INDEX *data_ptr;                   /* data pointer */
 };
 
 typedef struct tree_node TREE_NODE;
@@ -112,11 +112,12 @@ long        bsearch_(FILE *ifp, long first, long last, char *target);
 
 int main(int argc, char *argv[]) {
   if (argc != 3) {
-        puts("Usage: INDEX text_file_name index_file_name\n");
-        puts("Note: The text file must consist of a number of records "
-             "separated by lines");
-        puts("      containing a single period (\".\")");
-        return EXIT_FAILURE;
+    puts("Usage: INDEX text_file_name index_file_name\n");
+    puts("Note: The text file must consist of a number of records "
+         "separated by lines");
+    puts("      containing a single period (\".\")");
+    
+    return EXIT_FAILURE;
   }
   write_index(argv[1], argv[2]);
   
@@ -143,8 +144,8 @@ void write_index(char *txtfile, char *ndxfile) {
 ** Make index tree
 */
 
-TREE_NODE *make_tree(FILE *fp,            /* file                 */
-                     long *cnt_ptr) {     /* count of records     */
+TREE_NODE *make_tree(FILE *fp,            /* file             */
+                     long *cnt_ptr) {     /* count of records */
   TREE_NODE *root = NULL, *temp_ptr;  /* add node to tree     */
   char line[MAX_LINE];                /* next line            */
   long start_pos = 0;
