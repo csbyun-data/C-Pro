@@ -18,7 +18,7 @@
     **  (123) 456-7890
     **  .
     **  etc...
-    2) create index file index.ndx
+    2) create index binary file index.ndx
     - name, line position
     3) index.exe records.txt index.ndx
     ```
