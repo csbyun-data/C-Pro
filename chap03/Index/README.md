@@ -19,6 +19,7 @@
     **  .
     **  etc...
     2) create index file index.ndx
+    - name, line position
     3) index.exe records.txt index.ndx
     ```
    
