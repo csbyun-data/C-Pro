@@ -1,7 +1,7 @@
 
 ### File Index
 * File Index
-    * Create Index [index.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/index.c)
+    * Create Index [index.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/index.c), [records.txt](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/records.txt)
     ```
     1) records.txt file (name, address, phone-number)
     **  This is the indexing function for creating a binary file from an ASCII
@@ -19,5 +19,6 @@
     **  .
     **  etc...
     2) create index file index.ndx
+    3) index.exe records.txt index.ndx
     ```
    
