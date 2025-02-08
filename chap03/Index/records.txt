@@ -1,0 +1,100 @@
+Mark Corgan
+550 Foothill Rd.
+Gardnerville, NV 89410
+(702) 265-2388
+.
+Hello World
+123 Anywhere St.
+Anytown, CA 12345
+(123) 456-7890
+.
+Jane Doe
+456 Oak St.
+Smalltown, CA 67890
+(321) 654-9870
+.
+Alice Johnson
+789 Maple Ave.
+Bigcity, CA 98765
+(555) 123-4567
+.
+Bob Smith
+101 Pine Blvd.
+Lakeside, NV 11223
+(777) 888-9999
+.
+Charlie Brown
+102 Elm St.
+Hilltop, AZ 44556
+(888) 123-2345
+.
+Diana White
+303 Birch Rd.
+Riverdale, TX 33445
+(444) 555-6666
+.
+Eva Green
+564 Cedar St.
+Woodland, UT 75634
+(999) 234-5678
+.
+Frank Miller
+789 Oak Rd.
+Parkview, NY 54321
+(888) 234-5678
+.
+Grace Lee
+123 Ash Ave.
+Eastwood, CA 87654
+(567) 123-7890
+.
+Henry Ford
+456 Pine Rd.
+Central City, TX 90876
+(321) 765-4321
+.
+Isabella Davis
+876 Birch Blvd.
+Mapleton, CO 10293
+(234) 567-8901
+.
+Jack Wilson
+234 Maple St.
+Clearwater, FL 34789
+(987) 654-3210
+.
+Kathy Clark
+876 Oak Ave.
+Lakeside, CA 90876
+(555) 654-1234
+.
+Louis Adams
+432 Pine Blvd.
+Northbrook, IL 65432
+(444) 888-1234
+.
+Mona Lisa
+654 Cedar Ave.
+Sunshine, FL 76890
+(321) 234-5678
+.
+Nathan Allen
+1234 Elm St.
+Woodville, TX 34210
+(987) 123-4321
+.
+Olivia Thompson
+1234 Maple Ave.
+Greenwood, AR 45678
+(222) 333-4444
+.
+Paul Roberts
+567 Oak Blvd.
+Sunnydale, CA 12390
+(654) 987-7654
+.
+Quincy Adams
+432 Maple St.
+Hill Valley, CO 87654
+(321) 543-9876
+.
