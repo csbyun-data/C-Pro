@@ -144,8 +144,7 @@ void write_index(char *txtfile, char *ndxfile) {
 */
 
 TREE_NODE *make_tree(FILE *fp,            /* file                 */
-                     long *cnt_ptr)       /* count of records     */
-{
+                     long *cnt_ptr) {     /* count of records     */
   TREE_NODE *root = NULL, *temp_ptr;  /* add node to tree     */
   char line[MAX_LINE];                /* next line            */
   long start_pos = 0;
