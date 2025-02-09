@@ -67,8 +67,8 @@
    a simple facility for specifying multiple commands
    > do dir/w
    ```
+   ![image](https://github.com/user-attachments/assets/e6f6911b-e697-4e1c-abd0-69b6a748fd4f)
 
-   
 * 증감 연산자
     ```c
     // 후위 증감 연산자
