@@ -62,6 +62,12 @@
    ```
    ![image](https://github.com/user-attachments/assets/87784b32-e090-4ad0-9319-45c84e13df33)
 
+  * [snippets.org] do [code]()
+   ```txt
+   a simple facility for specifying multiple commands
+   > do dir/w
+   ```
+
    
 * 증감 연산자
     ```c
