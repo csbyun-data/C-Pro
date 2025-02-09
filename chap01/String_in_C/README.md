@@ -176,6 +176,7 @@
     char *strrev(char *str);
     char *comma_float( double num, char *buf, int dec);
     ```
-    
+    ![image](https://github.com/user-attachments/assets/18ba751a-5892-4496-9dc4-9a38699aa27c)
+
 
 
