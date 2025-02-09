@@ -41,7 +41,7 @@
    ```
     ![image](https://github.com/user-attachments/assets/b63f8fb0-85b5-40b5-bb70-0963a1cc3cf8)  
 
-   * [snippets.org] cmdline [code]()
+   * [snippets.org] cmdline [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/cmdline.c)
    
 * 증감 연산자
     ```c
