@@ -170,6 +170,12 @@
       Sort( strArray, sCnt);
     }
     ```
+    * Format a double using commas as thousands separators and a specified number of significant fractional digits.
+      [code]()
+    ```
+    char *strrev(char *str);
+    char *comma_float( double num, char *buf, int dec);
+    ```
     
 
 
