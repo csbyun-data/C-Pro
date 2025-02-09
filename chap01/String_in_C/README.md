@@ -171,7 +171,7 @@
     }
     ```
     * Format a double using commas as thousands separators and a specified number of significant fractional digits.
-      [code]()
+      [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/commaflt.c)
     ```
     char *strrev(char *str);
     char *comma_float( double num, char *buf, int dec);
