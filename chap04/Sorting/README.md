@@ -31,6 +31,7 @@
 * [Snippets.org] sorting 정리
    * Sorting library
    ```c
+   // https://github.com/vonj/snippets.org/blob/master/snipsort.h
    void hugesort(void HUGE *basep, unsigned  nel, unsigned width,
         int (*comp)(void HUGE *, void HUGE *));         /* Hugesort.C     */
    void    *sortl(void *list, void *(*getnext)(void *), void (*setnext)(void *, void *),
