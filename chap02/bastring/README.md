@@ -1,6 +1,6 @@
 ### bastring
 * bastring function
-    * string function
+    * string function [bastring.c](). [bastring.h]()
     ```
     char *stralloc(size_t length);
     void  str_free(char *string);
