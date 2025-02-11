@@ -414,6 +414,38 @@
   char str[] = "  test  test  ";
   trim(str);
   ```
+  ```c
+  /*  RULER.C(PP) - A utility to create text ruler lines */
+  #define NUL '\0'
+  char * rule_line(char * s,
+                   unsigned short len,
+                   short units,
+                   char * digits,
+                   char filler)
+  {
+     /*  If possible, initialize directly with correct value!    */
+     short           whichdigit = 0;
+     short           digitlen = strlen(digits);
+     unsigned short  i;
+
+     memset(s, filler, len);             /*  Fill string with all filler   */
+     s[len]  = NUL;                      /*  Tack on an ASCIIZ             */
+
+     for (i = 0; i < len; i += units) {
+       s[i] = digits[whichdigit];    /*  Put in digit                  */
+       whichdigit++;                 /*  Add 1 and reset to 0 if...    */
+       whichdigit %= digitlen;       /* ...bigger than length of digits*/
+     }
+     return s;
+  }
+  //..
+  printf("%s\n", rule_line(ruler, 40,   1, "123", ' '));
+  printf("%s\n", rule_line(ruler, 40,   1, "12345", ' '));
+  printf("%s\n", rule_line(ruler, 40,   1, "1234567890", ' '));
+  printf("%s\n", rule_line(ruler, 40,   5, "0123456789", ' '));
+  printf("%s\n", rule_line(ruler, 40,  10, "1234567890", ' '));
+  ```
+
   * 4.3 pointer를 이용한 방법의 장점 (index표기법, 포인터 사용)
   ```c
   // index 표기법, 느림, index를 주소로 변한 후 값을 가져 옴
