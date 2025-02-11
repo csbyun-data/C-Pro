@@ -60,6 +60,8 @@
   /*  File: BINSRCH.C */
   int BinSearch(double key, double *r, size_t n);
   ```
+  * [dossort.c](https://github.com/vonj/snippets.org/blob/master/dossort.c)
+  * 
   * void ssort (void *base, size_t nel, size_t width, int (*comp)(const void *, const void *)); [rg_ssort.c]()
   * void strsort(char **v, unsigned n) [strsort.c](https://github.com/vonj/snippets.org/blob/master/strsort.c)
   ```c
