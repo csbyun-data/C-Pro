@@ -27,3 +27,33 @@
    * 1.5 Advanced Quick Sort (Hybrid Algorithm) [code C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/Hybrid_Quick_Sort.cpp)
    * Reference [advanced-quick-sort-hybrid-algorithm](https://www.geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm/)
    * 1.6 Quick Sort using vector and iterator in STL [code C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/STL_Quick_Sort1.cpp)
+
+* [Snippets.org] sorting 정리
+   * Sorting library
+   ```c
+   void hugesort(void HUGE *basep, unsigned  nel, unsigned width,
+        int (*comp)(void HUGE *, void HUGE *));         /* Hugesort.C     */
+   void    *sortl(void *list, void *(*getnext)(void *), void (*setnext)(void *, void *),
+        int (*compare)(void *, void *));                /* Ll_Qsort.C     */
+   void isort(void *base, size_t nmemb, size_t size,
+        int (*comp)(const void *, const void *));       /* Rg_Isort.C     */
+   void qsort(void *, size_t, size_t,
+        int (*)(const void *, const void *));           /* Rg_Qsort.C     */
+   void swap_chars(char *, char *, size_t);             /* Rg_Qsort.C     */
+   void quicksort(int v[], unsigned n);                 /* Rgiqsort.C     */
+   void ssort (void *base, size_t nel, size_t width,
+        int (*comp)(const void *, const void *));       /* Rg_Ssort.C     */
+   void strsort(char **v, unsigned n);                  /* Strsort.C      */
+  
+   /* File: LL_MSORT.C */
+   typedef struct list_struct {
+           struct list_struct *next;
+           char *key;
+           /* other stuff */
+           } list;
+  
+   list *lsort (list *p);
+  
+  /*  File: BINSRCH.C */
+  int BinSearch(double key, double *r, size_t n);
+  ```
