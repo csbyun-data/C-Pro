@@ -59,3 +59,13 @@
   /*  File: BINSRCH.C */
   int BinSearch(double key, double *r, size_t n);
   ```
+  * void strsort(char **v, unsigned n) [code](https://github.com/vonj/snippets.org/blob/master/strsort.c)
+  ```c
+  char *str[] = {"WELCOME", "TO", "LIBRARY", "MANAGEMENT", "SYSTEM" };
+  int i, n=5;
+  STRSORT(str, 5);
+  
+  for(i=0; i<n; i++) {
+    printf("%s\n",str[i] );
+  }
+  ```
