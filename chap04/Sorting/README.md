@@ -28,7 +28,8 @@
    * Reference [advanced-quick-sort-hybrid-algorithm](https://www.geeksforgeeks.org/advanced-quick-sort-hybrid-algorithm/)
    * 1.6 Quick Sort using vector and iterator in STL [code C++](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/STL_Quick_Sort1.cpp)
 
-* [Snippets.org] sorting 정리
+### [Snippets.org]
+* sorting 정리
    * Sorting library
    ```c
    // https://github.com/vonj/snippets.org/blob/master/snipsort.h
