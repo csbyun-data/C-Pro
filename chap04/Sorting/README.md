@@ -69,3 +69,5 @@
     printf("%s\n",str[i] );
   }
   ```
+  ![image](https://github.com/user-attachments/assets/f4cd976c-ee9b-46dd-a9aa-33227746a584)
+
