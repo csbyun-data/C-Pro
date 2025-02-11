@@ -62,6 +62,7 @@
   ```
   * void strsort(char **v, unsigned n) [code](https://github.com/vonj/snippets.org/blob/master/strsort.c)
   ```c
+  // Shell sort an array of string pointers via strcmp()
   char *str[] = {"WELCOME", "TO", "LIBRARY", "MANAGEMENT", "SYSTEM" };
   int i, n=5;
   STRSORT(str, 5);
