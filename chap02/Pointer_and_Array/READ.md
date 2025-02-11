@@ -388,6 +388,28 @@
     return 0;
   }
   ```
+  ```c
+  /*  TRIM.C - Remove leading, trailing, & excess embedded spaces */
+  #include <ctype.h>
+  #define NUL '\0'
+  
+  char *trim (char *str) {
+    char *ibuf, *obuf;
+
+    if (str) {
+      for (ibuf = obuf = str; *ibuf; ) {
+        while (*ibuf && (isspace(*ibuf)))
+          ibuf++;
+        if (*ibuf && (obuf != str))
+          *(obuf++) = ' ';
+        while (*ibuf && (!isspace(*ibuf)))
+          *(obuf++) = *(ibuf++);
+      }
+      *obuf = NUL;
+    }
+    return (str);
+  }
+  ```
   * 4.3 pointer를 이용한 방법의 장점 (index표기법, 포인터 사용)
   ```c
   // index 표기법, 느림, index를 주소로 변한 후 값을 가져 옴
