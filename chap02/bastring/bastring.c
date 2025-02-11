@@ -1,3 +1,5 @@
+// https://github.com/vonj/snippets.org
+
 /*
 **  BASIC-like string operations
 **
