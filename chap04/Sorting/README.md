@@ -1,4 +1,4 @@
-### [https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/) Sorting
+### [https://www.geeksforgeeks.org/] Sorting
 * Sorting 정리
    * 1.1 Bubble Sort in C [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/BubbleSort1.c)
    * 1.2 Bubble Sort 최적화 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Sorting/BubbleSort2.c)
