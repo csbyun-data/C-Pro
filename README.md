@@ -22,7 +22,13 @@ Grammar of programming, a collection of basic materials for application.
 * [Function Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/README.md)
 * [Book], [Function Pointer Tutorials](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)
 * [Book], [Pointers on C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/READ.md)
-* [Book], [A tutorial on pointers and arrays in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/README.md) 
+* [Book], [A tutorial on pointers and arrays in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/A_tutorial_on_pointers_and_arrays_in_C/README.md)
+```c
+// pointer function implementation
+void bubble(void *p, int width, int N, int(*fptr)(const void *, const void *));
+int compare_string(const void *m, const void *n);
+int compare_long(const void *m, const void *n);
+```
 
 ## Structure, Union
 * Structures and Unions in C
