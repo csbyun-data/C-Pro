@@ -409,6 +409,10 @@
     }
     return (str);
   }
+
+  //...
+  char str[] = "  test  test  ";
+  trim(str);
   ```
   * 4.3 pointer를 이용한 방법의 장점 (index표기법, 포인터 사용)
   ```c
