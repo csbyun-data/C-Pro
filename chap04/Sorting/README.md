@@ -62,9 +62,14 @@
   ```
   * [dossort.c](https://github.com/vonj/snippets.org/blob/master/dossort.c)
   * [mdasort.c](https://github.com/vonj/snippets.org/blob/master/mdasort.c)
-  * 
-  * void ssort (void *base, size_t nel, size_t width, int (*comp)(const void *, const void *)); [rg_ssort.c]()
-  * void strsort(char **v, unsigned n) [strsort.c](https://github.com/vonj/snippets.org/blob/master/strsort.c)
+  * [ll_msort.c](https://github.com/vonj/snippets.org/blob/master/ll_msort.c)
+  * [ll_qsort.c](https://github.com/vonj/snippets.org/blob/master/ll_qsort.c)
+  * [rg_isort.c](https://github.com/vonj/snippets.org/blob/master/rg_isort.c)
+  * [rg_qsort.c](https://github.com/vonj/snippets.org/blob/master/rg_qsort.c)
+  * [rg_rand.c](https://github.com/vonj/snippets.org/blob/master/rg_rand.c)
+  * [rg_ssort.c](https://github.com/vonj/snippets.org/blob/master/rg_ssort.c)
+  * [rgiqsort.c](https://github.com/vonj/snippets.org/blob/master/rgiqsort.c)
+  * [strsort.c](https://github.com/vonj/snippets.org/blob/master/strsort.c)
   ```c
   // Shell sort an array of string pointers via strcmp()
   char *str[] = {"WELCOME", "TO", "LIBRARY", "MANAGEMENT", "SYSTEM" };
