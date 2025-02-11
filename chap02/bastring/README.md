@@ -1,6 +1,6 @@
 ### bastring
 * bastring function
-    * string function [bastring.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/bastring.c). [bastring.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/bastring.h)
+    * string function [bastring.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/bastring.c), [bastring.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/bastring.h)
     ```
     char *stralloc(size_t length);
     void  str_free(char *string);
