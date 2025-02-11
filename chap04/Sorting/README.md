@@ -60,7 +60,7 @@
   /*  File: BINSRCH.C */
   int BinSearch(double key, double *r, size_t n);
   ```
-  * [dossort.c](https://github.com/vonj/snippets.org/blob/master/dossort.c)
+  * [dossort.c](https://github.com/vonj/snippets.org/blob/master/dossort.c) driver code
   * [mdasort.c](https://github.com/vonj/snippets.org/blob/master/mdasort.c)
   * [ll_msort.c](https://github.com/vonj/snippets.org/blob/master/ll_msort.c)
   * [ll_qsort.c](https://github.com/vonj/snippets.org/blob/master/ll_qsort.c)
