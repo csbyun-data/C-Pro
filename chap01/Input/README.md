@@ -45,4 +45,5 @@
     char szStr[] = "11:50:21"
     sscanf(szStr, "%2s %*c %2s %*c %2s", hh, mm, ss);
     // hh = 11, mm = 50, ss = 21
+    // %*c는 문자를 입력받고 무시함
     ```
