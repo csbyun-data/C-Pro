@@ -40,4 +40,4 @@
     }
     ```
     * gets(), puts() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_gets1.c)
-    * sscanf()
+    * sscanf() [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/time_mac_conv.c)
