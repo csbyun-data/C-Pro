@@ -49,7 +49,7 @@
     // Example:   "11:50:21" -> "115021"
     ```
 
-    * kbhit() 사용법 [code]()
+    * kbhit() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/timed_getch.c)
     ```
     // waits for a given number of seconds for the user to press
     // a key.  Returns the key pressed, or EOF if time expires
