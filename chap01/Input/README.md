@@ -40,7 +40,7 @@
     }
     ```
     * gets(), puts() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_gets1.c)
-    * sscanf() [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/time_mac_conv.c)
+    * sscanf() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/time_mac_conv.c)
     ```
     char szStr[] = "11:50:21"
     sscanf(szStr, "%2s %*c %2s %*c %2s", hh, mm, ss); // hh = 11, mm = 50, ss = 21, %*c는 문자를 입력받고 무시함
