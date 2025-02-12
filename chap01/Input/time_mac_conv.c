@@ -42,8 +42,8 @@ char *time_mac_conv(char *pszTime) {
 
 int main()
 {
-	char pszTime[]= "11:50:21";
-	printf("%s\n", time_mac_conv(pszTime));
-	
-	return 0;
+  char pszTime[]= "11:50:21";
+  printf("%s\n", time_mac_conv(pszTime));
+  
+  return 0;
 }
