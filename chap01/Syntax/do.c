@@ -1,3 +1,5 @@
+// https://github.com/vonj/snippets.org/blob/master/do.c
+
 /*
 **  DO.C - a simple facility for specifying multiple commands
 */
