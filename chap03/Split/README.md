@@ -2,6 +2,7 @@
 * split large text files
   * [split.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/split.c)
   * [filnames.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/filnames.h)
+  * [sniptype.h]()
   * [fnsplit.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/fnsplit.c)
     ```
     Boolean_T has_wild(char *pname);
