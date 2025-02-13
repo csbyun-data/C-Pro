@@ -1,5 +1,5 @@
 ### A utility to split large text files into smaller files
-* split large text files
+* [snippets.org] split large text files
   * [split.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/split.c)
   * [filnames.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/filnames.h)
   * [sniptype.h](https://github.com/csbyun-data/C-Pro/tree/main/chap03/Split/sniptype.h)
