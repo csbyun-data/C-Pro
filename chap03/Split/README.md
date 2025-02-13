@@ -30,3 +30,10 @@
   ```
   * [structfil.c](https://github.com/vonj/snippets.org/blob/master/strucfil.c)
   * [structfil.h](https://github.com/vonj/snippets.org/blob/master/strucfil.h)
+
+* [snippets.org] Functions to read configuration files
+  * Read configuration file data
+  * [cfg.h]()
+  * [cfg.c]()
+  * [cfg.tst]()
+  
