@@ -48,7 +48,7 @@ Grammar of programming, a collection of basic materials for application.
 * [File Command](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/README.md)
 * [snippets.org], [File Index](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/README.md)
 * [snippets.org], [A utility to split large text files into smaller files
-]()
+](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/README.md)
 * [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
 ## Data Structure, Algorithm
