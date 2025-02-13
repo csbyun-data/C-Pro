@@ -12,3 +12,7 @@
     ```
 
   * [unix2dos.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/unix2dos.c)
+    ```
+    char *unix2dos(char *path);
+    char *dos2unix(char *path);
+    ```
