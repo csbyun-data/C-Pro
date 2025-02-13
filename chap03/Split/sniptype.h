@@ -1,4 +1,4 @@
-/* +++Date last modified: 05-Jul-1997 */
+// https://github.com/vonj/snippets.org/blob/master/sniptype.h
 
 /*
 **  SNIPTYPE.H - Include file for SNIPPETS data types and commonly used macros
