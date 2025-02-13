@@ -18,6 +18,20 @@
     ```
    * ErrExit(char *fmt, ...) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/err_exit.c)
    ```
+   #include <stdarg.h>
+   #include <stdio.h>
+   #include <stdlib.h>
+   
+   void ErrExit(char *fmt, ...) {
+      va_list ap;
+   
+      va_start(ap, fmt) ;
+      vfprintf(stderr, fmt, ap);
+      fputc('\n', stderr);
+      exit(EXIT_FAILURE);
+   }
+   
+   ErrExit("Found x = %d, y = %d; Expected them to be equal!", x, y);
    ```
    
 * printf() function [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/printf_format1.c)
