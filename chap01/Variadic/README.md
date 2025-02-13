@@ -16,6 +16,10 @@
       va_end(ptr); // Ending argument list traversal
     }
     ```
+   * ErrExit(char *fmt, ...) [code]()
+   ```
+   ```
+   
 * printf() function [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/printf_format1.c)
     ```c
     int a;
