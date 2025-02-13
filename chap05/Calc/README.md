@@ -50,7 +50,7 @@
   4) 변수 출력 a;
   ```
   
-* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c)
+* SNIPPETS, A simple mathematical expression evaluator in C  [eval.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/Eval/eval.c), [eval.how](https://github.com/vonj/snippets.org/blob/master/eval.how)
   ```
   1) 프로그램에서 head 파일 참조 구현된 함수들을 1개의 파일로 만듦
   #include "sniptype.h"
