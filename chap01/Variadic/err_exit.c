@@ -1,3 +1,4 @@
+// https://github.com/vonj/snippets.org/blob/master/err_exit.c
 /*
 **  ERR_EXIT.C - A generic fatal error-handler by Dave Schaumann
 */
