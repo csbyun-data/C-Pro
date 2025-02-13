@@ -16,7 +16,7 @@
       va_end(ptr); // Ending argument list traversal
     }
     ```
-   * ErrExit(char *fmt, ...) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/err_exit.c)
+   * [snippets] ErrExit(char *fmt, ...) [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/err_exit.c)
    ```
    #include <stdarg.h>
    #include <stdio.h>
