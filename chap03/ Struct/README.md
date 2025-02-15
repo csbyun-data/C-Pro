@@ -11,4 +11,4 @@
    Written by Lynn Nash 8/28/91 and donated to the public domain.
   ```
   * [structfil.c](https://github.com/vonj/snippets.org/blob/master/strucfil.c)
-  * [structfil.h](https://github.com/vonj/snippets.org/blob/master/strucfil.h)
+  * [structfil.h](https://github.com/vonj/snippets.org/blob/master/strucfil.h), [blackbook.c](chap03/ Struct/struct_blackbook.c)
