@@ -25,6 +25,7 @@
     ```
     ![image](https://github.com/user-attachments/assets/8f683ed0-093d-424d-9ce1-d762135331fa)
     ```txt
+    // binary-file viewer
     > powershell
     > format-hex index.ndx
     ```
