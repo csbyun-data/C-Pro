@@ -28,7 +28,7 @@
     > powershell
     > format-hex index.ndx
     ```
-    ![image](https://github.com/user-attachments/assets/9a075219-6a6a-4eb9-b7d1-d018f6204176)
+    ![image](https://github.com/user-attachments/assets/4d5d3a71-bcc4-424f-b50f-922e2672325d)
 
     * lookup [lookup.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/lookup.c), [errors.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/errors.h), [ferrorf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/ferrorf.c), [indxlook.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/indxlook.h), [sniptype.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/sniptype.h)
     ```
