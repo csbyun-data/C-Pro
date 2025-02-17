@@ -21,6 +21,7 @@
     2) create index binary file index.ndx
     - name, line position
     3) index.exe records.txt index.ndx
+       index.ndx binary file content : person name, 이름의 위치(문자의 갯수 카운터) 
     ```
     ![image](https://github.com/user-attachments/assets/8f683ed0-093d-424d-9ce1-d762135331fa)
     ```txt
