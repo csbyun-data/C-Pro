@@ -23,6 +23,11 @@
     3) index.exe records.txt index.ndx
     ```
     ![image](https://github.com/user-attachments/assets/8f683ed0-093d-424d-9ce1-d762135331fa)
+    ```txt
+    > powershell
+    > format-hex index.ndx
+    ```
+    ![image](https://github.com/user-attachments/assets/9a075219-6a6a-4eb9-b7d1-d018f6204176)
 
     * lookup [lookup.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/lookup.c), [errors.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/errors.h), [ferrorf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/ferrorf.c), [indxlook.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/indxlook.h), [sniptype.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/sniptype.h)
     ```
