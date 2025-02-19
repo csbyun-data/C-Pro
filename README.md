@@ -4,7 +4,7 @@ Grammar of programming, a collection of basic materials for application.
 ## Index
 ## Syntax
 * [Syntax (command line, 증감 연산자)](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/README.md) 
-* [가변인자, 가변함수](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/README.md)
+* [가변인자, 가변함수](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/README.md) [ErrExit(), printf()]
 * [Input(scanf, gets, fgets)](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/README.md)
 * [time, qsort 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/README.md)
 * [조건문, 반복문, setjmp()](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/README.md)
