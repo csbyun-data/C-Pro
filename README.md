@@ -45,7 +45,7 @@ Grammar of programming, a collection of basic materials for application.
     fgetc(), fgets(), fread(), fseek()
   저수준 파일함수 open(), write()
     ```
-* [File Command, file copy, tail](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/README.md)
+* [File Command](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/README.md), [file copy, file size, tail]
 * [snippets.org], [File Index](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/README.md)
 * [snippets.org], [A utility to split large text files into smaller files
 ](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/README.md)
