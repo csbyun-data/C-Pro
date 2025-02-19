@@ -1,3 +1,4 @@
+// https://github.com/vonj/snippets.org/blob/master/cfg.h
 /* =======================================================================
     CFG.h       Configuration file handler.
                 A. Reitsma, Delft, The Netherlands.
