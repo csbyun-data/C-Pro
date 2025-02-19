@@ -1,4 +1,4 @@
-## 1.getline 함수 구현및 사용법
+## 1.getline() 함수 구현및 사용법
 ### INDEX
 * 1.getline 함수
   ```txt
