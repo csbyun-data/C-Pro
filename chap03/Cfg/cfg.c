@@ -28,6 +28,18 @@ enum RetVal {
   ERR_MEM,
 };
 
+FILE *cant(char *fname, char *fmode)
+{
+      FILE *fp;
+
+      if (NULL == (fp = fopen(fname, fmode)))
+      {
+            ferrorf(stderr, "Can't open %s", fname);
+            exit(EXIT_FAILURE);
+      }
+      return fp;
+}
+
 int CfgRead( char *Filename, struct CfgStrings *CfgInfo ) {
   char Buffer[ BUFFERSIZE ];
   char *WorkPtr ;
