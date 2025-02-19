@@ -50,7 +50,6 @@ Grammar of programming, a collection of basic materials for application.
 * [snippets.org], [A utility to split large text files into smaller files
 ](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Split/README.md)
 * [snippets.org] [Functions to read configuration files](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Cfg/README.md)
-* [snippets.org] [reading and writing structures to a sequential file](https://github.com/csbyun-data/C-Pro/blob/main/chap03/%20Struct/README.md)
 * [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
 ## Data Structure, Algorithm
