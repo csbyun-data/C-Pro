@@ -1,3 +1,5 @@
+// https://github.com/vonj/snippets.org/blob/master/cfg.c
+
 /* =======================================================================
     CFG.c       Generic configuration file handler.
 
@@ -13,19 +15,27 @@
 #define LINE_LEN_MAX    128                  /* actual max line length  */
 #define BUFFERSIZE      LINE_LEN_MAX +2      /* ... including \n and \0 */
 
+struct CfgStrings CfgDemoData[] =
+{ { "workpath", NULL },
+  { "archiver", NULL },
+  { "splitter", NULL },
+  { NULL, NULL }         /* array terminator. REQUIRED !!! */
+};
+
 enum RetVal {
   NO_PROBLEMS,
   ERR_FOPEN,
   ERR_MEM,
 };
 
-int CfgRead( char * Filename, struct CfgStrings * CfgInfo ) {
+int CfgRead( char *Filename, struct CfgStrings *CfgInfo ) {
   char Buffer[ BUFFERSIZE ];
-  char * WorkPtr ;
-  char * CfgName ;
-  char * CfgData ;
-  struct CfgStrings * Cfg ;
-  FILE * CfgFile ;
+  char *WorkPtr ;
+  char *CfgName ;
+  char *CfgData ;
+  
+  struct CfgStrings *Cfg ;
+  FILE *CfgFile ;
 
   CfgFile = fopen( Filename, "r" );
   if( NULL == CfgFile ) {
@@ -33,8 +43,10 @@ int CfgRead( char * Filename, struct CfgStrings * CfgInfo ) {
   }
 
   while( NULL != fgets( Buffer, BUFFERSIZE, CfgFile )) {
-    /* clip off optional comment tail indicated by a semi-colon
-    */
+    /* clip off optional comment tail indicated by a semi-colon */
+    
+	// printf("buffer : %s", Buffer); // get string line in cfg.ini
+	
     if( NULL != (WorkPtr = strchr( Buffer, ';' )))
       *WorkPtr = '\0';
     else
@@ -52,12 +64,15 @@ int CfgRead( char * Filename, struct CfgStrings * CfgInfo ) {
       continue;
 
     CfgName = strtok( WorkPtr, " =" );
+    // printf("CfgName : '%s', ", CfgName);    
     if( NULL != CfgName ) {
       /* Condition the name (lower case required),
          and strip leading white and a 'late' = from data part.
       */
-      strlwr( CfgName );
+      strlwr( CfgName );  // change to the lower case string
       CfgData = strtok( NULL, "" );
+      // printf("CfgData : '%s' ", CfgData);
+      
       while( isspace( *CfgData ))
         CfgData++;
       if( '=' == *CfgData )
@@ -65,18 +80,18 @@ int CfgRead( char * Filename, struct CfgStrings * CfgInfo ) {
       while( isspace( *CfgData ))
         CfgData++;
 
-      /* look for matching 'name'
-      */
+	  // printf("-> '%s'\n", CfgData);
+	  
+      /* look for matching 'name' */
       Cfg = CfgInfo ;
       while( NULL != Cfg->name && 0 != strcmp( Cfg->name, CfgName ))
         Cfg++;
 
-      /* duplicate the data if the name is found.
-      */
+      /* duplicate the data if the name is found. */
       if( NULL != Cfg->name ) {
         Cfg->data = strdup( CfgData ); /* strdup is not ANSI    */
-                                   /* memory leaks if Cfg->data */
-                                   /* is malloc'ed already      */
+                                       /* memory leaks if Cfg->data */
+                                       /* is malloc'ed already      */
         if( NULL == Cfg->data ) {
           fclose( CfgFile );
           return ERR_MEM;
@@ -90,29 +105,18 @@ int CfgRead( char * Filename, struct CfgStrings * CfgInfo ) {
   return NO_PROBLEMS ;
 }
 
-
-struct CfgStrings CfgDemoData[] =
-{
-  { "workpath", NULL },
-  { "archiver", NULL },
-  { "splitter", NULL },
-  { NULL, NULL }         /* array terminator. REQUIRED !!! */
-};
-
-main( int argc, char * argv[] )
+int main( int argc, char * argv[] )
 {
   int ix ;
 
-  if( argc > 1 )
-    CfgRead( argv[ 1 ], CfgDemoData );
-  else
+  if( argc != 2 ) {
+    puts("Usage: cfg cfg.ini\n");
     return ERR_FOPEN ;
+  } else
+    CfgRead( argv[ 1 ], CfgDemoData );
 
-  printf( "%s\n", argv[ 0 ]);
   for( ix = 0; ix < 4 ; ix++ ) /* intentionally one too much */
     printf( "CfgItem \"%s\" is \"%s\"\n", CfgDemoData[ ix ].name,
                                           CfgDemoData[ ix ].data );
   return NO_PROBLEMS;
 }
-
-/* ==== CFG.c end ===================================================== */
