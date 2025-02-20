@@ -56,13 +56,15 @@
    ```
     ![image](https://github.com/user-attachments/assets/b63f8fb0-85b5-40b5-bb70-0963a1cc3cf8)  
 
+
+### [snippets.org]
+* command line options
    * [snippets.org] cmdline [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/cmdline.c)
    ```txt
    > cmdline 1 2 abc
    ```
    ![image](https://github.com/user-attachments/assets/87784b32-e090-4ad0-9319-45c84e13df33)
 
-* [snippets.org]
    * do [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/do.c)
    ```txt
    a simple facility for specifying multiple commands
