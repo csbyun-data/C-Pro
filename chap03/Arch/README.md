@@ -13,7 +13,4 @@
     Archive.Hpp  any  Declaration of extensible archive classes
   * Archive.Cpp  any  Archive class member functions
   ```
-  * [whicharc.cpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.cpp)
-  * [whicharc.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.h)
-  * [archive.cpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/archive.cpp)
-  * [archive.hpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.hpp)
+  * [code], [whicharc.cpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.cpp), [whicharc.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.h), [archive.cpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/archive.cpp), [archive.hpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.hpp)
