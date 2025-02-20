@@ -31,7 +31,7 @@ WORD ff_date(DOSFileData *f) {
   return DOS_date;
 }
 
-WORD ff_time(DOSFileData *f) [
+WORD ff_time(DOSFileData *f) {
   WORD DOS_date;
   WORD DOS_time;
 
