@@ -1,4 +1,4 @@
-### Input (scanf, gets, fgets)
+### Input함수 (scanf, gets, fgets)
 * Input
     * scanf() 사용법 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_Scanf.c), (입력 문자열에 공백이 있는 경우 공백뒷글자 잘림 )
     * fgets() 문자열 한줄 읽어 들임 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/Input_fgets4.c)
