@@ -62,12 +62,33 @@
    ```
    ![image](https://github.com/user-attachments/assets/87784b32-e090-4ad0-9319-45c84e13df33)
 
-  * [snippets.org] do [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/do.c)
+* [snippets.org]
+   * do [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/do.c)
    ```txt
    a simple facility for specifying multiple commands
    > do dir/w
    ```
    ![image](https://github.com/user-attachments/assets/08487916-a36b-42ad-964b-4932c9ef1f2f)
+
+   *  Functions to get command line options
+   ```
+   |=============================================================================
+   | Functions to get command line options
+   |=============================================================================
+   | File         O/S  Description
+   | ------------ ---  ----------------------------------------------------------
+     Getopts.Man  n/a  Manual for using getopts()
+     Getopts.H    any  Header for Getopts.C
+   * Getopts.C    any  Scan command line for switches, filenames, response files
+     Getoptst.C   any  Test program to exercise getopts()
+     Palnfilt.C   any  Palindrome filter, demo for Getopts.C
+   + Getoptsl.Man n/a  Manual for using getopts_lite()
+     Getoptsl.H   any  "Getopts Lite" - Smaller & simpler than full GETOPTS
+     Getoptsl.C   any
+   ```
+   * [code] 진행중
+   
+  
 
 * 증감 연산자
     ```c
