@@ -19,8 +19,10 @@
   char * -> const char * 로 변경
   char *Arctypes[] -> const char *Arctypes[]
   char *fingerprint; ->   const char *fingerprint;
-  Archive (long offs, char *fp, int t = UNKNOWN, int t2 = UNKNOWN) : offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
-  -> Archive (long offs, const char *fp, int t = UNKNOWN, int t2 = UNKNOWN) : offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
+  Archive (long offs, char *fp, int t = UNKNOWN, int t2 = UNKNOWN) :
+           offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
+  -> Archive (long offs, const char *fp, int t = UNKNOWN, int t2 = UNKNOWN) :
+           offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
   LhaArchive (long offs, char *fp) : Archive (offs, fp) { };
   -> LhaArchive (long offs, const char *fp) : Archive (offs, fp) { };
   char *p; ->   const char *p;
