@@ -1,6 +1,17 @@
 
 ### File Index
 * The indexing function for creating a binary file from an ASCII
+   ```
+   |=============================================================================
+   | Mark Corgan's functions for indexing and looking up data in text files
+   |=============================================================================
+   | File         O/S  Description
+   | ------------ ---  ----------------------------------------------------------
+     Indxlook.H   any  Header for INDEX.C and LOOKUP.C
+   * Index.C      any  Create a binary searchable index file from a text file
+     Lookup.C     any  Search a text file using a binary search index
+   ```
+  
     * Create Index [index.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/index.c), [records.txt](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/records.txt)
     ```
     1) records.txt file (name, address, phone-number)
