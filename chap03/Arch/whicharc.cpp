@@ -119,7 +119,7 @@ int SeekFile (FILE *fp, char *header, long pos) {
 } // SeekFile
 
 
-int WhichArc (char *szFileName) {
+int WhichArc ( char *szFileName) {
   char  header[BUFFSIZE];
 
   memset (header, 0, sizeof (header));
@@ -196,9 +196,7 @@ int WhichArc (char *szFileName) {
   return rc;
 }
 
-#ifdef TEST
-
-char *Arctypes[] = {
+const char *Arctypes[] = {
   "UNKNOWN"    ,
   "ARC"        ,
   "ARC6"       ,
@@ -248,8 +246,6 @@ int main (int argc, char *argv[])
 
   return arc_type;
 }
-
-#endif
 
 #ifdef __cplusplus
    }
