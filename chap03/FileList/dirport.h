@@ -1,44 +1,44 @@
 /*====================================================================
 
-    _MSC_VER        Microsoft C 6.0 and later
-    __SC__          Symantec C++ and Digital Mars C++
-    __ZTC__         Zortech C and C++ (also Symantec & Digital Mars)
-    __GNUC__        Gnu C
-
-    Revised:
-
-    Original   Scott Ladd   Now obsolete
-    14-Sep-93  Fred Cole    Moved MK_FP() macro to end of file to avoid
-                            redefinition error when dos.h gets included
-                            at the in/outport definitions for __TURBOC__
-    15-Sep-93  Thad Smith   Add conditional code for TC 2.01
-                            Fix findfirst/findnext support for ZTC 3.0
-    15-Oct-93  Bob Stout    Revise find first/next support
-    02-Dec-93  David Nugent Additions for findfirst/findnext support for
-                            MSC6 (& 7) for OS/2
-                            Added FIND_END macro for use under OS/2 to
-                            be nice about closing the directory handle
-                            DOSFileData members should be accessed via
-                            the new ff_*() macros for portability
-                            Note: use -DOS2 when compiling under OS/2
-    03-Apr-94  Bob Stout    Add Power C support, FAR
-    19-Aug-95  Bob Stout    Add NEAR, PASCAL, CDECL, and portable attributes
-    06-Sep-95  Phi Nguyen   Add DOSFileTime, DOSFileDate, & supporting macros
-               Bob Stout    (ff_yr/mo/day(), ff_hr/min/tsec())
-    08-Sep-95  Bob Nelson   Add __GNUCC__ and PAK macro
-    21-Sep-95  Bob Stout    Renamed to PC-PORT.H, revised directory stuff
-    25-Sep-95  Bob Stout    Split out EXTKWORD.H
-    26-Sep-95  Jerry Coffin Added Win32 support.
-    21-Oct-95  Bob Stout    Resolve struct dirent incompatibilities,
-                            move port I/O macros to PCHWIO.H,
-                            move MK_FP() cover to SNIPTYPE.H,
-                            rename to DIRPORT.H(!!!)
-    15-May-96  David Nugent Added 32-bit OS/2 support (Watcom/emx)
-    04-Jul-96  Bob Stout    Fixed attribute redefinition problems w/ TC 3.x
-    28-Jul-96  Bob Stout    Fixed error in definition of ff_sec() in DOS
-    20-Aug-96  Bob Stout    Eliminate Win32 conflicts
-    05-aug-01  Bob Stout    Remove support for everything but DMC & gcc,
-                            reorganize.
+  _MSC_VER        Microsoft C 6.0 and later
+  __SC__          Symantec C++ and Digital Mars C++
+  __ZTC__         Zortech C and C++ (also Symantec & Digital Mars)
+  __GNUC__        Gnu C
+  
+  Revised:
+  
+  Original   Scott Ladd   Now obsolete
+  14-Sep-93  Fred Cole    Moved MK_FP() macro to end of file to avoid
+                          redefinition error when dos.h gets included
+                          at the in/outport definitions for __TURBOC__
+  15-Sep-93  Thad Smith   Add conditional code for TC 2.01
+                          Fix findfirst/findnext support for ZTC 3.0
+  15-Oct-93  Bob Stout    Revise find first/next support
+  02-Dec-93  David Nugent Additions for findfirst/findnext support for
+                          MSC6 (& 7) for OS/2
+                          Added FIND_END macro for use under OS/2 to
+                          be nice about closing the directory handle
+                          DOSFileData members should be accessed via
+                          the new ff_*() macros for portability
+                          Note: use -DOS2 when compiling under OS/2
+  03-Apr-94  Bob Stout    Add Power C support, FAR
+  19-Aug-95  Bob Stout    Add NEAR, PASCAL, CDECL, and portable attributes
+  06-Sep-95  Phi Nguyen   Add DOSFileTime, DOSFileDate, & supporting macros
+             Bob Stout    (ff_yr/mo/day(), ff_hr/min/tsec())
+  08-Sep-95  Bob Nelson   Add __GNUCC__ and PAK macro
+  21-Sep-95  Bob Stout    Renamed to PC-PORT.H, revised directory stuff
+  25-Sep-95  Bob Stout    Split out EXTKWORD.H
+  26-Sep-95  Jerry Coffin Added Win32 support.
+  21-Oct-95  Bob Stout    Resolve struct dirent incompatibilities,
+                          move port I/O macros to PCHWIO.H,
+                          move MK_FP() cover to SNIPTYPE.H,
+                          rename to DIRPORT.H(!!!)
+  15-May-96  David Nugent Added 32-bit OS/2 support (Watcom/emx)
+  04-Jul-96  Bob Stout    Fixed attribute redefinition problems w/ TC 3.x
+  28-Jul-96  Bob Stout    Fixed error in definition of ff_sec() in DOS
+  20-Aug-96  Bob Stout    Eliminate Win32 conflicts
+  05-aug-01  Bob Stout    Remove support for everything but DMC & gcc,
+                          reorganize.
 ======================================================================*/
 
 /* prevent multiple inclusions of this header file */
@@ -186,13 +186,13 @@ typedef struct {
 #if  !defined(WIN32) && !defined(_WIN32) && !defined(__unix__) /* Not Win32 or Unix - i.e. DOS */
 
  typedef struct DIRENT_ {
-      char              reserved[21];
-      char              attrib;
-      DOSFileTime       time;
-      DOSFileDate       date;
-      long              d_size;
-      char              d_name[13];
-      } DOSFileData;
+    char              reserved[21];
+    char              attrib;
+    DOSFileTime       time;
+    DOSFileDate       date;
+    long              d_size;
+    char              d_name[13];
+    } DOSFileData;
 
  #define ff_name(x)     (x)->d_name
  #define ff_size(x)     (x)->d_size
