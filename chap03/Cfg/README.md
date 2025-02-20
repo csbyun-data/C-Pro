@@ -1,7 +1,17 @@
 ### Functions to read configuration files
 * [snippets.org] Read configuration file data
     ```
-    
+    |=============================================================================
+    | Functions to read configuration files
+    |=============================================================================
+    | File         O/S  Description
+    | ------------ ---  ----------------------------------------------------------
+      Cfg.H        any  Read configuration file data
+      Cfg.C        any
+      Cfg.Tst      any  Test data file for CFG.C #ifdef TEST section
+      Initvars.H   any  Read data into variables
+      Initvars.C   any
+      Initvars.Tst any  Test data file for INITVARS.C #ifdef TEST section
     ```
     
     * [cfg.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Cfg/cfg.h)
