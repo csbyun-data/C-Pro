@@ -1,6 +1,6 @@
 
 ### File Index
-* File Index
+* The indexing function for creating a binary file from an ASCII
     * Create Index [index.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/index.c), [records.txt](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/records.txt)
     ```
     1) records.txt file (name, address, phone-number)
