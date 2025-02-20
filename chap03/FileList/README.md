@@ -8,3 +8,5 @@
    ```
    > filelist *
    ```
+   ![image](https://github.com/user-attachments/assets/b3874f58-1fb9-4582-930a-4e1fdcaf7cd7)
+
