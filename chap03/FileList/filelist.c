@@ -70,14 +70,13 @@ main(int argc, char *argv[])
 
   nFiles = Get_FileList(plist, argv + 1, argc - 1, _A_FILE);
   if (nFiles >= 0) {
-    for (i = 0; i < nFiles; i++)
-    {
-          printf("%-12s %8li  %2u-%02u-%02u  %2u:%02u\n",
-                ff_name(&plist->file), ff_size(&plist->file),
-                ff_mo(&plist->file), ff_day(&plist->file),
-                ff_yr(&plist->file) + 80, ff_hr(&plist->file),
-                ff_min(&plist->file));
-          plist = plist->next;
+    for (i = 0; i < nFiles; i++) {
+      printf("%-12s %8li  %2u-%02u-%02u  %2u:%02u\n",
+            ff_name(&plist->file), ff_size(&plist->file),
+            ff_mo(&plist->file), ff_day(&plist->file),
+            ff_yr(&plist->file) + 80, ff_hr(&plist->file),
+            ff_min(&plist->file));
+      plist = plist->next;
     }
     Free_FileList(&list);
   } else {
