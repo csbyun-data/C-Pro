@@ -35,10 +35,11 @@ class Archive {
 protected:
   int  type, sfxtype;
   long offset;
-  char *fingerprint;
+  
+  const char *fingerprint;
 
 public:
-  Archive (long offs, char *fp, int t = UNKNOWN, int t2 = UNKNOWN) :
+  Archive (long offs, const char *fp, int t = UNKNOWN, int t2 = UNKNOWN) :
               offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
 
   int Scan  (FILE *fp, char *szBuff, long flen);
@@ -47,7 +48,7 @@ public:
 
 class LhaArchive : public Archive {
 public:
-  LhaArchive (long offs, char *fp) : Archive (offs, fp) { };
+  LhaArchive (long offs, const char *fp) : Archive (offs, fp) { };
   int Check (char *szBuff);
 };
 
