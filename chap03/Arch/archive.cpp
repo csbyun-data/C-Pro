@@ -35,7 +35,7 @@ int Archive::Scan (FILE *fp, char *szBuff, long flen) {
 // class from class Archive and write a new Check() function.
 
 int Archive::Check (char *szBuff) {
-  char *p;
+  const char *p;
   
   p = fingerprint;
   while (*p) {
