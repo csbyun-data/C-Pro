@@ -18,6 +18,10 @@
   [Warning] deprecated conversion from string constant to 'char*' [-Wwrite-strings]
   
   char * -> const char * 로 변경
+
+  > chcp 437
+  > rename file.zip file.abc
+  > whicharc file.abc
   ```
   ![image](https://github.com/user-attachments/assets/7422b5a1-ed70-4011-87fb-eeb050663d21)
 
