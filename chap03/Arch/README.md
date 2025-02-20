@@ -14,3 +14,16 @@
   * Archive.Cpp  any  Archive class member functions
   ```
   * [code], [whicharc.cpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.cpp), [whicharc.h](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.h), [archive.cpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/archive.cpp), [archive.hpp](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/whicharc.hpp)
+  ```
+  [Warning] deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  char * -> const char * 로 변경
+  char *Arctypes[] -> const char *Arctypes[]
+  char *fingerprint; ->   const char *fingerprint;
+  Archive (long offs, char *fp, int t = UNKNOWN, int t2 = UNKNOWN) : offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
+  -> Archive (long offs, const char *fp, int t = UNKNOWN, int t2 = UNKNOWN) : offset (offs), fingerprint (fp), type(t), sfxtype (t2) { };
+  LhaArchive (long offs, char *fp) : Archive (offs, fp) { };
+  -> LhaArchive (long offs, const char *fp) : Archive (offs, fp) { };
+  char *p; ->   const char *p;
+  ```
+  
+  
