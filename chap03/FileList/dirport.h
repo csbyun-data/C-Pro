@@ -1,3 +1,6 @@
+// https://github.com/vonj/snippets.org/blob/master/dirport.h
+// https://github.com/vonj/snippets.org/blob/master/extkword.h
+
 /*====================================================================
 
   _MSC_VER        Microsoft C 6.0 and later
