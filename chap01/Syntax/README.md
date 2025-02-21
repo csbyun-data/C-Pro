@@ -88,7 +88,7 @@
      Getoptsl.H   any  "Getopts Lite" - Smaller & simpler than full GETOPTS
      Getoptsl.C   any
    ```
-   * [code] [getoptsl.c](), [getoptsl.h](),  
+   * [code] [getoptsl.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.c), [getoptsl.h](),  
    ![image](https://github.com/user-attachments/assets/bb43693a-d511-4834-9773-2ad02825a22e)
 
    
