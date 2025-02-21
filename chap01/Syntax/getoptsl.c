@@ -1,3 +1,5 @@
+// https://github.com/vonj/snippets.org/blob/master/getoptsl.c
+
 /*
 **  GETOPTS.C - Universal command line options parser
 **
