@@ -88,7 +88,7 @@
      Getoptsl.H   any  "Getopts Lite" - Smaller & simpler than full GETOPTS
      Getoptsl.C   any
    ```
-   * [code] 진행중
+   * [code] [getoptsl.c](), [getoptsl.h](), 
    
   
 
