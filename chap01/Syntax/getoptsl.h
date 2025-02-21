@@ -1,3 +1,6 @@
+// https://github.com/vonj/snippets.org/blob/master/getoptsl.h
+// https://github.com/vonj/snippets.org/blob/master/sniptype.h
+
 /*
 **  GETOPTS.H
 **
