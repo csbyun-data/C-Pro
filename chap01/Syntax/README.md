@@ -96,7 +96,8 @@
 
    // test1 = FALSE로 변경
    ```
-   ![image](https://github.com/user-attachments/assets/bb43693a-d511-4834-9773-2ad02825a22e)
+   ![image](https://github.com/user-attachments/assets/8c3f795d-4b36-46d0-bff2-0b94d5a4c53b)
+
 
    
   
