@@ -88,7 +88,7 @@
      Getoptsl.H   any  "Getopts Lite" - Smaller & simpler than full GETOPTS
      Getoptsl.C   any
    ```
-   * [code] [getoptsl.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.c), [getoptsl.h](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.h),
+   * [code] [getoptsl.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.c), [getoptsl.h](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.h), [Getoptsl.Man](https://github.com/vonj/snippets.org/blob/master/getoptsl.man)
    ```
    > getopsl -A-
    // test1 = FALSE로 변경
