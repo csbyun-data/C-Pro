@@ -98,6 +98,7 @@
    ```
    ![image](https://github.com/user-attachments/assets/8c3f795d-4b36-46d0-bff2-0b94d5a4c53b)
    * [[code] [getopts.man](https://github.com/vonj/snippets.org/blob/master/getopts.man), [getoptst.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptst.c),[getopts.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getopts.c), [getopts.h](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getopts.h)
+   ![image](https://github.com/user-attachments/assets/aad661e6-c603-4105-9224-e15eff48e3d1)
 
 
    
