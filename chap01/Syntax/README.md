@@ -59,13 +59,13 @@
 
 ### [snippets.org]
 * command line options
-   * [snippets.org] cmdline [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/cmdline.c)
+   * [snippets.org] cmdline [cmdline.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/cmdline.c)
    ```txt
    > cmdline 1 2 abc
    ```
    ![image](https://github.com/user-attachments/assets/87784b32-e090-4ad0-9319-45c84e13df33)
 
-   * [snippets.org] do [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/do.c)
+   * [snippets.org] do [do.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/do.c)
    ```txt
    a simple facility for specifying multiple commands
    > do dir/w
@@ -97,6 +97,7 @@
    // test1 = FALSE로 변경
    ```
    ![image](https://github.com/user-attachments/assets/8c3f795d-4b36-46d0-bff2-0b94d5a4c53b)
+   * [[code] [getoptst.c](), 
 
 
    
