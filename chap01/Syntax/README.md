@@ -90,9 +90,9 @@
    ```
    * [code] [getoptsl.c](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.c), [getoptsl.h](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/getoptsl.h), [Getoptsl.Man](https://github.com/vonj/snippets.org/blob/master/getoptsl.man)
    ```
-   > getopsl -a-
-   -a    turns on the option, while
-   -a-   turns off the option.
+   > getopsl -A-
+   -A    turns on the option, while
+   -A-   turns off the option.
 
    // test1 = FALSE로 변경
    ```
