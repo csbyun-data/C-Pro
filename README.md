@@ -52,7 +52,7 @@ Grammar of programming, a collection of basic materials for application.
 * [snippets.org], [Functions to read configuration files](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Cfg/README.md)
 * [snippets.org], [Read a directory into a linked list](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileList/README.md)
 * [snippets.org], [Extensible C & C++ determine which archiver was used on a packed file](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Arch/README.md)
-* [snippets.org], [fork](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Fork/README.md)
+* [snippets.org], [fork output to multiple files, including console.](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Fork/README.md)
 * [aticleworld.com], [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
 ## Data Structure, Algorithm
