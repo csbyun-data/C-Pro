@@ -5,3 +5,4 @@
     echo hello world > abc.txt
     type abc.txt|fork out1.txt *out2.txt /c
     ```
+    ![image](https://github.com/user-attachments/assets/dc478c2f-e859-49a5-b088-ee2490920ff0)
