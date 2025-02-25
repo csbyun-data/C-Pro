@@ -35,13 +35,14 @@
 
 typedef struct filenode
 {
-      FILE            *ptr;
-      struct filenode *next;
+  FILE            *ptr;
+  struct filenode *next;
 } FILENODE;                 /* Node in ll containing a file pointer */
+
 typedef struct
 {
-      FILENODE     *head;
-      FILENODE     *tail;
+  FILENODE     *head;
+  FILENODE     *tail;
 } LL;                       /* ll of FILE pointers                  */
 
 void llopen(LL *files, FILE *fptr);
