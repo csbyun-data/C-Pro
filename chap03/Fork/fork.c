@@ -1,4 +1,4 @@
-https://github.com/vonj/snippets.org/blob/master/fork.c
+//https://github.com/vonj/snippets.org/blob/master/fork.c
 
 /*
 ** fork.c (fork.h) - fork output to multiple file(s).
