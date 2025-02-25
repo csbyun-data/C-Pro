@@ -12,7 +12,7 @@
      FILENODE     *tail;
     } LL;                       /* ll of FILE pointers                  */
     ```
-    <img src = "https://github.com/user-attachments/assets/0259cf04-4a76-43e5-967b-4f2459411b1d" width="70%" height="70%">
+    <img src = "https://github.com/user-attachments/assets/0259cf04-4a76-43e5-967b-4f2459411b1d" width="60%" height="60%">
 
     ```
     echo hello world > abc.txt
