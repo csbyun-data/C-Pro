@@ -3,9 +3,11 @@
 
 int main() {
 	init();
+	
 	while(1){
 		titleDraw();
 		int menuCode = menuDraw();
+		
 		if(menuCode == 0){
 			int n = maplistDraw();
 			
