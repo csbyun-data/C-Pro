@@ -10,10 +10,12 @@ int main() {
 	const int SPEED = 50; // 카운트 증가 대기시간  
 	int count = 0; // 현재 진행된 작업  
 	int i; // 반복문 전용 변수  
+	
 	float tick = (float)100/LEN; // 몇 %마다 프로그레스바 추가할지 계산 
 	printf("%0.2f%% 마다 bar 1개 출력\n\n", tick); 
 	int bar_count; // 프로그레스바 갯수 저장 변수  
 	float percent; // 퍼센트 저장 변수  
+	
 	while(count <= MAX) {
 		printf("\r%d/%d [", count, MAX); // 진행 상태 출력  
 		percent = (float)count/MAX*100; // 퍼센트 계산  
