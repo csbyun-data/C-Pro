@@ -68,7 +68,10 @@ Grammar of programming, a collection of basic materials for application.
 * [Reference](https://github.com/csbyun-data/C-Pro/blob/main/chap04/README.md)
 
 ## Project  
-* [File handling function](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/README.md), [도서 관리, 학생 기록-성적, 직원 기록]
+* [File handling function](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/README.md)
+    ```
+    1.도서 관리, 2.학생 기록-성적, 3.직원 기록, 4.주소록
+    ```
 * [Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/README.md)
 * [XML Parser](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
 * [Lightweight JSON library written in C](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/README.md)
