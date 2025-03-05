@@ -17,3 +17,6 @@
   *  1.11 deleteBooks [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/deleteBooks.c)
   *  1.12 updateCredential [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/updateCredential.c)
   *  1.13 Complete code [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/MRS/Library_Manager.c)
+  ```
+  책 제목, 저자, 발행일
+  ```
