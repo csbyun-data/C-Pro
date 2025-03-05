@@ -33,5 +33,6 @@ int main() {
 	}
 	printf(" done!\n\n");
 	system("pause"); // 프로그램 종료 전 일시정지  
+	
 	return 0; 
 }
