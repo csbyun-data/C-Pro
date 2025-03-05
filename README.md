@@ -84,6 +84,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Console Game], [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
 * [Console Game], [tictactoe](https://github.com/emacdona/tictactoe)
 * [Console Gaem], [Sokoban](https://github.com/maksimKorzh/sokoban)
+* [Console Gaem], [Chess](https://github.com/omeredel/Chess-In-C)
 
 ## Reference
 * [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
