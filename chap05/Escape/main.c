@@ -4,11 +4,11 @@
 int main() {
 	init();
 	
-	while(1){
+	while(1) {
 		titleDraw();
 		int menuCode = menuDraw();
 		
-		if(menuCode == 0){
+		if(menuCode == 0) {
 			int n = maplistDraw();
 			
 			if(n == 0) {
@@ -16,9 +16,9 @@ int main() {
 			} else if(n == 1){
 				gLoop(1); // 1: 어려운맵  
 			} 
-		} else if(menuCode == 1){
+		} else if(menuCode == 1) {
 			infoDraw(); // 게임정보  
-		} else if(menuCode == 2){
+		} else if(menuCode == 2) {
 			return 0; // 종료
 		}
 		system("cls");
