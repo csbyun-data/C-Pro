@@ -7,3 +7,5 @@
     #include <stdlib.h>
     void qsort( void* ptr, size_t count, size_t size, int (*comp)(const void*, const void*) );
     ```
+* sleep() 사용법
+   * [code]()
