@@ -16,7 +16,9 @@
   *  1.11 deleteStudent [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/SRS/deleteStudent.c)
   *  1.12 updateCredential [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/SRS/updateCredential.c)
   *  1.13 Complete code [here](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/SRS/Student_Record.c)
-
+  ```txt
+  No, 이름, 아버지 이름, 주소, 입학일
+  ```
 * 2.Student grade management  
   * [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/SRS/Student_Grade_mgr.c)
   ```txt
