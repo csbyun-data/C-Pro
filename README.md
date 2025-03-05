@@ -79,6 +79,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Book], [Interpreting LISP: Programming and Data Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/READ.md)
 * [Console Game], [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
 * [Console Game], [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
+* [Console Game], [Snake](https://github.com/Contagious06/console-snake-game)
 
 ## Reference
 * [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
