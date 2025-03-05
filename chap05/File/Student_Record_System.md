@@ -22,5 +22,5 @@
 * 2.Student grade management  
   * [code](https://github.com/csbyun-data/C-Pro/blob/main/chap05/File/SRS/Student_Grade_mgr.c)
   ```txt
-   이름, 국어, 수학, 영어, 평균
+  이름, 국어, 수학, 영어, 평균
   ```
