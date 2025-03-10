@@ -195,3 +195,34 @@
     // [Note] use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
     // Compiler > Code Generation > Language standard (-std) ISO C99 설정
     ```
+### Snippet
+* Linked List
+  * Linked List
+  ```
+  |=============================================================================
+ | Auke Reitsma's comprehensive linked list functions
+ |=============================================================================
+ | File         O/S  Description
+ | ------------ ---  ----------------------------------------------------------
+   Llist.Nts    any  Notes on linked list functions
+   Ll_Defs.H    any  Common includes and macros
+   Lls.H        any  Singly linked list header
+   Lls_Blob.H   any  Singly linked list for Binary Large OBjects
+   Lls_Str.H    any  Singly linked list for strings
+   Ll_Que.H     any  Singly linked list as queue
+   Ll_Stack.H   any  Singly linked list as stack
+   Lld.H        any  Doubly linked list header
+   Lld_Blob.H   any  Doubly linked list for Binary Large OBjects
+   Lld_Str.H    any  Doubly linked list for strings
+   Lls.C        any  Singly linked list functions
+   Lls_Blob.C   any  Singly linked list BLOB functions
+   Lld.C        any  Doubly linked list functions
+   Lld_Blob.C   any  Doubly linked list BLOB functions
+   Stack.H      any  Header for stack management functions
+   Stk_Defs.H   any  Common definitions and debugging macros
+   Stack.C      any  Stack management functions
+   Stk_Blob.H   any  Header for stack management of Binary Large OBjects
+   Stk_Str.H    any  Header for stack management of strings as BLOB's
+   Stk_Blob.C   any  Stack management functions for Binary Large OBjects
+ + Ll_Demo.C    any  Demonstration of linked list functions in action
+```
