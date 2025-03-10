@@ -195,7 +195,7 @@
     // [Note] use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
     // Compiler > Code Generation > Language standard (-std) ISO C99 설정
     ```
-### Snippet
+### [Snippets.org]
 * Linked List
   * Linked List  
   ```txt
