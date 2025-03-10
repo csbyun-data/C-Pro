@@ -1,4 +1,4 @@
-### [aticleworld.com]
+### [Aticleworld.com]
 * Linked List
   * Linked List [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Linked_List_ex1.c)  
   <img src = "https://github.com/user-attachments/assets/9e41c1a5-84d0-47df-b274-862cd3f0c511" width="50%" height="50%">
