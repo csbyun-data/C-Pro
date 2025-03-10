@@ -197,13 +197,9 @@
     ```
 ### Snippet
 * Linked List
-  * Linked List
-  ```
-  |=============================================================================
+  * Linked List  
+  ```txt
  | Auke Reitsma's comprehensive linked list functions
- |=============================================================================
- | File         O/S  Description
- | ------------ ---  ----------------------------------------------------------
    Llist.Nts    any  Notes on linked list functions
    Ll_Defs.H    any  Common includes and macros
    Lls.H        any  Singly linked list header
@@ -225,4 +221,4 @@
    Stk_Str.H    any  Header for stack management of strings as BLOB's
    Stk_Blob.C   any  Stack management functions for Binary Large OBjects
  + Ll_Demo.C    any  Demonstration of linked list functions in action
-```
+ ```
