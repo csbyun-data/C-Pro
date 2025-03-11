@@ -100,3 +100,4 @@ Grammar of programming, a collection of basic materials for application.
     * [SNIPPETS Table of Contents](https://github.com/vonj/snippets.org/blob/master/snippets.ndx)
 * [참조: [kocw.net](http://www.kocw.net/home/search/kemView.do?kemId=1267012])]
 * [참조: [cppreference.com/w/c](https://en.cppreference.com/w/c)]
+* [참조: [bito.ai/resources_categories/c-c/](https://bito.ai/resources_categories/c-c/)]
