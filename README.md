@@ -77,6 +77,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Lightweight JSON library written in C](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/README.md)
 * [David Betz. XLISP], [XLISP Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/README.md)
 * [Book], [Interpreting LISP: Programming and Data Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/READ.md)
+* [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://drh.github.io/cii/index.html)
 * [Console Game], [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
 * [Console Game], [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
 * [Console Game], [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
@@ -87,7 +88,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Console Gaem], [Chess](https://github.com/omeredel/Chess-In-C)
 
 ## Compiler
-* [book], [lcc, A Retargetable Compiler for ANSI C: Design and Implementation](https://github.com/drh/lcc)
+* [Book], [lcc, A Retargetable Compiler for ANSI C: Design and Implementation](https://drh.github.io/lcc/)
 
 ## Reference
 * [참조: [www.cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)]
