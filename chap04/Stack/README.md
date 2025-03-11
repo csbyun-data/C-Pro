@@ -1,6 +1,6 @@
 ### [Snippets.org]
-* Linked List
-  * Linked List  
+* Stack
+  * Stack
   ```txt
   // https://github.com/vonj/snippets.org
   Auke Reitsma's comprehensive linked list functions
