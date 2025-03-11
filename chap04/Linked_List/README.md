@@ -12,7 +12,7 @@
   // Data를 찾기 위해 시간이 소요됨
   ```
   * Linked List Insertion( 첫번째 순서에 Node를 추가)  
-  <img src = "https://github.com/user-attachments/assets/ae695477-21b5-491d-b69c-ff20e882e3c5" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/ae695477-21b5-491d-b69c-ff20e882e3c5" width="50%" height="50%">
 
   ```c
   //Linked List에 Node를 insert하는 순서
@@ -32,7 +32,7 @@
   Head = pNewNode;
   ```
   * 중간의 어느 지점에 node를 삽입하는 경우  
-  <img src = "https://github.com/user-attachments/assets/da235263-2577-4f6b-bbf1-3585e2f599f7" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/da235263-2577-4f6b-bbf1-3585e2f599f7" width="50%" height="50%">
 
   ```c
   // Insert a new node after a node
@@ -60,7 +60,7 @@
   ([InsertNodeAfterNode()함수 code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/InsertNodeAfterNode_func1.c))
   
   * 마지막 node에 신규 node를 입력  
-  <img src = "https://github.com/user-attachments/assets/e34e3f33-9fc4-4c12-850b-1dc13fa3634e" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/e34e3f33-9fc4-4c12-850b-1dc13fa3634e" width="50%" height="50%">
 
   ```c
   //1. Temp Node에 Head Pointer 할당
@@ -118,13 +118,13 @@
 
 * Delete a Linked List node
   * 시작 node 삭제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_start_node.c)  
-  <img src = "https://github.com/user-attachments/assets/88e935fe-dab6-4c7b-b5b9-5d7c6e8b00a5" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/88e935fe-dab6-4c7b-b5b9-5d7c6e8b00a5" width="50%" height="50%">
 
   * 중간 node 삭제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_middle_node.c)  
-  <img src = "https://github.com/user-attachments/assets/e28b4846-5541-490e-aca0-d4e8a0509f25" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/e28b4846-5541-490e-aca0-d4e8a0509f25" width="50%" height="50%">
 
   * 끝 node 삭제 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/Delete_end_node.c)  
-  <img src = "https://github.com/user-attachments/assets/92c9ac1b-a9c2-4ab9-92e8-06ae243f31ca" width="60%" height="60%">
+  <img src = "https://github.com/user-attachments/assets/92c9ac1b-a9c2-4ab9-92e8-06ae243f31ca" width="50%" height="50%">
 
 * Generic Linked List in C
     * Generic Linked List
