@@ -84,9 +84,9 @@ Grammar of programming, a collection of basic materials for application.
 * [Console Game], [Console-Games](https://github.com/arasgungore/console-games), [Pong, Snake, Tetris]
 * [Console Game], [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
 * [Console Game], [tictactoe](https://github.com/emacdona/tictactoe)
-* [Console Gaem], [Sokoban](https://github.com/maksimKorzh/sokoban)
-* [Console Gaem], [Chess](https://github.com/omeredel/Chess-In-C)
-* [Simple DB], [SDB]()
+* [Console Game], [Sokoban](https://github.com/maksimKorzh/sokoban)
+* [Console Game], [Chess](https://github.com/omeredel/Chess-In-C)
+* [Simple DB], [SDB](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/README.md)
 
 ## Compiler
 * [Book], [lcc, A Retargetable Compiler for ANSI C: Design and Implementation](https://drh.github.io/lcc/)
