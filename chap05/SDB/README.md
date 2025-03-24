@@ -17,6 +17,7 @@
     * [tbl.c]()
     * [_proto.h]()
     ```
+    // 활용 문장
     create checks (
     number      num     4
     date        char    8
