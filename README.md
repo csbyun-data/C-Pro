@@ -78,14 +78,15 @@ Grammar of programming, a collection of basic materials for application.
 * [David Betz. XLISP], [XLISP Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/README.md)
 * [Book], [Interpreting LISP: Programming and Data Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/READ.md)
 * [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://drh.github.io/cii/index.html)
-* [Console Game], [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
-* [Console Game], [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
-* [Console Game], [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
-* [Console Game], [Console-Games](https://github.com/arasgungore/console-games), [Pong, Snake, Tetris]
-* [Console Game], [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
-* [Console Game], [tictactoe](https://github.com/emacdona/tictactoe)
-* [Console Game], [Sokoban](https://github.com/maksimKorzh/sokoban)
-* [Console Game], [Chess](https://github.com/omeredel/Chess-In-C)
+* [Console Game]
+    * [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
+    * [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
+    * [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
+    * [Console-Games](https://github.com/arasgungore/console-games), [Pong, Snake, Tetris]
+    * [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
+    * [tictactoe](https://github.com/emacdona/tictactoe)
+    * [Sokoban](https://github.com/maksimKorzh/sokoban)
+    * [Chess](https://github.com/omeredel/Chess-In-C)
 * [Simple DB], [SDB](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/README.md)
 
 ## Compiler
