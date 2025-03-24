@@ -82,7 +82,7 @@ Grammar of programming, a collection of basic materials for application.
     * [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
     * [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
     * [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
-    * [Console-Games](https://github.com/arasgungore/console-games), [Pong, Snake, Tetris]
+    * [Pong, Snake, Tetris](https://github.com/arasgungore/console-games)
     * [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
     * [tictactoe](https://github.com/emacdona/tictactoe)
     * [Sokoban](https://github.com/maksimKorzh/sokoban)
