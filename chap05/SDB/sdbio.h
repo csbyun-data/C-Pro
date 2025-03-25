@@ -111,118 +111,118 @@
 #define BADSET          19      /* bad set parameter */
 
 struct attribute {
-    char at_name[ANSIZE];       /* attribute name */
-    char at_type;               /* attribute type */
-    char at_size;               /* attribute size in bytes */
-    char at_scale;              /* attribute scale factor (for numeric only) */
-    char at_unused[ASIZE-ANSIZE-3];     /* unused space */
+  char at_name[ANSIZE];       /* attribute name */
+  char at_type;               /* attribute type */
+  char at_size;               /* attribute size in bytes */
+  char at_scale;              /* attribute scale factor (for numeric only) */
+  char at_unused[ASIZE-ANSIZE-3];     /* unused space */
 };
 
 struct header {         /* sizeof(struct header) must be 512 bytes */
-    char hd_tcnt[2];            /* # of tuples in relation */
-    char hd_tmax[2];            /* maximum # of tuples */
-    char hd_data[2];            /* offset to first data byte */
-    char hd_size[2];            /* size of each tuple in bytes */
-    char hd_unused[HSIZE-8];    /* unused space */
-    struct attribute hd_attrs[NATTRS];  /* table of attributes */
+  char hd_tcnt[2];            /* # of tuples in relation */
+  char hd_tmax[2];            /* maximum # of tuples */
+  char hd_data[2];            /* offset to first data byte */
+  char hd_size[2];            /* size of each tuple in bytes */
+  char hd_unused[HSIZE-8];    /* unused space */
+  struct attribute hd_attrs[NATTRS];  /* table of attributes */
 };
 
 struct relation {
-    char rl_name[RNSIZE];       /* relation name */
-    unsigned int rl_tcnt;       /* # of tuples in relation (from hd_tcnt) */
-    unsigned int rl_tmax;       /* maximum # of tuples (from hd_tmax) */
-    int rl_data;                /* offset to first data byte (from hd_data) */
-    int rl_size;                /* size of eachtuple in bytes (from hd_size) */
-    int rl_store;               /* flag indicating a store happened */
-    int rl_fd;                  /* file descriptor for relation file */
-    int rl_scnref;              /* number of scans referencing this relation */
-    struct header rl_header;    /* the relation file header block */
-    struct relation *rl_next;   /* pointer to next relation */
+  char rl_name[RNSIZE];       /* relation name */
+  unsigned int rl_tcnt;       /* # of tuples in relation (from hd_tcnt) */
+  unsigned int rl_tmax;       /* maximum # of tuples (from hd_tmax) */
+  int rl_data;                /* offset to first data byte (from hd_data) */
+  int rl_size;                /* size of eachtuple in bytes (from hd_size) */
+  int rl_store;               /* flag indicating a store happened */
+  int rl_fd;                  /* file descriptor for relation file */
+  int rl_scnref;              /* number of scans referencing this relation */
+  struct header rl_header;    /* the relation file header block */
+  struct relation *rl_next;   /* pointer to next relation */
 };
 
 struct scan {
-    struct relation *sc_relation;       /* pointer to relation definition */
-    unsigned int sc_dtnum;              /* desired tuple number */
-    unsigned int sc_atnum;              /* actual tuple number */
-    int sc_store;                       /* flag indicating a store happened */
-    char *sc_tuple;                     /* tuple buffer */
+  struct relation *sc_relation;       /* pointer to relation definition */
+  unsigned int sc_dtnum;              /* desired tuple number */
+  unsigned int sc_atnum;              /* actual tuple number */
+  int sc_store;                       /* flag indicating a store happened */
+  char *sc_tuple;                     /* tuple buffer */
 };
 
 struct srel {
-    char *sr_name;                      /* alternate relation name */
-    struct scan *sr_scan;               /* relation scan structure ptr */
-    int sr_ctuple;                      /* current tuple flag */
-    int sr_update;                      /* updated tuple flag */
-    struct srel *sr_next;               /* next selected relation in list */
+  char *sr_name;                      /* alternate relation name */
+  struct scan *sr_scan;               /* relation scan structure ptr */
+  int sr_ctuple;                      /* current tuple flag */
+  int sr_update;                      /* updated tuple flag */
+  struct srel *sr_next;               /* next selected relation in list */
 };
 
 struct sattr {
-    char *sa_rname;                     /* relation name */
-    char *sa_aname;                     /* attribute name */
-    char *sa_name;                      /* alternate attribute name */
-    char *sa_aptr;                      /* pointer to attr in tuple buffer */
-    struct srel *sa_srel;               /* pointer to the selected relation */
-    struct attribute *sa_attr;          /* attribute structure ptr */
-    struct sattr *sa_next;              /* next selected attribute in list */
+  char *sa_rname;                     /* relation name */
+  char *sa_aname;                     /* attribute name */
+  char *sa_name;                      /* alternate attribute name */
+  char *sa_aptr;                      /* pointer to attr in tuple buffer */
+  struct srel *sa_srel;               /* pointer to the selected relation */
+  struct attribute *sa_attr;          /* attribute structure ptr */
+  struct sattr *sa_next;              /* next selected attribute in list */
 };
 
 struct operand {
-    int o_type;
-    union  {
-        struct {
-            int ovc_type;
-            char *ovc_string;
-            int ovc_length;
-        } ov_char;
-        int ov_boolean;
-    } o_value;
+  int o_type;
+  union  {
+      struct {
+          int ovc_type;
+          char *ovc_string;
+          int ovc_length;
+      } ov_char;
+      int ov_boolean;
+  } o_value;
 };
 
 union codecell {
-    int (*c_operator)(void);
-    struct operand *c_operand;
+  int (*c_operator)(void);
+  struct operand *c_operand;
 };
 
 struct binding {
-    struct attribute *bd_attr;          /* bound attribute */
-    char *bd_vtuple;                    /* pointer to value in tuple */
-    char *bd_vuser;                     /* pointer to user buffer */
-    struct binding *bd_next;            /* next binding */
+  struct attribute *bd_attr;          /* bound attribute */
+  char *bd_vtuple;                    /* pointer to value in tuple */
+  char *bd_vuser;                     /* pointer to user buffer */
+  struct binding *bd_next;            /* next binding */
 };
 
 struct sel {
-    struct srel *sl_rels;               /* selected relations */
-    struct sattr *sl_attrs;             /* selected attributes */
-    union codecell *sl_where;           /* where clause */
-    struct binding *sl_bindings;        /* user variable bindings */
+  struct srel *sl_rels;               /* selected relations */
+  struct sattr *sl_attrs;             /* selected attributes */
+  union codecell *sl_where;           /* where clause */
+  struct binding *sl_bindings;        /* user variable bindings */
 };
 
 struct mtext {
-    char *mt_text;
-    struct mtext *mt_next;
+  char *mt_text;
+  struct mtext *mt_next;
 };
 
 struct macro {
-    char *mc_name;
-    struct mtext *mc_mtext;
-    struct macro *mc_next;
+  char *mc_name;
+  struct mtext *mc_mtext;
+  struct macro *mc_next;
 };
 
 struct ifile {
-//    char *if_fp;
-    FILE *if_fp;
-    struct mtext *if_mtext;
-    char *if_cmdline;
-    int if_savech;
-    char *if_lptr;
-    struct ifile *if_next;
+  // char *if_fp;
+  FILE *if_fp;
+  struct mtext *if_mtext;
+  char *if_cmdline;
+  int if_savech;
+  char *if_lptr;
+  struct ifile *if_next;
 };
 
 struct skey {
-    int sk_type;
-    struct attribute *sk_aptr;
-    int sk_start;
-    struct skey *sk_next;
+  int sk_type;
+  struct attribute *sk_aptr;
+  int sk_start;
+  struct skey *sk_next;
 };
 
 int db_parse(char *fmt, ... );
