@@ -18,647 +18,663 @@ int _fmode = 0;  /*dns*/
 #endif
 
 /* CMD.C */
+//int db_parse ( char *fmt , int a1 , int a2 , int a3 , int a4 , int a5 , int a6 , int a7 , int a8 , int a9 );
+int db_parse(char *fmt, ... );
+
+static int help ( void );
+static int create ( void );
+static int insert ( void );
+static int delete ( void );
+static int update ( void );
+static int print ( void );
+static int select ( void );
+static int mc_define ( void );
+static int mc_show ( void );
+static void mc_free ( struct macro *mptr );
+static int using ( FILE **pfp , char *ext );
+static int table ( FILE *fp , struct sel *slptr );
+static int form ( FILE *ofp , struct sel *slptr , FILE *ffp );
+static void get_aname ( FILE *fp , char *aname );
+static void put_avalue ( FILE *fp , struct sel *slptr , char *aname );
+static int set ( void );
 
 /* db_parse - parse a command */
 int db_parse(char *fmt, ... )
 {
-    int sts;
-
-    /* check for a command line */
-    if (fmt != NULL)
-//        db_scan(fmt,a1,a2,a3,a4,a5,a6,a7,a8,a9);
-    db_scan(fmt);
-
-    /* determine the statement type */
-    switch (db_ntoken()) {
-    case ';':   sts = TRUE;
-                break;
-    case COMPRESS:
-                sts = db_squeeze(NULL);
-                break;
-    case CREATE:
-                sts = create();
-                break;
-    case DEFINE:
-                sts = mc_define();
-                break;
-    case DELETE:
-                sts = delete();
-                break;
-    case EXIT:
-                exit(0);
-    case EXPORT:
-                sts = db_export(NULL);
-                break;
-    case EXTRACT:
-                sts = db_extract(NULL);
-                break;
-    case HELP:
-                sts = help();
-                break;
-    case IMPORT:
-                sts = db_import(NULL);
-                break;
-    case INSERT:
-                sts = insert();
-                break;
-    case PRINT:
-                sts = print();
-                break;
-    case SELECT:
-                sts = select();
-                break;
-    case SET:
-                sts = set();
-                break;
-    case SHOW:
-                sts = mc_show();
-                break;
-    case SORT:
-                sts = db_sort(NULL);
-                break;
-    case UPDATE:
-                sts = update();
-                break;
-    default:
-                return (db_ferror(SYNTAX));
-    }
-
-    return (sts);
+  int sts;
+  
+  /* check for a command line */
+  if (fmt != NULL)
+  //        db_scan(fmt,a1,a2,a3,a4,a5,a6,a7,a8,a9);
+  db_scan(fmt);
+  
+  /* determine the statement type */
+  switch (db_ntoken()) {
+  case ';':   sts = TRUE;
+              break;
+  case COMPRESS:
+              sts = db_squeeze(NULL);
+              break;
+  case CREATE:
+              sts = create();
+              break;
+  case DEFINE:
+              sts = mc_define();
+              break;
+  case DELETE:
+              sts = delete();
+              break;
+  case EXIT:
+              exit(0);
+  case EXPORT:
+              sts = db_export(NULL);
+              break;
+  case EXTRACT:
+              sts = db_extract(NULL);
+              break;
+  case HELP:
+              sts = help();
+              break;
+  case IMPORT:
+              sts = db_import(NULL);
+              break;
+  case INSERT:
+              sts = insert();
+              break;
+  case PRINT:
+              sts = print();
+              break;
+  case SELECT:
+              sts = select();
+              break;
+  case SET:
+              sts = set();
+              break;
+  case SHOW:
+              sts = mc_show();
+              break;
+  case SORT:
+              sts = db_sort(NULL);
+              break;
+  case UPDATE:
+              sts = update();
+              break;
+  default:
+              return (db_ferror(SYNTAX));
+  }
+  
+  return (sts);
 }
 
 /* help - print a short help message */
 static int help()
 {
-    FILE *fp;
-    int ch;
+  FILE *fp;
+  int ch;
 
-    if ((fp = fopen("sdb.hlp","r")) != NULL) {
+  if ((fp = fopen("sdb.hlp","r")) != NULL) {
 #ifdef Lattice /* dns */
-        while ((ch = agetc(fp)) != EOF)
+    while ((ch = agetc(fp)) != EOF)
 #else
-        while ((ch =  getc(fp)) != EOF)
+    while ((ch =  getc(fp)) != EOF)
 #endif
-            putchar(ch);
-        fclose(fp);
-    }
-    else
-        printf("No online help available.  Read the manual\n");
+      putchar(ch);
+    fclose(fp);
+  } else
+    printf("No online help available.  Read the manual\n");
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* create - create a new relation */
 static int create()
 {
-    struct relation *rptr;
-    char aname[STRINGMAX+1];
-    int atype;
+  struct relation *rptr;
+  char aname[STRINGMAX+1];
+  int atype;
 
-    /* get relation name */
-    if (db_ntoken() != ID)
-        return (db_ferror(SYNTAX));
+  /* get relation name */
+  if (db_ntoken() != ID)
+      return (db_ferror(SYNTAX));
 
-    /* start relation creation */
-    if ((rptr = db_rcreate(dbv_tstring)) == NULL)
-        return (FALSE);
+  /* start relation creation */
+  if ((rptr = db_rcreate(dbv_tstring)) == NULL)
+      return (FALSE);
 
-    /* check for attribute list */
-    if (db_ntoken() != '(') {
-        free(rptr);
-        return (db_ferror(SYNTAX));
-    }
+  /* check for attribute list */
+  if (db_ntoken() != '(') {
+      free(rptr);
+      return (db_ferror(SYNTAX));
+  }
 
-    /* parse the attributes */
-    while (TRUE) {
+  /* parse the attributes */
+  while (TRUE) {
 
-        /* get the attribute name */
-        if (db_ntoken() != ID) {
-            free(rptr);
-            return (db_ferror(SYNTAX));
-        }
-        strcpy(aname,dbv_tstring);
+      /* get the attribute name */
+      if (db_ntoken() != ID) {
+          free(rptr);
+          return (db_ferror(SYNTAX));
+      }
+      strcpy(aname,dbv_tstring);
 
-        /* get the attribute type */
-        db_ntoken();
-        if (dbv_token == CHAR)
-            atype = TCHAR;
-        else if (dbv_token == NUM)
-            atype = TNUM;
-        else {
-            free(rptr);
-            return (db_ferror(SYNTAX));
-        }
+      /* get the attribute type */
+      db_ntoken();
+      if (dbv_token == CHAR)
+          atype = TCHAR;
+      else if (dbv_token == NUM)
+          atype = TNUM;
+      else {
+          free(rptr);
+          return (db_ferror(SYNTAX));
+      }
 
-        /* get the attribute size */
-        if (db_ntoken() != NUMBER) {
-            free(rptr);
-            return (db_ferror(SYNTAX));
-        }
+      /* get the attribute size */
+      if (db_ntoken() != NUMBER) {
+          free(rptr);
+          return (db_ferror(SYNTAX));
+      }
 
-        /* add the attribute */
-        if (!db_rcattr(rptr,aname,atype,dbv_tvalue)) {
-            free(rptr);
-            return (FALSE);
-        }
+      /* add the attribute */
+      if (!db_rcattr(rptr,aname,atype,dbv_tvalue)) {
+          free(rptr);
+          return (FALSE);
+      }
 
-        /* check for end of attributes */
-        if (db_token() != ID)
-            break;
-    }
+      /* check for end of attributes */
+      if (db_token() != ID)
+          break;
+  }
 
-    /* check for attribute list end */
-    if (db_ntoken() != ')') {
-        free(rptr);
-        return (db_ferror(SYNTAX));
-    }
+  /* check for attribute list end */
+  if (db_ntoken() != ')') {
+      free(rptr);
+      return (db_ferror(SYNTAX));
+  }
 
-    /* check for relation size */
-    if (db_ntoken() != NUMBER) {
-        free(rptr);
-        return (db_ferror(SYNTAX));
-    }
+  /* check for relation size */
+  if (db_ntoken() != NUMBER) {
+      free(rptr);
+      return (db_ferror(SYNTAX));
+  }
 
-    /* finish relation creation */
-    if (!db_rcheader(rptr))
-        return (FALSE);
-    if (!db_rctuples(rptr,dbv_tvalue))
-        return (FALSE);
-    if (!db_rcdone(rptr))
-        return (FALSE);
+  /* finish relation creation */
+  if (!db_rcheader(rptr))
+      return (FALSE);
+  if (!db_rctuples(rptr,dbv_tvalue))
+      return (FALSE);
+  if (!db_rcdone(rptr))
+      return (FALSE);
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* insert - insert a tuple into a relation */
 static int insert()
 {
-    struct scan *sptr;
-    struct attribute *aptr;
-    char aname[ANSIZE+1],avalue[STRINGMAX+1];
-    int tcnt,astart,i;
+  struct scan *sptr;
+  struct attribute *aptr;
+  char aname[ANSIZE+1],avalue[STRINGMAX+1];
+  int tcnt,astart,i;
 
-    /* get relation name */
-    if (db_token() == ID)
-        db_ntoken();
-    else
-        strcpy(dbv_tstring,"sdbcur");
+  /* get relation name */
+  if (db_token() == ID)
+      db_ntoken();
+  else
+      strcpy(dbv_tstring,"sdbcur");
 
-    /* make sure that the rest of the line is blank */
-    if (!db_flush())
-        return (FALSE);
+  /* make sure that the rest of the line is blank */
+  if (!db_flush())
+      return (FALSE);
 
-    /* open the relation */
-    if ((sptr = db_ropen(dbv_tstring)) == NULL)
-        return (FALSE);
+  /* open the relation */
+  if ((sptr = db_ropen(dbv_tstring)) == NULL)
+      return (FALSE);
 
-    /* insert tuples */
-    for (tcnt = 0; ; tcnt++) {
+  /* insert tuples */
+  for (tcnt = 0; ; tcnt++) {
 
-        /* print separator if not the first tuple */
-        if (tcnt != 0)
-            printf("----\n");
+      /* print separator if not the first tuple */
+      if (tcnt != 0)
+          printf("----\n");
 
-        /* get attribute values */
-        astart = 1;
-        for (i = 0; i < NATTRS; i++) {
+      /* get attribute values */
+      astart = 1;
+      for (i = 0; i < NATTRS; i++) {
 
-            /* get a pointer to the current attribute */
-            aptr = &sptr->sc_relation->rl_header.hd_attrs[i];
+          /* get a pointer to the current attribute */
+          aptr = &sptr->sc_relation->rl_header.hd_attrs[i];
 
-            /* check for the last attribute */
-            if (aptr->at_name[0] == 0)
-                break;
+          /* check for the last attribute */
+          if (aptr->at_name[0] == 0)
+              break;
 
-            /* get the attribute name */
-            strncpy(aname,aptr->at_name,ANSIZE); aname[ANSIZE] = 0;
+          /* get the attribute name */
+          strncpy(aname,aptr->at_name,ANSIZE); aname[ANSIZE] = 0;
 
-            /* setup null prompt strings */
-            db_prompt(NULL,NULL);
+          /* setup null prompt strings */
+          db_prompt(NULL,NULL);
 
-            /* prompt and input attribute value */
-            while (TRUE) {
-                if (dbv_ifp == NULL)
-                    if (strlen(aname) < 8)
-                        printf("%s\t\t: ",aname);
-                    else
-                        printf("%s\t: ",aname);
-                if (db_gline(avalue) != NULL)
-                    break;
-            }
+          /* prompt and input attribute value */
+          while (TRUE) {
+              if (dbv_ifp == NULL)
+                  if (strlen(aname) < 8)
+                      printf("%s\t\t: ",aname);
+                  else
+                      printf("%s\t: ",aname);
+              if (db_gline(avalue) != NULL)
+                  break;
+          }
 
-            /* check for last insert */
-            if (i == 0 && avalue[0] == EOS)
-                break;
+          /* check for last insert */
+          if (i == 0 && avalue[0] == EOS)
+              break;
 
-            /* store the attribute value */
-            db_aput(aptr,&sptr->sc_tuple[astart],avalue);
+          /* store the attribute value */
+          db_aput(aptr,&sptr->sc_tuple[astart],avalue);
 
-            /* update the attribute start */
-            astart += aptr->at_size;
-        }
+          /* update the attribute start */
+          astart += aptr->at_size;
+      }
 
-        /* check for last insert */
-        if (avalue[0] == EOS)
-            break;
+      /* check for last insert */
+      if (avalue[0] == EOS)
+          break;
 
-        /* store the new tuple */
-        if (!db_rstore(sptr)) {
-            db_rclose(sptr);
-            return (FALSE);
-        }
-    }
+      /* store the new tuple */
+      if (!db_rstore(sptr)) {
+          db_rclose(sptr);
+          return (FALSE);
+      }
+  }
 
-    /* close the relation */
-    db_rclose(sptr);
+  /* close the relation */
+  db_rclose(sptr);
 
-    /* check number of tuples inserted */
-    if (tcnt != 0) {
+  /* check number of tuples inserted */
+  if (tcnt != 0) {
 
-        /* print tuple count */
-        printf("[ %d inserted ]\n",tcnt);
-    }
-    else
-        printf("[ none inserted ]\n");
+      /* print tuple count */
+      printf("[ %d inserted ]\n",tcnt);
+  }
+  else
+      printf("[ none inserted ]\n");
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* delete - delete tuples from a relation */
 static int delete()
 {
-    struct sel *slptr;
-    struct srel *srptr;
-    int tcnt;
+  struct sel *slptr;
+  struct srel *srptr;
+  int tcnt;
 
-    /* parse the retrieval clause */
-    if ((slptr = db_retrieve(NULL)) == NULL)
-        return (FALSE);
+  /* parse the retrieval clause */
+  if ((slptr = db_retrieve(NULL)) == NULL)
+      return (FALSE);
 
-    /* loop through the retrieved tuples */
-    for (tcnt = 0; db_fetch(slptr); tcnt++)
+  /* loop through the retrieved tuples */
+  for (tcnt = 0; db_fetch(slptr); tcnt++)
 
-        /* delete the retrieved tuples */
-        for (srptr = slptr->sl_rels; srptr != NULL; srptr = srptr->sr_next)
-            if (!db_rdelete(srptr->sr_scan)) {
-                db_done(slptr);
-                return (FALSE);
-            }
+      /* delete the retrieved tuples */
+      for (srptr = slptr->sl_rels; srptr != NULL; srptr = srptr->sr_next)
+          if (!db_rdelete(srptr->sr_scan)) {
+              db_done(slptr);
+              return (FALSE);
+          }
 
-    /* finish the retrieval */
-    db_done(slptr);
+  /* finish the retrieval */
+  db_done(slptr);
 
-    /* check number of tuples deleted */
-    if (tcnt != 0) {
+  /* check number of tuples deleted */
+  if (tcnt != 0) {
 
-        /* print tuple count */
-        printf("[ %d deleted ]\n",tcnt);
-    }
-    else
-        printf("[ none deleted ]\n");
+      /* print tuple count */
+      printf("[ %d deleted ]\n",tcnt);
+  }
+  else
+      printf("[ none deleted ]\n");
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* update - update tuples from a relation */
 static int update()
 {
-    struct sel *slptr;
-    struct sattr *saptr;
-    struct attribute *aptr;
-    char aname[ANSIZE+1],avalue[STRINGMAX+1],*ap;
-    int tcnt;
+  struct sel *slptr;
+  struct sattr *saptr;
+  struct attribute *aptr;
+  char aname[ANSIZE+1],avalue[STRINGMAX+1],*ap;
+  int tcnt;
 
-    /* parse the selection clause */
-    if ((slptr = db_select(NULL)) == NULL)
-        return (FALSE);
+  /* parse the selection clause */
+  if ((slptr = db_select(NULL)) == NULL)
+    return (FALSE);
 
-    /* make sure that the rest of the line is blank */
-    if (!db_flush()) {
-        db_done(slptr);
-        return (FALSE);
-    }
+  /* make sure that the rest of the line is blank */
+  if (!db_flush()) {
+    db_done(slptr);
+    return (FALSE);
+  }
 
-    /* loop through the selected tuples */
-    for (tcnt = 0; db_fetch(slptr); tcnt++) {
+  /* loop through the selected tuples */
+  for (tcnt = 0; db_fetch(slptr); tcnt++) {
 
-        /* print separator if not the first tuple */
-        if (tcnt != 0)
-            printf("----\n");
+    /* print separator if not the first tuple */
+    if (tcnt != 0)
+        printf("----\n");
 
-        /* loop through the selected attributes */
-        for (saptr = slptr->sl_attrs; saptr != NULL; saptr = saptr->sa_next) {
+    /* loop through the selected attributes */
+    for (saptr = slptr->sl_attrs; saptr != NULL; saptr = saptr->sa_next) {
 
-            /* get the attribute pointer */
-            aptr = saptr->sa_attr;
+        /* get the attribute pointer */
+        aptr = saptr->sa_attr;
 
-            /* get the attribute name */
-            strncpy(aname,aptr->at_name,ANSIZE); aname[ANSIZE] = 0;
+        /* get the attribute name */
+        strncpy(aname,aptr->at_name,ANSIZE); aname[ANSIZE] = 0;
 
-            /* get the attribute value */
-            db_aget(aptr,saptr->sa_aptr,avalue);
-            for (ap = avalue; isspace(*ap); ap++)
-                ;
+        /* get the attribute value */
+        db_aget(aptr,saptr->sa_aptr,avalue);
+        for (ap = avalue; isspace(*ap); ap++)
+            ;
 
-            /* print it */
+        /* print it */
+        if (strlen(aname) < 8)
+            printf("%s\t\t: %s\n",aname,ap);
+        else
+            printf("%s\t: %s\n",aname,ap);
+
+        /* setup null prompt strings */
+        db_prompt(NULL,NULL);
+
+        /* prompt and input attribute value */
+        while (TRUE) {
             if (strlen(aname) < 8)
-                printf("%s\t\t: %s\n",aname,ap);
+                printf("%s\t\t: ",aname);
             else
-                printf("%s\t: %s\n",aname,ap);
-
-            /* setup null prompt strings */
-            db_prompt(NULL,NULL);
-
-            /* prompt and input attribute value */
-            while (TRUE) {
-                if (strlen(aname) < 8)
-                    printf("%s\t\t: ",aname);
-                else
-                    printf("%s\t: ",aname);
-                if (db_gline(avalue) != NULL)
-                    break;
-            }
-
-            /* store the attribute value */
-            if (avalue[0] != EOS) {
-                db_aput(aptr,saptr->sa_aptr,avalue);
-                saptr->sa_srel->sr_update = TRUE;
-            }
+                printf("%s\t: ",aname);
+            if (db_gline(avalue) != NULL)
+                break;
         }
 
-        /* update the tuples */
-        db_update(slptr);
+        /* store the attribute value */
+        if (avalue[0] != EOS) {
+            db_aput(aptr,saptr->sa_aptr,avalue);
+            saptr->sa_srel->sr_update = TRUE;
+        }
     }
 
-    /* finish the selection */
-    db_done(slptr);
+    /* update the tuples */
+    db_update(slptr);
+  }
 
-    /* check number of tuples updated */
-    if (tcnt != 0) {
+  /* finish the selection */
+  db_done(slptr);
 
-        /* print tuple count */
-        printf("[ %d updated ]\n",tcnt);
-    }
-    else
-        printf("[ none updated ]\n");
+  /* check number of tuples updated */
+  if (tcnt != 0) {
+    /* print tuple count */
+    printf("[ %d updated ]\n",tcnt);
+  } else
+    printf("[ none updated ]\n");
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* print - print tuples from a set of relations */
 static int print()
 {
-    struct sel *slptr;
-    FILE *ffp,*ofp;
-    int tcnt;
+  struct sel *slptr;
+  FILE *ffp,*ofp;
+  int tcnt;
 
-    /* parse the using clause */
-    if (!using(&ffp,".frm"))
-        return (FALSE);
+  /* parse the using clause */
+  if (!using(&ffp,".frm"))
+    return (FALSE);
 
-    /* parse the select clause */
-    if ((slptr = db_select(NULL)) == NULL)
-        return (FALSE);
+  /* parse the select clause */
+  if ((slptr = db_select(NULL)) == NULL)
+    return (FALSE);
 
-    /* parse the into clause */
-    if (!db_to(&ofp,".txt")) {
-        db_done(slptr);
-        return (FALSE);
-    }
-
-    /* check for normal or formated output */
-    if (ffp == NULL)
-        tcnt = table(ofp,slptr);
-    else
-        tcnt = form(ofp,slptr,ffp);
-
-    /* finish the selection */
+  /* parse the into clause */
+  if (!db_to(&ofp,".txt")) {
     db_done(slptr);
+    return (FALSE);
+  }
 
-    /* close the form definition file */
-    if (ffp != NULL)
-        fclose(ffp);
+  /* check for normal or formated output */
+  if (ffp == NULL)
+    tcnt = table(ofp,slptr);
+  else
+    tcnt = form(ofp,slptr,ffp);
 
-    /* close the output file */
-    if (ofp != stdout)
-        fclose(ofp);
+  /* finish the selection */
+  db_done(slptr);
 
-    /* check number of tuples selected */
-    if (tcnt != 0)
-        printf("[ %d found ]\n",tcnt);
-    else
-        printf("[ none found ]\n");
+  /* close the form definition file */
+  if (ffp != NULL)
+    fclose(ffp);
 
-    /* return successfully */
-    return (TRUE);
+  /* close the output file */
+  if (ofp != stdout)
+    fclose(ofp);
+
+  /* check number of tuples selected */
+  if (tcnt != 0)
+    printf("[ %d found ]\n",tcnt);
+  else
+    printf("[ none found ]\n");
+
+  /* return successfully */
+  return (TRUE);
 }
 
 /* select - select tuples from a set of relations */
 static int select()
 {
-    struct sel *slptr;
-    struct relation *rptr;
-    struct sattr *saptr;
-    char *aname,*tbuf;
-    int tcnt,abase,i;
+  struct sel *slptr;
+  struct relation *rptr;
+  struct sattr *saptr;
+  char *aname,*tbuf;
+  int tcnt,abase,i;
 
-    /* parse the select clause */
-    if ((slptr = db_select(NULL)) == NULL)
-        return (FALSE);
+  /* parse the select clause */
+  if ((slptr = db_select(NULL)) == NULL)
+      return (FALSE);
 
-    /* create a new relation */
-    if ((rptr = db_rcreate("sdbcur")) == NULL) {
-        db_done(slptr);
-        return (FALSE);
-    }
+  /* create a new relation */
+  if ((rptr = db_rcreate("sdbcur")) == NULL) {
+      db_done(slptr);
+      return (FALSE);
+  }
 
-    /* create the selected attributes */
-    for (saptr = slptr->sl_attrs; saptr != NULL; saptr = saptr->sa_next) {
+  /* create the selected attributes */
+  for (saptr = slptr->sl_attrs; saptr != NULL; saptr = saptr->sa_next) {
 
-        /* decide which attribute name to use */
-        if ((aname = saptr->sa_name) == NULL)
-            aname = saptr->sa_aname;
+      /* decide which attribute name to use */
+      if ((aname = saptr->sa_name) == NULL)
+          aname = saptr->sa_aname;
 
-        /* add the attribute */
-        if (!db_rcattr(rptr,aname,saptr->sa_attr->at_type,
-                                  saptr->sa_attr->at_size)) {
-            free(rptr);
-            db_done(slptr);
-            return (FALSE);
-        }
-    }
+      /* add the attribute */
+      if (!db_rcattr(rptr,aname,saptr->sa_attr->at_type,
+                                saptr->sa_attr->at_size)) {
+          free(rptr);
+          db_done(slptr);
+          return (FALSE);
+      }
+  }
 
-    /* create the relation header */
-    if (!db_rcheader(rptr)) {
-        db_done(slptr);
-        return (FALSE);
-    }
+  /* create the relation header */
+  if (!db_rcheader(rptr)) {
+      db_done(slptr);
+      return (FALSE);
+  }
 
-    /* allocate and initialize a tuple buffer */
-    if ((tbuf = (char *)calloc(1,rptr->rl_size)) == NULL) {
-        db_rcdone(rptr);
-        return (db_ferror(INSMEM));
-    }
-    tbuf[0] = ACTIVE;
+  /* allocate and initialize a tuple buffer */
+  if ((tbuf = calloc(1,rptr->rl_size)) == NULL) {
+      db_rcdone(rptr);
+      return (db_ferror(INSMEM));
+  }
+  tbuf[0] = ACTIVE;
 
-    /* loop through the selected tuples */
-    for (tcnt = 0; db_fetch(slptr); tcnt++) {
+  /* loop through the selected tuples */
+  for (tcnt = 0; db_fetch(slptr); tcnt++) {
 
-        /* create the tuple from the selected attributes */
-        abase = 1;
-        for (saptr = slptr->sl_attrs; saptr != NULL; saptr = saptr->sa_next) {
-            for (i = 0; i < saptr->sa_attr->at_size; i++)
-                tbuf[abase + i] = saptr->sa_aptr[i];
-            abase += i;
-        }
+      /* create the tuple from the selected attributes */
+      abase = 1;
+      for (saptr = slptr->sl_attrs; saptr != NULL; saptr = saptr->sa_next) {
+          for (i = 0; i < saptr->sa_attr->at_size; i++)
+              tbuf[abase + i] = saptr->sa_aptr[i];
+          abase += i;
+      }
 
-        /* write the tuple */
-        if (write(rptr->rl_fd,tbuf,rptr->rl_size) != rptr->rl_size) {
-            db_rcdone(rptr);
-            free(tbuf);
-            return (db_ferror(INSBLK));
-        }
-        rptr->rl_tcnt++;
-        rptr->rl_tmax++;
-    }
+      /* write the tuple */
+      if (write(rptr->rl_fd,tbuf,rptr->rl_size) != rptr->rl_size) {
+          db_rcdone(rptr);
+          free(tbuf);
+          return (db_ferror(INSBLK));
+      }
+      rptr->rl_tcnt++;
+      rptr->rl_tmax++;
+  }
 
-    /* finish the selection */
-    db_done(slptr);
+  /* finish the selection */
+  db_done(slptr);
 
-    /* finish relation creation */
-    if (!db_rcdone(rptr))
-        return (FALSE);
+  /* finish relation creation */
+  if (!db_rcdone(rptr))
+      return (FALSE);
 
-    /* check number of tuples selected */
-    if (tcnt != 0)
-        printf("[ %d found ]\n",tcnt);
-    else
-        printf("[ none found ]\n");
+  /* check number of tuples selected */
+  if (tcnt != 0)
+      printf("[ %d found ]\n",tcnt);
+  else
+      printf("[ none found ]\n");
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* mc_define - define a macro */
 static int mc_define()
 {
-    struct macro *mptr,*mlast;
-    struct mtext *tptr,*tlast;
-    char textline[LINEMAX+1];
+  struct macro *mptr,*mlast;
+  struct mtext *tptr,*tlast;
+  char textline[LINEMAX+1];
 
-    /* get macro name */
-    if (db_xntoken() != ID)
-        return (db_ferror(SYNTAX));
+  /* get macro name */
+  if (db_xntoken() != ID)
+      return (db_ferror(SYNTAX));
 
-    /* make sure that the rest of the line is blank */
-    if (!db_flush())
-        return (FALSE);
+  /* make sure that the rest of the line is blank */
+  if (!db_flush())
+      return (FALSE);
 
-    /* find the macro in the macro table and free it */
-    for (mptr = dbv_macros, mlast = NULL; mptr != NULL; mlast = mptr, mptr = mptr->mc_next)
-        if (db_scmp(mptr->mc_name,dbv_tstring) == 0) {
-            if (mlast == NULL)
-                dbv_macros = mptr->mc_next;
-            else
-                mlast->mc_next = mptr->mc_next;
-            mc_free(mptr);
-        }
+  /* find the macro in the macro table and free it */
+  for (mptr = dbv_macros, mlast = NULL; mptr != NULL; mlast = mptr, mptr = mptr->mc_next)
+      if (db_scmp(mptr->mc_name,dbv_tstring) == 0) {
+          if (mlast == NULL)
+              dbv_macros = mptr->mc_next;
+          else
+              mlast->mc_next = mptr->mc_next;
+          mc_free(mptr);
+      }
 
-    /* allocate and initialize a macro structure */
-    if ((mptr = (struct macro *)malloc(sizeof(struct macro))) == NULL)
-        return (db_ferror(INSMEM));
-    if ((mptr->mc_name = (char*)malloc(strlen(dbv_tstring)+1)) == NULL) {
-        free(mptr);
-        return (db_ferror(INSMEM));
-    }
-    strcpy(mptr->mc_name,dbv_tstring);
-    mptr->mc_mtext = NULL;
+  /* allocate and initialize a macro structure */
+  if ((mptr = (struct macro *)malloc(sizeof(struct macro))) == NULL)
+      return (db_ferror(INSMEM));
+  if ((mptr->mc_name = (char*)malloc(strlen(dbv_tstring)+1)) == NULL) {
+      free(mptr);
+      return (db_ferror(INSMEM));
+  }
+  strcpy(mptr->mc_name,dbv_tstring);
+  mptr->mc_mtext = NULL;
 
-    /* setup null prompt strings */
-    db_prompt(NULL,"SDB-DEF> ");
+  /* setup null prompt strings */
+  db_prompt(NULL,"SDB-DEF> ");
 
-    /* get definition text */
-    for (tlast = NULL; ; tlast = tptr) {
+  /* get definition text */
+  for (tlast = NULL; ; tlast = tptr) {
 
-        /* get a line */
-        db_gline(textline);
-        if (textline[0] == EOS || textline[0] == '\n')
-            break;
+      /* get a line */
+      db_gline(textline);
+      if (textline[0] == EOS || textline[0] == '\n')
+          break;
 
-        /* allocate a macro text structure */
-        if ((tptr = (struct mtext *)malloc(sizeof(struct mtext))) == NULL) {
-            mc_free(mptr);
-            return (db_ferror(INSMEM));
-        }
-        if ((tptr->mt_text = (char*)malloc(strlen(textline)+1)) == NULL) {
-            mc_free(mptr);
-            return (db_ferror(INSMEM));
-        }
-        strcpy(tptr->mt_text,textline);
-        tptr->mt_next = NULL;
+      /* allocate a macro text structure */
+      if ((tptr = (struct mtext *)malloc(sizeof(struct mtext))) == NULL) {
+          mc_free(mptr);
+          return (db_ferror(INSMEM));
+      }
+      if ((tptr->mt_text = (char*)malloc(strlen(textline)+1)) == NULL) {
+          mc_free(mptr);
+          return (db_ferror(INSMEM));
+      }
+      strcpy(tptr->mt_text,textline);
+      tptr->mt_next = NULL;
 
-        /* link it into the macro list */
-        if (tlast == NULL)
-            mptr->mc_mtext = tptr;
-        else
-            tlast->mt_next = tptr;
-    }
+      /* link it into the macro list */
+      if (tlast == NULL)
+          mptr->mc_mtext = tptr;
+      else
+          tlast->mt_next = tptr;
+  }
 
-    /* link the new macro into the macro list */
-    if (tlast == NULL)
-        mc_free(mptr);
-    else {
-        mptr->mc_next = dbv_macros;
-        dbv_macros = mptr;
-    }
+  /* link the new macro into the macro list */
+  if (tlast == NULL)
+      mc_free(mptr);
+  else {
+      mptr->mc_next = dbv_macros;
+      dbv_macros = mptr;
+  }
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* mc_show - show a macro */
 static int mc_show()
 {
-    struct macro *mptr;
-    struct mtext *tptr;
+  struct macro *mptr;
+  struct mtext *tptr;
 
-    /* get macro name */
-    if (db_xntoken() != ID)
-        return (db_ferror(SYNTAX));
+  /* get macro name */
+  if (db_xntoken() != ID)
+      return (db_ferror(SYNTAX));
 
-    /* find the macro in the macro table */
-    for (mptr = dbv_macros; mptr != NULL; mptr = mptr->mc_next)
-        if (db_scmp(mptr->mc_name,dbv_tstring) == 0) {
-            for (tptr = mptr->mc_mtext; tptr != NULL; tptr = tptr->mt_next)
-                printf("\t%s\n",tptr->mt_text);
-            break;
-        }
+  /* find the macro in the macro table */
+  for (mptr = dbv_macros; mptr != NULL; mptr = mptr->mc_next)
+      if (db_scmp(mptr->mc_name,dbv_tstring) == 0) {
+          for (tptr = mptr->mc_mtext; tptr != NULL; tptr = tptr->mt_next)
+              printf("\t%s\n",tptr->mt_text);
+          break;
+      }
 
-    /* check for successful search */
-    if (mptr == NULL)
-        printf("*** no macro named: %s ***\n",dbv_tstring);
+  /* check for successful search */
+  if (mptr == NULL)
+      printf("*** no macro named: %s ***\n",dbv_tstring);
 
-    /* return successfully */
-    return (TRUE);
+  /* return successfully */
+  return (TRUE);
 }
 
 /* mc_free - free a macro definition */
 static void mc_free(struct macro *mptr)
 {
-    struct mtext *tptr;
+  struct mtext *tptr;
 
-    while ((tptr = mptr->mc_mtext) != NULL) {
-        mptr->mc_mtext = tptr->mt_next;
-        free(tptr->mt_text);
-        free(tptr);
-    }
-    free(mptr->mc_name);
-    free(mptr);
+  while ((tptr = mptr->mc_mtext) != NULL) {
+      mptr->mc_mtext = tptr->mt_next;
+      free(tptr->mt_text);
+      free(tptr);
+  }
+  free(mptr->mc_name);
+  free(mptr);
 }
 
 /* db_to - redirect output into a file */
