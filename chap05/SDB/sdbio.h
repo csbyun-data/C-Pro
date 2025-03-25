@@ -225,25 +225,6 @@ struct skey {
   struct skey *sk_next;
 };
 
-int db_parse(char *fmt, ... );
-
-static int help ( void );
-static int create ( void );
-static int insert ( void );
-static int delete ( void );
-static int update ( void );
-static int print ( void );
-static int select ( void );
-static int mc_define ( void );
-static int mc_show ( void );
-static void mc_free ( struct macro *mptr );
-static int using ( FILE **pfp , char *ext );
-static int table ( FILE *fp , struct sel *slptr );
-static int form ( FILE *ofp , struct sel *slptr , FILE *ffp );
-static void get_aname ( FILE *fp , char *aname );
-static void put_avalue ( FILE *fp , struct sel *slptr , char *aname );
-static int set ( void );
-
 #include "_proto.h"
 
 #endif
