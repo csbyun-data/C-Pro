@@ -15,7 +15,7 @@
     * [sel.c]()
     * [srt.c]()
     * [tbl.c]()
-    * [_proto.h]()
+    * [proto.h]()
     ```
     // 활용 문장
     create checks (
