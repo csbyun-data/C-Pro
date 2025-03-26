@@ -41,8 +41,11 @@
     ```
     update amount, category from checks where number = 2;
     print payee,amount from checks where category;
+    select * from checks;
     ```
     ![image](https://github.com/user-attachments/assets/91e22ab9-f1fc-4bac-a776-f1e4ecd8ef1d)
+    ![image](https://github.com/user-attachments/assets/0e99360b-9ec8-4c71-9619-6bf8e957ff6f)
+
     ```
     import in.dat into checks
     export checks into a.dat
