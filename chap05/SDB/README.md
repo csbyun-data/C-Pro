@@ -17,7 +17,8 @@
     * [tbl.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/tbl.c)
     * [_proto.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/_proto.h)
     ```
-    // 활용 문장
+    // SQL 문장 분석하여 파일 생성, 자료 조회, 저장, 수정, 삭제, 정렬 기능
+    // 매크로 작업 저장 기능
     create checks (
     number      num     4
     date        char    8
