@@ -49,7 +49,7 @@
     ```
     import in.dat into checks
     export checks into a.dat
-    extract checks into c; - c.def 파일이 생성됨
+    extract checks into c; <- c.def 파일이 생성됨
     compress checks - 지워진 row를 줄이고, 마지막 row 입력칸을 당김
     ```
     ![image](https://github.com/user-attachments/assets/b25f6712-38e5-44fd-9ec5-90a77dd1949a)
@@ -60,6 +60,20 @@
     ```
     ![image](https://github.com/user-attachments/assets/ee946edd-cf7e-42c2-a58d-d02efe232998)
     ![image](https://github.com/user-attachments/assets/b86e1720-52fc-47c0-8873-d380968a9062)
+    ```
+    // macro 파일생성
+    define macro
+    show macro
+    ```
+    ![image](https://github.com/user-attachments/assets/6e7900a2-cfde-4535-a234-e508c209885e)
+    ```
+    //fuction
+    help <- sdb.hlp 파일 내용을 화면에 출력
+    exit <- 프로그램 종료
+    ```
+    ![image](https://github.com/user-attachments/assets/125068ed-becc-41a1-b35d-22cd79b9dfa5)
+
+
 
 
 
