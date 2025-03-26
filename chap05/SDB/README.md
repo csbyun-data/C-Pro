@@ -54,6 +54,13 @@
     ```
     ![image](https://github.com/user-attachments/assets/b25f6712-38e5-44fd-9ec5-90a77dd1949a)
     ![image](https://github.com/user-attachments/assets/e0412b88-8418-4337-8a4b-f9316c4c8d6f)
+    ```
+    sort checks by amount descending;
+    sort checks by amount asending;
+    ```
+    ![image](https://github.com/user-attachments/assets/ee946edd-cf7e-42c2-a58d-d02efe232998)
+    ![image](https://github.com/user-attachments/assets/b86e1720-52fc-47c0-8873-d380968a9062)
+
 
 
     
