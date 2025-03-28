@@ -1,4 +1,24 @@
+### Array
+* 1.Array
+    * 배열 선언, 초기화
+    ```
+    int array[5];
+    int matrix[5][3];
 
+    int *ptr;
+
+    TYPEDEF int array[10];
+    array simple, matrix[5]; <- int (simple)[10], (matrix[5])[10];
+
+    int a=5;
+    int array1[5] = {1, 2, 3, 4, 5};
+    int array2[] = {1, 2, 3, 4, 5};
+    int matrix1[2][3] = {1, 2, 3, 4, 5, 6};
+    int matrix2[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    
+    ```   
+    
+  2. 
 ### String in C
 * 1.문자열 (String)
     * Reference [string-c-cpp-programs](https://www.geeksforgeeks.org/string-c-cpp-programs/)
