@@ -17,8 +17,6 @@
     int matrix2[2][3] = {{1, 2, 3}, {4, 5, 6}};
     
     ```   
-    
-  2. 
 ### String in C
 * 1.문자열 (String)
     * Reference [string-c-cpp-programs](https://www.geeksforgeeks.org/string-c-cpp-programs/)
