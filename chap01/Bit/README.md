@@ -6,7 +6,7 @@
   논리곱 (AND) : &, 논리합 (OR) : |, 배타적 논리합 (XOR) : ^
   왼쪽 이동 연산자 <<, 오른쪽 이동 연산자 >>
   ```
-  * [bitarray.c](https://github.com/vonj/snippets.org/blob/master/bitarray.c）
+  * [bitarray.c](https://github.com/vonj/snippets.org/blob/master/bitarray.c)
   * [bitcnt_1.c](https://github.com/vonj/snippets.org/blob/master/bitcnt_1.c)
   * [bitcnt_2.c](https://github.com/vonj/snippets.org/blob/master/bitcnt_2.c)
   * [bitcnt_3.c](https://github.com/vonj/snippets.org/blob/master/bitcnt_3.c)
