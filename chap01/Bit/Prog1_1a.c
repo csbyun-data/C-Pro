@@ -1,5 +1,4 @@
-/*Prgl_la - Simple bit manipulation functions 
- by Stephen R. Davis, '87 
+/*Prgl_la - Simple bit manipulation functions by Stephen R. Davis, '87 
 
  Simple Clacks "bit picking" primitives. The following routines 
  provide some simple bit manipulation capabilities. 
