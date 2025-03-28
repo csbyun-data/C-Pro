@@ -15,3 +15,4 @@
   * [bitfiles.c](https://github.com/vonj/snippets.org/blob/master/bitfiles.c)
   * [bitops.h](https://github.com/vonj/snippets.org/blob/master/bitops.h), [bitops.how](https://github.com/vonj/snippets.org/blob/master/bitops.how)
   * [bitstrng.c](https://github.com/vonj/snippets.org/blob/master/bitstrng.c)
+  * [Simple bit manipulation functions]()
