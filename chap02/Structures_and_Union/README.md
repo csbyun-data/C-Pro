@@ -41,6 +41,10 @@
   // 초기화 방법1
   struct Mydata InfoData = { 2, 3};
 
+  struct { int a[3];
+           int b;
+         } w = {{1, 2, 3}, 4};
+
   // 초기화 방법2
   struct Mydata InfoData;
   InfoData.a = 2;
