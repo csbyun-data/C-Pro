@@ -100,7 +100,9 @@
     (*ptr)(); // callback to A
   }
   ```
-### Pointer to Function
-* [Book] Turbo C The Art of Advanced Program Design Optimization and Debuggin
-    * Pointer to Function [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_4.c)
+### [Book] Turbo C The Art of Advanced Program Design Optimization and Debugging
+* Pointer to Function
+    * Trapezoid Rule [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_3b.c)
+    * Classic Bubble Sort [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_4.c)
+
   
