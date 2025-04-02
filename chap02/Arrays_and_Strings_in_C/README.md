@@ -156,7 +156,7 @@
 
 ### String
 * Turbo C The Art of Advanced Program Design Optimization and Debugging
-  * [Complex Pointer]()
+  * [Complex Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/Prg3_2b.c)
   ```
   /*Prg 3_2b - Print the names of the month
     by Stephen R. Davis, 1987 
