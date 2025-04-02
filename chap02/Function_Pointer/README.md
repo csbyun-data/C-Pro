@@ -100,3 +100,7 @@
     (*ptr)(); // callback to A
   }
   ```
+### Pointer to Function
+* [Book] Turbo C The Art of Advanced Program Design Optimization and Debuggin
+    * Pointer to Function [code]()
+  
