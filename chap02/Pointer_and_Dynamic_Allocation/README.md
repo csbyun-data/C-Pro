@@ -188,13 +188,13 @@
 * 4.Pointer to string array in C
   * 4.1 2차원 배열 사용한 문자열
   ```c
-   char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+   char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcdef4","abcdef5" };
   ```
   ![image](https://github.com/user-attachments/assets/39b45f87-9633-4f74-9856-03e44c91ad48)
 
   * 4.2 string pointer 배열을 사용한 문자열
   ```c
-   char *arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+   char *arr[5] = {"abcdef1", "abcdef2","abcdef3","abcdef4","abcdef5" };
   ```
   ![image](https://github.com/user-attachments/assets/93daf016-231f-4c92-b473-8ffc7905a6fc)
   
@@ -207,7 +207,7 @@
   {
     int row =0;
     //create 2d array of the characters
-    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcdef4","abcdef5" };
     //create pointer to the array
     char (*ptrArr)[10] = NULL;
 
@@ -226,7 +226,7 @@
   {
     int row =0;
     //create 2d array of the characters
-    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+    char arr[5][10] = {"abcdef1", "abcdef2","abcdef3","abcdef4","abcdef5" };
     //create pointer to the 2d array
     char (*ptrArr)[5][10] = NULL;
 
@@ -247,7 +247,7 @@
   {
     int row =0;
     //create 2d array of the characters
-    char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+    char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcdef4","abcdef5" };
 
     //create pointer to the array
     char * (*ptrArr)[5] = NULL; // 배열 포인터-> (*ptrArr)[5], 배열[5]인 것을 가리키는 포인터 1개
@@ -268,7 +268,7 @@
   {
     int row =0;
     //create 2d array of the characters
-    char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcedf3","abcdef4","abcdef5" };
+    char * arr[5] = {"abcdef1", "abcdef2","abcdef3","abcdef4","abcdef5" };
 
     //create pointer to the array
     char **ptr = NULL;
