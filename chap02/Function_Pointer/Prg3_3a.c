@@ -40,22 +40,22 @@ void * (*) (void *));
  
 /*Sort - implement bubble sort*/ 
 int sort (compare, swap, sequence) 
- int (*compare) (void*, void*), (*swap) (void*, void*); 
- void *(*sequence) (void *); 
+  int (*compare) (void*, void*), (*swap) (void*, void*); 
+  void *(*sequence) (void *); 
 {
-	int flag; 
-	void *pl, *p2; 
-	do { 
-		flag = 0; 
-		p2 = (*sequence) (0); /*starting w/ first entry ... */ 
-		while (pl= p2, p2 = (*sequence) (p2)) { /* ... sequence thru*/ 
-			if ((*compare) (pl, p2) > 0) { /*if pl> p2 ... */ 
-				if ((*swap)(pl, p2)) return -1;/* ... swappl & p2*/ 
-				flag = 1; 
-			}
-		}
-	} while (flag); 	/* stop when all are in order */
-	return 0; 
+  int flag; 
+  void *pl, *p2; 
+  do { 
+    flag = 0; 
+    p2 = (*sequence) (0); /*starting w/ first entry ... */ 
+    while (pl= p2, p2 = (*sequence) (p2)) { /* ... sequence thru*/ 
+      if ((*compare) (pl, p2) > 0) { /*if pl> p2 ... */ 
+        if ((*swap)(pl, p2)) return -1;/* ... swappl & p2*/ 
+        flag = 1; 
+      }
+    }
+  } while (flag); 	/* stop when all are in order */
+  return 0; 
 }
 
 /*simple example of using SORT() --
@@ -71,45 +71,45 @@ int data [N];
 int compare (i1, i2) 
   int *i1, *i2; 
 {
-	if (*i1 != *i2) return (*i1 > *i2)  ? 1: -1;
-	return 0; 
+  if (*i1 != *i2) return (*i1 > *i2)  ? 1: -1;
+  return 0; 
 }
 
 int swap (il, i2) 
   int *il, *i2; 
 {
-	int temp; 
-	
-	temp = *il; 
-	*il = *i2; 
-	*i2 = temp; 
-	
-	return 0; 
+  int temp; 
+  
+  temp = *il; 
+  *il = *i2; 
+  *i2 = temp; 
+  
+  return 0; 
 }
 
 void *sequence (i) 
   int *i; 
 {
-	if (i) 
-		if (i == &data[N - 1])  /*if last entry ... */ 
-			return 0;			/* ... return a 0; else ... */ 
-		else
-			return ++i;			/* ... return the next entry*/ 
-	else
-		return data;			/*return first entry*/ 
+  if (i) 
+    if (i == &data[N - 1])  /*if last entry ... */ 
+      return 0;			/* ... return a 0; else ... */ 
+    else
+      return ++i;			/* ... return the next entry*/ 
+  else
+    return data;			/*return first entry*/ 
 }
 
 
 int main () 
 {
-	int i; 
-
-	printf ("Enter a sequence of %d integers\n", N); 
-	for (i = 0; i < N; i++) 
-		scanf ("%d", &data[i]); 
-	if (sort (compare, swap, sequence)) 
-		printf ("Error during sort!\n"); 
-	printf ("\n\nHere is the sorted sequence\n"); 
-	for (i = 0; i < N; i++) 
-		printf ("%d ", data[i]); 
+  int i; 
+  
+  printf ("Enter a sequence of %d integers\n", N); 
+  for (i = 0; i < N; i++) 
+    scanf ("%d", &data[i]); 
+  if (sort (compare, swap, sequence)) 
+    printf ("Error during sort!\n"); 
+  printf ("\n\nHere is the sorted sequence\n"); 
+  for (i = 0; i < N; i++) 
+    printf ("%d ", data[i]); 
 }
