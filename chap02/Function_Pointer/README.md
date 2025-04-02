@@ -102,5 +102,5 @@
   ```
 ### Pointer to Function
 * [Book] Turbo C The Art of Advanced Program Design Optimization and Debuggin
-    * Pointer to Function [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_3a.c)
+    * Pointer to Function [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_4.c)
   
