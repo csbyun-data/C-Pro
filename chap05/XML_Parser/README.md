@@ -550,6 +550,15 @@
       i++;
       parse_attrs(buf, &i, lex, &lexi, curr_node);
     }
+
+    char* XMLNode_attr_val(XMLNode* node, char* key) {
+      for(int i = 0; i < node->attributes.size; i++) {
+        XMLAttribute attr = node->attributes.data[i];
+        if(!strcmp(attr.key, key))
+           return attr.value;
+      }
+      return NULL;
+    }
     ```
     ![image](https://github.com/user-attachments/assets/7e7e19c7-d9bb-4852-b014-278f21a6afdc)
     * XML Document Structure  
