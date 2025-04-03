@@ -123,7 +123,7 @@
     ```
 ### [Book] Turbo C-The Art of Advanced Program Design Optimization and Debugging
 * Environment
-   * dump the environment on the screen [code]()
+   * dump the environment on the screen [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/Prg5_10b.c)
    ```C
    /*Prg5_10b - Display the Environment 
      by Stephen R. Davis, 1987 
