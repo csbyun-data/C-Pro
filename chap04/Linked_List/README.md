@@ -224,3 +224,6 @@
    Stk_Blob.C   any  Stack management functions for Binary Large OBjects
    + Ll_Demo.C    any  Demonstration of linked list functions in action
   ```
+### [Book] Turbo C The Art of Advanced Program Design Optimization and Debugging
+* Linked List
+  * Singly Linked Lists [code]()
