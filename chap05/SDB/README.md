@@ -30,6 +30,114 @@
     1. ./checks.sdb 파일이 생성 됨, 속성이 읽기 모드로 생성 됨으로 속성 수정해야됨
     2. 속성 수정관련 프로그램 점검 필요함
     ```
+    ```
+    //cmd.c
+    /* db_parse - parse a command */
+    int db_parse(char *fmt, ... ) {
+      int sts;
+
+      /* check for a command line */
+      if (fmt != NULL)
+        db_scan(fmt);
+
+      /* determine the statement type */
+      switch (db_ntoken()) {
+      case ';':   sts = TRUE;
+                  break;
+      case CREATE:
+                sts = create();
+                break;
+      default:
+         return (db_ferror(SYNTAX));
+      }
+      return (sts);
+    }
+    ```
+    ```
+    /* db_token - return the current input token */
+    int db_token() {
+      struct macro *mptr;
+      struct ifile *new_ifp;
+   
+      /* find a token that's not a macro call */
+      while (db_xtoken() == ID) {
+        /* check for a macro call */
+        for (mptr = dbv_macros; mptr != NULL; mptr = mptr->mc_next)
+          if (db_scmp(dbv_tstring,mptr->mc_name) == 0) {
+            if ((new_ifp = (struct ifile *)malloc(sizeof(struct ifile))) == NULL)
+              printf("*** error expanding macro: %s ***\n",dbv_tstring);
+            else {
+              new_ifp->if_fp = NULL;
+              new_ifp->if_mtext = mptr->mc_mtext->mt_next;
+              new_ifp->if_lptr = lptr; lptr = mptr->mc_mtext->mt_text;
+              new_ifp->if_savech = savech; savech = EOS;
+              new_ifp->if_next = dbv_ifp;
+              dbv_ifp = new_ifp;
+           }
+           savetkn = NULL;
+           break;
+         }
+   
+         if (mptr == NULL)
+           break;
+      }  
+      return (dbv_token);
+    }
+
+    /* db_xtoken - return the current input token */
+    int db_xtoken() {
+       int ch;
+   
+       /* check for a saved token */
+       if ((dbv_token = savetkn) != NULL)
+         return (dbv_token);
+   
+       /* get the next non-blank character */
+       ch = nextch();
+   
+       /* check type of character */
+       if (isalpha(ch))                    /* identifier or keyword */
+         get_id();
+       else if (isdigit(ch))               /* number */
+         get_number();
+       else if (ch == '"')                 /* string */
+         get_string();
+       else if (get_rel())                 /* relational operator */
+         ;
+       else                                /* single character token */
+         dbv_token = getch();
+   
+       /* save the lookahead token */
+       savetkn = dbv_token;
+   
+       /* return the token */
+       return (dbv_token);
+    }
+           
+    /* db_ntoken - get next token (after skipping the current one) */
+    int db_ntoken() {
+      /* get the current token */
+      db_token();
+   
+      /* make sure another is read on next call */
+      savetkn = NULL;
+   
+      /* return the current token */
+      return (dbv_token);
+    }
+
+    /* db_xntoken - get next token (after skipping the current one) */
+    int db_xntoken() {
+      /* get the current token */
+      db_xtoken();
+
+      /* make sure another is read on next call */
+      savetkn = NULL;
+
+      /* return the current token */
+      return (dbv_token);
+    }    
+    ```
     ![image](https://github.com/user-attachments/assets/c4c26f22-f863-4b8c-ad0c-ff739bd0912f)
     ```
     insert checks
