@@ -61,7 +61,7 @@ Grammar of programming, a collection of basic materials for application.
 ## Data Structure, Algorithm
 * [snippets.org], [Stack](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Stack/README.md)
 * Queue, Priority Queue, Heap
-* [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
+* [aticleworld.com], [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
 * Recursion method
 * [Binary Tree](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Binary_Tree/README.md)
 * Graph
