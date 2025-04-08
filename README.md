@@ -79,7 +79,7 @@ Grammar of programming, a collection of basic materials for application.
     * [snippets.org], [Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/README.md)
     * [numbertheory.org], [CALC-A number theory calculator](http://www.numbertheory.org/keith.html)
 * [XML Parser](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
-* [Lightweight JSON library written in C](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/README.md)
+* [github.com/kgabis/parson], [Lightweight JSON library written in C](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/README.md)
 * [David Betz. XLISP], [XLISP Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/README.md)
 * [Book], [Interpreting LISP: Programming and Data Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/READ.md)
 * [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://drh.github.io/cii/index.html)
