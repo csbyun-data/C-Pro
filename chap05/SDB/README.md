@@ -65,11 +65,11 @@
 
       /* determine the statement type */
       switch (db_ntoken()) {
-      case CREATE:
-                sts = create();
-                break;
-      default:
-         return (db_ferror(SYNTAX));
+        case CREATE:
+          sts = create();
+          break;
+        default:
+          return (db_ferror(SYNTAX));
       }
       return (sts);
     }
