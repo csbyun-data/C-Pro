@@ -5,11 +5,11 @@ Grammar of programming, a collection of basic materials for application.
 ## Syntax
 * [Syntax](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Syntax/README.md) [command line argument, getopts, 증감 연산자, environment] 
 * [가변인자, 가변함수](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Variadic/README.md) [Variadic arguments, ErrExit(), printf()]
-* [Input함수](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/README.md) [scanf(), sscanf(), gets(), fgets(), kbhit()], [OutPut함수: puts(), fputs()]
-* [sleep(), time(), qsort() 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/README.md)
-* [조건문, 반복문, setjmp()](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/README.md)
-* [Array, String](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md)
-* [function(), parameter, return value](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md)
+* [Input, Output 함수](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Input/README.md) [scanf(), sscanf(), gets(), fgets(), kbhit()], [puts(), fputs()]
+* [Function:](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/README.md) [sleep(), time(), qsort()]
+* [Function:](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md) [parameter, return value]
+* [조건문, 반복문](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/README.md) [setjmp(), longjmp()]
+* [Array, String](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md) [scanf(), fgets(), puts(), strcat(), strcpy(), strcmp(), stddup()]
 * [typedef 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md)
 * [Binary Octal Decimal Hexa변환](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin/README.md)
 * [static, extern 사용](https://github.com/csbyun-data/C-Pro/blob/main/chap01/extern/README.md)
