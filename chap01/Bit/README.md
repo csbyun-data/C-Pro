@@ -1,5 +1,5 @@
-### BIT UNIT OPERATOR
-* bit
+### [snippets.org]
+* BIT UNIT OPERATOR
   * 논리연산자
   ```
   (단항) 비트단위 보수	~
