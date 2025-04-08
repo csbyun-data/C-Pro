@@ -13,13 +13,13 @@ Grammar of programming, a collection of basic materials for application.
 * [typedef 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md)
 * [Binary Octal Decimal Hexa변환](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin/README.md)
 * [static, extern 사용](https://github.com/csbyun-data/C-Pro/blob/main/chap01/extern/README.md)
-* [snippets.org][bit unit operator](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bit/README.md)
+* [snippets.org], [bit unit operator](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bit/README.md)
   
 ## Pointer, Array, String, Function Pointer  
 * [pointer and array, function pointer, pointer structure](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
 * [Pointer and Dynamic memory allocation](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
 * [Arrays and String in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
-* [snippets.org],[BASIC-like string functions](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/README.md)
+* [snippets.org], [BASIC-like string functions](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/README.md)
 * [Function Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/README.md)
 * [Book], [Function Pointer Tutorials](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)
 * [Book], [Pointers on C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/READ.md)
