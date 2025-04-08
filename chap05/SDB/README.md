@@ -31,7 +31,30 @@
     2. 속성 수정관련 프로그램 점검 필요함
     ```
     ```
-    //cmd.c
+    // scn.c
+    int dbv_token;                          /* current token */
+    int dbv_tvalue;                         /* integer token value */
+    char dbv_tstring[STRINGMAX+1];          /* string token value */
+    
+    const static char *keywords[] = {             /* keyword table */
+      "ascending",
+      "by",
+      "char",
+      "compress",
+      "create",
+      //..
+    };
+    const static int keytokens[] = {              /* token values for each keyword */
+      ASCENDING, //-32
+      BY,        //-31
+      CHAR,      //-14
+      COMPRESS,  //-25
+      CREATE,    //-10
+      //..
+    };
+    ```
+    ```
+    // cmd.c
     /* db_parse - parse a command */
     int db_parse(char *fmt, ... ) {
       int sts;
@@ -42,8 +65,6 @@
 
       /* determine the statement type */
       switch (db_ntoken()) {
-      case ';':   sts = TRUE;
-                  break;
       case CREATE:
                 sts = create();
                 break;
@@ -60,27 +81,11 @@
       struct ifile *new_ifp;
    
       /* find a token that's not a macro call */
+      // db_xtoken()에서 dbv_token 값 대입 
       while (db_xtoken() == ID) {
         /* check for a macro call */
-        for (mptr = dbv_macros; mptr != NULL; mptr = mptr->mc_next)
-          if (db_scmp(dbv_tstring,mptr->mc_name) == 0) {
-            if ((new_ifp = (struct ifile *)malloc(sizeof(struct ifile))) == NULL)
-              printf("*** error expanding macro: %s ***\n",dbv_tstring);
-            else {
-              new_ifp->if_fp = NULL;
-              new_ifp->if_mtext = mptr->mc_mtext->mt_next;
-              new_ifp->if_lptr = lptr; lptr = mptr->mc_mtext->mt_text;
-              new_ifp->if_savech = savech; savech = EOS;
-              new_ifp->if_next = dbv_ifp;
-              dbv_ifp = new_ifp;
-           }
-           savetkn = NULL;
-           break;
-         }
-   
-         if (mptr == NULL)
-           break;
-      }  
+        //...
+      }
       return (dbv_token);
     }
 
