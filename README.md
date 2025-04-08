@@ -76,8 +76,8 @@ Grammar of programming, a collection of basic materials for application.
     1.도서 관리, 2.학생 기록-성적, 3.직원 기록, 4.주소록
     ```
 * [Calculation]
-    * [Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/README.md)
-    * [CALC-A number theory calculator](http://www.numbertheory.org/keith.html)
+    * [snippets.org], [Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Calc/README.md)
+    * [numbertheory.org], [CALC-A number theory calculator](http://www.numbertheory.org/keith.html)
 * [XML Parser](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XML_Parser/README.md)
 * [Lightweight JSON library written in C](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/README.md)
 * [David Betz. XLISP], [XLISP Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/README.md)
