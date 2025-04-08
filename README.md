@@ -41,7 +41,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Memory layout of C program](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Memory-layout/README.md)
   
 ## File I/O
-* [File I/O](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/README.md)
+* [aticleworld.com], [File I/O](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/README.md)
   ```txt
   고수준 파일함수 fopen(), fprintf(), fputc(), fputs(), fwrite(),fscanf(),
     fgetc(), fgets(), fread(), fseek()
