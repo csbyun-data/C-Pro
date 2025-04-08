@@ -59,7 +59,7 @@ Grammar of programming, a collection of basic materials for application.
 * [aticleworld.com], [Parse XML response in C without using library](https://github.com/csbyun-data/C-Pro/blob/main/chap03/XML/README.md)
 
 ## Data Structure, Algorithm
-* [Stack](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Stack/README.md)
+* [snippets.org], [Stack](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Stack/README.md)
 * Queue, Priority Queue, Heap
 * [Linked List](https://github.com/csbyun-data/C-Pro/blob/main/chap04/Linked_List/README.md)
 * Recursion method
