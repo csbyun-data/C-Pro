@@ -17,8 +17,8 @@
     int matrix2[2][3] = {{1, 2, 3}, {4, 5, 6}};
     
     ```   
-### String in C
-* 1.문자열 (String)
+### string-c-cpp-programs
+* 1.String in C
     * Reference [string-c-cpp-programs](https://www.geeksforgeeks.org/string-c-cpp-programs/)
     ```c
     char c[] = "abcd";
