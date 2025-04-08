@@ -17,7 +17,7 @@
     int matrix2[2][3] = {{1, 2, 3}, {4, 5, 6}};
     
     ```   
-### string-c-cpp-programs
+### String-c-cpp-programs
 * 1.String in C
     * Reference [string-c-cpp-programs](https://www.geeksforgeeks.org/string-c-cpp-programs/)
     ```c
