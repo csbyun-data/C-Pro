@@ -18,7 +18,7 @@ Grammar of programming, a collection of basic materials for application.
 ## Pointer, Array, String, Function Pointer  
 * [pointer and array](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md) [Type, 산술, Dynamic array, function pointer, pointer structure, pointer사용Error]
 * [aticleworld.com], [Pointer and Dynamic memory allocation](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
-* [Arrays and String in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
+* [aticleworld.com], [Arrays and String in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
 * [snippets.org], [BASIC-like string functions](https://github.com/csbyun-data/C-Pro/blob/main/chap02/bastring/README.md)
 * [Function Pointer](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer/README.md)
 * [Book], [Function Pointer Tutorials](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)
