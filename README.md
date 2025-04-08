@@ -36,7 +36,7 @@ Grammar of programming, a collection of basic materials for application.
 * Structures and Unions in C
     * [aticleworld.com], [Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
     * [Pragma pack 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/Pragma_Pack.md)
-    * [Unions and Bit field](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/UNION.md)
+    * [aticleworld.com], [Unions and Bit field](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/UNION.md)
 * [Structures, String Pointer 활용](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/README.md)
 * [Memory layout of C program](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Memory-layout/README.md)
   
