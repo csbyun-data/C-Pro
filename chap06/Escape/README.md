@@ -33,6 +33,16 @@
   int menuDraw();
   ```
   ![image](https://github.com/user-attachments/assets/51cf080a-02a4-45b4-b711-72297a4a0432)
+  ```
+  int maplistDraw();
+  ```
+  ![image](https://github.com/user-attachments/assets/90c53971-009e-4485-88b4-22440dff1260)
+
+  ```
+  void infoDraw();
+  ```
+  ![image](https://github.com/user-attachments/assets/28f7ea96-802b-4250-a811-7ea9bd55ebe8)
+
 
   * [util.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Escape/util.c)  
   ```c
