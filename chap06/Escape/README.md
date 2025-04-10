@@ -41,6 +41,24 @@
   void infoDraw();
   ```
   ![image](https://github.com/user-attachments/assets/28f7ea96-802b-4250-a811-7ea9bd55ebe8)
+  ```
+  // w, a, s, d
+  int keyControl(){
+    char temp = getch();
+    
+    if(temp == 'w' || temp == 'W'){
+      return UP;
+    } else if(temp == 'a' || temp == 'A'){
+      return LEFT;
+    } else if(temp == 's' || temp == 'S'){
+      return DOWN;
+    } else if(temp == 'd' || temp == 'D'){
+      return RIGHT;
+    } else if(temp == ' '){ // 스페이스바(공백)이 선택 버튼  
+      return SUBMIT;
+    }
+  }
+  ```
 
 
   * [util.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Escape/util.c)  
