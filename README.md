@@ -86,7 +86,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Simple DB], [SDB](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/README.md)
 ## Game
 * [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Escape/README.md)
-* [Sokoban](https://github.com/maksimKorzh/sokoban)
+* [Sokoban](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Sokoban/README.md)
 * [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
 * [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
 * [Pong, Snake, Tetris](https://github.com/arasgungore/console-games)
