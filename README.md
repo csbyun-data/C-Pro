@@ -85,15 +85,14 @@ Grammar of programming, a collection of basic materials for application.
 * [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://drh.github.io/cii/index.html)
 * [Simple DB], [SDB](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/README.md)
 ## Game
-* [Console Game](https://github.com/csbyun-data/C-Pro/blob/main/chap06/README.md)
-    * [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
-    * [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
-    * [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
-    * [Pong, Snake, Tetris](https://github.com/arasgungore/console-games)
-    * [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
-    * [tictactoe](https://github.com/emacdona/tictactoe)
-    * [Sokoban](https://github.com/maksimKorzh/sokoban)
-    * [Chess](https://github.com/omeredel/Chess-In-C)
+* [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
+* [Sokoban](https://github.com/maksimKorzh/sokoban)
+* [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
+* [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
+* [Pong, Snake, Tetris](https://github.com/arasgungore/console-games)
+* [Rhythm](https://github.com/Waterticket/C-Rhythm-Game)
+* [tictactoe](https://github.com/emacdona/tictactoe)
+* [Chess](https://github.com/omeredel/Chess-In-C)
 ## Compiler
 * [Book], [lcc, A Retargetable Compiler for ANSI C: Design and Implementation](https://drh.github.io/lcc/)
 
