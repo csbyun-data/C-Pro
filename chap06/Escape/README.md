@@ -36,8 +36,7 @@
   ```
   int maplistDraw();
   ```
-  ![image](https://github.com/user-attachments/assets/90c53971-009e-4485-88b4-22440dff1260)
-
+  ![image](https://github.com/user-attachments/assets/f931a220-7ba6-4025-92c9-944df038630a)
   ```
   void infoDraw();
   ```
