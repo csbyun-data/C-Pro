@@ -41,7 +41,7 @@
   void infoDraw();
   ```
   ![image](https://github.com/user-attachments/assets/28f7ea96-802b-4250-a811-7ea9bd55ebe8)
-* Move Key : <span style='background-color:$f6f8fa'> w, a, s, d </span>
+  
   ```
   int keyControl(){
     char temp = getch();
