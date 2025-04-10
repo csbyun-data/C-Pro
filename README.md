@@ -85,7 +85,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://drh.github.io/cii/index.html)
 * [Simple DB], [SDB](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/README.md)
 ## Game
-* [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Escape/README.md)
+* [Escape](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Escape/README.md)
 * [Sokoban](https://github.com/maksimKorzh/sokoban)
 * [Packman](https://github.com/YoctoForBeaglebone/pacman4console)
 * [Snake](https://github.com/Contagious06/console-snake-game), [Snake1](https://github.com/peperunii/Games-Snake)
