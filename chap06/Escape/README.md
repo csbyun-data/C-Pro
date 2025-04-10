@@ -27,6 +27,13 @@
   void drawMap(int*, int*);
   void drawUI(int*, int*, int*);
   ```
+  ```
+  // Start Window Draw
+  void titleDraw();
+  int menuDraw();
+  ```
+  ![image](https://github.com/user-attachments/assets/51cf080a-02a4-45b4-b711-72297a4a0432)
+
   * [util.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Escape/util.c)  
   ```c
   void init(){
