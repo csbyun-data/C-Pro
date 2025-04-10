@@ -72,3 +72,4 @@
    ```
     ![image](https://github.com/user-attachments/assets/2a3a2b7d-38c7-480d-8542-fa9b74871d47)
 
+    * [참조: sokoban](https://github.com/maksimKorzh/sokoban)
