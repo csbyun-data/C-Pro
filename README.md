@@ -31,7 +31,7 @@ Grammar of programming, a collection of basic materials for application.
   int compare_string(const void *m, const void *n);
   int compare_long(const void *m, const void *n);
   ```
-* [Book], [Pointer in C a Hands on Approach]()
+* [Book], [Pointer in C a Hands on Approach](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_in_C/README.md)
 
 ## Structure, Union
 * Structures and Unions in C
