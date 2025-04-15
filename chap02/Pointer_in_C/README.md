@@ -1,2 +1,2 @@
-### [Book] Pointer in C a Hands on Approach
+### [Book] Pointer in C-a Hands on Approach
 * book
