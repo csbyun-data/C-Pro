@@ -114,3 +114,4 @@ Grammar of programming, a collection of basic materials for application.
 * [참조: [cppreference.com/w/c](https://en.cppreference.com/w/c)]
 * [참조: [bito.ai/resources_categories/c-c/](https://bito.ai/resources_categories/c-c/)]
 * [참조: [http://soen.kr/](http://soen.kr/lecture/ccpp/cpplec.htm)
+* [참조: [https://github.com/ifding/learning-notes](https://github.com/ifding/learning-notes)
