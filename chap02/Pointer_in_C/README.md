@@ -268,12 +268,12 @@
     * Multievel pointers
     ```
     // Pointers to a pointer variable
-    ```
+
     int a = 10;
     int *ptr = &a;
     int **ptr1 = &ptr;
     ```  
-    ![image](https://github.com/user-attachments/assets/219452f6-8b6f-4214-be11-39bac5c55b8e)
+    ![image](https://github.com/user-attachments/assets/219452f6-8b6f-4214-be11-39bac5c55b8e)  
     ```
     // ptr10.c
     int main() {
@@ -296,6 +296,12 @@
       return 0;
     }
     ```
+* Chapter 3: Pointer Arithmetic and Single Dimension Arrays
+* Chapter 4: Pointers and Strings
+* Chapter 5: Pointers and Multidimensional Arrays
+* Chapter 6: Pointers to Structures
+* Chapter 7: Function Pointers
+* Chapter 8: Pointers to File I/O
     
     
 
