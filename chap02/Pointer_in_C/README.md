@@ -842,7 +842,8 @@
      free(arr);
    }
    ```
-   
+   ![image](https://github.com/user-attachments/assets/5de354db-c250-446f-8924-8779441115ef)
+
 * Chapter 5: Pointers and Multidimensional Arrays
 * Chapter 6: Pointers to Structures
 * Chapter 7: Function Pointers
