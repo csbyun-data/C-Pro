@@ -712,8 +712,139 @@
    // string9.c
    #include <stdio.h>
    #include <malloc.h>
+   int main() {
+     char arrstr[6];
+     char *strptr;
+     printf("Input hello\n");
+     scanf("%s", arrstr);
+     strptr = arrstr;
+     while( *strptr != '\0') {
+       printf("%c", *strptr);
+       strptr++;
+     }
+   }
    ```
+   * String length
    ```
+   int str_length(char *str) {
+     int string_length = 0;
+     char *ptr = null;
+     ptr = str;
+     while( *ptr != '\0')
+       string_length++;
+     return string_length;
+   }
+   ```
+   * String copy
+   ```
+   void str_copy(char *dest_str, const char *src_str) {
+     char *stemp = src_str;
+     char *dtemp = dest_str;
+     while( *stemp != '\0') {
+       *dtemp = *stemp;
+       stemp++;
+       dtemp++;
+     }
+     *dtemp = '\0';
+   }
+   ```
+   * String Concatenation
+   ```
+   void str_cat(char *deststr, const char *srcstr) {
+     char *dtemp = deststr;
+     char *stemp = srcstr;
+     // reach till end of the deststr
+     while( *dtemp != '\0') {
+       dtemp++;
+     while( *srcstr != '\0') {
+       *dtemp = *srcstr;
+       dtemp++;
+       srcstr++;
+     }
+     *dtemp = '\0';
+   }
+   ```
+   * Array of Strings
+   ```
+   // string10.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     char arr[6][10] = { "EGRET", "IBIS", "MYNA", "IORA", "MUNIA", "BULBUL" };
+     int i;
+     for( i=0; i<6; i++)
+       printf(" %d - %s\n", i, arr[i]);
+     return 0;
+   }
+
+   // string11.c
+   #include <stdio.h>
+   #include <string.h>
+   #include <malloc.h>
+
+   int main( int argc, char *argv[]) {
+     char *arr[6];
+     char tempstring[30];
+     int i;
+
+     for( i=0; i<6; i++) {
+       printf("Insert data\n");
+       scanf("%s", tempstring);
+       arr[i] = (char *)malloc( sizeof(char)*(strlen(tempstring) + 1));
+       strcpy(arr[i], tempstring);
+     }
+
+     printf("Data in array");
+     for( i=0; i<6; i++) 
+       printf(" %d - %s\n", i, arr[i]);
+     freestring(arr, 5);
+
+     return 0;
+   }
+
+   freestring( char arr[], int length) {
+     int i;
+     for( i=0; i<= length; i++)
+       free(arr[i]);
+   }
+
+   // string12.c
+   #include <stdio.h>
+   #include <string.h>
+   #include <malloc.h>
+
+   int main( int argc, char *argv[]) {
+     char **arr = NULL;
+     char tempstring[30];
+     int i;
+
+     for( i=0; i<6; i++) {
+       printf("Insert data\n");
+       scanf("%s", tempstring);
+       if( arr == NULL) 
+         arr = (char **)malloc(sizeof(char *));
+       else
+         arr = (char **)realloc(arr, sizeof(char *)*(i+1));
+       arr[i] = (char *)malloc(sizeof(char) * (strlen(tempstring) + 1));
+       strcpy(arr[i], tempstring);
+     }
+     for( i=0; i<6; i++)
+       prinf("%d - %s\n", i, arr[i]);
+     freestrmemory(arr, 5);
+     return 0;
+   }
+
+   void freestrmemory( char ** arr, int length)
+   {
+     int i;
+     for( i=0; i <= length; i++)
+       free(arr[i]);
+
+     free(arr);
+   }
+
+   // 
+
+
    
    
 * Chapter 5: Pointers and Multidimensional Arrays
