@@ -841,11 +841,7 @@
 
      free(arr);
    }
-
-   // 
-
-
-   
+   ```
    
 * Chapter 5: Pointers and Multidimensional Arrays
 * Chapter 6: Pointers to Structures
