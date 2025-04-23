@@ -624,6 +624,96 @@
    }
    ```
    * Dynmic memory allocation
+   ```
+   // string3.c
+   #include <string.h>
+   #include <malloc.h>
+   int main(int argc, char *argv[]) {
+     char *src = "Hello pointer";
+     char *dst = NULL;
+     dst = (char *)malloc(sizeof(char) * (strlen(src) + 1));
+     memcpy(dst, src, strlen(src));
+
+     return 0;
+   }
+   ```
+   * String literals and constants
+   ```
+   // string4.c 
+   #include <stdio.h>
+   int *foo(void);
+   int main( int argc, char *argv[]) {
+     int *m = foo();
+     printf("Priniting local value of function foo = %d\n", *m);
+
+     return 0;
+   }
+
+   int *foo(void) {
+     int i = 10;
+     return &i; // , not valid anymore
+   }
+   ```
+   ```
+   // literal or constant, and the memory is allocated from the RO section,
+    which is persistent throughout the life cycle of program execution
+   // string5.c
+   #include <stdio.h>
+   char *foo(void);
+   int main(int argc, char *argv[]) {
+     char *m = foo();
+     printf("Printing local value of function foo = %s\n", m);
+
+     return 0;
+   }
+   char * foo(void) {
+     char *str = "STRING";
+     return str;
+   }
+   ```
+   ```
+   // string6.c
+   #include <stdio.h>
+   int main() {
+     char *strliteral = "ADD";
+     strliteral[0] = 'B';   // Modifying value of 0th index, NOT ALLOWED,
+                            // program will generate segmentation fault
+     strliteral++; //Allowed
+     return 0;
+   }
+   ```
+   * String operations
+   ```
+   // handling string inputs
+   // string7.c
+   #include <stdio.h>
+   #include <malloc.h>
+   int main() {
+     char arrstr[6];
+     char *strptr;
+     printf("Input hello\n");
+     strptr = (char *)malloc(sizeof(char)*10);
+     printf("Input hello\n");
+     scanf("%s", strptr);
+   }
+   ```
+   * String iteration
+   ```
+   // string8.c
+   #include <stdio.h>
+   #include <malloc.h>
+   int main() {
+     char arrstr[6];
+     char *strptr;
+     printf("Input hello\n");
+     scanf("%s", arrstr);
+     printf("String received = %s\n", arrstr);
+   }
+   // string9.c
+   #include <stdio.h>
+   #include <malloc.h>
+   ```
+   ```
    
    
 * Chapter 5: Pointers and Multidimensional Arrays
