@@ -341,7 +341,291 @@
     }
     ```
 * Chapter 3: Pointer Arithmetic and Single Dimension Arrays
+   * Array Memory Layout
+   ```
+   // ptr1.c
+   #include <stdio.h>
+   int main() {
+     int iArray[32];
+     int i;
+
+     for( i=0; i<32; i++)
+       iArray[i] = i;
+     for( i=0; i<32; i++) {
+       printf("a[%d] %u %d ", i, &iArray[i], iArray[i]);
+       if(i%4 ==0;) && (i != 0))
+         printf("\n");
+     }
+     getch();
+   }
+   ```
+   * Little endian, Big endian
+   ```
+   // ptr2.c
+   #include <stdio.h>
+   #define BIG_ENDIAN 0
+   #define LITTLE_ENDIAN 1
+   int endian() {
+     short int word = 0x0001;
+     char *byte = (char *) &word;
+     return (byte[0]? LITTLE_ENDIAN : BIG_ENDIAN);
+   }
+   int main(int argc, char *argv[]) {
+     int value;
+     value = endian();
+     if(value == 1)
+       printf("The machine is Little Endian\n");
+     eles
+       printf("The machine is Big Endian\n");
+     return 0;
+   }
+   ```
+   * Pointer Arithmetic
+   ```
+   int arr[10]; // array of type integer which can hold 10 integers.
+   int *ptr;  // an integer to pointer
+   ptr = arr; // This will point to first index of the array element.
+   ```
+   * Pointer addition
+   ```
+   ptr = ptr  + 1;
+
+   // ptr3.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     int i = 0;
+     int data = 9;
+     int *iptr;
+     char *cptr;
+     iptr = &data;
+     cptr = (char *)&data;
+
+     printf("value of data = %d hex value = %x\n", data, data);
+     printf("Address of data = %p\n", &data);
+     printf("Integer pointer pointing at %p\n", iptr);
+     printf("Character pointer pointing at %p\n", cptr);
+     printf("Printing address of all the four bytes of variable int data\n");
+     for( i=0; i<4; i++) {
+       printf("address = %p value = %x\n", cptr, *cptr);
+       cptr++;
+     }
+
+     return 0;
+   }
+   ```
+   * Subtracting two pointer variables
+   ```
+   // ptr4.c
+   #include <stdio.h>
+   int main( int argc, char * argv[]) {
+     int data[4] = {1, 2, 3, 4};
+     int *iptr1;
+     int *iptr2;
+     int val;
+     iptr1 = &data[0];
+     iptr2 = &data[1];
+     val = iptr2 - iptr1;
+     printf("Distance between the two addresses = %d\n", val);
+
+     return 0;
+   }
+   ```
+   * Comparing two pointer variables
+   ```
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[4] = {1, 2, 3, 4};
+     int *iptr1;
+     int *ptr2;
+     iptr1 = &data[0];
+     iptr2 = &data[1];
+     if( iptr1 == iptr2)
+       printf("Address of iptr1 is equal to address of iptr2\n");
+     if( iptr1 > iptr2)
+       printf("Address of iptr1 is greater than address of iptr2\n");
+      else
+       printf("Address of iptr1 is smaller than address of iptr2\n");
+
+     return 0;
+   }
+   ```
+   * Arrays Explored
+   ```
+   int arr_var[100];
+   arr_var // 동일 표현 &arr_var[0]
+   arr_var + 1 // address of 1st index
+   arr_var + 2 // address of 2nd index location
+   arr_var + offset    // 동일 표현 &arr_var[offset]
+   *(arr_var + offset) // 동일 표현 arr_var[offset]
+
+   // ptr7.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     int arr[4] = {1, 2, 3, 4};
+     int *iptr;
+     iptr = &arr[0] + 2; // pointing to the 2nd element
+     printf("Address of 2nd index = %p\n", iptr);
+   
+     iptr = &arr[2]; // pointing to the 2nd element
+     printf("Address of 2nd index = %p\n", iptr);
+
+     return 0;
+   }
+   ```
+   ```
+   // ptr8.c
+   #include <stdio.h>
+   ibt main(int argc, char *argv[]) {
+     int arr[4] = {1, 2, 3, 4};
+     printf("Address of 0th index = %p\n", arr);
+     printf("Address of 0th index = %p\n", &arr[0]);
+
+     return 0;
+   }
+   ```
+   ```
+   int arr_var[5];
+   arr_var = arr_var + 1; // this is not allowed since this expression is trying to shift the pointer
+   // location via array name to the next integer variable's address.
+   arr_var ++; // illegal statement, as it is trying to change the starting address of an array variable
+   ```
+   * Dynamic array
+   ```
+   // ptr9.c
+   #include <stdio.h>
+   #include <malloc.h>
+   int *ptr = NULL;
+   static int count = 0;
+   void insert(int data) {
+     if(ptr == NULL) {
+       ptr = (int *)malloc(sizeof(int)); // allocating space from heap for 1st data
+       ptr[0] = data; // accessing memory address with array notation to store data
+     } else  {
+       ptr = (int *)realloc(ptr, sizeof(int)*(count+1)); // Increasing the size of memory
+       // accomodate new integer
+       ptr[count] = data; // accessing memory address with array notation to store data
+     }
+     count++;
+   }
+   void show() {
+     int i=0;
+     for( i=0; i<count; i++) {
+       printf("%d\n", ptr[i]);
+     }
+   }
+   int main(int argc, char *argv[]) {
+     int c=0;
+     int data;
+     while( c != 3) {
+       printf("Insert choice\n");
+       printf("1 to insert data\n");
+       printf("2 to Show data\n");
+       printf("3 to quit data\n");
+       scanf("%d", &c);
+       if( c==3)
+         break;
+       switch(c) {
+         case 1:
+           printf("Data = \n");
+           scanf("%d", &data);
+           insert(data);
+           break;
+         case 2:
+           printf("Data in array\n");
+           show();
+           break;
+       }
+     }
+     return 0;
+   }
+   ```
+   * Array of pointers
+   ```
+   // int *arr_ptr[10]  , pointer to 10 integer variable
+   // ptr10.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     int arr[4] = {1, 2, 3, 4};
+     int *arr_ptr[4];
+     int i;
+
+     for( i=0; i<4; i++) 
+       arr_ptr[i] = arr + i;
+
+     printf("Address of (arr) array element\n");
+     for( i=0; i<4; i++)
+       printf("Address of %d index = %p\n", i, arr+i);
+
+     printf("Value of (arr_ptr) array of pointer element\n");
+     for(i=0; i<4; i++)
+       printf("Value of %d index = %p\n", i, arr_ptr[i]);
+
+     return 0;
+   }
+   * Pointer to array  
+   ```
+   // int (*ptr2arr)[4]; // it is a pointer to an array of 4 integers
+   // ptr11.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int arr[4] = {1, 2, 3, 4};
+     int (*ptr2arr)[4];
+     int i;
+     int *ptr = arr;
+     ptr2arr = &arr;
+
+     for(i=0; i<4; i++)
+       printf("Address of array = %p\n", arr + i);
+
+     printf("Value at = %d\n", *(ptr2arr[0] + 1));
+     for( i=0; i<4; i++)
+       printf("Value at %p = %d\n', (ptr2arr[0] + i), *(ptr2arr[0] + i));
+
+     return 0;
+   }
+   ```
+   
 * Chapter 4: Pointers and Strings
+   * String layout in memory
+   ```
+   char *strptr = "Hello";
+   char strarray1[] = "Hello";
+   char strarray2[6] = "Hello";
+   char strarray3[4] = {'a','b','c','d'};
+
+   char arr1[7] = "STRING";
+   char arr2[9] = "STRING";
+   ```
+   * Accessing string elements
+   ```
+   // string1.c
+   #include <string.h>
+   int main(int argc, char *argv[]) {
+     char *str = "Hello Pointer";
+     int i = 0;
+
+     for( i=0; i<strlen(str); i++)
+       printf("%c", str[i]);
+
+     return 0;
+   }
+   ```
+   ```
+   // string2.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     char *str = "Hello Pointer";
+     char *ptr = str;
+     while( *ptr != '\0') {
+       printf("%c", *ptr);
+       ptr++;
+     }
+     return 0;
+   }
+   ```
+   * Dynmic memory allocation
+   
+   
 * Chapter 5: Pointers and Multidimensional Arrays
 * Chapter 6: Pointers to Structures
 * Chapter 7: Function Pointers
