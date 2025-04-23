@@ -280,6 +280,8 @@
       printf("Value stored at pointer = %d\n", *ptr1);
     }
     ```
+    ![image](https://github.com/user-attachments/assets/b90bd7a1-2b56-4927-9b60-8d9d43f57b77)
+
     ```
     // Pointers to constant variable
     // ptr8.c
@@ -294,6 +296,8 @@
       printf("Value stored at pointer = %d\n"m *ptr1);
     }
     ```
+    ![image](https://github.com/user-attachments/assets/b53430ec-73fd-4c31-8177-ca4814dd9da1)
+
     ```
     // Constant pointer to a constant variable
     // ptr9.c
@@ -562,6 +566,9 @@
 
      return 0;
    }
+   ```
+   ![image](https://github.com/user-attachments/assets/ad1313ac-473b-47d9-8829-e4536ba9eafc)
+
    * Pointer to array  
    ```
    // int (*ptr2arr)[4]; // it is a pointer to an array of 4 integers
@@ -586,7 +593,9 @@
    ```
    
 * Chapter 4: Pointers and Strings
-   * String layout in memory
+   * String layout in memory  
+   ![image](https://github.com/user-attachments/assets/04e5fbea-e6c4-4ca2-8653-0e1c78d39ba7)
+
    ```
    char *strptr = "Hello";
    char strarray1[] = "Hello";
@@ -596,6 +605,8 @@
    char arr1[7] = "STRING";
    char arr2[9] = "STRING";
    ```
+   ![image](https://github.com/user-attachments/assets/08e0f85b-0166-4e4b-b640-e3c61420e819)
+
    * Accessing string elements
    ```
    // string1.c
@@ -842,17 +853,403 @@
      free(arr);
    }
    ```
-   ![image](https://github.com/user-attachments/assets/5de354db-c250-446f-8924-8779441115ef)
+   <img src = "https://github.com/user-attachments/assets/5de354db-c250-446f-8924-8779441115ef" width="70%" height="70%">
 
 * Chapter 5: Pointers and Multidimensional Arrays
+   *  access to two-dimemsional array
+   ```
+   // multidim1.c
+   int main( int argc, char *argv[]) {
+     int data[5][5];
+     int i, j;
+     for( i=0; i<5; i++) {
+       data[i][j] = -1;
+     }
+     return 0;
+   }
+   ```
+   * Pointer to 2D array
+   ```
+   // multidim2.c
+   int main( int argc, char *argv[]) {
+     int data[5][5];
+     int i, j;
+     int count = 0;
+     for( i=0; i<5; i++) {
+       for( j=0; j<5; j++)
+         data[i][j] = count++;
+     }
+     printf("Starting address of the array %p\n", data);
+     for( i=0; i<5; i++) {
+       printf(" %dth row location = %p\n", i, data[i]);
+       printf("Loc %d,1 = %p\n", &dadta[i][0]);
+     }
+     return 0;
+   }
+   ```
+   * Arithmetic on an address of an array
+   ```
+   // multidim3.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[5][5];
+     int i, j;
+     int count = 0;
+     for( i=0; i<5; i++) {
+       for( j=0; j<5; j++)
+         data[i][j] = count++;
+     }
+     for( i=0; i<5; i++) {
+       printf(" %d row = %p\n", i, data[i]);
+       printf("Columns\n");
+       for( j=0; j<5; j++) {
+         printf("%d = %p, ", j, data[i] + j);
+       }
+       printf("\n");
+     }
+     return 0;
+   }
+   ```
+   * Value at the location
+   ```
+   arr[i][j]
+   arr[i] == *(&arr[i]) == *(arr+i)
+   *(arr[i]+j) == *(*(arr+i)+j)
+   ```
+   ```
+   // multidim4.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[5][5];
+     int i, j;
+     int count = 0;
+     int (*aptr)[5];
+   
+     for( i=0; i<5; i++) {
+       for( j=0; j<5; j++)
+         data[i][j] = count++;
+     }
+     aptr = data;
+     for( i=0; i<5; i++)
+       printf("%dth row = %p\n", i, *aptr++);
+
+     return 0;
+   }
+   ```
+   ```
+   // multidim5.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[5][5];
+     int i, j;
+     int count = 0;
+     int (*aptr)[5];
+   
+     for( i=0; i<5; i++) {
+       for( j=0; j<5; j++)
+         data[i][j] = count++;
+     }
+     aptr = data;
+     for( i=0; i<5; i++) {
+       for( j=0; j<5; j++) 
+         printf("%d,%d = %p val = %d \n", i, j, (*aptr+j), *(*aptr+j));
+       printf("\n");
+       aptr++;
+     }
+     return 0;
+   }
+   ```
+   * Accessing the indices with a pointer variable in the case of 2D array  
+   ```
+   // multidim6.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[5][5];
+     int i, j;
+     int count = 0;
+     int (*aptr)[5];
+     int *dataptr;
+   
+     for( i=0; i<5; i++) {
+       for( j=0; j<5; j++)
+         data[i][j] = count++;
+     }
+     aptr = data;
+     for( i=0; i<5; i++) {
+       printf("Address of %d row = %p\n", i, (*aptr + i));
+       dataptr = (*aptr + i*5);
+       for( j=0; j<5; j++) {
+         printf("%d,%d = %p val = %d \n", i, j, dataptr, *(dataptr));
+         dataptr++;
+       }
+       printf("\n");
+     }
+     return 0;
+   }
+   ```
+   * 3D array basics
+   ```
+   // multidim7.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[3][3][3];
+     int i, j, k;
+     int count = 0;
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++)
+         for( k=0; k<3; k++)
+           data[i][j][k] = count++;
+     }
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++) {
+         for( k=0; k<3; k++)
+           printf("%d%d%d = %d", i, j, k, data[i][j][k]);
+         printf("\n");
+       }
+       printf("\n");
+     }
+     return 0;
+   }
+   ```
+   * Understanding 3D array expressions and their meaning
+   ```
+   // multidim8.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[3][3][3];
+     int i, j, k;
+     int count = 0;
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++)
+         for( k=0; k<3; k++)
+           data[i][j][k] = count++;
+     }
+     printf("0th row of 3d array = %p\n", data);
+     printf("0th row of 2d array = %p\n", data[0][0]);
+     printf("0th row of 1d array = %p\n", data[0][0][0]);
+
+     return 0;
+   }
+   ```
+   * Array arithmetic
+   ```
+   // multidim9.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[3][3][3];
+     int i, j, k;
+     int count = 0;
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++)
+         for( k=0; k<3; k++)
+           data[i][j][k] = count++;
+     }
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++) {
+         for( k=0; k<3; k++)
+           printf("%d%d%d addr %p", i, j, k, &data[i][j][k]);
+         printf("\n");
+       }
+       printf("\n");
+     }
+     printf("Index value address\n");
+     for( i=0; i<3; i++)
+       printf("row %d addr = %p\n", i, data+i);
+   
+     return 0;
+   }
+   ```
+   ```
+   // multidim10.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[3][3][3];
+     int i, j, k;
+     int count = 0;
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++)
+         for( k=0; k<3; k++)
+           data[i][j][k] = count++;
+     }
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++) {
+         for( k=0; k<3; k++)
+           printf("%d%d%d=%d addr %p", i, j, k, data[i][j][k], &data[i][j][k]);
+         printf("\n");
+       }
+       printf("\n");
+     }
+   
+     for( i=0; i<3; i++)
+       printf("row %d addr = %p\n", i, data[0][i]);
+     printf("2D row address\n");
+     for( i=0; i<3; i++)
+       printf("2D row %d addr = %p %p \n", j, data[i][j], *(data[i]+j));
+     return 0;
+   }
+   ```   
+   ```
+   // *(*(data[i]+j)+k) == *(data[i][j]+k) == d[i][j][k]
+   // multidim11.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[3][3][3];
+     int i, j, k;
+     int count = 0;
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++)
+         for( k=0; k<3; k++)
+           data[i][j][k] = count++;
+     }
+     printf("Index=val addr <>\n");
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++) {
+         for( k=0; k<3; k++)
+           printf("%d%d%d=%d addr %p", i, j, k, data[i][j][k], &data[i][j][k]);
+         printf("\n");
+       }
+       printf("\n");
+     }
+     for( i=0; i<3; i++)
+       printf("row %d addr = %p\n", i, data[0][i]);
+   
+     printf("2D row address\n");
+     for( i=0; i<3; i++) {
+       printf("3D %d ROW\n", i);
+       for( j=0; j<3; j++)
+         printf("2D row %d addr = %p %p \n", j, datda[i][j], *(data[i]+j));
+     }
+   
+     printf("1D row address\n");
+     for( i=0; i<3; i++) {
+       printf("3D %d ROW\n", i);
+       for( j=0; j<3; j++) {
+         printf("2D %d row\n", j);
+         for( k=0; k<3; k++)
+           printf("%d%d%d = %p val = %d ", i, j, k, *(data[i]+j)+k, *(*(data[i]+j)+k));
+         printf("\n");
+       }
+     }
+     return 0;
+   }
+   ```   
+   ```
+   // multidim12.c
+   #include <stdio.h>
+   int main( int argc, char *argv[]) {
+     int data[3][3][3];
+     int i, j, k;
+     int count = 0;
+     int *dataptr = NULL;
+   
+     for( i=0; i<3; i++) {
+       for( j=0; j<3; j++)
+         for( k=0; k<3; k++)
+           data[i][j][k] = count++;
+     }
+
+     for( i=0; i<3; i++) {
+       printf("3D %d ROW\n", i);
+       for( j=0; j<3; j++) {
+         printf("2D %d row\n", j);
+         dataptr = *(data[i]+j);
+         for( k=0; k<3; k++)
+           printf("%d%d%d = %p val = %d ", i, j, k, dataptr, *dataptr++);
+         printf("\n");
+       }
+     }
+     return 0;
+   }
+   ```
 * Chapter 6: Pointers to Structures
+   * Defining structures
+   ```
+   struct header {
+     int header_version;
+     char tagid;
+     char signature[4];
+     int data_offset;
+   }
+   ```
+   * Declaring structure variables
+   ```
+   struct date {
+     int day;
+     int month;
+     int year;
+   };
+   struct date correntdate;
+   ```
+   * Accessing structure members
+   ```
+   // struct1.c
+   int main( int argc, char *argv[]) {
+     struct date {
+       int day;
+       int month;
+       int year;
+     }
+     sturct date current;
+     current.day = 1;
+     current.month = 11;
+     current.year = 2012;
+
+     return 0;
+   }
+   ```
+   * Initializing structure variables
+   ```
+   // sturct2.c
+   int main( int argc, char *argv[]) {
+     struct date {
+       int day;
+       int month;
+       int year;
+     };
+     sturct date current = { 1, 11, 2012 };
+     return 0;
+   }
+   ```
+   * Structure nesting
+   ```
+   struct header {
+     int version;
+     int signature;
+     struct tagname {
+       int id;
+       int offset;
+     } tagid;
+   };
+
+   // struct3.c
+   int main( int argc, char *argv[]) {
+      struct header {
+        int version;
+        int signature;
+        struct tagname {
+          int id;
+          int offset;
+        } tagid;
+     };
+     struct header hdrinfo;
+     hdrinfo.version = 0;
+     hdrinfo.signature = 5;
+     hdrinfo.tagid.id = 1;
+     hdrinfo.tagid.offset = 10;
+
+     return 0;
+   }
+   ```
+   * Struct in Memory
+   
+   
 * Chapter 7: Function Pointers
 * Chapter 8: Pointers to File I/O
-    
-    
-
-    
-    
-    
-    
-
