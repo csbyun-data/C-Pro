@@ -1249,7 +1249,526 @@
    }
    ```
    * Struct in Memory
+   ```
+   // struct4.c
+   int main( int argc, char * argv[]) {
+     struct data {
+       int i;
+       int j;
+       int k;
+     };
+     struct data v1;
+     printf("Size of sutructure data = %d\n", sizeof(sutruct data));
+   }
+   ```
+   * Struct Padding
+  ![image](https://github.com/user-attachments/assets/8cccf400-727d-479b-a71c-735db0388add)
+
+   ```
+   // struct5.c
+   #include <stdio.h>
+   int main( int argc, char * argv[]) {
+     struct data {
+       int i;
+       char c;
+       int j;
+     };
+     struct data v1;
+     struct data *dsptr;
+     printf("Size of structure data = %d\n", sizeof(struct data));
+     dsptr = (struct data *)malloc(sizeof(struct data));
+     printf("Address of member int i = %u\n", &(dsptr->i));
+     printf("Address of member char c = %u\n", &(dsptr->c));
+     printf("Address of member int j = %u\n", &(dsptr->j));
+
+     return 0;
+   }
+   ```
+   ![image](https://github.com/user-attachments/assets/26f83dcd-51d3-4b0c-913a-a63f39d72c46)
+
+    ```
+   // struct6.c
+   #include <stdio.h>
+   int main( int argc, char * argv[]) {
+     struct data {
+       int i;
+       char c1;
+       int j;
+       char c2;
+       int k;
+     };
+     struct data v1;
+     struct data *dsptr;
+     printf("Size of structure data = %d\n", sizeof(struct data));
+     dsptr = (struct data *)malloc(sizeof(struct data));
+     printf("Address of member int i = %u\n", &(dsptr->i));
+     printf("Address of member char c1 = %u\n", &(dsptr->c1));
+     printf("Address of member int j = %u\n", &(dsptr->j));
+     printf("Address of member char c2 = %u\n", &(dsptr->c2));
+     printf("Address of member int k = %u\n", &(dsptr->k));
+
+     return 0;
+   }
+   ```
+   * When structure padding is not helpful
+   <img src = "https://github.com/user-attachments/assets/5b4007b6-0c7a-4e8a-85b6-88d41fe2faf7" width="70%" height="70%">
+   ```
+   // struct7.c
+   int main( int argc, char *argv[]) {
+     struct gif_hdr {
+       char signature[3];
+       char version[3];
+       int width;
+       int height;
+       char colormap;
+       char bgcolor;
+       char ratio;
+     };
+     struct gif_hdr v1;
+     struct gif_hdr *dsptr;
    
+     printf("Size of structure data = %d\n", sizeof(struct gif_hdr));
+     dsptr = (struct gif_hdr *)malloc(sizeof(struct gif_hdr));
+     printf("Offset of signature = %d\n", &(dsptr->signature[0] - &(dsptr->signture[0]));
+     printf("Offset of version = %d\n", &(dsptr->version[0] - &(dsptr->signature[0]));
+     printf("Offset of width = %d\n", (char *)&(dsptr->width) - &(dsptr->signature[0]));
+     printf("Offset of height = %d\n", (char *)&(dsptr->height) - &(dsptr->signature[0]));
+     printf("Offset of colormap = %d\n", &(dsptr->colormap) - &(dsptr->signature[0]));
+     printf("Offset of bgcolor = %d\n", &(dsptr->bgcolor) - &(dsptr->signature[0]));
+     printf("Offset of ratio = %d\n", &(dsptr->ratio) - &(dsptr->signature[0]));
+
+     return 0;
+   }
+   ```
+   * Structure packing
+   ```
+   #pragma pack(1) // 1 - byte aligment
+   struct data { 
+     int i;
+     char c;
+     int j;
+   };
+   // Directly againist the members of structure
+   struct data { 
+     int i __attribute__((__packed__));
+     char c __attribute__((__packed__));
+     int j __attribute__((__packed__));
+   };
+   // Againist the complete structure
+   struct data {
+     int i;
+     char c;
+     int j;
+   } __attribute__((__packed__));
+   ```
+   * Structure assignment and copying
+   ```
+   // struct9.c
+   #include <malloc.h>
+   int main(int argc, char* argv[]) {
+     struct data {
+       int i;
+       char c;
+       int j;
+       int arr[2];
+      };
+      struct datawptr {
+        int i;
+        char *c;
+      };
+      struct datawptr dptr1;
+      struct datawptr dptr2;
+      struct data svar1;  // a normal variable of type struct data
+      struct data svar2;  // a normal variable of type struct data
+      svar1.c = 'a';
+      svar1.i = 1;
+      svar1.j = 2;
+      svar1.arr[0] = 10;
+      svar1.arr[1] = 20;
+      svar2 = svar1;
+      printf("Value of second variable \n");
+      printf("Member c = %c\n", svar2.c);
+      printf("Member i = %d\n", svar2.i);
+      printf("Member j = %d\n", svar2.j);
+      printf("Member arr0th = %d\n", svar2.arr[0]);
+      printf("Member arr1st = %d\n", svar2.arr[1]);
+      dptr1.i = 10;
+      dptr1.c = (char*)malloc(sizeof(char));
+      *(dptr1.c) = 'c';
+      dptr2.c = (char*)malloc(sizeof(char));
+      dptr2 = dptr1;
+      printf("int member = %d\n", dptr2.i);
+      printf("char ptr member = %c\n", *(dptr2.c));
    
+      return 0;
+   }
+   ```
+   // struct10.c
+   int main(int argc, char* argv[]) {
+     struct datawptr {
+       int i;
+       char *c;
+     };
+     struct datawptr dptr1;
+     struct datawptr dptr2;
+     dptr1.i = 10;
+     dptr1.c = (char*)malloc(sizeof(char));
+     *(dptr1.c) = 'c';
+     dptr2.c = (char*)malloc(sizeof(char));
+     memcpy(&dptr2, &dptr1, sizeof(struct datawptr));
+     printf("Int member value of 2nd variable = %d\n", dptr2.i);
+     printf("Char ptr member value of 2nd variable = %c\n", *(dptr2.c));
+     printf("value of char ptr in 1st variable = %p\n", dptr1.c);
+     printf("value of char ptr in 2nd variable = %p\n", dptr2.c);
+     printf("Changing value of 2nd member in 2nd variable (dptr2)\n");
+     *(dptr2.c) = 'a';
+     printf("value of char ptr of 2nd variable = %c and 1st variable = %c\n", *(dptr2.c), *(dptr1.c));
+     return 0;
+   }
+   ```
+   * Structure pointers
+   ```
+   struct data {
+     int i;
+     char c;
+     int j;
+   };
+   struct data *var; // declaring a pointer variable "var" of type struct data
+   ```
+   * Accessing member variables
+   ```
+   #include <stdio.h>
+   int main(int argc, char* argv[]) {
+     struct data {
+       int i;
+       char c;
+       int j;
+     };
+     struct data *sptr; //pointer variable of type struct data
+     struct data svar;  // a normal variable of type struct data
+     sptr = (struct data*) malloc (sizeof(struct data)); //the code below is accessing the member 
+     // fields with help of arrow operator ->
+     sptr->c = 'c';
+     sptr->i = 10;
+     sptr->j = 20;    //or the same variable could be access in the following way
+     (*sptr).c = 'd';
+     (*sptr).i = 30;
+     (*sptr).j = 40;  //below code is accessing the member fields with help of dot operator
+     svar.c = 'a';
+     var.i = 1;
+     svar.j = 2;     //or the same variable could be access in the following way, using address
+     // of operator and arrow operator
+     (&svar)->c = 'c';
+     (&svar)->i = 3;
+     (&svar)->j = 4;
+  
+     return 0;
+   }
+   ```
+   * Passing structure pointer variable
+   ```
+   // struct12.c
+   struct node {
+    int data;
+    char c;
+   };
+   int main() {
+    struct node v1;
+    struct node *p1 = &v1;
+    foo_passbyvalue(v1);
+    foo_passbyaddr(p1);
+  }
+  void foo_passbyvalue(struct node v) {
+    //do something
+  }
+  void foo_passbyaddr(struct node *p) {
+    //do something
+  }
+  ```
+  ```
+  // struct13.c
+  struct node {
+    int data;
+  };
+  void addnode(struct node *n1) {
+    n1 = (struct node *)malloc(sizeof(struct node));
+    n1->data = 9;
+  }
+  int main( int argc, char *argv[]) {
+    struct node *n1 = NULL;
+    addnode(n1);
+
+    return 0;
+  }
+  ```
+  ```
+  // struct14.c
+  struct node {
+    int data;
+  };
+  void addnode( structure node **n1) {
+    *n1 = (struct node *)malloc(sizeof(struct node));
+    (*n1)->data = 9;
+  }
+  int main( int argc, char *argv[]) {
+    struct node *n1 = NULL;
+    addnode(&n1);
+
+    return 0;
+  }
+  ```
+  * Type casting structure pointers
+  ```
+  // struct15.c
+  int main() {
+    struct signature {
+      char sign;
+      char version;
+    };
+    struct id {
+      char id;
+      char platform;
+    };
+    struct data {
+      struct signature sig;
+      struct id idv;
+      char data[100];
+    };
+    struct data *img;
+    receivedata(img);
+    struct signature *sign = extractsignature(&img);
+    struct id *idval = extractid(&img);
+  }
+  struct signature *extractsignature( struct data *d) {
+    struct signature *sig = (struct signature *)d;
+    return sig;
+  }
+  struct id *extracted( struct data *d) {
+    struct id *idv = (struct id *)d;
+    return idv;
+  }
+  ```
+  * Self-referential structures
+  ```
+  struct node {
+    int data;
+    struct node * self;
+  }
+  ```
+* Data structure and algorithms
+   * linked lists  
+   ![image](https://github.com/user-attachments/assets/e0f2b57b-f17f-4408-94e2-1dbf85dca21e)
+   ```
+   // struct16.c
+   #include <malloc.h>
+   #include <stdio.h>
+   struct node {
+     int data;
+     struct node *next;
+   };
+   struct node *createnode(int data) {
+     struct node *n1 = (struct node *)malloc(sizeof(struct node));
+     n1->data = data;
+     n1->next = NULL;
+   
+     return n1;
+   }
+   void addatend(struct node **root, struct node *n) {
+     struct node *temp = *root;
+     if( temp == NULL)
+       *root = n;
+     else {
+       while(temp->next != NULL)
+         temp = temp->next;
+       temp->next = n;
+     }
+   }
+   int main( int argc, char *argv[]) {
+     struct node *root = NULL;
+     for( int i=0; i<10; i++)
+       addatend(&root, createnode(i));
+     return 0;
+   }
+   ```
+   * Binary search tree  
+   ![image](https://github.com/user-attachments/assets/0d2ec1e9-b29a-402f-b55e-97c9e0183ef7)
+   ```
+   struct node {
+     int data;
+     struct node *left;
+     struct node *right;
+   };
+   ```
+   * Creation of a BST
+   ```
+   // struct17.c
+   #include <string.h>
+   #include <malloc.h>
+   #include <stdio.h>
+   struct node {
+     int data;
+     struct node *left;
+     struct node *right;
+   };
+   struct node *createnode(int dadta) {
+     struct node *n1 = (struct node *)malloc(sizeof(struct node));
+     n1->data = data;
+     n1->left = NULL;
+     n1->right = NULL;
+
+     return n1;
+   }
+   void insertnode( struct node **root, struct node *n) {
+     struct node *temp = *root;
+     if( temp == NULL) {
+       *root = n;
+     } else {
+       if(n->data < temp->data) {
+         insertnode( &(temp->left), n);
+       } else if { n->data > temp->data) {
+         insertnode( &(temp->right), n);
+       }
+     }
+   }
+   int main( int argc, char *argv[]) {
+     struct node *root = NULL;
+     for( int i=0; i<10; i++) {
+       insertnode( &root, createnode(i));
+     }
+     return 0;
+   }
+   ```
 * Chapter 7: Function Pointers
+   * Initializing function pointers
+   ```
+   // fptr1.c
+   #include <malloc.h>
+   #include <stdio.h>
+   void mesg( int num) {
+     printf("Mesg no. %d\n", num);
+   }
+   int * add(int x, int y) {
+     int *z = (int *)malloc(sizeof(int));
+     *z = 10;
+     return z;
+   }
+   int main( int argc, char *argv[]) {
+     int *t;
+     void (*fpmsg)(int);          //function pointer variable to point to the function "mesg"
+     int *(*addfptr)(int, int);   //function pointer variable to point to the function "add"
+     addfptr = &add;              //assignment using "address of" operator
+     fpmsg = mesg;                //assignment using implicit method
+
+     return 0;
+   }
+   ```
+   * Using function pointers
+   ```
+   // fptr2.c
+   #include <malloc.h>
+   #include <stdio.h>
+   void mesg( int num) {
+     printf("Mesg no. %d\n", num);
+   }
+   int main(int argc, char *argv[]) {
+     int *t;
+     void (*fpmsg1)(int);  //function pointer variable to point to the function "mesg"
+     void (*fpmsg2)(int);  //function pointer variable to point to the function "mesg"
+     fpmsg1 = mesg;
+     fpmsg2 = mesg;
+     fpmsg1(10);           // implicit method of invoking a function
+     (*)fpmsg2(20);        // explicit way of invoking a function
+
+     return 0;
+   }
+   ```
+   ```
+   // fptr3.c
+   bool arraysearch(int data) {
+     //some code
+     return true;
+   }
+   bool linkedlistsearch(int data) {
+     //some code
+     return true;
+   }
+   bool binarysearch(int data) {
+     //some code
+     return true;
+   }
+   bool search( bool (*funcptr)( int ), int data ) {
+     return (*funcptr)(data);
+   }
+   int main(int argc, char* argv[]) {
+     printf("Input Options\n");
+     printf("1 arrsrch\n");
+     printf("2 linkedlistsrch\n");
+     printf("3 binarysrch\n");
+     printf("4 exit\n");
+   
+     int choice = 0;
+     int data;
+     while(choice != 4) {
+       printf("Input\n");
+       scanf("%d", &choice);
+       printf("Data to search\n");
+       scanf("%d", &data);
+       if(choice == 1) {
+         search(arraysearch,data);       //invoking 1st function
+       } else if(choice == 2) {
+         search(linkedlistsearch, data); //invoking 2nd function
+       } else if(choice == 3) {
+         search(binarysearch, data);     //invoking  3rd function
+       } else if(choice == 4)
+          break;
+      }
+     return 0;
+   }
+   ```
+   * Array of function pointers
+   ```
+   // fptr4.c
+   int myadd( int a, int b) {
+     int z = a + b;
+     return z;
+   }
+   int mysub(int a, int b) {
+     int z = a - b;
+     return z;
+   }
+   int mymul(int a, int b) {
+     int z = a*b;
+     return z;
+   }
+   int mydiv(int a, int b) {
+     int z = a/b;
+     return z;
+   }
+   //array of function pointers,
+   int (* opfunctptr [ ] ) ( int x, int y) = { myadd, mysub, mymul, mydiv };
+   typedef int (*calc)(int x, int y );
+   //function returning the function pointer of type int (*calc)(int x, int y )
+   calc retmathfunc(int index) {
+     return opfunctptr[index];
+   }
+   int main(int argc, char* argv[]) {
+     int choice, p1, p2, res;
+     int (*calculator)(int x, int y);
+     printf("Type -1 to quit\n");
+     printf("Type 0 - add, 1 - sub, 2 - mul, 3 - div\n");
+     scanf("%d", &choice);
+     while( choice != -1) {
+       calculator = retmathfunc(choice); //returns function pointer
+       printf("Param1\n");
+       scanf("%d", &p1);
+       printf("Param2\n");
+       scanf("%d", &p2);
+       res = calculator(p1, p2);         //calling function pointer
+       printf("res = %d\n", res);
+       printf("Type 0 - add, 1 - sub, 2 - mul, 3 - div\n");
+       scanf("%d", &choice);
+     }
+     return 0;
+   }
+   ```
 * Chapter 8: Pointers to File I/O
