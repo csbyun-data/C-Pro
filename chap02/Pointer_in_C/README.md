@@ -1772,3 +1772,52 @@
    }
    ```
 * Chapter 8: Pointers to File I/O
+   * fopen(), fclose()
+   ```
+   // fileprog2.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     FILE *fp = NULL;
+     int res;
+     fp = fopen("c:\\test.txt","w");
+     if(fp == NULL) {
+       printf("File opening error\n");
+     } else {
+       printf("File opening error\n");
+     }
+     res = fclose(fp);
+     if( res == 0) {
+       printf("File closed\n");
+     } else {
+       printf("Unable to close file\n");
+     }
+     return 0;
+   }
+   ```
+   * Reading from a File
+   ```
+   // fileprog3.c
+   #include <stdio.h>
+   int main(int argc, char *argv[]) {
+     FILE *fp = NULL;
+     int res;
+     fp = fopen("c:\\test.txt","w");
+     if(fp == NULL) {
+       printf("File opening error\n");
+     } else {
+       printf("File opening error\n");
+     }
+     res = fclose(fp);
+     if( res == 0) {
+       printf("File closed\n");
+     } else {
+       printf("Unable to close file\n");
+     }
+     return 0;
+   }
+   ```   
+   
+   
+
+   
+   
