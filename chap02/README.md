@@ -30,24 +30,3 @@
   * 1.4 함수 포인터를 함수의 parameter로 사용
   * 1.5 함수 포인터와 void포인터를 이용한 qsort()함수
   * 1.6 함수 포인터와 void포인터를 이용한 search()함수  
-  
-* 4.2 Function Pointer Tutorials [[here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/README.md)]
-  * 1.1 Function Pointers
-  * 1.2 Syntax of C and C++ Function Pointers
-  * 1.3 Callback Function
-  ```c
-  void qsort( ... , int(_USERENTRY *cmpFunc)(const void*, const void*)) {
-    int bigger=cmpFunc(item1, item2); // make callback
-    //...
-  }
-  ```
-  * 1.4 Functors 
-    
-* 5.Structures and Unions in C [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structures_and_Union/README.md)
-  * 1.1 구조체
-  * 1.2 공용체
-  * 1.3 bit field
-  * 1.4 구조체와 포인터 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Structure_and_Pointer/README.md)
-
-* 6.구조체, 문자열 Pointer 활용
-  * 1.1 구조체(이름, 점수), 문자열 Pointer 활용 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/Student_order1.c), [code c++](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Application/Student_order1.cpp)
