@@ -48,6 +48,7 @@ Grammar of programming, a collection of basic materials for application.
    - getline()구현
   저수준 파일함수 open(), write()
     ```
+* [Book], Pointer in C a Hands on Approach()
 * [File Command](https://github.com/csbyun-data/C-Pro/blob/main/chap03/FileCmd/README.md), [file copy, file size, tail()]
 * [Book, Turbo-C], [The Maze Problem](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Maze/README.md)
 * [snippets.org], [The indexing function for creating a binary file from an ASCII](https://github.com/csbyun-data/C-Pro/blob/main/chap03/Index/README.md)
