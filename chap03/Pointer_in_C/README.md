@@ -11,7 +11,7 @@
     Chapter 7: Function Pointers
     Chapter 8: Pointers to File I/O
     ```
-* [Chap1~7](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_in_C/README.md)
+* [Chapter 1~7:](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_in_C/README.md)
 * Chapter 8: Pointers to File I/O
    * fopen(), fclose()
    ```
