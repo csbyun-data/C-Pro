@@ -16,7 +16,7 @@ Grammar of programming, a collection of basic materials for application.
 * [snippets.org], [bit unit operator](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bit/README.md)
   
 ## Pointer, Array, String, Function Pointer  
-* [정리],[pointer and array](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
+* [정리], [pointer and array](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
     * [pointer Type, pointer 산술, Dynamic array, function pointer, pointer structure, pointer사용Error]
 * [aticleworld.com], [Pointer and Dynamic memory allocation](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Dynamic_Allocation/README.md)
 * [aticleworld.com], [Arrays and String in C](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Arrays_and_Strings_in_C/README.md)
