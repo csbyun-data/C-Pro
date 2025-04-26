@@ -28,7 +28,6 @@
   4.2 How to Implement Functors ? 
   4.3 Example of How to Use Functors 
   ```
-  *  Pdf File [book.pdf](https://github.com/csbyun-data/C-Pro/blob/main/chap02/The%20Function%20Pointer%20Tutorials.pdf)
 
 * 1.Introduction to Function Pointers 
   * 1.2 Introductory Example or How to Replace a Switch-Statement [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Function_Pointer_Tutorials/Function_Pointer1.c)
