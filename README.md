@@ -84,7 +84,7 @@ Grammar of programming, a collection of basic materials for application.
 * [github.com/kgabis/parson], [Lightweight JSON library written in C](https://github.com/csbyun-data/C-Pro/blob/main/chap05/JSON/README.md)
 * [David Betz. XLISP], [XLISP Calculation formula analysis](https://github.com/csbyun-data/C-Pro/blob/main/chap05/XLISP/README.md)
 * [Book], [Interpreting LISP: Programming and Data Structures](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interpreting-lisp/READ.md)
-* [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://drh.github.io/cii/index.html)
+* [Book], [C Interfaces and Implementations: Techniques for Creating Reusable Software](https://github.com/csbyun-data/C-Pro/blob/main/chap05/Interface_and_Implementation/README.md)
 * [Simple DB], [SDB](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/README.md)
 ## Game
 * [Console Game]
