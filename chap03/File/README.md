@@ -42,6 +42,7 @@
     fclose(fp);
     ```
     ```c
+    // fputc.c
     FILE *fp = fopen("abc.txt", "w");
     ...
     // write A to Z in file
