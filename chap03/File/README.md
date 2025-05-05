@@ -112,7 +112,7 @@
     * getline() 구현 및 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/getline/README.md)
     * getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/combine_file.c)
     
-    * fgetc, fputc 함수를 활용한 file 복사 프로그램 ([fgets](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy1.c), [fread](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fread_func1.c), [c++ code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy3.cpp))
+    * fgetc, fputc 함수를 활용한 file 복사 프로그램 ([file_copy1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy1.c), [fread](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fread_func1.c), [c++ code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy3.cpp))
     ```c
     // file_copy1.c
     #define MAX_SIZE 32
