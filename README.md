@@ -44,8 +44,8 @@ Grammar of programming, a collection of basic materials for application.
 ## File I/O
 * [aticleworld.com], [File I/O](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/README.md)
   ```txt
-  고수준 파일함수 fopen(), fprintf(), fgetc(), fputc(), fgets(), fputs(),
-   fread(), fwrite(),fscanf(), fseek()
+  고수준 파일함수 fopen(), fprintf(), fgetc(), fputc(), fgets(), fputs(), fread(),
+   fwrite(),fscanf(), fseek()
    - getline()구현
   저수준 파일함수 open(), write()
     ```
