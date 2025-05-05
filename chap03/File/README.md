@@ -78,6 +78,15 @@
 * Reading from a file
     *   1.3 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func2.c), [fgetc](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fgetc_func1.c), [fget_line](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fget_line_func1.c))
     ```c
+    //fscanf_func1.c
+    char readFileData[MAX_SIZE+MAX_SIZE] = {0};
+    FILE *fp = fopen("abc.txt", "r");
+    ...
+    fscanf(fp, "%s", readFileData);
+    puts(readFileData);
+    fclose(fp);
+    ```
+    ```c
     //fgetc_func1.c
     FILE *fp = fopen("abc.txt", "r");
     ...
@@ -87,6 +96,19 @@
     
     fclose(fp);
     ```
+    ```c
+    // fgets_func1.c
+    char readFileData[MAX_SIZE] = {0};
+    FILE *fp = fopen("abc.txt", "r");
+    ...
+    if( fges(readFileData, MAX_SIZE, fp) == NULL) {
+      fclose(fp);
+      exit(1);
+    }
+    puts(readFileData);
+    fclose(fp);
+    ```
+    
     * getline() 구현 및 사용법 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap03/getline/README.md)
     * getc(), putc() 함수를 활용하여 파일 2개를 다른 한개의 파일로 결합 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/combine_file.c)
     
