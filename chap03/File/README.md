@@ -114,6 +114,7 @@
     
     * fgetc, fputc 함수를 활용한 file 복사 프로그램 ([c code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy1.c), [c++ code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/file_copy3.cpp))
     ```c
+    // file_copy1.c
     #define MAX_SIZE 32
     
     char readFileData[MAX_SIZE] = {0};
