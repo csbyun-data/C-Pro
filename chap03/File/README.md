@@ -76,7 +76,7 @@
     ```
     
 * Reading from a file
-    *   1.3 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func2.c), [fgetc](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fgetc_func1.c), [fget_line](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fget_line_func1.c))
+    *   1.3 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func2.c), [fgetc](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fgetc_func1.c), [fgets](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fgets_func1.c), [fget_line](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fget_line_func1.c))
     ```c
     //fscanf_func1.c
     char readFileData[MAX_SIZE+MAX_SIZE] = {0};
