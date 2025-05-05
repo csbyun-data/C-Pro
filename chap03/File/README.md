@@ -28,6 +28,7 @@
     *   1.1 File Open fopen(), Create [[Text파일 code1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Create_File.c), [Text 파일 code2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Text_File1.c), [Binary 파일 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Binary_File1.c)]  
     ![image](https://github.com/user-attachments/assets/93bb7595-bba8-4e44-84df-d2a2553b606d)
     *   1.1-1 Binary File, song 구조체 저장, 읽기 [저장 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Bin_Struct_song1.c), [읽기 code](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/Bin_Struct_song2.c)
+
 * Writing to a File
     *   1.2 fprintf(), fputc(), fputs(), fwrite() 사용 [fprintf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fprintf.c), [fputc.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fputc.c), [fputs.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fputs.c), [fwrite.c](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fwrite.c)
     ```c
@@ -72,9 +73,12 @@
     ...
     fwrite( buff, sizeif(buff[0]), MAX_SIZE, fp);
     fclose(fp);
-    ```  
+    ```
+    
+* Reading from a file
     *   1.3 fscanf(), fgetc(), fgets(), fread(), fseek() 사용법 ([fscanf 1](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func1.c), [fscanf 2](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fscanf_func2.c), [fgetc](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fgetc_func1.c), [fget_line](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fget_line_func1.c))
     ```c
+    //fgetc_func1.c
     FILE *fp = fopen("abc.txt", "r");
     ...
     while( (ch=fgetc(fp)) != EOF) {
