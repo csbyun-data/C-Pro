@@ -132,6 +132,7 @@
     fclose(fp);
     ```
     ```c
+    // fread_func1.c
     #define MAX_SIZE 32
     
     char readFileData[MAX_SIZE] = {0};
