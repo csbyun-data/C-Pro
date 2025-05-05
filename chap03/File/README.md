@@ -147,7 +147,7 @@
     ```
     
 * Change the position of the file indicator    
-    * fseek()이용 파일크기 계산 [fseek](fseek)
+    * fseek()이용 파일크기 계산 [fseek](https://github.com/csbyun-data/C-Pro/blob/main/chap03/File/fseek_func1.c)
     ```c
     // fseek_func1.c
     // int fseek(FILE *pointer. long int offset, int position);
