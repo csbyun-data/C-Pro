@@ -51,6 +51,7 @@
     fclose(fp);
     ```
     ```c
+    // fputs.c
     FILE *fp = fopen("abc.txt", "w");
     ...
     fputs("Hello There, I hope this abc will help!", fp);
