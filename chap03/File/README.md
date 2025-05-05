@@ -145,8 +145,11 @@
     
     fclose(fp);
     ```
-    * fseek()이용 파일크기 계산 [code]()
+    
+* Change the position of the file indicator    
+    * fseek()이용 파일크기 계산 [fseek](fseek)
     ```c
+    // fseek_func1.c
     // int fseek(FILE *pointer. long int offset, int position);
     // SEEK_SET(파일 시작)
     // SEEK_CUR(파일 포인터의 현재 위치)
