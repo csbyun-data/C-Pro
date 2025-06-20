@@ -1,5 +1,5 @@
 ### 목차
-    [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer.md)
+* 포인터 목차 정리 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer.md)
 ### Pointer and Array, String, Function Pointer, Pointer Structure
 
 * 1.포인터와 배열
