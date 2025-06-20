@@ -15,7 +15,7 @@
     * [sel.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/sel.c)
     * [srt.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/srt.c)
     * [tbl.c](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/tbl.c)
-    * [_proto.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/_proto.h)
+    * [proto.h](https://github.com/csbyun-data/C-Pro/blob/main/chap05/SDB/_proto.h)
     ```
     // SQL 문장 분석하여 파일 생성, 자료 조회, 저장, 수정, 삭제, 정렬 기능
     // 매크로 작업 저장 기능
