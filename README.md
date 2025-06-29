@@ -14,7 +14,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Binary Octal Decimal Hexa변환](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bin/README.md)
 * [static, extern 사용](https://github.com/csbyun-data/C-Pro/blob/main/chap01/extern/README.md)
 * [snippets.org], [bit unit operator](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Bit/README.md)
-* [참조: [learn c](https://github.com/aimeceleste/learn-c-now)]
+* [Book], [learn c](https://github.com/aimeceleste/learn-c-now)]
   
 ## Pointer, Array, String, Function Pointer  
 * [정리], [pointer and array](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointer_and_Array/READ.md)
