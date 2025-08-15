@@ -1,7 +1,7 @@
 
 ### Tetris Game
 * Tetris
-    * [Tetris.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Tetris/tetris.c)
+    * [tetris.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Tetris/tetris.c)
    ```
    #include <Windows.h>
    #include <conio.h>   
