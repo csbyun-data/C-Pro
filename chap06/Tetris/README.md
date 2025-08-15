@@ -36,5 +36,21 @@
    }
    ```
    <img width="401" height="382" alt="image" src="https://github.com/user-attachments/assets/3c46bb16-5a16-45f2-bdbc-62b24c7af1c4" />
+   ```
+   //Modify code
+   void rotate(MData map[MAP_SIZE_H][MAP_SIZE_W],int blockShape[4][4], Location * curLoc){
+     int i, j;
+     int tmp[4][4] = {0};  // <- tmp[4][4]; 배열이 초기화 되지 않아 rotation shape이 바르게 생성되지 않아 수정함
+     int leftW, rightW, bottomH;
+   
+     for(i=0; i<4;i++){
+       for(j=0; j<4;j++){
+         if(blockShape[i][j] == BLOCK){
+           tmp[3-j][i] = blockShape[i][j]; // <- tmp[j][3-i] = blockShape[i][j]; 회전을 시계 반시계 방향으로 변경
+           blockShape[i][j] = EMPTY;
+         }
+       }
+     }
+   ```
 
     * [참조: [Tetris](https://github.com/BlockDMask/Tetris_Game)]
