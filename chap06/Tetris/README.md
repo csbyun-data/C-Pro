@@ -35,7 +35,7 @@
      //...
    }
    ```
-   <img width="401" height="382" alt="image" src="https://github.com/user-attachments/assets/3c46bb16-5a16-45f2-bdbc-62b24c7af1c4" />
+   <img width="401" height="382" alt="image" src="https://github.com/user-attachments/assets/3c46bb16-5a16-45f2-bdbc-62b24c7af1c4" />  
    ```
    //Modify code
    void rotate(MData map[MAP_SIZE_H][MAP_SIZE_W],int blockShape[4][4], Location * curLoc){
