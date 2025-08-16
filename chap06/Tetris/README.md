@@ -1,7 +1,8 @@
 
 ### Tetris Game
 * Tetris
-    * [tetris.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Tetris/tetris.c)
+    * code [tetris.c](https://github.com/csbyun-data/C-Pro/blob/main/chap06/Tetris/tetris.c)
+    * 화면 출력 및 cursor이동
    ```
    #include <Windows.h>
    #include <conio.h>   
@@ -53,6 +54,7 @@
        }
      }
    ```
+   * 점수를 file에 save, read
    ```
    // 최고 점수를 file에 저장 및 읽기
    int GameOver(MData map[MAP_SIZE_H][MAP_SIZE_W],int score, int bestScore){
