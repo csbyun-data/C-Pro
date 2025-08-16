@@ -53,5 +53,28 @@
        }
      }
    ```
-
-    * [참조: [Tetris](https://github.com/BlockDMask/Tetris_Game)]
+   ```
+   // 최고 점수를 file에 저장 및 읽기
+   int GameOver(MData map[MAP_SIZE_H][MAP_SIZE_W],int score, int bestScore){
+     FILE * wfp;
+     
+     if(score >= bestScore){
+       wfp = fopen("score.txt", "w");
+       fprintf(wfp, "%d", score);
+       fclose(wfp);
+     }
+   }
+   
+   int GameStart(MData map[MAP_SIZE_H][MAP_SIZE_W]){
+     int score =0, bestScore =0;
+     FILE * rfp;
+     if((rfp = fopen("score.txt", "r")) == NULL){
+       FILE * wfp;
+       wfp = fopen("score.txt", "w");
+       fprintf(wfp, "%d", 0);
+       fclose(wfp);
+     }
+     fscanf(rfp, "%d", &bestScore);
+   }
+   ```
+   * [참조: [Tetris](https://github.com/BlockDMask/Tetris_Game)]
