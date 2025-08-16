@@ -62,7 +62,7 @@
    ...
    swap(a, b);
    ```
-   * the pass by pointer in function [code]()
+   * the pass by pointer in function [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/pass_by_pointer.c)
    ```c
    void modifyVal ( int *myptr) {
      *myptr = 200;
