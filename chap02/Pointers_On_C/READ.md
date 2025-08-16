@@ -64,13 +64,6 @@
   ![image](https://github.com/user-attachments/assets/143fdf90-e459-459f-9409-40c2840f4ddf)
 
 * Chap06 Pointers.
-  * [testPtr.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch06/testPtr.c)
-  <img width="437" height="105" alt="image" src="https://github.com/user-attachments/assets/d513ab4b-8340-492d-802f-a526a6f93d74" />
-  * [소수, SieveEratoAlgorithm.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch06/SieveEratoAlgorithm.c)
-  <img width="516" height="174" alt="image" src="https://github.com/user-attachments/assets/02917dcf-7b84-48d0-961c-cd264b9f126b" />
-  * 
- 
- 
 * Chap07 Functions.
   * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c) 
   ```c
