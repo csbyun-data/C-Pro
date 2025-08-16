@@ -63,7 +63,11 @@
   ```  
   ![image](https://github.com/user-attachments/assets/143fdf90-e459-459f-9409-40c2840f4ddf)
 
-
+* Chap06 Pointers.
+  * [testPtr.c]()
+  * 
+ 
+ 
 * Chap07 Functions.
   * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c) 
   ```c
