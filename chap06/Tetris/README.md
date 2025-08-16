@@ -77,4 +77,4 @@
      fscanf(rfp, "%d", &bestScore);
    }
    ```
-   * [참조: [Tetris](https://github.com/BlockDMask/Tetris_Game)]
+   * [참조: [https://github.com/BlockDMask/Tetris_Game](https://github.com/BlockDMask/Tetris_Game)]
