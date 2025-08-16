@@ -17,7 +17,7 @@
    swap(a, b);
    ```
    ```c
-   // call by address (pass by address)
+   // call by address (pass by address), call by pointer
    void swap( int *x, int *y) { }
    ...
    swap( &a, &b);
