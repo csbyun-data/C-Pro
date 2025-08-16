@@ -61,15 +61,18 @@
    void swap( int &x, int &y) { }
    ...
    swap(a, b);
-   ```
+   ```  
    ```c
    // the pass by pointer in function
    void modifyVal ( int *myptr) { }
    ...
+   int a = 100;
+   int *myptr = &a;
    modifyVal(myptr);
    ```
  
    *  1.2 1D 배열을 전달
+
    *  배열 전달 call by address 활용 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Parameter_1D_1_1.c)]
    *  포인터 전달 call by address 활용 [[code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/Parameter_1D_1_2.c)]
    ```c
