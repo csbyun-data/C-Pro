@@ -64,11 +64,18 @@
    ```  
    ```c
    // the pass by pointer in function
-   void modifyVal ( int *myptr) { }
-   ...
-   int a = 100;
-   int *myptr = &a;
-   modifyVal(myptr);
+   void modifyVal ( int *myptr) {
+     *myptr = 200;
+   }
+
+   int main(void) {
+     int a = 100;
+     int *myptr = &a;
+     modifyVal(myptr);
+
+     printf("%d", a);
+     return 0;
+   }
    ```
  
    *  1.2 1D 배열을 전달
