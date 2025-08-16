@@ -1,5 +1,5 @@
 ### Function
-* Value
+* Variable
   * 1.1 reference 와 pointer 비교  
   <img width="482" height="352" alt="image" src="https://github.com/user-attachments/assets/ecd8f7db-f7ce-493e-8a5e-673ed777c903" />
 
