@@ -1,6 +1,6 @@
 ### Function
 * Variable
-  * 1.1 reference 와 pointer 비교  
+  * 1.1 reference 와 pointer 비교 [reference](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/reference.cpp), [pointer]()
   <img width="480" height="350" alt="image" src="https://github.com/user-attachments/assets/991e8748-2764-4fe4-b579-c850b0a56991" />
 
 * Function
