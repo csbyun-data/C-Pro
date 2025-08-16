@@ -61,9 +61,9 @@
    void swap( int &x, int &y) { }
    ...
    swap(a, b);
-   ```  
+   ```
+   * the pass by pointer in function [code]()
    ```c
-   // the pass by pointer in function
    void modifyVal ( int *myptr) {
      *myptr = 200;
    }
