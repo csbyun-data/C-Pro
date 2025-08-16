@@ -65,7 +65,7 @@
 
 * Chap06 Pointers.
   * [testPtr.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch06/testPtr.c)
-  * [소수, SieveEratoAlgorithm.c]()
+  * [소수, SieveEratoAlgorithm.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch06/SieveEratoAlgorithm.c)
   * 
  
  
