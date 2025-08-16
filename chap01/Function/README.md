@@ -284,9 +284,11 @@
    // 포인터 매개변수는 사용시 반드시 NULL 확인 필요
    void FuncByReference(struct person&);
    // 참조 매개변수는 NULL확인 필요하지 않음
- 
-   struct person peter;
-   FuncByPointer(&peter);  // pointer parameter 사용법
-   FuncByReference(peter); // reference parameter 사용법
+
+   int main(void) {
+     struct person peter;
+     FuncByPointer(&peter);  // pointer parameter 사용법
+     FuncByReference(peter); // reference parameter 사용법
+   }
    ```
 
