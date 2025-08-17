@@ -191,6 +191,7 @@ int find_char( char **strings, char value) {
   }
   ```
   <img width="427" height="138" alt="image" src="https://github.com/user-attachments/assets/f235989e-4077-4ecc-8537-f57a82c1c95f" />
+  
   ```
   // Recursive Fibonacci numbers
   long fibinacci( int n ) {
@@ -216,6 +217,25 @@ int find_char( char **strings, char value) {
     return result;
   }
   ```
+  ```
+  // 7.6 Variable Argument Lists
+  // 7.9b Compute the average of scalar values
+  #include <stdarg.h>
+  float average( int n_valuies, ... ) {
+    va_list var_arg;
+    int count;
+    float sum = 0;
+
+    va_start( var_arg, n_valuss );
+    for( count = 0; count < n_values; count += 1 ) [
+      sum += va_arg( var_arg, int);
+    }
+    va_end( var_arg );
+
+    return sum / n_values;
+  }
+  ```
+
   * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c) 
   ```c
   void print_format( char*, ... );
