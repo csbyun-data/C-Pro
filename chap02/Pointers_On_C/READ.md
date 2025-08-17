@@ -34,7 +34,36 @@
 * Chap02 Basic Concepts [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch02/main.c), [increment.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch02/increment.h), [increment.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch02/increment.c), [negate.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch02/negate.h), [negate.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch02/negate.c)  
   ![image](https://github.com/user-attachments/assets/fc01cb0d-25ff-41b2-b656-43b15cda4994)
 
-* Chap03 Data.
+* Chap03 Data.  
+  ```
+  // 3.2.3 Declaring Pointers
+  int* a, b, c;  //-> int *a; int b; int c;
+
+  char *message="Hello world!";
+
+  // 잘못되 사용 예 
+  char *message;
+  *message = "Hello world!";
+  ```
+  ```
+  // 3.4 Constants
+  int const *pi; // 동일 표현 const int *p; , 값 변경 X, 주소 변경 O
+  int * const pi; // 값 변경 O, 주소 변경 X
+  const int * const pi; // 값 변경 X, 주소 변경 X
+
+  #include <stdio.h>
+  int main() {
+    int a = 10;
+    int b = 20;
+    int const *pi = &a;
+    printf("%d\n", *pi);  // read 가능
+    *pi = 15;   // 불가 X
+    pi = &b;    // 가능 O
+
+    return 0;
+  }
+  ```
+   
   * return string, int [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/return.c)
   ```c
   #include <stdio.h>
