@@ -148,6 +148,74 @@ int find_char( char **strings, char value) {
 
 
 * Chap07 Functions.
+  ```
+  // 7.3 Function Arguments
+  void swap( int *x, int *y) {
+    int temp;
+ 
+    temp = *x;
+    *x = *y;
+    *y = temp;
+  }
+    
+  int main() {
+    int a, b;
+    //...
+    swap( &a, &b);
+    return 0;
+  }
+
+  void clear_array( int array[], int n_elements) {
+    while( n_elements > 0)
+      array[ --n_elements ] = 0;
+  }
+  ```
+  ```
+  // 7.5.2 Recursion versus Iteration
+  // 7.7a Recusive fatorials
+  long factorial( int n ) {
+    if( n <= 0 )
+      return 1;
+    else
+      return n * factorial( n-1 );
+  }
+  // 7.7b Iterative factorials
+  long factorial( int n ) {
+    int result = 1;
+
+    while( n > 1 ) {
+      result *= n;
+      n -= 1;
+    }
+    return result;
+  }
+  ```
+  <img width="427" height="138" alt="image" src="https://github.com/user-attachments/assets/f235989e-4077-4ecc-8537-f57a82c1c95f" />
+  ```
+  // Recursive Fibonacci numbers
+  long fibinacci( int n ) {
+    if( n <= 2 )
+      return 1;
+    return fibinacci( n-1) + fibonacci( n-2 );
+  }
+
+  // Iterative Fibonacci numbers
+  long fibonacci( int n ) {
+    long result;
+    long previous_result;
+    long next_older_result;
+
+    result = previous_result = 1;
+
+    while( n>2 ) {
+      n -= 1;
+      next_older_result = previous_result;
+      previous_result = result;
+      result = previous_result + next_older_result;
+    }
+    return result;
+  }
+  ```
   * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c) 
   ```c
   void print_format( char*, ... );
