@@ -245,6 +245,8 @@ int find_char( char **strings, char value) {
   ```
   ![image](https://github.com/user-attachments/assets/2931a998-4a46-432f-88e4-b294590f1546)
 
+* Chap* Arrays
+
 * Chap11 Dynamic Memory Allocation.
   * Keyin한 문자열이 20개 단위로 잘라서 크기가 더 크면 메모리를 추가 할당하여 문자열 저장
   * [read_from_stdin code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/read_from_stdin.c)
