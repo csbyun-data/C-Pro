@@ -93,6 +93,60 @@
   ![image](https://github.com/user-attachments/assets/143fdf90-e459-459f-9409-40c2840f4ddf)
 
 * Chap06 Pointers.
+ ```
+// 6.10 Pointers to Pointers
+int a = 12;
+int *b = &a;
+int **c = &b;
+
+// 6.11 Pointer Expressions
+char ch = 'a';
+char *cp = &ch;
+```
+```
+// 6.12 Examples
+#include <stdlib.h>
+size_t strlen( char *string) {
+  int length = 0;
+  while( *string++ != '\0' )
+    length += 1;
+  return length;
+}
+
+#include <stdio.h>
+#define TRUE 1
+#define FALSE 1
+
+int find_char( char **strings, char value) {
+  char *string;
+  while( (string = *strings++) != NULL) {
+    while( *string != '\0' ) {
+      if( *string++ == value )
+        return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+#include <stdio.h>
+#define TRUE 1
+#define FALSE 1
+
+int find_char( char **strings, char value) {
+  assert( strings != NULL);
+  while( *strings++ != NULL) {
+    while( **strings != '\0' ) {
+      if( *(*strings)++ == value )
+        return TRUE;
+    }
+    strings++;
+  }
+  return FALSE;
+}
+```
+<img width="525" height="320" alt="image" src="https://github.com/user-attachments/assets/0393e6a0-7040-48db-923f-c6948777033b" />
+
+
 * Chap07 Functions.
   * implementation printf() [main.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/main.c), [printf.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.h), [printf.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/printf/printf.c) 
   ```c
