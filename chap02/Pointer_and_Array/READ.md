@@ -10,8 +10,7 @@
   // 연산자 * , 포인터가 가리키는 주소에 저장된 내용
   
   int *iPtr;
-  a = *iPtr;
-  *iPtr=a;
+  a = *iPtr;,  *iPtr=a;
 
   char cData;
   char *pcData = NULL;
