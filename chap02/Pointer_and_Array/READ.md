@@ -474,6 +474,8 @@
     return sum;
   }
   ```
+  <img width="440" height="90" alt="image" src="https://github.com/user-attachments/assets/6c09b89b-6cce-437d-a1fb-870d7282c4e3" />
+
   * 4.4 Array pointer(2차원 배열), 배열과 포인터
   ```c
   #include <stdio.h>
