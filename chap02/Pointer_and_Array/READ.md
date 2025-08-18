@@ -449,7 +449,7 @@
   printf("%s\n", rule_line(ruler, 40,  10, "1234567890", ' '));
   ```
 
-  * 4.3 pointer를 이용한 방법의 장점 (index표기법, 포인터 사용)
+  * 4.3 pointer를 이용한 방법의 장점 (index표기법, 포인터 사용) [code]()
   ```c
   // index 표기법, 느림, index를 주소로 변한 후 값을 가져 옴
   int sum( int a[], int n) {  
