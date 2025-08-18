@@ -20,8 +20,9 @@
   char *ps = "Hello, World!"; // RAM CODE영역에 저장, read only 속성
   char s[] = "Hello, World!"; // RAM DATA영역에 저장, read/write 속성
 
-  char *s = NUUL;
-  s = "Hello, World!"; //OK
+  char *s = NULL;
+  s = "Hello, World!"; //OK, 문법상 이상은 없지만, C언어에서 문자열 표현 해석 오류 발생할수 있음
+  
   char s[15];
   s = "Hello, World!"; // Error, s == s[0]를 가르키는 변수
 
