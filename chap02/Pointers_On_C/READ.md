@@ -246,6 +246,13 @@ int find_char( char **strings, char value) {
   ![image](https://github.com/user-attachments/assets/2931a998-4a46-432f-88e4-b294590f1546)
 
 * Chap08 Arrays
+* Chap09 Strings, Characters, and Bytes.
+  * [my_strchr.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter9/my_strchr.c)
+  * [my_strcat.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter9/my_strcat.c)
+  * [my_strcpy.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter9/my_strcpy.c)
+  * [my_strcpy_end.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter9/my_strcpy_end.c)
+  * [my_strnchr.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter9/my_strnchr.c)
+  * [my_strnlen.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter9/my_strnlen.c)
 
 * Chap11 Dynamic Memory Allocation.
   * Keyin한 문자열이 20개 단위로 잘라서 크기가 더 크면 메모리를 추가 할당하여 문자열 저장
