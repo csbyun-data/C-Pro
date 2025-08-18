@@ -276,6 +276,12 @@ int find_char( char **strings, char value) {
   * Linked List 방식의 메모리를 할당하고, 해제하는 방법 점검 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch11/linked_list.c)
 
   ![image](https://github.com/user-attachments/assets/2105a77e-10ca-4ace-9b67-20336a91905c)
+* Chap12 Using Structures and Pointers.
+  * [concordanceList.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter12/concordanceList.c)
+  * [countLst-searchLst.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter12/countLst-searchLst.c)
+  * [removelist.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter12/removelist.c)
+  * [reverseList.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter12/reverseList.c)
+  * [rmvDoublyLst.c code](https://github.com/DragScorpio/Pointers-On-C-Solutions/blob/master/chapter12/rmvDoublyLst.c)
 
 * Chap16 Standard Library.
   * Generic Insertion Sort 구현 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch16/insertion_sort.c)
