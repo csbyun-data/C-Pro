@@ -294,6 +294,51 @@ int find_char( char **strings, char value) {
   ![image](https://github.com/user-attachments/assets/147ada53-c57b-404a-ae86-980e7608cfa7)
 
   ![image](https://github.com/user-attachments/assets/00c7c41b-5520-42b6-bbe8-26d97ab6118c)
+  ```
+  // using a malloc(), structure type
+  
+  #define TREE_TYPE int
+  typedef struct BINARY_SEARCH_TREE {
+    TREE_TYPE value;
+    struct BINARY_SEARCH_TREE *left;
+    struct BINARY_SEARCH_TREE *right;
+  } BST;
+
+  #define XOR( X, Y ) (X) != (Y)
+  static BST *tree;
+
+  void insert( TREE_TYPE value ) {
+	BST *new_node, **node_ptr;
+	new_node = (BST *)malloc( sizeof(BST) );
+	assert( new_node != NULL );
+	new_node->value = value;
+	new_node->left = new_node->right = NULL;
+
+	node_ptr = &tree;
+	while( *node_ptr != NULL ) {
+		assert( (*node_ptr)->value != value );
+		node_ptr = value < (*node_ptr)->value ? &(*node_ptr)->left : &(*node_ptr)->right;
+	}
+
+  	*node_ptr = new_node;
+  }
+
+  static BST **in_order_successor( BST **root ) {
+  /* this function returns the in-order successor of the node pointed by root */
+	assert( *root != NULL && (*root)->right != NULL );
+	root = &(*root)->right;
+	while( (*root)->left != NULL )
+      root = &(*root)->left;
+	return root;
+  }
+
+  int main( void ) {
+    int value, flag = 1;
+	BST **node_ptr;
+    // ....
+  }
+
+  ```
 
   * Linked List Queue Implementation [main_q.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_q.c), [llist_queue.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/llist_queue.h), [llist_queue.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/linst_queue.c)  
   ```
