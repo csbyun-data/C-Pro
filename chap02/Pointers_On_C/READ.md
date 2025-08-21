@@ -295,7 +295,35 @@ int find_char( char **strings, char value) {
 
   ![image](https://github.com/user-attachments/assets/00c7c41b-5520-42b6-bbe8-26d97ab6118c)
 
-  * Linked List Queue Implementation [main_q.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_q.c), [llist_queue.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/llist_queue.h), [llist_queue.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/linst_queue.c)
+  * Linked List Queue Implementation [main_q.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_q.c), [llist_queue.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/llist_queue.h), [llist_queue.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/linst_queue.c)  
+  ```
+  // linked list queue, using a malloc(), struct type
+  #define QUEUE_TYPE int
+
+  typedef struct QUEUE {
+    QUEUE_TYPE value;
+    struct QUEUE *next;
+  } Queue;
+
+  static Queue *queue;
+
+  void enqueue( QUEUE_TYPE value ) {
+    Queue *new_node, **qptr = &queue;
+    new_node = (Queue *)malloc( sizeof( Queue ) );
+    // ....
+  }
+  int main( void ) {
+    while( flag ) {
+      scanf( " %c", &cmd );
+		    switch( cmd ) {
+       // ....
+      }
+  		  printf( "Do you want to continue?[Y/N]  " );
+  		  scanf( " %c", &cmd );
+  		  flag = cmd == 'y' || cmd == 'Y' ? 1 : 0;
+   	}
+  }
+  ```
 
   * Dynamic Memory Array Queue Implementation [main_d.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_d.c), [arr_bst.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/arr_bst.h), [arr_bst.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/arr_bst.c), [dma_queue.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_queue.h), [dma_queue.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_queue.c)
 
