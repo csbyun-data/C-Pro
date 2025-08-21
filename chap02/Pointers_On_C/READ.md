@@ -327,22 +327,40 @@ int find_char( char **strings, char value) {
         printf( "Enter the value to find: " );
         scanf( " %i", &value );
         if( ( node = find( value ) ) != NULL )
-         printf( "The value %i is found\n", *node );
-        else
-         printf( "The value is not found!\n" );
+          printf( "The value %i is found\n", *node );
         break;
-        // ....
-      
-        case 'p':
+      case 'p':
         pre_order_traverse( 1, print_tree);
-        printf("\n");
         break;
         // ....
     }
+  }  
+  ```
+  ```
+  // using a calloc(), realloc(), free()
+  
+  #define QUEUE_TYPE int
+  static QUEUE_TYPE *queue;
+
+  int create_queue( size_t size ) {
+    assert( queue_size == 0 );  /* queue is created if only queue is empty currently */
+    queue_size = size;
+    queue = (QUEUE_TYPE *)calloc( ARRAY_SIZE, sizeof( QUEUE_TYPE ) );
+    return queue != NULL ? 1 : 0;
   }
-     
-  
-  
+
+  int resize_queue( size_t new_size ) {
+    assert( new_size > queue_size );
+    queue_size = new_size;
+    queue = (QUEUE_TYPE *)realloc( queue, ARRAY_SIZE * sizeof( QUEUE_TYPE ) );
+    return queue != NULL ? 1 : 0;
+  }
+
+  void destroy_queue( void ) {
+   	queue_size = 0;
+    free( queue );
+    queue = NULL;
+  }
   ```
  
   * Dynamic Memory Array Stack [main_s.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_s.c), [dma_stack.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.h), [dma_stack.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.c)
