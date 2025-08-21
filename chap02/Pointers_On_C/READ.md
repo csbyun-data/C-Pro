@@ -391,5 +391,31 @@ int find_char( char **strings, char value) {
   }
   ```
  
-  * Dynamic Memory Array Stack [main_s.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_s.c), [dma_stack.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.h), [dma_stack.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.c)
-  
+  * Dynamic Memory Array Stack [main_s.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_s.c), [dma_stack.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.h), [dma_stack.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.c)  
+  ```
+  // using a calloc(), realloc()
+  #define STACK_TYPE int
+
+  static STACK_TYPE *stack;
+  static size_t stack_size;
+
+  int create_stack( size_t size ) {
+    assert( stack == NULL );
+	stack_size = size;
+	stack = (STACK_TYPE *)calloc( stack_size, sizeof( STACK_TYPE ) );
+	return stack != NULL ? 1 : 0;
+  }
+
+  int resize_stack( size_t new_size ) {
+	assert( new_size > stack_size );
+	stack_size = new_size;
+	stack = (STACK_TYPE *)realloc( stack, new_size * sizeof( STACK_TYPE ) );
+	return stack != NULL ? 1 : 0;
+}
+
+void destroy_stack( void ) {
+  stack_size = 0;
+  free( stack );
+  stack = NULL;
+}
+```
