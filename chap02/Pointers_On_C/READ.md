@@ -298,6 +298,52 @@ int find_char( char **strings, char value) {
   * Linked List Queue Implementation [main_q.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_q.c), [llist_queue.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/llist_queue.h), [llist_queue.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/linst_queue.c)
 
   * Dynamic Memory Array Queue Implementation [main_d.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_d.c), [arr_bst.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/arr_bst.h), [arr_bst.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/arr_bst.c), [dma_queue.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_queue.h), [dma_queue.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_queue.c)
+
+  ```
+  // using a static array
+  #define TREE_TYPE int
+  #define TREE_SIZE 100
+  #define ARRAY_SIZE (TREE_SIZE + 1)
+  static TREE_TYPE tree[ARRAY_SIZE];
+  
+  // using a function pointer
+  void pre_order_traverse( int parent, void (*callback)( TREE_TYPE value ) );
+  
+  TREE_TYPE *find( TREE_TYPE value ) {
+    // ....
+   	return tree[current] == value ? tree + current : NULL;
+  }
+
+  void print_tree( int value ) {
+    printf( "%i ", value );
+  }
+
+  int main( void )  {
+    int *node;
+  
+    scanf( " %c", &cmd );
+    switch( cmd ) {
+      case 'F':
+        printf( "Enter the value to find: " );
+        scanf( " %i", &value );
+        if( ( node = find( value ) ) != NULL )
+         printf( "The value %i is found\n", *node );
+        else
+         printf( "The value is not found!\n" );
+        break;
+        // ....
+      
+        case 'p':
+        pre_order_traverse( 1, print_tree);
+        printf("\n");
+        break;
+        // ....
+    }
+  }
+     
+  
+  
+  ```
  
   * Dynamic Memory Array Stack [main_s.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_s.c), [dma_stack.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.h), [dma_stack.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/dma_stack.c)
   
