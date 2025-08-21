@@ -411,11 +411,11 @@ int find_char( char **strings, char value) {
 	stack_size = new_size;
 	stack = (STACK_TYPE *)realloc( stack, new_size * sizeof( STACK_TYPE ) );
 	return stack != NULL ? 1 : 0;
-}
+  }
 
-void destroy_stack( void ) {
-  stack_size = 0;
-  free( stack );
-  stack = NULL;
-}
-```
+  void destroy_stack( void ) {
+    stack_size = 0;
+    free( stack );
+    stack = NULL;
+  }
+  ```
