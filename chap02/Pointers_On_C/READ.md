@@ -463,6 +463,32 @@ int find_char( char **strings, char value) {
     stack = NULL;
   }
   ```
-  * Multi Stack [main_ms.c](), [multi_stack.h](), [multi_stack.c]()
+  * Multi Stack [main_ms.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/main_ms.c), [multi_stack.h](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/multi_stack.h), [multi_stack.c](https://github.com/csbyun-data/C-Pro/blob/main/chap02/Pointers_On_C/Ch17/multi_stack.c)
   ```
+  #define STACK_TYPE int
+
+  #define N_STACKS 10
+  static STACK_TYPE *stack[N_STACKS];
+  static size_t stack_size[N_STACKS];
+  static int top_element[N_STACKS] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+
+  int create_stack( size_t size, int index ) {
+	assert( stack[index] == NULL );
+	stack_size[index] = size;
+	stack[index] = (STACK_TYPE *)calloc( stack_size[index], sizeof( STACK_TYPE ) );
+	return stack[index] != NULL ? 1 : 0;
+  }
+
+  int resize_stack( size_t new_size, int index ) {
+	assert( new_size > stack_size[index] );
+	stack_size[index] = new_size;
+	stack[index] = (STACK_TYPE *)realloc( stack[index], new_size * sizeof( STACK_TYPE ) );
+	return stack[index] != NULL ? 1 : 0;
+  }
+
+  void destroy_stack( int index ) {
+	stack_size[index] = 0;
+	free( stack[index] );
+	stack[index] = NULL;
+  }
   ```
