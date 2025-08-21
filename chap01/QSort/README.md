@@ -13,6 +13,8 @@
     tm->tm_hour, tm->tm_min, tm->tm_sec,
     tm->tm_mon, tm->tm_mday, tm->tm_year );
   ```
+  <img width="633" height="547" alt="image" src="https://github.com/user-attachments/assets/1a159000-c6f9-414d-b4eb-8d80363e53fb" />
+
   * qsort() 숫자배열 정렬 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num3.c) 문자배열 정렬 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_word1.c), 구조체배열 정렬 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_struct1.c)
    ```c
    // https://en.cppreference.com/w/c/algorithm/qsort
