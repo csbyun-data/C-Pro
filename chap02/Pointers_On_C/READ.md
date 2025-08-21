@@ -463,3 +463,6 @@ int find_char( char **strings, char value) {
     stack = NULL;
   }
   ```
+  * Multi Stack [main_ms.c](), [multi_stack.h](), [multi_stack.c]()
+  ```
+  ```
