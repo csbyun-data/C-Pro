@@ -1,7 +1,7 @@
 ### Function
 * time(), qsort() 사용법
   * 실행시간체크 time() [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Running_time.c)
-  * 날짜,시간
+  * 날짜,시간  
   ```
   #include <time.h>
   struct tm *tm;
