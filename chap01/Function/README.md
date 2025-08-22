@@ -302,7 +302,7 @@
    }
    ```
 * Function Pointer variable 전달
-  * fgrep.c 구현 [code]()
+  * fgrep.c 구현 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/fgrep.c)
   ```
   // Book Pointers on C, fgrep.c, solution 15.9
   void search( char *filename, FILE *stream, char *string);
