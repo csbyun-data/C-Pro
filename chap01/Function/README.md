@@ -301,4 +301,19 @@
      FuncByReference(peter); // reference parameter 사용법
    }
    ```
+* Function Pointer variable 전달
+  * fgrep.c 구현 [code]()
+  ```
+  // Book Pointers on C, fgrep.c, solution 15.9
+  void search( char *filename, FILE *stream, char *string);
+  int main( int ac, char **av) {
+    char *string;
+    FILE *stream;
+    search( *av, stream, string);
+    //..
+  }  
+  ```
+
+  
+
 
