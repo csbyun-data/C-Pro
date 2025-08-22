@@ -9,7 +9,7 @@ Grammar of programming, a collection of basic materials for application.
 * [Function:](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/README.md) [sleep(), time(), qsort()]
 * [Function:](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Function/README.md) [parameter, return value]
    - call by value, call by pointer, call by reference 설명
-* [Function:]()[srand(), rand()] [code]
+* [Function:][srand(), rand()] [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Rand/throw_die.c)
 * [조건문, 반복문](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Flow/README.md) [setjmp(), longjmp()]
 * [Array, String](https://github.com/csbyun-data/C-Pro/blob/main/chap01/String_in_C/README.md) [scanf(), fgets(), puts(), strcat(), strcpy(), strcmp(), stddup()]
 * [typedef 사용법](https://github.com/csbyun-data/C-Pro/blob/main/chap01/TypeDef/README.md)
