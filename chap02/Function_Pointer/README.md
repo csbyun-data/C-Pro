@@ -138,7 +138,41 @@
   ```
 ### [Book] Turbo C The Art of Advanced Program Design Optimization and Debugging
 * Pointer to Function
-    * Trapezoid Rule [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_3b.c)
-    * Classic Bubble Sort [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_4.c)
+  * Trapezoid Rule [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_3b.c)
+  ```
+  /*prototype definitions --*/ 
+  double integrate (double (*)(double), double, double, unsigned); 
+  double func (double), answer (double); 
+  
+  double integrate (double (*fn)(), double a, double b, unsigned steps) 
+  {
+    unsigned i; 
+    double integral,spacing,x; 
+    
+    spacing = (b - a) / steps; 
+    integral = ( (*fn) (b) + (*fn) (a)) / 2; 
+    for (i = 1, x = a; i < steps; i++) { 
+      x += spacing; 
+      integral += (*fn) (x); 
+    }
+    return (integral* spacing); 
+  }
+  
+  double experiment (double x) {
+    return (x*x); 
+  }
+  
+  double answer (double x) {
+    return x*x*x/3.; 
+  }
+  
+  int main () {
+    // 활용 예
+    printf ("Integral is %f\n", integrate(experiment, (double) a, (double) b, steps)); 
+    printf ("(actual value is %f)\n", answer (b) - answer (a));
+  }
+  ```
+    
+  * Classic Bubble Sort [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_4.c)
 
   
