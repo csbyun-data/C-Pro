@@ -11,6 +11,7 @@
 */ 
 #define MAX_OK_RAND \ 
  (int)( ( ( (long)RAND_MAX + 1 ) / 6 ) * 6 - 1 ) 
+  
 int throw_die( void ){ 
   static int is_seeded = 0; 
   int value; 
