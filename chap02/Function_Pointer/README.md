@@ -101,6 +101,16 @@
   }
   ```
   ```c
+  #define TREE_TYPE int;
+  
+  void print_tree( TREE_TYPE value ) {
+    printf( "%i ", value );
+  }
+  
+  int main( void )  {
+     breadth_first_traversal( print_tree);
+  }  
+
   // Book pointers on C Chap 17 breadth.c Solution 17.6ȱ
   void breadth_first_traversal( void (*callback)( TREE_TYPE value ) )
   {
