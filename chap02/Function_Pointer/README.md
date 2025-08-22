@@ -174,5 +174,23 @@
   ```
     
   * Classic Bubble Sort [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_4.c)
-
+  ```
+  /* Prg 3_4 - the classic Bubble Sort using user-supplied routines by Stephen R. Davis, 1987 */
+  /*prototype definitions --*/ 
+  int sort (int (*)(void*, void*), int(*) (void*, void*), void * (*) (void *)); 
+   
+  /*Sort - implement bubble sort*/ 
+  int sort (int (*compare) (void*, void*), (*swap) (void*, void*), void *(*sequence) (void *)) {}
   
+  #define N 10 
+  int data [N]; 
+  
+  int compare (int *i1, int *i2) {..}
+  int swap (int *il, int *i2) {..}
+  void *sequence (int *i) {..}
+  
+  int main ()  {
+    // ...
+    if (sort (compare, swap, sequence)) 
+  }
+  ```
