@@ -1,5 +1,13 @@
 ### 가변인자, 가변함수
-* Variadic arguments (va_start, va_list, va_end, va_arg) 
+* Variadic arguments (va_start, va_list, va_end, va_arg)
+   ```
+   // Book pointers on C, mystdarg.h
+   // Replacement for the library stdarg.h macros. 
+   typedef char *va_list; 
+   #define va_start(arg_ptr,arg) arg_ptr = (char *)&arg + sizeof( arg ) 
+   #define va_arg(arg_ptr,type) *((type *)arg_ptr)++ 
+   #define va_end(arg_ptr)
+   ```
     * 인자 더하기 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Add.c) 
     * 인자 최대값 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Max.c) 
     * 인자 평균값 [here](https://github.com/csbyun-data/C-Pro/blob/main/chap01/VariableArgument_Average.c)
