@@ -100,6 +100,33 @@
     (*ptr)(); // callback to A
   }
   ```
+  ```c
+  // Book pointers on C Chap 17 breadth.c Solution 17.6ȱ
+  void breadth_first_traversal( void (*callback)( TREE_TYPE value ) )
+  {
+    int current;
+    int child;
+  
+    /* Insert the root node into the queue. */
+    queue_insert( 1 );
+
+    /* While the queue is not empty... */
+    while( !is_queue_empty() ){
+      /* Take the first value off the queue and process it */
+      current = queue_first();
+      queue_delete();
+      callback( tree[ current ] );
+
+      /* Add the children of the node to the queue. */
+      child = left_child( current );
+      if( child < ARRAY_SIZE && tree[ child ] != 0 )
+         queue_insert( child );
+      child = left_child( current );
+      if( child < ARRAY_SIZE && tree[ child ] != 0 )
+        queue_insert( child ); 
+     } 
+  } 
+  ```
 ### [Book] Turbo C The Art of Advanced Program Design Optimization and Debugging
 * Pointer to Function
     * Trapezoid Rule [code](https://github.com/csbyun-data/C-Pro/tree/main/chap02/Function_Pointer/Prg3_3b.c)
