@@ -31,3 +31,9 @@ void func2() {
 void func3() {
   printf("func3 run\n");
 }
+
+// main start
+// main end.
+// func3 run
+// func2 run
+// func1 run
