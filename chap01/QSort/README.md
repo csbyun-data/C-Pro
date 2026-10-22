@@ -15,12 +15,14 @@
   ```
   <img width="633" height="547" alt="image" src="https://github.com/user-attachments/assets/1a159000-c6f9-414d-b4eb-8d80363e53fb" />
 
-  * qsort() 숫자배열 정렬 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num3.c) 문자배열 정렬 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_word1.c), 구조체배열 정렬 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_struct1.c)
+* qsort() 숫자배열 정렬 [code1](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num1.c), [code2](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num2.c), [code3](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_num3.c) 문자배열 정렬 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_word1.c), 구조체배열 정렬 [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/QSort/qsort_struct1.c)
    ```c
    // https://en.cppreference.com/w/c/algorithm/qsort
+   // 비교 함수 포인터를 사용 예,  int (* comp)(const void*, const void*)
    #include <stdlib.h>
    void qsort( void* ptr, size_t count, size_t size, int (*comp)(const void*, const void*) );
    ```
+   
 * sleep() 사용법
    * [Progress Bar], [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Time/progress_bar.c)
   <img width="353" height="86" alt="image" src="https://github.com/user-attachments/assets/ae575e52-53e8-4e00-a5d4-60ba4d2dab45" />
