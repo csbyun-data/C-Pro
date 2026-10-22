@@ -23,3 +23,5 @@
    ```
 * sleep() 사용법
    * [Progress Bar], [code](https://github.com/csbyun-data/C-Pro/blob/main/chap01/Time/progress_bar.c)
+  <img width="353" height="86" alt="image" src="https://github.com/user-attachments/assets/ae575e52-53e8-4e00-a5d4-60ba4d2dab45" />
+
