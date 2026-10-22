@@ -16,7 +16,7 @@ int main(void) {
   atexit(func2);
   atexit(func3);
 
-  printf("main end.\n');
+  printf("main end.\n");
 
   return 0;
 }
